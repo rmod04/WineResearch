@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Every Wine Has Its Moment — Research Findings</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --burgundy: #5C1A2E;
+    --cream: #F5ECD7;
+    --gold: #B8973A;
+    --rose: #C27A8A;
+    --dark: #2A1A20;
+    --mid: #7A5A64;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Georgia, serif;
+    background: var(--cream);
+    color: var(--dark);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+  .page { max-width: 860px; margin: 0 auto; padding: 48px 32px 80px; }
+
+  /* ── Header ── */
+  .doc-header {
+    border-bottom: 3px solid var(--burgundy);
+    padding-bottom: 24px;
+    margin-bottom: 40px;
+  }
+  .doc-header h1 {
+    font-size: 2rem;
+    color: var(--burgundy);
+    font-style: italic;
+    margin-bottom: 6px;
+  }
+  .doc-header .meta {
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    color: var(--mid);
+    letter-spacing: 0.06em;
+  }
+
+  /* ── Methodology strip ── */
+  .methodology {
+    background: var(--burgundy);
+    color: var(--cream);
+    border-radius: 8px;
+    padding: 16px 24px;
+    font-family: sans-serif;
+    font-size: 0.82rem;
+    margin-bottom: 48px;
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .methodology strong { color: var(--gold); }
+
+  /* ── Section headings ── */
+  .section { margin-bottom: 64px; }
+  .section-tag {
+    font-family: sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--rose);
+    margin-bottom: 6px;
+  }
+  .section h2 {
+    font-size: 1.6rem;
+    color: var(--burgundy);
+    font-style: italic;
+    margin-bottom: 8px;
+  }
+  .section .thesis {
+    font-size: 0.95rem;
+    color: var(--mid);
+    max-width: 640px;
+    margin-bottom: 28px;
+  }
+
+  /* ── Stat row ── */
+  .stat-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+  }
+  .stat-box {
+    flex: 1;
+    min-width: 180px;
+    background: var(--burgundy);
+    color: var(--cream);
+    border-radius: 8px;
+    padding: 20px 18px;
+    text-align: center;
+  }
+  .stat-box .num {
+    font-size: 2.4rem;
+    font-style: italic;
+    color: var(--gold);
+    line-height: 1;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .stat-box .lbl {
+    font-family: sans-serif;
+    font-size: 0.78rem;
+    line-height: 1.4;
+    opacity: 0.88;
+  }
+
+  /* ── Chart block ── */
+  .chart-block {
+    background: white;
+    border-radius: 8px;
+    padding: 24px 28px;
+    margin-bottom: 24px;
+    border-left: 4px solid var(--gold);
+  }
+  .chart-block h3 {
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--burgundy);
+    margin-bottom: 3px;
+  }
+  .chart-block .source {
+    font-family: sans-serif;
+    font-size: 0.74rem;
+    color: #aaa;
+    margin-bottom: 16px;
+  }
+  .chart-wrap { position: relative; height: 260px; }
+  .method-note {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+    font-family: sans-serif;
+    font-size: 0.74rem;
+    color: #999;
+    line-height: 1.5;
+  }
+
+  /* ── Quote cards ── */
+  .quote {
+    background: white;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 14px;
+    border-left: 4px solid var(--rose);
+  }
+  .quote.hero {
+    border-left-color: var(--burgundy);
+    background: #faf5ee;
+  }
+  .quote p {
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--dark);
+    margin-bottom: 10px;
+  }
+  .quote.hero p { font-size: 1.25rem; color: var(--burgundy); }
+  .quote .attribution {
+    font-family: sans-serif;
+    font-size: 0.75rem;
+    color: #aaa;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .score {
+    background: var(--gold);
+    color: white;
+    border-radius: 20px;
+    padding: 2px 9px;
+    font-weight: 700;
+    font-size: 0.7rem;
+  }
+  .score.high { background: var(--burgundy); }
+
+  /* ── Critical learning box ── */
+  .learning {
+    background: #f4ede0;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 20px;
+    font-family: sans-serif;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: #555;
+    border-left: 4px solid var(--burgundy);
+  }
+  .learning strong { color: var(--burgundy); }
+
+  /* ── Divider ── */
+  .divider {
+    text-align: center;
+    color: var(--rose);
+    letter-spacing: 0.4em;
+    font-size: 1rem;
+    margin: 48px 0;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="doc-header">
+    <h1>Every Wine Has Its Moment — Research Findings</h1>
+    <div class="meta">Rohan Modwel · April 2026 · Internal research document</div>
+  </div>
+
+  <div class="methodology">
+    <span><strong>584</strong> original data points</span>
+    <span><strong>132</strong> Instagram posts · 8 hashtags</span>
+    <span><strong>452</strong> Reddit comments · 17 r/wine threads</span>
+    <span>Wine Market Council 2025 · OIV · Prof. Spence · Deutsch Family</span>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- SECTION 1: IT DEPENDS                  -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="section" id="s1">
+    <div class="section-tag">Section 1</div>
+    <h2>It Depends</h2>
+    <p class="thesis">For the first time in 30 years, U.S. consumers are choosing wine by occasion — not habit, not relaxation. Two large independent surveys converge on the same signal.</p>
+
+    <div class="stat-row">
+      <div class="stat-box">
+        <span class="num">#1</span>
+        <div class="lbl">Occasion is now the top driver of wine choice — first time in 30 years<br>(WMC 2025, n=4,900+)</div>
+      </div>
+      <div class="stat-box">
+        <span class="num">−50%</span>
+        <div class="lbl">"Treat me / relax alone" occasions halved from 14% → 7% in just two years<br>(Deutsch Family, n=56,000)</div>
+      </div>
+      <div class="stat-box">
+        <span class="num">29%</span>
+        <div class="lbl">of U.S. legal-age adults drink wine; Millennials now the largest cohort at 31%<br>(WMC 2025)</div>
+      </div>
+    </div>
+
+    <div class="chart-block">
+      <h3>The Occasion Shift: "Relax Alone" Occasions Halved in Two Years</h3>
+      <div class="source">Deutsch Family Wine &amp; Spirits — 56,000 responses, 7 survey waves, mid-2023 to July 2025</div>
+      <div class="chart-wrap"><canvas id="deutschChart"></canvas></div>
+      <div class="method-note">
+        <strong>Methodology:</strong> Deutsch Family tracked wine drinking motivations across 56,000 responses in 7 waves over two years. "Treat me / relax alone" occasions fell from 14% to 7% — a 50% relative decline. Corroborated by WMC 2025 (n=4,900+) finding that occasion has replaced relaxation as the #1 stated driver. Two independent large-sample datasets pointing the same direction makes this finding robust.
+      </div>
+    </div>
+
+    <div class="quote">
+      <p>"Wine tastes better when you are having a good time."</p>
+      <div class="attribution">
+        <span class="score">▲ 44</span>
+        <span>u/Myfrogsaysreddit</span>
+        <span>r/wine · "Why does wine taste better at the winery?"</span>
+      </div>
+    </div>
+
+    <div class="learning">
+      <strong>Critical learning — Section 1:</strong> The WMC and Deutsch findings together establish that the article's premise is not a niche observation — it's a measurable structural shift. Wine is migrating from a solitary reward to a social/occasion marker. This anchors the "it depends" argument in hard data before any anecdote lands.
+    </div>
+  </div>
+
+  <div class="divider">· · ·</div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SECTION 2: THE SEASONAL INSTINCT (TASK 4B) -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div class="section" id="s2">
+    <div class="section-tag">Section 2 · Task 4B — Real Reddit Signals Loaded</div>
+    <h2>The Seasonal Instinct</h2>
+    <p class="thesis">Consumers have strong, consistent seasonal wine preferences — and twenty years of global production data confirm the same instinct at scale. The world is quietly drinking lighter.</p>
+
+    <!-- OIV Chart -->
+    <div class="chart-block">
+      <h3>Global Wine Colour Shift: Red Declining, White &amp; Rosé Rising (2000–2021)</h3>
+      <div class="source">OIV International Organisation of Vine and Wine · via Decanter, December 2023</div>
+      <div class="chart-wrap"><canvas id="oivChart"></canvas></div>
+      <div class="method-note">
+        <strong>Methodology:</strong> OIV global consumption share data, two snapshots: 2000 and 2021. Red wine fell from 55% to 47% (−8pp; peak was ~55% in 2007 before sustained decline). White rose from 38% to 43% (+5pp). Rosé grew from 7% to 10% — a 43% relative increase, the fastest-growing colour by share. Connection to seasonal thesis: the global shift toward lighter styles is consistent with rising consumer preference for wine in warmer, more casual, social occasions.
+      </div>
+    </div>
+
+    <!-- Instagram seasonal analysis chart -->
+    <div class="chart-block">
+      <h3>Instagram Seasonal Hashtags: Wine Type Coded from Caption Text</h3>
+      <div class="source">132 posts across 6 seasonal hashtags — each caption coded by wine colour/type, April 2026</div>
+      <div class="chart-wrap"><canvas id="igChart"></canvas></div>
+      <div class="method-note">
+        <strong>Methodology:</strong> Each Instagram caption manually coded as Red, White, Rosé, Sparkling, or Generic/song-reference based on explicit wine mentions. #redwineweather and #roseseason are definitionally categorical (100% red and 100% rosé respectively). Key finding: within #summerwine, red and white wines appear in almost equal numbers (12 vs 13 posts), with reds described as "chillable reds" — a framing absent from #winterwine, where reds dominate unchallenged. #holidaywine skews sparkling (Christmas/NYE context). The diversity within #summerwine is itself evidence for the article's argument: even "summer wine" is not a single answer.
+      </div>
+    </div>
+
+    <!-- TASK 4B: Real Reddit Quotes for Section 2 -->
+    <div style="margin-top:8px; margin-bottom:6px;">
+      <div class="section-tag" style="margin-bottom:10px;">Task 4B — Real Reddit voices: The Seasonal Instinct</div>
+
+      <div class="quote">
+        <p>"For the most part it will be based on my seasonal cooking habits. In summer I eat more salad and grill more. In winter I do more roasting and braising. Therefore I find myself drinking crisp whites in summer, whereas in winter I lean towards richer whites and more complex reds. Of course, when it all comes down to it, I drink whatever the hell I want, whenever the hell I want!"</p>
+        <div class="attribution">
+          <span class="score">▲ 8</span>
+          <span>u/NWisthebest</span>
+          <span>r/wine · "Which wines do you associate with the seasons?"</span>
+        </div>
+      </div>
+
+      <div class="quote">
+        <p>"Summer: Rosé or Gruner. Fall: Zweigelt. Winter: Zin, Cab or Barolo. Spring: Sauv Blanc or Gruner again lol."</p>
+        <div class="attribution">
+          <span class="score">▲ 5</span>
+          <span>u/blondybee</span>
+          <span>r/wine · "Which wines do you associate with the seasons?"</span>
+        </div>
+      </div>
+
+      <div class="quote">
+        <p>"Giuseppe Attanasio Primitivo di Manduria. Clocking in at 16.5%. Chocolate, baked cherries, fertile black soil, figs. Viscous and intense flavors. Pairs great with a fireplace or bonfire, blankets, and good company."</p>
+        <div class="attribution">
+          <span class="score">▲ 4</span>
+          <span>u/WhiskeyandCigars7</span>
+          <span>r/wine · "Best wine for a cold winter night?"</span>
+        </div>
+      </div>
+
+      <div class="quote">
+        <p>"Ameztoi Txakolina or the Ameztoi Rubentis Rosé. Both with a good chill kept me alive in the hot and humid summers of Boston."</p>
+        <div class="attribution">
+          <span class="score">▲ 11</span>
+          <span>u/DumbassPhysicist</span>
+          <span>r/wine · "Best wine to pair with the sun / summer time?"</span>
+        </div>
+      </div>
+
+      <div class="quote">
+        <p>"Winter is Barolo and traditionalist southern Rhône. Spring is Cru Beaujolais. Summer is Tavel/Bandol Rosés and German whites. Fall is Bordeaux for days."</p>
+        <div class="attribution">
+          <span class="score">▲ 1</span>
+          <span>u/ThatFrenchieGuy</span>
+          <span>r/wine · "Which wines do you associate with the seasons?"</span>
+        </div>
+      </div>
+
+      <div class="quote">
+        <p>"Pinot has always felt like a great fall wine to me. Chardonnay feels like spring. Summer is built for Rosé, and Winter is where the biggest red isn't big enough. But mostly I just drink all the good wines all the time."</p>
+        <div class="attribution">
+          <span class="score">▲ 1</span>
+          <span>u/YoYoMoMa</span>
+          <span>r/wine · "Which wines do you associate with the seasons?"</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="learning">
+      <strong>Critical learning — Section 2 (Task 4B, Reddit seasonal voices):</strong> Six distinct voices, three different threads, near-identical seasonal maps. The consensus is strong on the poles — summer → light/rosé/whites, winter → big structured reds — but every single top-voted comment qualifies it with personal sovereignty ("I drink whatever I want"). That qualifier is not a caveat; it is the argument. The seasonal instinct is real and the data shows it, but it describes tendency, not prescription.
+    </div>
+
+    <div class="learning" style="margin-top:12px;">
+      <strong>Critical learning — Section 2 (OIV + Instagram):</strong> The OIV 21-year trend and the Instagram hashtag analysis both point the same way: lighter styles are gaining share. But the #summerwine data complicates a simple "summer = white/rosé" narrative — chillable reds are a real and growing summer category. The most honest version of the seasonal instinct is not a prescription but a tendency. That tension is the article.
+    </div>
+  </div>
+
+  <div class="divider">· · ·</div>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- SECTION 3: WHY YOUR WINE TASTES DIFFERENT ON HOLIDAY -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <div class="section" id="s3">
+    <div class="section-tag">Section 3</div>
+    <h2>Why Your Wine Tastes Different on Holiday</h2>
+    <p class="thesis">The 219-upvote comment answers the question plainly. Science adds the mechanism. Context — not the label — is doing most of the work.</p>
+
+    <div class="quote hero">
+      <p>"Because you're not in vacation mode. Being in the moment elevates everything."</p>
+      <div class="attribution">
+        <span class="score high">▲ 219</span>
+        <span>u/Steven1789</span>
+        <span>r/wine · "Why does wine always taste better at the winery?"</span>
+      </div>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat-box">
+        <span class="num">+9%</span>
+        <div class="lbl">uplift in wine enjoyment from environmental cues alone (red light + sweet music) — Prof. Charles Spence, Oxford Colour Lab</div>
+      </div>
+      <div class="stat-box" style="background: var(--mid);">
+        <span class="num" style="color: var(--gold);">€5</span>
+        <div class="lbl">That bottle of house wine in Italy. Tastes extraordinary. Holiday context explains the gap — not the wine.</div>
+      </div>
+    </div>
+
+    <div class="quote">
+      <p>"A lot of the enjoyment of wine is in the context. La Tâche doesn't hit the same when you're drinking it with assholes."</p>
+      <div class="attribution">
+        <span class="score">▲ 119</span>
+        <span>u/thewhizzle</span>
+        <span>r/wine · "Does wine taste better when drinking with company?"</span>
+      </div>
+    </div>
+
+    <div class="quote">
+      <p>"This reminds me of all the people waxing poetic about the wine in Italy or Spain when you know it's just €5 house wine and holiday vibes."</p>
+      <div class="attribution">
+        <span class="score">▲ 46</span>
+        <span>u/shedrinkscoffee</span>
+        <span>r/wine · "Why does wine always taste better at the winery?"</span>
+      </div>
+    </div>
+
+    <div class="quote">
+      <p>"Wineries invest a lot of time and money into immersive tasting experiences. They guide you through tasting notes while you're at a beautiful venue and having great conversation with wines that have properly breathed in pristine stemware. There are so many itty bitty factors contributing to you drinking that first glass."</p>
+      <div class="attribution">
+        <span class="score">▲ 22</span>
+        <span>u/NapoleonTrilobite</span>
+        <span>r/wine · "Why does wine always taste better at the winery?"</span>
+      </div>
+    </div>
+
+    <div class="quote">
+      <p>"You might be tasting a wine that was opened early in the day and has had time to slow oxidise and really open up before it's poured for you."</p>
+      <div class="attribution">
+        <span class="score">▲ 114</span>
+        <span>u/AustraliaWineDude</span>
+        <span>r/wine · "Why does wine always taste better at the winery?"</span>
+      </div>
+    </div>
+
+    <div class="learning">
+      <strong>Critical learning — Section 3:</strong> The "winery effect" thread produced four of the dataset's top twelve most-upvoted comments. Four distinct mechanisms emerge: (1) psychological presence / vacation mode (▲219); (2) company and social environment (▲119); (3) immersive setting and guided experience (▲22); (4) the wine itself being properly prepared — opened early, properly breathed (▲114). Spence's +9% provides controlled experimental evidence for mechanisms 2 and 3. The implication: wine preference is always a composite signal — wine + person + place + moment. You cannot isolate the liquid.
+    </div>
+  </div>
+
+  <div class="divider">· · ·</div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- SECTION 4: THE WINE CHANGES. SO DO YOU. -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="section" id="s4">
+    <div class="section-tag">Section 4</div>
+    <h2>The Wine Changes. So Do You.</h2>
+    <p class="thesis">Preference evolves. The most-upvoted voices in these threads don't drink what they drank ten years ago — and they're not defensive about it.</p>
+
+    <div class="quote hero">
+      <p>"There is no such thing as a special occasion. The bottle is the occasion."</p>
+      <div class="attribution">
+        <span class="score high">▲ 198</span>
+        <span>u/AustraliaWineDude</span>
+        <span>r/wine · "How have your opinions on wine changed over your lifetime?"</span>
+      </div>
+    </div>
+
+    <div class="quote">
+      <p>"I can't be bothered with anything with too much oak. I feel like I can tell when it's being amped up to disguise shortcomings now."</p>
+      <div class="attribution">
+        <span class="score">▲ 80</span>
+        <span>u/pretzelllogician</span>
+        <span>r/wine · "How have your opinions on wine changed over your lifetime?"</span>
+      </div>
+    </div>
+
+    <div class="quote">
+      <p>"Wine for me has become a means of understanding agricultural practice and the relationships between farmers and the earth they tend to. Those moments where you really tap into that energy are totally electric."</p>
+      <div class="attribution">
+        <span class="score">▲ 66</span>
+        <span>u/Vagimas</span>
+        <span>r/wine · "How have your opinions on wine changed over your lifetime?"</span>
+      </div>
+    </div>
+
+    <div class="quote">
+      <p>"I used to drink almost entirely reds. At the moment, I likely drink way more whites. I used to seek out the most intense fruit bombs I could find. Now I like funky flavours and subtlety as well."</p>
+      <div class="attribution">
+        <span class="score">▲ 15</span>
+        <span>u/Jealous-Breakfast-86</span>
+        <span>r/wine · "How have your opinions on wine changed over your lifetime?"</span>
+      </div>
+    </div>
+
+    <div class="learning">
+      <strong>Critical learning — Section 4:</strong> The "opinions changed" thread produced three of the dataset's top ten most-upvoted comments. The evolution arc is consistent across respondents: intensity → subtlety; fruit bombs → terroir; oak scepticism grows with experience; red dominance softens toward whites. The 198-upvote closer collapses the "saving wine for special occasions" fallacy — and lands perfectly against the WMC 2025 finding that occasion is now the #1 driver of wine choice. The two data points rhyme: occasion matters more, and occasion is now. There is no special occasion. The bottle always was.
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════ -->
+  <!-- FOOTER                      -->
+  <!-- ═══════════════════════════ -->
+  <div style="border-top: 2px solid var(--burgundy); padding-top: 24px; margin-top: 48px;
+              font-family: sans-serif; font-size: 0.75rem; color: var(--mid); line-height: 1.6;">
+    <strong style="color: var(--burgundy);">Data sources</strong><br>
+    Wine Market Council 2025 U.S. Consumer Benchmark Survey (n=4,900+, via Forbes/Erica Duecy, January 2026) ·
+    Deutsch Family Wine &amp; Spirits survey (n=56,000, 7 waves, mid-2023–July 2025) ·
+    OIV global consumption data (via Decanter, December 2023) ·
+    Prof. Charles Spence, Oxford University Colour Lab ·
+    Reddit r/wine — 452 comments across 17 threads (run IDs: TvwLkjxNNTD4YnbXd, Brcvs84UkVJ9QQUKL, ySnHUtc9ejoyBYfye) ·
+    Instagram — 132 posts across 8 seasonal hashtags (run ID: QlKDzqInMPyZ8tCjc) ·
+    Compiled April 2026.
+  </div>
+
+  <div class="divider">· · ·</div>
+
+</div><!-- end .page, continued in next chunk -->
+
+<script>
+// ── Deutsch Family Chart ──
+// (defined after OIV and IG charts to share one script block)
+
+// ── OIV Colour Shift Chart ──
+new Chart(document.getElementById('oivChart'), {
+  type: 'bar',
+  data: {
+    labels: ['2000', '2021'],
+    datasets: [
+      { label: 'Red',      data: [55, 47], backgroundColor: '#5C1A2E', borderRadius: 4, borderSkipped: false },
+      { label: 'White',    data: [38, 43], backgroundColor: '#B8973A', borderRadius: 4, borderSkipped: false },
+      { label: 'Rosé',     data: [7,  10], backgroundColor: '#C27A8A', borderRadius: 4, borderSkipped: false }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'top', labels: { usePointStyle: true, padding: 18 } },
+               tooltip: { callbacks: { label: c => ` ${c.dataset.label}: ${c.parsed.y}% global share` } } },
+    scales: {
+      y: { beginAtZero: true, max: 65, ticks: { callback: v => v + '%' }, grid: { color: '#f0e8dc' } },
+      x: { grid: { display: false } }
+    }
+  }
+});
+
+// ── Instagram Seasonal Chart ──
+new Chart(document.getElementById('igChart'), {
+  type: 'bar',
+  data: {
+    labels: ['#summerwine', '#winterwine', '#redwineweather', '#roseseason', '#whitewineseason', '#holidaywine'],
+    datasets: [
+      { label: 'Red',              data: [12, 7, 7, 0, 0, 1], backgroundColor: '#5C1A2E', borderRadius: 3 },
+      { label: 'White',            data: [13, 2, 0, 0, 5, 0], backgroundColor: '#B8973A', borderRadius: 3 },
+      { label: 'Rosé',             data: [8,  0, 0, 6, 0, 0], backgroundColor: '#C27A8A', borderRadius: 3 },
+      { label: 'Sparkling',        data: [2,  1, 0, 0, 0, 2], backgroundColor: '#e8d5b0', borderRadius: 3,
+        borderColor: '#B8973A', borderWidth: 1 },
+      { label: 'Generic/song ref', data: [25, 5, 0, 0, 0, 2], backgroundColor: '#e0d5c8', borderRadius: 3 }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'top', labels: { usePointStyle: true, padding: 14, font: { size: 11 } } } },
+    scales: {
+      x: { stacked: true, grid: { display: false }, ticks: { font: { size: 10 } } },
+      y: { stacked: true, grid: { color: '#f0e8dc' }, ticks: { stepSize: 5 } }
+    }
+  }
+});
+
+// ── Deutsch Family Chart ──
+new Chart(document.getElementById('deutschChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Mid-2023', 'July 2025'],
+    datasets: [{
+      label: '"Treat me / relax alone" occasions',
+      data: [14, 7],
+      backgroundColor: ['#C27A8A', '#5C1A2E'],
+      borderRadius: 6,
+      borderSkipped: false,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      y: { beginAtZero: true, max: 20,
+           ticks: { callback: v => v + '%' },
+           grid: { color: '#f0e8dc' } },
+      x: { grid: { display: false } }
+    }
+  }
+});
+</script>
+</body>
+</html>
