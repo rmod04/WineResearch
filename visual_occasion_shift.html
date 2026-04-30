@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wine Occasion Shift · Every Wine Has Its Moment</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --burgundy: #5C1A2E;
+    --burgundy-deep: #3D1020;
+    --cream: #F5ECD7;
+    --cream-dark: #EAD9BE;
+    --gold: #B8973A;
+    --gold-light: #D4B468;
+    --rose: #C27A8A;
+    --charcoal: #2C2C2C;
+    --mid: #7A5A64;
+    --light: #B09090;
+  }
+
+  body {
+    background: var(--cream);
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+  }
+
+  .card {
+    background: #fff;
+    border: 1px solid var(--cream-dark);
+    border-radius: 2px;
+    max-width: 680px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 4px 40px rgba(92,26,46,0.08);
+  }
+
+  .header {
+    background: var(--burgundy);
+    padding: 28px 32px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::after {
+    content: '';
+    position: absolute;
+    right: -20px; bottom: -20px;
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    border: 1px solid rgba(184,151,58,0.2);
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    right: 10px; bottom: 10px;
+    width: 70px; height: 70px;
+    border-radius: 50%;
+    border: 1px solid rgba(184,151,58,0.15);
+  }
+
+  .eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  .title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--cream);
+    line-height: 1.25;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    font-size: 11px;
+    font-weight: 400;
+    color: rgba(245,236,215,0.65);
+    line-height: 1.6;
+  }
+
+  .body {
+    padding: 28px 32px;
+  }
+
+  /* Stat pills */
+  .stats-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+
+  .stat-pill {
+    flex: 1;
+    min-width: 130px;
+    background: var(--cream);
+    border: 1px solid var(--cream-dark);
+    border-radius: 2px;
+    padding: 14px 16px;
+    cursor: default;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .stat-pill::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: var(--burgundy);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.3s ease;
+  }
+
+  .stat-pill:hover::before { transform: scaleY(1); }
+  .stat-pill:hover { background: #fdf8f2; border-color: var(--burgundy); }
+
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--burgundy);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .stat-label {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--mid);
+    line-height: 1.4;
+    letter-spacing: 0.3px;
+  }
+
+  /* Chart */
+  .chart-wrap {
+    position: relative;
+    height: 240px;
+    margin-bottom: 20px;
+  }
+
+  /* Toggle */
+  .toggle-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .toggle-btn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 7px 14px;
+    border: 1px solid var(--cream-dark);
+    background: transparent;
+    color: var(--mid);
+    cursor: pointer;
+    border-radius: 1px;
+    transition: all 0.2s ease;
+  }
+
+  .toggle-btn.active {
+    background: var(--burgundy);
+    color: var(--cream);
+    border-color: var(--burgundy);
+  }
+
+  .toggle-btn:hover:not(.active) {
+    border-color: var(--burgundy);
+    color: var(--burgundy);
+  }
+
+  /* Tooltip */
+  .custom-tooltip {
+    position: absolute;
+    background: var(--charcoal);
+    color: var(--cream);
+    padding: 10px 14px;
+    border-radius: 2px;
+    font-size: 11px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    z-index: 10;
+    min-width: 160px;
+    transform: translate(-50%, -110%);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+
+  .custom-tooltip.visible { opacity: 1; }
+
+  .tooltip-label {
+    font-weight: 600;
+    color: var(--gold-light);
+    margin-bottom: 4px;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .tooltip-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  .tooltip-desc {
+    font-size: 10px;
+    color: rgba(245,236,215,0.6);
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+
+  /* Annotation */
+  .annotation {
+    background: #fdf8f2;
+    border-left: 3px solid var(--gold);
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    font-size: 11px;
+    color: var(--mid);
+    line-height: 1.7;
+    font-style: italic;
+  }
+
+  .annotation strong { color: var(--burgundy); font-style: normal; font-weight: 600; }
+
+  /* Legend */
+  .legend {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--mid);
+    letter-spacing: 0.3px;
+  }
+
+  .legend-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .footer {
+    padding: 14px 32px;
+    border-top: 1px solid var(--cream-dark);
+    font-size: 9.5px;
+    color: var(--light);
+    font-style: italic;
+    letter-spacing: 0.2px;
+  }
+
+  @media (max-width: 480px) {
+    .header, .body { padding: 20px; }
+    .title { font-size: 20px; }
+    .stat-num { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="header">
+    <div class="eyebrow">Cork to Table · Data Insight</div>
+    <div class="title">From Solo Ritual<br>to Shared Moment</div>
+    <div class="subtitle">How wine drinking occasions have shifted<br>2023 → 2025 · Deutsch Family Wine & Spirits</div>
+  </div>
+
+  <div class="body">
+
+    <div class="stats-row">
+      <div class="stat-pill">
+        <div class="stat-num">−50%</div>
+        <div class="stat-label">Drop in solo/relax occasions over two years</div>
+      </div>
+      <div class="stat-pill">
+        <div class="stat-num">14→7%</div>
+        <div class="stat-label">"Treat me / relax alone" share of all wine occasions</div>
+      </div>
+      <div class="stat-pill">
+        <div class="stat-num">56,000</div>
+        <div class="stat-label">Survey responses across 7 waves, 2023–2025</div>
+      </div>
+    </div>
+
+    <div class="toggle-row">
+      <button class="toggle-btn active" onclick="setView('shift')">Occasion Shift</button>
+      <button class="toggle-btn" onclick="setView('compare')">Solo vs. Shared</button>
+    </div>
+
+    <div class="chart-wrap">
+      <canvas id="mainChart"></canvas>
+      <div class="custom-tooltip" id="tooltip">
+        <div class="tooltip-label" id="tt-label"></div>
+        <div class="tooltip-value" id="tt-value"></div>
+        <div class="tooltip-desc" id="tt-desc"></div>
+      </div>
+    </div>
+
+    <div class="annotation" id="annotation">
+      <strong>What this means:</strong> For the first time in 30 years, the #1 reason U.S. consumers choose wine is occasion — not relaxation. The solo drinking moment has halved. Wine is becoming social currency.
+    </div>
+
+    <div style="font-size:10px;color:#B09090;font-style:italic;margin-bottom:16px;">
+      ◦ Two confirmed data points shown (mid-2023 and July 2025). The connecting line is directional, not tracked data.
+    </div>
+
+    <div class="legend" id="legend">
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#5C1A2E"></div>
+        Solo / relax alone occasions
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#B8973A"></div>
+        WMC: Occasion as #1 driver
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    Source: Deutsch Family Wine & Spirits, 56,000 responses across 7 survey waves, mid-2023 to July 2025. Reported at Wine Market Council Conference, January 2026. · Every Wine Has Its Moment — Rohan Modwel, Cork to Table
+  </div>
+</div>
+
+<script>
+const ctx = document.getElementById('mainChart').getContext('2d');
+const tooltip = document.getElementById('tooltip');
+
+// Data
+// NOTE: Only two data points are confirmed in the source (mid-2023: 14%, Jul 2025: 7%).
+// The line between them is illustrative of direction only — not tracked intermediate data.
+const shiftData = {
+  labels: ['Mid 2023', 'Jul 2025'],
+  datasets: [
+    {
+      label: 'Solo / relax alone occasions',
+      data: [14, 7],
+      borderColor: '#5C1A2E',
+      backgroundColor: 'rgba(92,26,46,0.08)',
+      pointBackgroundColor: '#5C1A2E',
+      pointBorderColor: '#fff',
+      pointBorderWidth: 3,
+      pointRadius: 8,
+      pointHoverRadius: 11,
+      fill: true,
+      tension: 0.35,
+      borderWidth: 2.5,
+      borderDash: [],
+    },
+    {
+      label: 'Shared / couples moments (gained share)',
+      data: [6, 10.2],
+      borderColor: '#B8973A',
+      backgroundColor: 'rgba(184,151,58,0.06)',
+      pointBackgroundColor: '#B8973A',
+      pointBorderColor: '#fff',
+      pointBorderWidth: 3,
+      pointRadius: 8,
+      pointHoverRadius: 11,
+      fill: true,
+      tension: 0.35,
+      borderWidth: 2.5,
+    }
+  ]
+};
+
+const compareData = {
+  labels: ['Mid 2023', 'Jul 2025'],
+  datasets: [
+    {
+      label: 'Solo occasions',
+      data: [14, 7],
+      backgroundColor: ['rgba(92,26,46,0.2)', 'rgba(92,26,46,0.85)'],
+      borderColor: '#5C1A2E',
+      borderWidth: 1.5,
+      borderRadius: 2,
+    },
+    {
+      label: 'Shared occasions (gained share)',
+      data: [6, 10.2],
+      backgroundColor: ['rgba(184,151,58,0.2)', 'rgba(184,151,58,0.85)'],
+      borderColor: '#B8973A',
+      borderWidth: 1.5,
+      borderRadius: 2,
+    }
+  ]
+};
+
+const tooltipDescriptions = {
+  'Mid 2023': ['Solo occasions at 14% — 1 in 7 wine moments was solitary relaxation (confirmed, Deutsch Family)', 'Shared moments at lower base'],
+  'Jul 2025': ['Solo occasions at 7% — a 50% relative decline confirmed by Deutsch Family survey (56,000 responses)', 'Wine Market Council 2025 confirms: occasion is now the #1 driver of wine choice, first time in 30 years'],
+};
+
+let currentView = 'shift';
+let chart;
+
+function buildChart(type, data) {
+  if (chart) chart.destroy();
+
+  const isLine = type === 'line';
+
+  chart = new Chart(ctx, {
+    type: type,
+    data: data,
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { display: false },
+        tooltip: { enabled: false },
+      },
+      scales: {
+        x: {
+          grid: { color: 'rgba(92,26,46,0.05)', drawBorder: false },
+          ticks: {
+            font: { family: 'Montserrat', size: 9.5, weight: '500' },
+            color: '#B09090',
+            maxRotation: 0,
+          },
+          border: { display: false }
+        },
+        y: {
+          grid: { color: 'rgba(92,26,46,0.06)', drawBorder: false },
+          ticks: {
+            font: { family: 'Montserrat', size: 9.5 },
+            color: '#B09090',
+            callback: v => v + '%'
+          },
+          border: { display: false },
+          min: 0,
+          max: isLine ? 18 : 18,
+        }
+      },
+      onHover: (event, elements) => {
+        if (!elements.length) {
+          tooltip.classList.remove('visible');
+          return;
+        }
+        const el = elements[0];
+        const idx = el.index;
+        const label = data.labels[idx];
+        const val0 = data.datasets[0].data[idx];
+        const val1 = data.datasets[1]?.data[idx];
+        const descs = tooltipDescriptions[label] || ['',''];
+
+        document.getElementById('tt-label').textContent = label;
+        document.getElementById('tt-value').textContent = val0 + '%  →  ' + (val1 || '') + '%';
+        document.getElementById('tt-desc').textContent = descs[0];
+
+        const canvasRect = ctx.canvas.getBoundingClientRect();
+        const pt = chart.getDatasetMeta(0).data[idx];
+        tooltip.style.left = (pt.x) + 'px';
+        tooltip.style.top = (pt.y) + 'px';
+        tooltip.classList.add('visible');
+      }
+    }
+  });
+}
+
+function setView(view) {
+  currentView = view;
+  document.querySelectorAll('.toggle-btn').forEach((b,i) => {
+    b.classList.toggle('active', (i===0 && view==='shift') || (i===1 && view==='compare'));
+  });
+
+  const annotations = {
+    shift: '<strong>What this means:</strong> For the first time in 30 years, the #1 reason U.S. consumers choose wine is occasion — not relaxation. The solo drinking moment has halved. Wine is becoming social currency.',
+    compare: '<strong>Start vs. end:</strong> In just two years, solo relaxation occasions dropped from 14% to 7% of all wine moments — a 50% relative decline. Shared and celebration occasions filled the gap.'
+  };
+  document.getElementById('annotation').innerHTML = annotations[view];
+
+  if (view === 'shift') {
+    buildChart('line', shiftData);
+  } else {
+    buildChart('bar', compareData);
+  }
+}
+
+setView('shift');
+</script>
+</body>
+</html>
