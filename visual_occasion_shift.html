@@ -290,9 +290,8 @@
 
 <div class="card">
   <div class="header">
-    <div class="eyebrow">Cork to Table · Data Insight</div>
     <div class="title">From Solo Ritual<br>to Shared Moment</div>
-    <div class="subtitle">How wine drinking occasions have shifted<br>2023 → 2025 · Deutsch Family Wine & Spirits</div>
+    <div class="subtitle">How wine drinking occasions have shifted · 2023 → 2025</div>
   </div>
 
   <div class="body">
@@ -312,11 +311,6 @@
       </div>
     </div>
 
-    <div class="toggle-row">
-      <button class="toggle-btn active" onclick="setView('shift')">Occasion Shift</button>
-      <button class="toggle-btn" onclick="setView('compare')">Solo vs. Shared</button>
-    </div>
-
     <div class="chart-wrap">
       <canvas id="mainChart"></canvas>
       <div class="custom-tooltip" id="tooltip">
@@ -326,12 +320,8 @@
       </div>
     </div>
 
-    <div class="annotation" id="annotation">
-      <strong>What this means:</strong> For the first time in 30 years, the #1 reason U.S. consumers choose wine is occasion — not relaxation. The solo drinking moment has halved. Wine is becoming social currency.
-    </div>
-
-    <div style="font-size:10px;color:#B09090;font-style:italic;margin-bottom:16px;">
-      ◦ Two confirmed data points shown (mid-2023 and July 2025). The connecting line is directional, not tracked data.
+    <div class="annotation">
+      <strong>What this means:</strong> In just two years, solo relaxation occasions dropped from 14% to 7% of all wine moments — a 50% relative decline. For the first time in 30 years, occasion, not relaxation, is the #1 reason U.S. consumers choose wine.
     </div>
 
     <div class="legend" id="legend">
@@ -341,14 +331,14 @@
       </div>
       <div class="legend-item">
         <div class="legend-dot" style="background:#B8973A"></div>
-        WMC: Occasion as #1 driver
+        Shared / couples occasions
       </div>
     </div>
 
   </div>
 
   <div class="footer">
-    Source: Deutsch Family Wine & Spirits, 56,000 responses across 7 survey waves, mid-2023 to July 2025. Reported at Wine Market Council Conference, January 2026. · Every Wine Has Its Moment — Rohan Modwel, Cork to Table
+    Source: Deutsch Family Wine & Spirits, 56,000 responses across 7 survey waves, mid-2023 to July 2025. Reported at Wine Market Council Conference, January 2026.
   </div>
 </div>
 
@@ -356,59 +346,21 @@
 const ctx = document.getElementById('mainChart').getContext('2d');
 const tooltip = document.getElementById('tooltip');
 
-// Data
-// NOTE: Only two data points are confirmed in the source (mid-2023: 14%, Jul 2025: 7%).
-// The line between them is illustrative of direction only — not tracked intermediate data.
-const shiftData = {
+const chartData = {
   labels: ['Mid 2023', 'Jul 2025'],
   datasets: [
     {
-      label: 'Solo / relax alone occasions',
+      label: 'Solo / relax alone',
       data: [14, 7],
-      borderColor: '#5C1A2E',
-      backgroundColor: 'rgba(92,26,46,0.08)',
-      pointBackgroundColor: '#5C1A2E',
-      pointBorderColor: '#fff',
-      pointBorderWidth: 3,
-      pointRadius: 8,
-      pointHoverRadius: 11,
-      fill: true,
-      tension: 0.35,
-      borderWidth: 2.5,
-      borderDash: [],
-    },
-    {
-      label: 'Shared / couples moments (gained share)',
-      data: [6, 10.2],
-      borderColor: '#B8973A',
-      backgroundColor: 'rgba(184,151,58,0.06)',
-      pointBackgroundColor: '#B8973A',
-      pointBorderColor: '#fff',
-      pointBorderWidth: 3,
-      pointRadius: 8,
-      pointHoverRadius: 11,
-      fill: true,
-      tension: 0.35,
-      borderWidth: 2.5,
-    }
-  ]
-};
-
-const compareData = {
-  labels: ['Mid 2023', 'Jul 2025'],
-  datasets: [
-    {
-      label: 'Solo occasions',
-      data: [14, 7],
-      backgroundColor: ['rgba(92,26,46,0.2)', 'rgba(92,26,46,0.85)'],
+      backgroundColor: ['rgba(92,26,46,0.25)', 'rgba(92,26,46,0.88)'],
       borderColor: '#5C1A2E',
       borderWidth: 1.5,
       borderRadius: 2,
     },
     {
-      label: 'Shared occasions (gained share)',
+      label: 'Shared / couples',
       data: [6, 10.2],
-      backgroundColor: ['rgba(184,151,58,0.2)', 'rgba(184,151,58,0.85)'],
+      backgroundColor: ['rgba(184,151,58,0.25)', 'rgba(184,151,58,0.88)'],
       borderColor: '#B8973A',
       borderWidth: 1.5,
       borderRadius: 2,
@@ -417,97 +369,61 @@ const compareData = {
 };
 
 const tooltipDescriptions = {
-  'Mid 2023': ['Solo occasions at 14% — 1 in 7 wine moments was solitary relaxation (confirmed, Deutsch Family)', 'Shared moments at lower base'],
-  'Jul 2025': ['Solo occasions at 7% — a 50% relative decline confirmed by Deutsch Family survey (56,000 responses)', 'Wine Market Council 2025 confirms: occasion is now the #1 driver of wine choice, first time in 30 years'],
+  'Mid 2023': { solo: '14% of wine moments — solo relaxation', shared: '6% shared & couples occasions' },
+  'Jul 2025': { solo: '7% — halved in two years', shared: '10.2% — occasions filling the gap' },
 };
 
-let currentView = 'shift';
-let chart;
-
-function buildChart(type, data) {
-  if (chart) chart.destroy();
-
-  const isLine = type === 'line';
-
-  chart = new Chart(ctx, {
-    type: type,
-    data: data,
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      interaction: { mode: 'index', intersect: false },
-      plugins: {
-        legend: { display: false },
-        tooltip: { enabled: false },
+const chart = new Chart(ctx, {
+  type: 'bar',
+  data: chartData,
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    interaction: { mode: 'index', intersect: false },
+    plugins: {
+      legend: { display: false },
+      tooltip: { enabled: false },
+    },
+    scales: {
+      x: {
+        grid: { color: 'rgba(92,26,46,0.05)', drawBorder: false },
+        ticks: { font: { family: 'Montserrat', size: 9.5, weight: '500' }, color: '#B09090', maxRotation: 0 },
+        border: { display: false }
       },
-      scales: {
-        x: {
-          grid: { color: 'rgba(92,26,46,0.05)', drawBorder: false },
-          ticks: {
-            font: { family: 'Montserrat', size: 9.5, weight: '500' },
-            color: '#B09090',
-            maxRotation: 0,
-          },
-          border: { display: false }
-        },
-        y: {
-          grid: { color: 'rgba(92,26,46,0.06)', drawBorder: false },
-          ticks: {
-            font: { family: 'Montserrat', size: 9.5 },
-            color: '#B09090',
-            callback: v => v + '%'
-          },
-          border: { display: false },
-          min: 0,
-          max: isLine ? 18 : 18,
-        }
-      },
-      onHover: (event, elements) => {
-        if (!elements.length) {
-          tooltip.classList.remove('visible');
-          return;
-        }
-        const el = elements[0];
-        const idx = el.index;
-        const label = data.labels[idx];
-        const val0 = data.datasets[0].data[idx];
-        const val1 = data.datasets[1]?.data[idx];
-        const descs = tooltipDescriptions[label] || ['',''];
-
-        document.getElementById('tt-label').textContent = label;
-        document.getElementById('tt-value').textContent = val0 + '%  →  ' + (val1 || '') + '%';
-        document.getElementById('tt-desc').textContent = descs[0];
-
-        const canvasRect = ctx.canvas.getBoundingClientRect();
-        const pt = chart.getDatasetMeta(0).data[idx];
-        tooltip.style.left = (pt.x) + 'px';
-        tooltip.style.top = (pt.y) + 'px';
-        tooltip.classList.add('visible');
+      y: {
+        grid: { color: 'rgba(92,26,46,0.06)', drawBorder: false },
+        ticks: { font: { family: 'Montserrat', size: 9.5 }, color: '#B09090', callback: v => v + '%' },
+        border: { display: false },
+        min: 0, max: 18,
       }
+    },
+    onHover: (event, elements) => {
+      if (!elements.length) { tooltip.classList.remove('visible'); return; }
+      const idx = elements[0].index;
+      const label = chartData.labels[idx];
+      const d = tooltipDescriptions[label];
+
+      document.getElementById('tt-label').textContent = label;
+      document.getElementById('tt-value').textContent =
+        chartData.datasets[0].data[idx] + '%  ·  ' + chartData.datasets[1].data[idx] + '%';
+      document.getElementById('tt-desc').textContent = d.solo + ' / ' + d.shared;
+
+      const canvasRect = ctx.canvas.getBoundingClientRect();
+      const pt = chart.getDatasetMeta(0).data[idx];
+      const cardRect = ctx.canvas.closest('.card').getBoundingClientRect();
+
+      // Keep tooltip within card horizontally
+      let left = pt.x;
+      const ttWidth = 180;
+      if (pt.x - ttWidth / 2 < 4) left = ttWidth / 2 + 4;
+      if (pt.x + ttWidth / 2 > canvasRect.width - 4) left = canvasRect.width - ttWidth / 2 - 4;
+
+      tooltip.style.left = left + 'px';
+      tooltip.style.top = (pt.y - 8) + 'px';
+      tooltip.classList.add('visible');
     }
-  });
-}
-
-function setView(view) {
-  currentView = view;
-  document.querySelectorAll('.toggle-btn').forEach((b,i) => {
-    b.classList.toggle('active', (i===0 && view==='shift') || (i===1 && view==='compare'));
-  });
-
-  const annotations = {
-    shift: '<strong>What this means:</strong> For the first time in 30 years, the #1 reason U.S. consumers choose wine is occasion — not relaxation. The solo drinking moment has halved. Wine is becoming social currency.',
-    compare: '<strong>Start vs. end:</strong> In just two years, solo relaxation occasions dropped from 14% to 7% of all wine moments — a 50% relative decline. Shared and celebration occasions filled the gap.'
-  };
-  document.getElementById('annotation').innerHTML = annotations[view];
-
-  if (view === 'shift') {
-    buildChart('line', shiftData);
-  } else {
-    buildChart('bar', compareData);
   }
-}
-
-setView('shift');
+});
 </script>
 </body>
 </html>
