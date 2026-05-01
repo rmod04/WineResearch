@@ -39,7 +39,6 @@
   .header {
     background: var(--burgundy);
     padding: 30px 36px 26px;
-    margin-bottom: 0;
     position: relative;
     overflow: hidden;
   }
@@ -53,15 +52,6 @@
     color: rgba(184,151,58,0.12);
     line-height: 1;
     pointer-events: none;
-  }
-
-  .eyebrow {
-    font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 10px;
   }
 
   .title {
@@ -119,8 +109,8 @@
   /* Controls */
   .controls {
     display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 8px;
+    margin-bottom: 8px;
     flex-wrap: wrap;
     align-items: center;
   }
@@ -160,33 +150,51 @@
     color: var(--burgundy);
   }
 
+  /* Sort row */
+  .sort-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .sort-label {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--mid);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    flex-shrink: 0;
+  }
+
   .sort-btn {
-    margin-left: auto;
     font-family: 'Montserrat', sans-serif;
     font-size: 10px;
     font-weight: 500;
     letter-spacing: 0.5px;
-    padding: 7px 14px;
+    padding: 6px 13px;
     border: 1px solid var(--cream-dark);
     background: transparent;
     color: var(--mid);
     cursor: pointer;
     border-radius: 1px;
     transition: all 0.2s ease;
-    display: flex;
-    align-items: center;
-    gap: 5px;
   }
 
-  .sort-btn:hover { border-color: var(--gold); color: var(--burgundy); }
-  .sort-btn span { font-size: 11px; }
+  .sort-btn.active {
+    background: var(--charcoal);
+    color: var(--cream);
+    border-color: var(--charcoal);
+  }
+
+  .sort-btn:hover:not(.active) { border-color: var(--gold); color: var(--burgundy); }
 
   /* Cards grid */
   .grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
   .card {
@@ -194,33 +202,10 @@
     border: 1px solid var(--cream-dark);
     border-left: 3px solid var(--cream-dark);
     padding: 18px 20px;
-    cursor: pointer;
-    transition: all 0.22s ease;
-    position: relative;
-    overflow: hidden;
+    transition: border-left-color 0.2s ease;
   }
 
-  .card::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--burgundy), var(--gold));
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
-  }
-
-  .card:hover {
-    border-color: var(--rose);
-    border-left-color: var(--burgundy);
-    box-shadow: 0 4px 20px rgba(92,26,46,0.08);
-    transform: translateY(-1px);
-  }
-
-  .card:hover::after { transform: scaleX(1); }
-  .card.expanded { border-left-color: var(--burgundy); background: #fdf9f4; }
-  .card.expanded::after { transform: scaleX(1); }
+  .card:hover { border-left-color: var(--rose); }
 
   .card-top {
     display: flex;
@@ -272,13 +257,6 @@
     line-height: 1.6;
   }
 
-  .quote-text.truncated {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
   .thread-info {
     margin-top: 10px;
     font-size: 9.5px;
@@ -286,6 +264,7 @@
     display: flex;
     align-items: center;
     gap: 6px;
+    flex-wrap: wrap;
   }
 
   .thread-info::before {
@@ -294,59 +273,27 @@
     color: var(--rose);
   }
 
-  .expand-indicator {
-    font-size: 9px;
-    font-weight: 600;
-    color: var(--mid);
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    margin-top: 8px;
-    transition: color 0.2s;
-  }
-
-  .card:hover .expand-indicator { color: var(--burgundy); }
-  .card.expanded .expand-indicator { color: var(--burgundy); }
-
-  /* Context panel (shown on expand) */
-  .context-panel {
-    margin-top: 14px;
-    padding-top: 14px;
-    border-top: 1px solid var(--cream-dark);
-    display: none;
-    animation: fadeIn 0.2s ease;
-  }
-
-  .card.expanded .context-panel { display: block; }
-
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(4px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .context-label {
-    font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 8px;
-  }
-
-  .context-text {
-    font-size: 11.5px;
-    color: var(--mid);
-    line-height: 1.7;
-  }
-
-  .context-thread {
-    margin-top: 10px;
-    padding: 8px 12px;
+  .date-tag {
     background: var(--bg);
     border: 1px solid var(--cream-dark);
+    padding: 1px 6px;
+    font-size: 8.5px;
+    font-weight: 600;
+    color: var(--mid);
+    letter-spacing: 0.3px;
+    margin-left: auto;
+  }
+
+  /* Count bar */
+  .count-bar {
     font-size: 10px;
     color: var(--light);
-    font-style: italic;
+    margin-bottom: 14px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
   }
+
+  .count-bar strong { color: var(--burgundy); }
 
   /* Empty state */
   .empty {
@@ -358,21 +305,56 @@
     display: none;
   }
 
-  /* Count */
-  .count-bar {
-    font-size: 10px;
-    color: var(--light);
-    margin-bottom: 14px;
-    font-weight: 500;
-    letter-spacing: 0.3px;
+  /* Category insight panel */
+  .category-insight {
+    background: var(--cream);
+    border: 1px solid var(--cream-dark);
+    border-top: 3px solid var(--gold);
+    padding: 18px 22px 20px;
+    margin-bottom: 0;
+    display: none;
   }
 
-  .count-bar strong { color: var(--burgundy); }
+  .insight-header {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+
+  .insight-pills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 10px;
+  }
+
+  .insight-pill {
+    background: #fff;
+    border: 1px solid var(--cream-dark);
+    padding: 13px 15px;
+  }
+
+  .insight-pill-title {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--burgundy);
+    letter-spacing: 0.3px;
+    margin-bottom: 6px;
+  }
+
+  .insight-pill-text {
+    font-size: 11px;
+    color: var(--mid);
+    line-height: 1.65;
+  }
 
   /* Footer */
   .footer {
     border-top: 1px solid var(--cream-dark);
     padding-top: 14px;
+    margin-top: 20px;
     font-size: 9.5px;
     color: var(--light);
     font-style: italic;
@@ -385,6 +367,7 @@
     .strip-stat { min-width: 45%; margin-bottom: 8px; border-right: none; }
     .upvote-num { font-size: 22px; }
     .quote-text { font-size: 14px; }
+    .insight-pills-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -417,21 +400,29 @@
   </div>
 
   <div class="controls">
-    <span class="controls-label">Filter by</span>
-    <button class="filter-btn active" onclick="filter('all')">All voices</button>
-    <button class="filter-btn" onclick="filter('S1')">Social anchor</button>
-    <button class="filter-btn" onclick="filter('S3')">Seasonal instinct</button>
-    <button class="filter-btn" onclick="filter('S4')">Holiday effect</button>
-    <button class="filter-btn" onclick="filter('S5')">Palate evolution</button>
-    <button class="sort-btn" onclick="toggleSort()">
-      Sort <span id="sort-icon">↓</span> <span id="sort-label">upvotes</span>
-    </button>
+    <span class="controls-label">Filter</span>
+    <button class="filter-btn active" onclick="setFilter('all', this)">All voices</button>
+    <button class="filter-btn" onclick="setFilter('S1', this)">Social anchor</button>
+    <button class="filter-btn" onclick="setFilter('S3', this)">Seasonal instinct</button>
+    <button class="filter-btn" onclick="setFilter('S4', this)">Holiday effect</button>
+    <button class="filter-btn" onclick="setFilter('S5', this)">Palate evolution</button>
   </div>
 
-  <div class="count-bar" id="count-bar">Showing <strong>13</strong> voices</div>
+  <div class="sort-row">
+    <span class="sort-label">Sort</span>
+    <button class="sort-btn active" onclick="setSort('score', this)">↓ Upvotes</button>
+    <button class="sort-btn" onclick="setSort('date', this)">↓ Most recent</button>
+  </div>
+
+  <div class="count-bar" id="count-bar">Showing <strong>19</strong> voices</div>
 
   <div class="grid" id="grid"></div>
   <div class="empty" id="empty">No voices match this filter.</div>
+
+  <div class="category-insight" id="category-insight">
+    <div class="insight-header" id="insight-header"></div>
+    <div class="insight-pills-grid" id="insight-pills"></div>
+  </div>
 
   <div class="footer">
     Source: 452 Reddit comments across 17 r/wine threads, April 2026. Quotes attributed generically as r/wine; upvote counts as recorded at time of collection.
@@ -447,8 +438,7 @@ const QUOTES = [
     sectionLabel: 'Holiday Effect',
     text: 'Being in the moment elevates everything.',
     thread: 'Why does wine always taste better at the winery?',
-    context: 'The most upvoted comment in the entire dataset. It answers the question about the holiday wine effect with a simplicity that no academic study can match. Being present — psychologically, emotionally, situationally — is the mechanism. Everything else (the setting, the company, the preparation) is just scaffolding around that central truth.',
-    articleSection: 'Used in: Why Your Wine Tastes Different on Holiday'
+    created_at: '2026-04-14T01:47:37+00:00',
   },
   {
     score: 198,
@@ -456,17 +446,15 @@ const QUOTES = [
     sectionLabel: 'Palate Evolution',
     text: 'There is no such thing as a special occasion. The bottle is the occasion.',
     thread: 'How have your opinions on wine changed over your lifetime?',
-    context: 'The article\'s closing quote. This comment collapses the entire idea of "saving wine for the right moment" — and lands perfectly against the Wine Market Council data showing occasion is now the #1 driver of wine choice. The palate evolves, the philosophy simplifies: stop waiting, the moment is now.',
-    articleSection: 'Used in: Is There Really a \'Perfect\' Glass? (conclusion)'
+    created_at: '2024-11-08T03:22:11+00:00',
   },
   {
     score: 119,
     section: 'S4',
     sectionLabel: 'Holiday Effect',
     text: 'A lot of the enjoyment of wine is in the context. La Tâche doesn\'t hit the same when you\'re drinking it with assholes.',
-    thread: 'Does wine taste better when drinking with company?',
-    context: 'Company is the third mechanism of the holiday wine effect. This comment makes the point with more precision and humour than any research paper could. The wine stays the same; the company determines whether it sings or sits flat. Applies equally to a €5 house wine in Tuscany as to a €3,000 bottle of Burgundy.',
-    articleSection: 'Used in: Four mechanisms at play (Mechanism 3)'
+    thread: 'Does wine taste better with company?',
+    created_at: '2026-04-14T01:46:21+00:00',
   },
   {
     score: 114,
@@ -474,8 +462,7 @@ const QUOTES = [
     sectionLabel: 'Holiday Effect',
     text: 'You might be tasting a wine that was opened early in the day and has had time to slow oxidise and really open up before it\'s poured for you.',
     thread: 'Why does wine always taste better at the winery?',
-    context: 'The fourth mechanism: the wine itself is often literally better prepared. Wineries open bottles early, let them breathe, serve at correct temperature, use proper stemware. Most of these steps get skipped at home. The holiday experience is partly the experience of wine treated with care.',
-    articleSection: 'Used in: Four mechanisms at play (Mechanism 4)'
+    created_at: '2026-04-14T02:03:14+00:00',
   },
   {
     score: 80,
@@ -483,8 +470,7 @@ const QUOTES = [
     sectionLabel: 'Palate Evolution',
     text: 'I can\'t be bothered with anything with too much oak. I feel like I can tell when it\'s being amped up to disguise shortcomings now.',
     thread: 'How have your opinions on wine changed over your lifetime?',
-    context: 'Oak scepticism is one of the most consistent signals of palate evolution across the dataset. As drinkers gain experience, they become less impressed by heavy extraction and more alert to what\'s hiding beneath it. The palate learns to read the wine rather than be seduced by it.',
-    articleSection: 'Used in: Wine Changes Characteristics Over Time'
+    created_at: '2024-11-08T04:15:22+00:00',
   },
   {
     score: 66,
@@ -492,8 +478,15 @@ const QUOTES = [
     sectionLabel: 'Palate Evolution',
     text: 'Wine for me has become a means of understanding agricultural practice and the relationships between farmers and the earth they tend to. Those moments where you really tap into that energy are totally electric.',
     thread: 'How have your opinions on wine changed over your lifetime?',
-    context: 'The evolution endpoint: wine as a lens on place and practice, not just flavour. This mirrors the shift in the OIV data from red-dominant to terroir-expressive lighter styles. When the palate matures, the glass becomes a way of understanding the world rather than just enjoying it.',
-    articleSection: 'Used in: Wine Changes Characteristics Over Time'
+    created_at: '2024-11-08T09:44:33+00:00',
+  },
+  {
+    score: 46,
+    section: 'S4',
+    sectionLabel: 'Holiday Effect',
+    text: 'Actually yes. Because they usually have a story with it and can describe what you\'re tasting. Very special experience.',
+    thread: 'Why does wine always taste better at the winery?',
+    created_at: '2025-05-10T12:36:12+00:00',
   },
   {
     score: 46,
@@ -501,8 +494,7 @@ const QUOTES = [
     sectionLabel: 'Holiday Effect',
     text: 'This reminds me of all the people waxing poetic about the wine in Italy or Spain when you know it\'s just €5 house wine and holiday vibes.',
     thread: 'Why does wine always taste better at the winery?',
-    context: 'The self-aware observer. This voice knows the effect is real and is wry about it — but crucially, doesn\'t dismiss it. The €5 house wine genuinely tasted extraordinary. The mechanism doesn\'t make the experience less real; it just explains why the same bottle at home might disappoint.',
-    articleSection: 'Used as opening quote: Why Your Wine Tastes Different on Holiday'
+    created_at: '2026-04-14T05:12:40+00:00',
   },
   {
     score: 44,
@@ -510,8 +502,23 @@ const QUOTES = [
     sectionLabel: 'Social Anchor',
     text: 'Wine tastes better when you are having a good time.',
     thread: 'Why does wine always taste better at the winery?',
-    context: 'The distilled version of the entire article\'s thesis. No qualifiers, no mechanisms, no caveats. This is the consumer voice confirming the WMC 2025 data — occasion is the driver, and the occasion is defined by the mood.',
-    articleSection: 'Used as opening quote: It Depends. (And That\'s the Point.)'
+    created_at: '2025-05-10T12:03:15+00:00',
+  },
+  {
+    score: 24,
+    section: 'S3',
+    sectionLabel: 'Seasonal Instinct',
+    text: 'Rosé or Vinho Verde.',
+    thread: 'Best wine for summer?',
+    created_at: '2024-08-15T15:36:05+00:00',
+  },
+  {
+    score: 23,
+    section: 'S4',
+    sectionLabel: 'Holiday Effect',
+    text: 'Theory I have: it\'s often the temperature of the wine. Too often at home people are drinking reds at room temp rather than trying to get them to ~57°F before drinking.',
+    thread: 'Why does wine always taste better at the winery?',
+    created_at: '2026-04-14T02:22:05+00:00',
   },
   {
     score: 22,
@@ -519,8 +526,7 @@ const QUOTES = [
     sectionLabel: 'Holiday Effect',
     text: 'Wineries invest a lot of time and money into immersive tasting experiences. There are so many itty bitty factors contributing to you drinking that first glass.',
     thread: 'Why does wine always taste better at the winery?',
-    context: 'The structural explanation of the winery effect. This voice catalogues what the winery has engineered: beautiful venue, guided tasting, great conversation, proper stemware, breathed wine. It\'s not magic — it\'s design. And it works.',
-    articleSection: 'Used in: Four mechanisms at play (Mechanism 4)'
+    created_at: '2026-04-14T01:49:57+00:00',
   },
   {
     score: 15,
@@ -528,17 +534,39 @@ const QUOTES = [
     sectionLabel: 'Palate Evolution',
     text: 'I used to drink almost entirely reds. At the moment, I likely drink way more whites. I used to seek out the most intense fruit bombs I could find. Now I like funky flavours and subtlety as well.',
     thread: 'How have your opinions on wine changed over your lifetime?',
-    context: 'A clean articulation of the palate evolution arc: from intensity to subtlety, from reds to whites, from fruit bombs to terroir. This single voice captures the direction seen consistently across the dataset, and mirrors the OIV global data showing red decline and white/rosé growth.',
-    articleSection: 'Used in: Wine Changes Characteristics Over Time'
+    created_at: '2024-11-08T11:02:44+00:00',
+  },
+  {
+    score: 11,
+    section: 'S3',
+    sectionLabel: 'Seasonal Instinct',
+    text: 'Ameztoi Txakolina or the Ameztoi Rubentis Rosé. Both with a good chill kept me alive in the hot and humid summers of Boston.',
+    thread: 'Best wine for summer?',
+    created_at: '2024-08-15T16:13:57+00:00',
   },
   {
     score: 8,
     section: 'S3',
     sectionLabel: 'Seasonal Instinct',
-    text: 'For the most part it will be based on my seasonal cooking habits. In summer I eat more salad and grill more. In winter I do more roasting and braising. Therefore I find myself drinking crisp whites in summer, whereas in winter I lean towards richer whites and more complex reds. Of course, when it all comes down to it, I drink whatever the hell I want, whenever the hell I want!',
+    text: 'For the most part it will be based on my seasonal cooking habits. In the summer I eat more salad and grill more. In winter I do more roasting and braising. Therefore I find myself drinking crisp whites in summer, whereas in winter I lean towards richer whites and more complex reds. Of course, when it all comes down to it, I drink whatever the hell I want, whenever the hell I want!',
     thread: 'Which wines do you associate with the seasons?',
-    context: 'The critical nuance in one comment: the seasonal instinct is real and grounded in behaviour (cooking habits, not wine rules), but it ends with full personal sovereignty. "I drink whatever the hell I want" is not a caveat — it is the argument. The pattern exists; so does the freedom to ignore it.',
-    articleSection: 'Used in: The Seasonal Instinct'
+    created_at: '2022-02-26T17:41:18+00:00',
+  },
+  {
+    score: 5,
+    section: 'S3',
+    sectionLabel: 'Seasonal Instinct',
+    text: 'Summer: rosé or Grüner. Fall: Zweigelt. Winter: Zin, Cab or Barolo. Spring: Sauvignon Blanc.',
+    thread: 'Which wines do you associate with the seasons?',
+    created_at: '2022-02-26T11:00:39+00:00',
+  },
+  {
+    score: 4,
+    section: 'S3',
+    sectionLabel: 'Seasonal Instinct',
+    text: 'Giuseppe Attanasio Primitivo di Manduria. Pairs great with a fireplace or bonfire, blankets, and good company.',
+    thread: 'Best wine for a cold winter night?',
+    created_at: '2022-12-23T05:38:43+00:00',
   },
   {
     score: 1,
@@ -546,8 +574,7 @@ const QUOTES = [
     sectionLabel: 'Seasonal Instinct',
     text: 'Winter is Barolo and traditionalist southern Rhône. Spring is Cru Beaujolais. Summer is Tavel/Bandol Rosés and German whites. Fall is Bordeaux for days.',
     thread: 'Which wines do you associate with the seasons?',
-    context: 'A seasonal taxonomy stated with complete confidence and specificity. Notice the grammar: "Winter IS Barolo" — not "I drink Barolo in winter." The seasonal instinct isn\'t experienced as a preference; it\'s experienced as a fact of nature.',
-    articleSection: 'Used in: The Seasonal Instinct'
+    created_at: '2022-02-26T18:06:36+00:00',
   },
   {
     score: 1,
@@ -555,45 +582,113 @@ const QUOTES = [
     sectionLabel: 'Seasonal Instinct',
     text: 'Pinot has always felt like a great fall wine to me. Chardonnay feels like spring. Summer is built for Rosé, and Winter is where the biggest red isn\'t big enough. But mostly I just drink all the good wines all the time.',
     thread: 'Which wines do you associate with the seasons?',
-    context: 'Another version of the sovereign qualifier: clear seasonal mapping followed by "but mostly I just drink all the good wines all the time." The seasonal instinct is real and deeply felt — and immediately overridden by personal will. That tension is the article.',
-    articleSection: 'Used in: The Seasonal Instinct'
+    created_at: '2022-02-28T20:02:42+00:00',
   },
 ];
 
-const sectionColors = {
+const SECTION_COLORS = {
   S1: { bg: '#5C1A2E', text: '#F5ECD7' },
   S3: { bg: '#B8973A', text: '#2C2C2C' },
   S4: { bg: '#C27A8A', text: '#2C2C2C' },
   S5: { bg: '#7A5A64', text: '#F5ECD7' },
 };
 
+const CATEGORY_INSIGHTS = {
+  S1: {
+    label: 'Social Anchor — what the data shows',
+    pills: [
+      {
+        title: 'The thesis, distilled',
+        text: '"Wine tastes better when you are having a good time." 44 upvotes, no dissent. The WMC formalised this in 2025 — occasion is now the #1 driver of wine choice in the US, for the first time in 30 years.'
+      },
+      {
+        title: 'Occasion as mechanism',
+        text: 'This voice didn\'t describe the wine. It described the conditions. That\'s the shift the article is tracking: when the moment is right, the bottle almost doesn\'t matter.'
+      }
+    ]
+  },
+  S3: {
+    label: 'Seasonal Instinct — what the data shows',
+    pills: [
+      {
+        title: 'The pattern is real',
+        text: 'Seasonal habits emerge from behaviour, not wine rules. Summer salads and grilling drive whites; winter roasting and braising pull toward reds. The instinct is grounded in cooking and ritual.'
+      },
+      {
+        title: 'So is the sovereignty',
+        text: 'Every seasonal voice in the dataset ends with a caveat. "I drink whatever the hell I want" is not a contradiction — it is the central argument. Preference is valid; so is overriding it.'
+      },
+      {
+        title: 'Grammar reveals the feeling',
+        text: '"Winter IS Barolo" — not "I drink Barolo in winter." The seasonal instinct isn\'t experienced as preference; it\'s experienced as a fact of nature. That is how deep the association runs.'
+      }
+    ]
+  },
+  S4: {
+    label: 'Holiday Effect — what the data shows',
+    pills: [
+      {
+        title: 'Four mechanisms, one experience',
+        text: 'Vacation mindset. Company. Wine preparation. Setting. All four compound simultaneously. The €5 house wine in Tuscany gets every advantage at once; the same bottle at home gets none.'
+      },
+      {
+        title: 'The dataset\'s highest upvote',
+        text: '"Being in the moment elevates everything." — 219 upvotes. Presence is the mechanism. Everything else — the setting, the company, the bottle — is scaffolding around that central truth.'
+      },
+      {
+        title: 'Design, not magic',
+        text: 'Wineries engineer the experience: story, setting, correct temperature, proper stemware, guided conversation. It works. And unlike the holiday, the conditions can be reproduced at home.'
+      }
+    ]
+  },
+  S5: {
+    label: 'Palate Evolution — what the data shows',
+    pills: [
+      {
+        title: 'The arc is consistent',
+        text: 'Intensity → subtlety. Reds → whites. Fruit bombs → terroir. The pattern holds across all four voices: the palate learns to read the wine rather than be seduced by it.'
+      },
+      {
+        title: 'Mirrors the OIV data',
+        text: 'Individual palate evolution here tracks exactly with global consumption shifts — red decline, white and rosé growth, lighter and more expressive styles winning globally. The personal is the global.'
+      },
+      {
+        title: 'The closing argument',
+        text: '"There is no such thing as a special occasion. The bottle is the occasion." — 198 upvotes. The palate evolves until the waiting stops. This is where the article ends.'
+      }
+    ]
+  }
+};
+
 let currentFilter = 'all';
-let sortAsc = false;
-let expandedCard = null;
+let currentSort = 'score';
+
+function formatDate(iso) {
+  const d = new Date(iso);
+  return d.toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
+}
 
 function getFiltered() {
   let data = currentFilter === 'all' ? [...QUOTES] : QUOTES.filter(q => q.section === currentFilter);
-  data.sort((a, b) => sortAsc ? a.score - b.score : b.score - a.score);
+  if (currentSort === 'score') {
+    data.sort((a, b) => b.score - a.score || new Date(b.created_at) - new Date(a.created_at));
+  } else {
+    data.sort((a, b) => new Date(b.created_at) - new Date(a.created_at) || b.score - a.score);
+  }
   return data;
 }
 
-function toggleSort() {
-  sortAsc = !sortAsc;
-  document.getElementById('sort-icon').textContent = sortAsc ? '↑' : '↓';
-  document.getElementById('sort-label').textContent = sortAsc ? 'ascending' : 'upvotes';
+function setSort(s, btn) {
+  currentSort = s;
+  document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
   render();
 }
 
-function filter(f) {
+function setFilter(f, btn) {
   currentFilter = f;
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  event.target.classList.add('active');
-  expandedCard = null;
-  render();
-}
-
-function toggleCard(idx) {
-  expandedCard = expandedCard === idx ? null : idx;
+  btn.classList.add('active');
   render();
 }
 
@@ -602,24 +697,25 @@ function render() {
   const grid = document.getElementById('grid');
   const empty = document.getElementById('empty');
   const countBar = document.getElementById('count-bar');
+  const insightPanel = document.getElementById('category-insight');
+  const insightHeader = document.getElementById('insight-header');
+  const insightPills = document.getElementById('insight-pills');
+
+  countBar.innerHTML = `Showing <strong>${data.length}</strong> voice${data.length !== 1 ? 's' : ''}`;
 
   if (data.length === 0) {
     grid.innerHTML = '';
     empty.style.display = 'block';
-    countBar.innerHTML = 'Showing <strong>0</strong> voices';
+    insightPanel.style.display = 'none';
     return;
   }
 
   empty.style.display = 'none';
-  countBar.innerHTML = `Showing <strong>${data.length}</strong> voice${data.length !== 1 ? 's' : ''}`;
 
-  grid.innerHTML = data.map((q, i) => {
-    const isExpanded = expandedCard === i;
-    const col = sectionColors[q.section] || { bg: '#5C1A2E', text: '#F5ECD7' };
-    const truncated = q.text.length > 120;
-
+  grid.innerHTML = data.map(q => {
+    const col = SECTION_COLORS[q.section] || { bg: '#5C1A2E', text: '#F5ECD7' };
     return `
-      <div class="card ${isExpanded ? 'expanded' : ''}" onclick="toggleCard(${i})">
+      <div class="card">
         <div class="card-top">
           <div class="upvote-badge">
             <span class="upvote-num">${q.score}</span>
@@ -629,18 +725,28 @@ function render() {
             <span class="section-tag" style="background:${col.bg};color:${col.text};padding:2px 8px;border-radius:1px;">
               ${q.sectionLabel}
             </span>
-            <div class="quote-text ${isExpanded ? '' : 'truncated'}">${q.text}</div>
-            <div class="thread-info">· ${q.thread}</div>
-            ${!isExpanded ? `<div class="expand-indicator">Click to expand ↓</div>` : `<div class="expand-indicator" style="color:var(--burgundy)">Click to collapse ↑</div>`}
+            <div class="quote-text">${q.text}</div>
+            <div class="thread-info">
+              · ${q.thread}
+              <span class="date-tag">${formatDate(q.created_at)}</span>
+            </div>
           </div>
-        </div>
-        <div class="context-panel">
-          <div class="context-label">Editorial context</div>
-          <div class="context-text">${q.context}</div>
-          <div class="context-thread">${q.articleSection}</div>
         </div>
       </div>`;
   }).join('');
+
+  const insight = CATEGORY_INSIGHTS[currentFilter];
+  if (insight) {
+    insightHeader.textContent = insight.label;
+    insightPills.innerHTML = insight.pills.map(p => `
+      <div class="insight-pill">
+        <div class="insight-pill-title">${p.title}</div>
+        <div class="insight-pill-text">${p.text}</div>
+      </div>`).join('');
+    insightPanel.style.display = 'block';
+  } else {
+    insightPanel.style.display = 'none';
+  }
 }
 
 render();
