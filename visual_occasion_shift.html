@@ -203,8 +203,7 @@
     opacity: 0;
     transition: opacity 0.15s ease;
     z-index: 10;
-    min-width: 160px;
-    transform: translate(-50%, -110%);
+    width: 190px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
   }
 
@@ -290,7 +289,7 @@
 
 <div class="card">
   <div class="header">
-    <div class="title">From Solo Ritual<br>to Shared Moment</div>
+    <div class="title">From Solo Ritual to Shared Moment</div>
     <div class="subtitle">How wine drinking occasions have shifted · 2023 → 2025</div>
   </div>
 
@@ -298,8 +297,8 @@
 
     <div class="stats-row">
       <div class="stat-pill">
-        <div class="stat-num">−50%</div>
-        <div class="stat-label">Drop in solo/relax occasions over two years</div>
+        <div class="stat-num">+70%</div>
+        <div class="stat-label">Rise in shared occasions over two years</div>
       </div>
       <div class="stat-pill">
         <div class="stat-num">14→7%</div>
@@ -321,7 +320,7 @@
     </div>
 
     <div class="annotation">
-      <strong>What this means:</strong> In just two years, solo relaxation occasions dropped from 14% to 7% of all wine moments — a 50% relative decline. For the first time in 30 years, occasion, not relaxation, is the #1 reason U.S. consumers choose wine.
+      <strong>What this means:</strong> In just two years, solo relaxation occasions dropped from 14% to 7% of all wine moments — a 50% relative decline. For the first time in 30 years, shared occasion, not solo relaxation, is the #1 reason U.S. consumers choose wine.
     </div>
 
     <div class="legend" id="legend">
@@ -410,16 +409,20 @@ const chart = new Chart(ctx, {
 
       const canvasRect = ctx.canvas.getBoundingClientRect();
       const pt = chart.getDatasetMeta(0).data[idx];
-      const cardRect = ctx.canvas.closest('.card').getBoundingClientRect();
+      const ttWidth = 190;
+      const ttHeight = tooltip.offsetHeight || 82;
 
-      // Keep tooltip within card horizontally
-      let left = pt.x;
-      const ttWidth = 180;
-      if (pt.x - ttWidth / 2 < 4) left = ttWidth / 2 + 4;
-      if (pt.x + ttWidth / 2 > canvasRect.width - 4) left = canvasRect.width - ttWidth / 2 - 4;
+      // Centre on bar group, clamp so it never bleeds outside the canvas
+      let left = pt.x - ttWidth / 2;
+      if (left < 4) left = 4;
+      if (left + ttWidth > canvasRect.width - 4) left = canvasRect.width - ttWidth - 4;
+
+      // Place above the bar; flip below if no room
+      let top = pt.y - ttHeight - 12;
+      if (top < 4) top = pt.y + 12;
 
       tooltip.style.left = left + 'px';
-      tooltip.style.top = (pt.y - 8) + 'px';
+      tooltip.style.top = top + 'px';
       tooltip.classList.add('visible');
     }
   }
