@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --burgundy: #5C1A2E;
+  --cream: #F5ECD7;
+  --gold: #B8973A;
+  --rose: #C27A8A;
+  --charcoal: #2C2C2C;
+  --mid: #7A5A64;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--cream);
+    color: var(--charcoal);
+    font-family: var(--font-montserrat), sans-serif;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-cormorant), serif;
+  }
+
+  ::selection {
+    background-color: var(--burgundy);
+    color: var(--cream);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-block px-8 py-3 bg-burgundy text-cream font-montserrat text-sm tracking-widest uppercase border border-burgundy transition-all duration-300 hover:bg-transparent hover:text-burgundy;
+  }
+
+  .btn-outline {
+    @apply inline-block px-8 py-3 bg-transparent text-cream font-montserrat text-sm tracking-widest uppercase border border-cream transition-all duration-300 hover:bg-cream hover:text-burgundy;
+  }
+
+  .btn-outline-dark {
+    @apply inline-block px-8 py-3 bg-transparent text-burgundy font-montserrat text-sm tracking-widest uppercase border border-burgundy transition-all duration-300 hover:bg-burgundy hover:text-cream;
+  }
+
+  .section-label {
+    @apply font-montserrat text-xs tracking-[0.3em] uppercase text-gold;
+  }
+
+  .editorial-heading {
+    @apply font-cormorant text-5xl md:text-6xl lg:text-7xl font-light leading-tight text-burgundy;
+  }
+
+  .divider-gold {
+    @apply w-16 h-px bg-gold mx-auto my-6;
+  }
+
+  .divider-gold-left {
+    @apply w-16 h-px bg-gold my-6;
+  }
+
+  .nav-link {
+    @apply font-montserrat text-xs tracking-widest uppercase text-charcoal hover:text-burgundy transition-colors duration-200;
+  }
+}
