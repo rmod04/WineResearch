@@ -61,8 +61,7 @@
 <body>
 <div class="card">
   <div class="header">
-    <div class="eyebrow">Cork to Table · OIV Data · Global Wine Consumption</div>
-    <div class="title">The World Is Drinking Lighter</div>
+    <div class="title">The World is Moving Towards Lighter</div>
     <div class="subtitle">Global wine consumption by colour · 2000 vs 2021 · OIV via Decanter 2023</div>
   </div>
 
@@ -96,8 +95,7 @@
     </div>
 
     <div class="toggle-row">
-      <button class="toggle-btn active" onclick="setView('grouped')">Side by Side</button>
-      <button class="toggle-btn" onclick="setView('stacked')">Stacked Share</button>
+      <button class="toggle-btn active" onclick="setView('stacked')">Stacked Share</button>
       <button class="toggle-btn" onclick="setView('change')">Change Only</button>
     </div>
     <div style="font-size:9.5px;color:#B09090;font-style:italic;margin-bottom:14px;margin-top:-10px;">pp = percentage points of global consumption share · relative % change shown in pills above</div>
@@ -113,7 +111,7 @@
   </div>
 
   <div class="footer">
-    Source: OIV — International Organisation of Vine and Wine. Global wine consumption by colour, 2000–2021. Reported in Decanter, December 2023. · Every Wine Has Its Moment — Rohan Modwel, Cork to Table
+    Source: OIV — International Organisation of Vine and Wine. Global wine consumption by colour, 2000–2021. Reported in Decanter, December 2023.
   </div>
 </div>
 
@@ -131,12 +129,11 @@ const COLORS = {
 };
 
 const INSIGHTS = {
-  grouped: '<strong>The story in one sentence:</strong> Red wine\'s decade-long dominance is unwinding. A generation of consumers is quietly choosing lighter, brighter styles — and the numbers show it at global scale. Click each colour pill to isolate the trend.',
-  stacked: '<strong>Stacked share view:</strong> In 2000, red wine held more than half of all global consumption. By 2021, that has shrunk to 47%. White and rosé have filled the gap — together now accounting for over half of global consumption for the first time.',
+  stacked: '<strong>Stacked share view:</strong> In 2000, red wine held more than half of all global consumption. By 2021, that has shrunk to just below half. White and rosé have filled the gap — together now accounting for over half of global consumption for the first time. This may seem minor, but in absolute consumption it represents a significant change.',
   change: '<strong>Change since 2000 (in percentage points):</strong> Rosé is the standout mover — a +3pp absolute gain, representing a 43% relative increase in global share. White wine grew steadily (+5pp). Red wine gave back ground accumulated since the 1990s (−8pp). <em>Note: pp = percentage points of global consumption share. Relative % change shown in the colour pills above.</em>',
 };
 
-let currentView = 'grouped';
+let currentView = 'stacked';
 let hidden = { red: false, white: false, rose: false };
 let chart;
 
@@ -147,21 +144,6 @@ function getVisibleDatasets() {
     { key: 'rose',  label: 'Rosé',       color: COLORS.rose },
   ];
   return base.filter(d => !hidden[d.key]);
-}
-
-function buildGrouped() {
-  const ds = getVisibleDatasets();
-  return {
-    labels: ['2000', '2021'],
-    datasets: ds.map(d => ({
-      label: d.label,
-      data: [DATA[d.key].y2000, DATA[d.key].y2021],
-      backgroundColor: [d.color.light, d.color.solid],
-      borderColor: d.color.solid,
-      borderWidth: 1.5,
-      borderRadius: 2,
-    }))
-  };
 }
 
 function buildStacked() {
@@ -198,7 +180,7 @@ function render() {
   const isStacked = currentView === 'stacked';
   const isChange = currentView === 'change';
 
-  const data = isStacked ? buildStacked() : isChange ? buildChange() : buildGrouped();
+  const data = isStacked ? buildStacked() : buildChange();
 
   chart = new Chart(document.getElementById('mainChart').getContext('2d'), {
     type: 'bar',
@@ -216,7 +198,11 @@ function render() {
           titleFont: { family: 'Montserrat', size: 10, weight: '600' },
           bodyFont: { family: 'Cormorant Garamond', size: 18 },
           callbacks: {
-            label: ctx => `${ctx.dataset.label}: ${ctx.parsed.y > 0 ? '+' : ''}${ctx.parsed.y}%`,
+            label: ctx => {
+              const v = ctx.parsed.y;
+              const prefix = (currentView === 'change' && v > 0) ? '+' : '';
+              return `${ctx.dataset.label}: ${prefix}${v}%`;
+            }
           }
         }
       },
@@ -236,7 +222,7 @@ function render() {
           },
           border: { display: false },
           min: isChange ? -12 : 0,
-          max: isChange ? 10 : 65,
+          max: isChange ? 10 : (isStacked ? 105 : 65),
         }
       },
       animation: { duration: 500, easing: 'easeInOutQuart' }
@@ -247,7 +233,7 @@ function render() {
 function setView(view) {
   currentView = view;
   document.querySelectorAll('.toggle-btn').forEach((b, i) => {
-    b.classList.toggle('active', ['grouped','stacked','change'][i] === view);
+    b.classList.toggle('active', ['stacked','change'][i] === view);
   });
   document.getElementById('insight').innerHTML = INSIGHTS[view];
   render();
