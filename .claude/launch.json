@@ -1,0 +1,14 @@
+{
+  "preview": {
+    "baseUrl": "https://rmod04.github.io/WineResearch",
+    "files": [
+      "visual_occasion_shift.html",
+      "visual_oiv_colour_shift.html",
+      "visual_instagram.html",
+      "visual_seasonal_instinct.html",
+      "visual_reddit_voices.html",
+      "findings.html"
+    ]
+  },
+  "note": "Enable GitHub Pages in repo Settings → Pages → Branch: main → / (root) for these URLs to go live."
+}
