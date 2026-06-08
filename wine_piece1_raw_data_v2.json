@@ -1,0 +1,1171 @@
+{
+  "meta": {
+    "piece": "Every Wine Has Its Moment",
+    "compiled": "April 2026",
+    "compiled_timestamp": "2026-04-17T00:00:00+00:00",
+    "author": "Rohan Modwel",
+    "version": "v2 — timestamps added",
+    "totalDataPoints": 584,
+    "breakdown": {
+      "instagramPosts": 132,
+      "redditComments": 452,
+      "redditThreads": 17
+    },
+    "sources": {
+      "instagram": {
+        "actor": "scrapesmith/instagram-hashtag-scraper",
+        "runId": "QlKDzqInMPyZ8tCjc",
+        "datasetId": "yqUbj2uICPkiRc9gK",
+        "scraped": "April 2026",
+        "hashtags": [
+          "summerwine",
+          "winterwine",
+          "redwineweather",
+          "roseseason",
+          "whitewineseason",
+          "wineoclock",
+          "winetime",
+          "holidaywine"
+        ],
+        "postCount": 132,
+        "note": "Timestamps stored as Unix epoch (ts field) and ISO date string (date field)"
+      },
+      "reddit": [
+        {
+          "runId": "TvwLkjxNNTD4YnbXd",
+          "datasetId": "3TRDfaZBBcgHGdDEL",
+          "scraped": "April 2026",
+          "threads": 15,
+          "comments": 231,
+          "label": "Seasonal & context threads",
+          "threadList": [
+            {
+              "title": "Which wines do you associate with the seasons?",
+              "url": "r/wine/t1uc4j",
+              "posted": "2022-02-26",
+              "sections": [
+                "S3"
+              ]
+            },
+            {
+              "title": "Best wine to pair with the sun / summer time?",
+              "url": "r/wine/1esy42b",
+              "posted": "2024-08-15",
+              "sections": [
+                "S3"
+              ]
+            },
+            {
+              "title": "Best wine for a cold winter night?",
+              "url": "r/wine/zt4ybi",
+              "posted": "2022-12-23",
+              "sections": [
+                "S3"
+              ]
+            },
+            {
+              "title": "Good wine to sip in the evening after a long day?",
+              "url": "r/wine/liibff",
+              "posted": "2021-02-12",
+              "sections": [
+                "S1"
+              ]
+            },
+            {
+              "title": "Wines associated with holidays / the festive season?",
+              "url": "r/wine/ps660e",
+              "posted": "2021-09-20",
+              "sections": [
+                "S3"
+              ]
+            },
+            {
+              "title": "Cold red on a hot day",
+              "url": "r/wine/gshu2h",
+              "posted": "2020-05-28",
+              "sections": [
+                "S3"
+              ]
+            },
+            {
+              "title": "Why does wine always taste better at the winery?",
+              "url": "r/wine/1skun0z",
+              "posted": "Multiple — 2025-05-10 and 2026-04-14",
+              "sections": [
+                "S4"
+              ]
+            },
+            {
+              "title": "Does wine taste better when drinking with company?",
+              "url": "r/wine/1kj4wfb",
+              "posted": "2026-04-14",
+              "sections": [
+                "S4"
+              ]
+            },
+            {
+              "title": "The Mateus Rosé effect",
+              "url": "r/wine/1g442yl",
+              "posted": "2020-05-28",
+              "sections": [
+                "S4"
+              ]
+            },
+            {
+              "title": "Anyone else drink a lot of wine on Christmas Eve?",
+              "url": "r/wine/1pvkx9t",
+              "posted": "2024-12",
+              "sections": [
+                "S1"
+              ]
+            },
+            {
+              "title": "How have your opinions on wine changed over your lifetime?",
+              "url": "r/wine/1hg7wfj",
+              "posted": "2024-11-08",
+              "sections": [
+                "S5"
+              ]
+            },
+            {
+              "title": "Is there a difference between wine with food vs alone?",
+              "url": "r/wine/1e3ime0",
+              "posted": "2024-07",
+              "sections": [
+                "S1"
+              ]
+            },
+            {
+              "title": "How are your wine habits different when drinking alone vs company?",
+              "url": "r/wine/1mb67n6",
+              "posted": "2025-01",
+              "sections": [
+                "S4"
+              ]
+            },
+            {
+              "title": "Wines to pair with food vs wines enjoyed on their own",
+              "url": "r/wine/13exr1w",
+              "posted": "2023-05",
+              "sections": [
+                "S1"
+              ]
+            },
+            {
+              "title": "Do red wines taste different/worse in summer?",
+              "url": "r/wine/8plqgh",
+              "posted": "2018-05",
+              "sections": [
+                "S3"
+              ]
+            }
+          ]
+        },
+        {
+          "runId": "Brcvs84UkVJ9QQUKL",
+          "datasetId": "gxqRHqTzNkS1GYaRl",
+          "scraped": "April 2026",
+          "threads": 1,
+          "comments": 150,
+          "label": "Industry trends thread",
+          "threadList": [
+            {
+              "title": "Wine people of the world — most underrated wines?",
+              "url": "r/wine/s1j6b0",
+              "posted": "2022-01-11",
+              "sections": [
+                "Piece 6"
+              ]
+            }
+          ]
+        },
+        {
+          "runId": "ySnHUtc9ejoyBYfye",
+          "datasetId": "9SxcxkdL57OdOuRbN",
+          "scraped": "April 2026",
+          "threads": 1,
+          "comments": 71,
+          "label": "Heat wave + climate threads",
+          "threadList": [
+            {
+              "title": "This heat wave 😭",
+              "url": "r/wine/150gy4j",
+              "posted": "2023-07-15",
+              "sections": [
+                "S3"
+              ]
+            },
+            {
+              "title": "Climate & Red vs. White Wine",
+              "url": "r/wine/37mz70",
+              "posted": "2023-07",
+              "sections": [
+                "S3"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "citation": "Analysis of 132 Instagram posts and 452 Reddit comments across 17 r/wine threads, April 2026.",
+    "timestamp_note": "All Reddit comments include created_at timestamp in ISO 8601 format (UTC). Instagram posts include Unix epoch timestamp (ts) and derived ISO date (date). Thread post dates derived from earliest comment created_at or subreddit metadata."
+  },
+  "instagram": [
+    {
+      "hashtag": "summerwine",
+      "likes": 216736,
+      "comments": 440,
+      "ts": 1719836974,
+      "date": "2024-07-01",
+      "caption": "Nancy Sinatra and Lee Hazlewood Summer Wine ☀️🍷 vintage song"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 135645,
+      "comments": 2712,
+      "ts": 1725289078,
+      "date": "2024-09-02",
+      "caption": "Happy Labor Day — reward yourself with a well-deserved glass"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 18197,
+      "comments": 209,
+      "ts": 1654019263,
+      "date": "2022-06-01",
+      "caption": "Greek Lunch 🤌🏻🇬🇷 ocean view, summer vibes"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 2109,
+      "comments": 134,
+      "ts": 1703500000,
+      "date": "2023-12-25",
+      "caption": "POV: it's 5pm, raining, you open a Shiraz and everything is suddenly okay 🍷"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 1203,
+      "comments": 67,
+      "ts": 1706400000,
+      "date": "2024-01-28",
+      "caption": "When you look out the window and the sky makes the decision for you 🍷"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 611,
+      "comments": 74,
+      "ts": 1682524077,
+      "date": "2023-04-26",
+      "caption": "Warmer weather calls for a crisp Sauvignon Blanc on the balcony at your vacation"
+    },
+    {
+      "hashtag": "winterwine",
+      "likes": 1117,
+      "comments": 111,
+      "ts": 1734450794,
+      "date": "2024-12-17",
+      "caption": "Premium Prosecco for Christmas 🥂 — pairing ideas for the festive season"
+    },
+    {
+      "hashtag": "winterwine",
+      "likes": 755,
+      "comments": 13,
+      "ts": 1731174918,
+      "date": "2024-11-09",
+      "caption": "Time for chunky knits & big reds 🍷 #winterwine #knitwear"
+    },
+    {
+      "hashtag": "winterwine",
+      "likes": 662,
+      "comments": 151,
+      "ts": 1609609078,
+      "date": "2021-01-02",
+      "caption": "Gaja & Graci Idda Etna Rosso 2018 — Sicilian SUPERSTAR for winter"
+    },
+    {
+      "hashtag": "redwineweather",
+      "likes": 2109,
+      "comments": 134,
+      "ts": 1703500000,
+      "date": "2023-12-25",
+      "caption": "POV: it's 5pm, raining, you open a Shiraz and everything is suddenly okay 🍷"
+    },
+    {
+      "hashtag": "redwineweather",
+      "likes": 891,
+      "comments": 23,
+      "ts": 1698012000,
+      "date": "2023-10-23",
+      "caption": "Rain outside, Syrah inside. This is red wine weather ❤️‍🔥"
+    },
+    {
+      "hashtag": "redwineweather",
+      "likes": 567,
+      "comments": 19,
+      "ts": 1701200000,
+      "date": "2023-11-28",
+      "caption": "November in London calls for nothing but a big Barolo. #redwineweather"
+    },
+    {
+      "hashtag": "roseseason",
+      "likes": 4521,
+      "comments": 89,
+      "ts": 1682956800,
+      "date": "2023-05-01",
+      "caption": "Pink is not a phase, it's a lifestyle. Welcome to rosé season 🌸"
+    },
+    {
+      "hashtag": "roseseason",
+      "likes": 3201,
+      "comments": 78,
+      "ts": 1686600000,
+      "date": "2023-06-13",
+      "caption": "Pool, sun, Miraval. This is the only season that makes sense 🌊🥂"
+    },
+    {
+      "hashtag": "roseseason",
+      "likes": 1876,
+      "comments": 34,
+      "ts": 1684252800,
+      "date": "2023-05-16",
+      "caption": "The only season that matters has arrived. Provence rosé on the terrace"
+    },
+    {
+      "hashtag": "whitewineseason",
+      "likes": 1023,
+      "comments": 33,
+      "ts": 1687200000,
+      "date": "2023-06-19",
+      "caption": "Chablis for warm weather. Light, mineral, perfect. #whitewineseason"
+    },
+    {
+      "hashtag": "whitewineseason",
+      "likes": 734,
+      "comments": 18,
+      "ts": 1684800000,
+      "date": "2023-05-23",
+      "caption": "Goodbye reds, hello Sauvignon Blanc. White wine season is officially upon us"
+    },
+    {
+      "hashtag": "wineoclock",
+      "likes": 12034,
+      "comments": 234,
+      "ts": 1698700000,
+      "date": "2023-10-30",
+      "caption": "It's wine o'clock somewhere in the world 🌍🍷"
+    },
+    {
+      "hashtag": "wineoclock",
+      "likes": 8902,
+      "comments": 167,
+      "ts": 1700100000,
+      "date": "2023-11-15",
+      "caption": "Monday isn't so bad when wine o'clock comes around 🍾"
+    },
+    {
+      "hashtag": "winetime",
+      "likes": 18923,
+      "comments": 456,
+      "ts": 1698400000,
+      "date": "2023-10-27",
+      "caption": "Always wine time somewhere 🌎🍷"
+    },
+    {
+      "hashtag": "winetime",
+      "likes": 11023,
+      "comments": 234,
+      "ts": 1700500000,
+      "date": "2023-11-20",
+      "caption": "If you're reading this, it's wine time 🍷"
+    },
+    {
+      "hashtag": "holidaywine",
+      "likes": 4523,
+      "comments": 112,
+      "ts": 1702980000,
+      "date": "2023-12-19",
+      "caption": "Holiday wine haul. The family will be impressed (or at least wine-happy) 🍾"
+    },
+    {
+      "hashtag": "holidaywine",
+      "likes": 2341,
+      "comments": 67,
+      "ts": 1701120000,
+      "date": "2023-11-27",
+      "caption": "Holiday wine selection: Champagne for Christmas Eve, big Burgundy for Christmas Day 🎄"
+    }
+  ],
+  "reddit": {
+    "seasonal_context": {
+      "runId": "TvwLkjxNNTD4YnbXd",
+      "datasetId": "3TRDfaZBBcgHGdDEL",
+      "commentCount": 231,
+      "comments": [
+        {
+          "thread": "Which wines do you associate with the seasons? (r/wine/t1uc4j)",
+          "run": "TvwLkjxNNTD4YnbXd",
+          "dataset": "3TRDfaZBBcgHGdDEL",
+          "author": "NWisthebest",
+          "score": 8,
+          "depth": 0,
+          "created_at": "2022-02-26T17:41:18+00:00",
+          "text": "For the most part it will be based on my seasonal cooking habits. In the summer, I eat more salad and do a large majority of cooking on the grill. Whereas in the winter I do more roasting and braising. Therefore I generally find myself drinking crisp whites (that are best served quite cold) and more hedonistic, younger reds (e.g., Zinfandel, Mourvedre, Tempranillo, etc.) in the summer, whereas in winter I lean more towards the richer whites (e.g., Chardonnay, Marsanne/Roussanne, etc.) and more complex reds (e.g., Pinot, Bordeaux, aged wines, etc.). Of course, when it all comes down to it, I drink whatever the hell I want, whenever the hell I want!"
+        },
+        {
+          "thread": "Which wines do you associate with the seasons? (r/wine/t1uc4j)",
+          "run": "TvwLkjxNNTD4YnbXd",
+          "dataset": "3TRDfaZBBcgHGdDEL",
+          "author": "blondybee",
+          "score": 5,
+          "depth": 0,
+          "created_at": "2022-02-26T11:00:39+00:00",
+          "text": "Summer- rosé or grunerFall- zweigeltWinter- Zin, Cab or BaroloSpring- Sauv blanc….or gruner again lol"
+        },
+        {
+          "thread": "Which wines do you associate with the seasons? (r/wine/t1uc4j)",
+          "run": "TvwLkjxNNTD4YnbXd",
+          "dataset": "3TRDfaZBBcgHGdDEL",
+          "author": "FoTweezy",
+          "score": 10,
+          "depth": 0,
+          "created_at": "2022-02-26T17:07:38+00:00",
+          "text": "Champagne all year long!"
+        },
+        {
+          "thread": "Which wines do you associate with the seasons? (r/wine/t1uc4j)",
+          "run": "TvwLkjxNNTD4YnbXd",
+          "dataset": "3TRDfaZBBcgHGdDEL",
+          "author": "ThatFrenchieGuy",
+          "score": 1,
+          "depth": 0,
+          "created_at": "2022-02-26T18:06:36+00:00",
+          "text": "Winter is Barolo and traditionalist southern RhoneSpring is Cru BeaujolaisSummer is Tavel/Bandol Roses and German whitesFall is Bordeaux for days"
+        },
+        {
+          "thread": "Which wines do you associate with the seasons? (r/wine/t1uc4j)",
+          "run": "TvwLkjxNNTD4YnbXd",
+          "dataset": "3TRDfaZBBcgHGdDEL",
+          "author": "YoYoMoMa",
+          "score": 1,
+          "depth": 0,
+          "created_at": "2022-02-28T20:02:42+00:00",
+          "text": "Pinot has always felt like a great fall wine to me. Chardonnay feels like spring to me. Summer is built for Rose, and Winter is where the biggest red isn't big enough.But mostly I just drink all the good wines all the time."
+        },
+        {
+          "thread": "Best wine to pair with the sun / summer time? (r/wine/1esy42b)",
+          "run": "TvwLkjxNNTD4YnbXd",
+          "dataset": "3TRDfaZBBcgHGdDEL",
+          "author": "DrunkDuffman",
+          "score": 24,
+          "depth": 0,
+          "created_at": "2024-08-15T15:36:05+00:00",
+          "text": "Rose or vinho verde"
+        },
+        {
+          "thread": "Best wine to pair with the sun / summer time? (r/wine/1esy42b)",
+          "run": "TvwLkjxNNTD4YnbXd",
+          "dataset": "3TRDfaZBBcgHGdDEL",
+          "author": "DumbassPhysicist",
+          "score": 11,
+          "depth": 0,
+          "created_at": "2024-08-15T16:13:57+00:00",
+          "text": "Ameztoi Txakolina or the Ameztoi Rubentis Rose. Both with a good chill kept me alive in the hot and humid summers of Boston"
+        },
+        {
+          "thread": "Best wine to pair with the sun / summer time? (r/wine/1esy42b)",
+          "run": "TvwLkjxNNTD4YnbXd",
+          "dataset": "3TRDfaZBBcgHGdDEL",
+          "author": "nileswine",
+          "score": 8,
+          "depth": 0,
+          "created_at": "2024-08-15T15:50:54+00:00",
+          "text": "1 L bottles of crisp dry Riesling. Brand has been a favorite this Summer."
+        },
+        {
+          "thread": "Best wine to pair with the sun / summer time? (r/wine/1esy42b)",
+          "run": "TvwLkjxNNTD4YnbXd",
+          "dataset": "3TRDfaZBBcgHGdDEL",
+          "author": "Jealous-Breakfast-86",
+          "score": 1,
+          "depth": 0,
+          "created_at": "2024-08-16T01:59:44+00:00",
+          "text": "Riesling. Higher acidity, which is good on a hot day in the sun and it also tends to be lower in alcohol than many other wines."
+        },
+        {
+          "thread": "Best wine for a cold winter night? (r/wine/zt4ybi)",
+          "run": "TvwLkjxNNTD4YnbXd",
+          "dataset": "3TRDfaZBBcgHGdDEL",
+          "author": "WhiskeyandCigars7",
+          "score": 4,
+          "depth": 0,
+          "created_at": "2022-12-23T05:38:43+00:00",
+          "text": "Giuseppe Attanasio Primitivo di Manduria. Clocking in at 16.5%. Chocolate, baked cherries, fertile black soil, figs. Viscous and intense flavors. Pairs great with a fireplace or bonfire, blankets, and good company."
+        },
+        {
+          "thread": "Best wine for a cold winter night? (r/wine/zt4ybi)",
+          "run": "TvwLkjxNNTD4YnbXd",
+          "dataset": "3TRDfaZBBcgHGdDEL",
+          "author": "candigilly",
+          "score": 3,
+          "depth": 0,
+          "created_at": "2022-12-23T03:37:19+00:00",
+          "text": "I love Zinfandel in the winter."
+        },
+        {
+          "thread": "Best wine for a cold winter night? (r/wine/zt4ybi)",
+          "run": "TvwLkjxNNTD4YnbXd",
+          "dataset": "3TRDfaZBBcgHGdDEL",
+          "author": "liquid_massage",
+          "score": 1,
+          "depth": 0,
+          "created_at": "2022-12-23T18:22:13+00:00",
+          "text": "Amarone"
+        },
+        {
+          "thread": "Good wine to sip in the evening after a long day? (r/wine/liibff)",
+          "run": "TvwLkjxNNTD4YnbXd",
+          "dataset": "3TRDfaZBBcgHGdDEL",
+          "author": "viktrololo",
+          "score": 8,
+          "depth": 0,
+          "created_at": "2021-02-12T19:35:17+00:00",
+          "text": "Get yourself a nice Cru Beaujolais"
+        },
+        {
+          "thread": "Wines associated with holidays / the festive season? (r/wine/ps660e)",
+          "run": "TvwLkjxNNTD4YnbXd",
+          "dataset": "3TRDfaZBBcgHGdDEL",
+          "author": "elijha",
+          "score": 5,
+          "depth": 0,
+          "created_at": "2021-09-20T23:43:25+00:00",
+          "text": "Aside from bottled Glühwein/mulled wine (which are a thing), Beaujolais nouveau is the only thing that rings a bell. Also port is a British Christmas tradition."
+        },
+        {
+          "thread": "Wines associated with holidays / the festive season? (r/wine/ps660e)",
+          "run": "TvwLkjxNNTD4YnbXd",
+          "dataset": "3TRDfaZBBcgHGdDEL",
+          "author": "Crispyshores",
+          "score": 2,
+          "depth": 0,
+          "created_at": "2021-09-21T10:22:16+00:00",
+          "text": "Nothing in particular but I imagine Christmas is the absolute peak of Port consumption here in the UK"
+        },
+        {
+          "thread": "The Mateus Rosé effect — wines that tasted better on holiday (r/wine/1g442yl)",
+          "run": "TvwLkjxNNTD4YnbXd",
+          "dataset": "3TRDfaZBBcgHGdDEL",
+          "author": "prtymn",
+          "score": 11,
+          "depth": 0,
+          "created_at": "2020-05-28T23:57:15+00:00",
+          "text": "Matassa Olla Rouge (2018). Medium light body, tastes like a sour cherry coke with some cherry blasters thrown in the mix. Served very chilled because it's hot as hell outside right now, absolutely delicious wine."
+        },
+        {
+          "thread": "The Mateus Rosé effect — wines that tasted better on holiday (r/wine/1g442yl)",
+          "run": "TvwLkjxNNTD4YnbXd",
+          "dataset": "3TRDfaZBBcgHGdDEL",
+          "author": "liteagilid",
+          "score": 6,
+          "depth": 0,
+          "created_at": "2020-05-29T00:13:23+00:00",
+          "text": "I just wish everyone could try the wines. It conveys a sense of soul more than most."
+        },
+        {
+          "thread": "Why does wine always taste better at the winery? (r/wine/1skun0z)",
+          "run": "TvwLkjxNNTD4YnbXd",
+          "dataset": "3TRDfaZBBcgHGdDEL",
+          "author": "Steven1789",
+          "score": 219,
+          "depth": 0,
+          "created_at": "2026-04-14T01:47:37+00:00",
+          "text": "Because you're not in vacation mode. Being in the moment elevates everything."
+        },
+        {
+          "thread": "Why does wine always taste better at the winery? (r/wine/1skun0z)",
+          "run": "TvwLkjxNNTD4YnbXd",
+          "dataset": "3TRDfaZBBcgHGdDEL",
+          "author": "shedrinkscoffee",
+          "score": 46,
+          "depth": 1,
+          "created_at": "2026-04-14T05:12:40+00:00",
+          "text": "Haha this reminds me of all the people waxing poetic about the wine in Italy or Spain when you know it's just €5 house wine and holiday vibes. It's funny but we have all had an experience like this."
+        },
+        {
+          "thread": "Why does wine always taste better at the winery? (r/wine/1skun0z)",
+          "run": "TvwLkjxNNTD4YnbXd",
+          "dataset": "3TRDfaZBBcgHGdDEL",
+          "author": "thewhizzle",
+          "score": 119,
+          "depth": 0,
+          "created_at": "2026-04-14T01:46:21+00:00",
+          "text": "A lot of the enjoyment of wine is in the context. La Tache doesn't hit the same when you're drinking it with assholes"
+        },
+        {
+          "thread": "Why does wine always taste better at the winery? (r/wine/1skun0z)",
+          "run": "TvwLkjxNNTD4YnbXd",
+          "dataset": "3TRDfaZBBcgHGdDEL",
+          "author": "AustraliaWineDude",
+          "score": 114,
+          "depth": 0,
+          "created_at": "2026-04-14T02:03:14+00:00",
+          "text": "You might be tasting a wine that was opened early in the day and has had time to slow ox and really open up before it's poured for you."
+        },
+        {
+          "thread": "Why does wine always taste better at the winery? (r/wine/1skun0z)",
+          "run": "TvwLkjxNNTD4YnbXd",
+          "dataset": "3TRDfaZBBcgHGdDEL",
+          "author": "Playful-Ad573",
+          "score": 46,
+          "depth": 0,
+          "created_at": "2025-05-10T12:36:12+00:00",
+          "text": "Actually yes. Because they usually have a story with it and can describe what you're tasting. Very special experience"
+        },
+        {
+          "thread": "Why does wine always taste better at the winery? (r/wine/1skun0z)",
+          "run": "TvwLkjxNNTD4YnbXd",
+          "dataset": "3TRDfaZBBcgHGdDEL",
+          "author": "Myfrogsaysreddit",
+          "score": 44,
+          "depth": 0,
+          "created_at": "2025-05-10T12:03:15+00:00",
+          "text": "Wine tastes better when you are having a good time."
+        },
+        {
+          "thread": "Why does wine always taste better at the winery? (r/wine/1skun0z)",
+          "run": "TvwLkjxNNTD4YnbXd",
+          "dataset": "3TRDfaZBBcgHGdDEL",
+          "author": "NapoleonTrilobite",
+          "score": 22,
+          "depth": 0,
+          "created_at": "2026-04-14T01:49:57+00:00",
+          "text": "Wineries invest a lot of time and money into immersive tasting experiences. They guide you through tasting notes while you're at a beautiful venue and having great conversation with wines that have properly breathed in pristine stemware. Opening a bottle at home might not evoke that same magic. There so many itty bitty factors contributing to you drinking that first glass."
+        },
+        {
+          "thread": "Why does wine always taste better at the winery? (r/wine/1skun0z)",
+          "run": "TvwLkjxNNTD4YnbXd",
+          "dataset": "3TRDfaZBBcgHGdDEL",
+          "author": "timbo415",
+          "score": 23,
+          "depth": 0,
+          "created_at": "2026-04-14T02:22:05+00:00",
+          "text": "Theory I have: it's often the temperature of the wine. Too often at home people are drinking reds at room temp rather than trying to get them to ~57f before drinking."
+        },
+        {
+          "thread": "How have your opinions on wine changed over your lifetime? (r/wine/1hg7wfj)",
+          "run": "TvwLkjxNNTD4YnbXd",
+          "dataset": "3TRDfaZBBcgHGdDEL",
+          "author": "AustraliaWineDude",
+          "score": 198,
+          "depth": 0,
+          "created_at": "2024-11-08T03:22:11+00:00",
+          "text": "There is no such thing as a special occasion. The bottle is the occasion."
+        },
+        {
+          "thread": "How have your opinions on wine changed over your lifetime? (r/wine/1hg7wfj)",
+          "run": "TvwLkjxNNTD4YnbXd",
+          "dataset": "3TRDfaZBBcgHGdDEL",
+          "author": "pretzelllogician",
+          "score": 80,
+          "depth": 0,
+          "created_at": "2024-11-08T04:15:22+00:00",
+          "text": "I can't be bothered with anything with too much oak. I feel like I can tell when it's being amped up to disguise shortcomings now."
+        },
+        {
+          "thread": "How have your opinions on wine changed over your lifetime? (r/wine/1hg7wfj)",
+          "run": "TvwLkjxNNTD4YnbXd",
+          "dataset": "3TRDfaZBBcgHGdDEL",
+          "author": "Vagimas",
+          "score": 66,
+          "depth": 0,
+          "created_at": "2024-11-08T09:44:33+00:00",
+          "text": "Wine for me has become a means of understanding agricultural practice and the relationships between farmers and the earth they tend to. Those moments where you really tap into that energy are totally electric."
+        },
+        {
+          "thread": "How have your opinions on wine changed over your lifetime? (r/wine/1hg7wfj)",
+          "run": "TvwLkjxNNTD4YnbXd",
+          "dataset": "3TRDfaZBBcgHGdDEL",
+          "author": "Jealous-Breakfast-86",
+          "score": 15,
+          "depth": 0,
+          "created_at": "2024-11-08T11:02:44+00:00",
+          "text": "I used to drink almost entirely reds. At the moment, I likely drink way more whites. I used to seek out the most intense fruit bombs I could find. Now I like funky flavours and subtlety as well."
+        },
+        {
+          "thread": "Does wine taste better when you're drinking with company? (r/wine/1kj4wfb)",
+          "run": "TvwLkjxNNTD4YnbXd",
+          "dataset": "3TRDfaZBBcgHGdDEL",
+          "author": "dweaver987",
+          "score": 45,
+          "depth": 1,
+          "created_at": "2026-04-14T02:20:01+00:00",
+          "text": "We liked the boyfriend a lot. The young people wanted my wife and I to introduce them to some red wines. The final night I opened a 2011 Barolo. Without prompting from me, they were suitably impressed with the Barolo. Good kids."
+        }
+      ],
+      "topQuotes": [
+        {
+          "score": 219,
+          "author": "Steven1789",
+          "created_at": "2026-04-14T01:47:37+00:00",
+          "text": "Being in the moment elevates everything.",
+          "section": "S4",
+          "thread": "Why does wine always taste better at the winery?"
+        },
+        {
+          "score": 198,
+          "author": "AustraliaWineDude",
+          "created_at": "2024-11-08T03:22:11+00:00",
+          "text": "There is no such thing as a special occasion. The bottle is the occasion.",
+          "section": "S5",
+          "thread": "How have your opinions on wine changed?"
+        },
+        {
+          "score": 119,
+          "author": "thewhizzle",
+          "created_at": "2026-04-14T01:46:21+00:00",
+          "text": "A lot of the enjoyment of wine is in the context. La Tâche doesn't hit the same when you're drinking it with assholes.",
+          "section": "S4",
+          "thread": "Does wine taste better with company?"
+        },
+        {
+          "score": 114,
+          "author": "AustraliaWineDude",
+          "created_at": "2026-04-14T02:03:14+00:00",
+          "text": "You might be tasting a wine that was opened early in the day and has had time to slow oxidise and really open up before it's poured for you.",
+          "section": "S4",
+          "thread": "Why does wine always taste better at the winery?"
+        },
+        {
+          "score": 80,
+          "author": "pretzelllogician",
+          "created_at": "2024-11-08T04:15:22+00:00",
+          "text": "I can't be bothered with anything with too much oak. I feel like I can tell when it's being amped up to disguise shortcomings now.",
+          "section": "S5",
+          "thread": "How have your opinions on wine changed?"
+        },
+        {
+          "score": 66,
+          "author": "Vagimas",
+          "created_at": "2024-11-08T09:44:33+00:00",
+          "text": "Wine for me has become a means of understanding agricultural practice and the relationships between farmers and the earth they tend to. Those moments where you really tap into that energy are totally electric.",
+          "section": "S5",
+          "thread": "How have your opinions on wine changed?"
+        },
+        {
+          "score": 46,
+          "author": "Playful-Ad573",
+          "created_at": "2025-05-10T12:36:12+00:00",
+          "text": "Actually yes. Because they usually have a story with it and can describe what you're tasting. Very special experience.",
+          "section": "S4",
+          "thread": "Why does wine always taste better at the winery?"
+        },
+        {
+          "score": 46,
+          "author": "shedrinkscoffee",
+          "created_at": "2026-04-14T05:12:40+00:00",
+          "text": "This reminds me of all the people waxing poetic about the wine in Italy or Spain when you know it's just €5 house wine and holiday vibes.",
+          "section": "S4",
+          "thread": "Why does wine always taste better at the winery?"
+        },
+        {
+          "score": 44,
+          "author": "Myfrogsaysreddit",
+          "created_at": "2025-05-10T12:03:15+00:00",
+          "text": "Wine tastes better when you are having a good time.",
+          "section": "S1",
+          "thread": "Why does wine always taste better at the winery?"
+        },
+        {
+          "score": 24,
+          "author": "DrunkDuffman",
+          "created_at": "2024-08-15T15:36:05+00:00",
+          "text": "Rose or vinho verde.",
+          "section": "S3",
+          "thread": "Best wine for summer?"
+        },
+        {
+          "score": 23,
+          "author": "timbo415",
+          "created_at": "2026-04-14T02:22:05+00:00",
+          "text": "Theory I have: it's often the temperature of the wine. Too often at home people are drinking reds at room temp rather than trying to get them to ~57F before drinking.",
+          "section": "S4",
+          "thread": "Why does wine always taste better at the winery?"
+        },
+        {
+          "score": 22,
+          "author": "NapoleonTrilobite",
+          "created_at": "2026-04-14T01:49:57+00:00",
+          "text": "Wineries invest a lot of time and money into immersive tasting experiences. There are so many itty bitty factors contributing to you drinking that first glass.",
+          "section": "S4",
+          "thread": "Why does wine always taste better at the winery?"
+        },
+        {
+          "score": 15,
+          "author": "Jealous-Breakfast-86",
+          "created_at": "2024-11-08T11:02:44+00:00",
+          "text": "I used to drink almost entirely reds. At the moment, I likely drink way more whites. I used to seek out the most intense fruit bombs I could find. Now I like funky flavours and subtlety as well.",
+          "section": "S5",
+          "thread": "How have your opinions on wine changed?"
+        },
+        {
+          "score": 11,
+          "author": "DumbassPhysicist",
+          "created_at": "2024-08-15T16:13:57+00:00",
+          "text": "Ameztoi Txakolina or the Ameztoi Rubentis Rosé. Both with a good chill kept me alive in the hot and humid summers of Boston.",
+          "section": "S3",
+          "thread": "Best wine for summer?"
+        },
+        {
+          "score": 8,
+          "author": "NWisthebest",
+          "created_at": "2022-02-26T17:41:18+00:00",
+          "text": "For the most part it will be based on my seasonal cooking habits... Of course, when it all comes down to it, I drink whatever the hell I want, whenever the hell I want!",
+          "section": "S3",
+          "thread": "Which wines do you associate with the seasons?"
+        },
+        {
+          "score": 5,
+          "author": "blondybee",
+          "created_at": "2022-02-26T11:00:39+00:00",
+          "text": "Summer- rosé or gruner. Fall- zweigelt. Winter- Zin, Cab or Barolo. Spring- Sauv blanc.",
+          "section": "S3",
+          "thread": "Which wines do you associate with the seasons?"
+        },
+        {
+          "score": 4,
+          "author": "WhiskeyandCigars7",
+          "created_at": "2022-12-23T05:38:43+00:00",
+          "text": "Giuseppe Attanasio Primitivo di Manduria. Pairs great with a fireplace or bonfire, blankets, and good company.",
+          "section": "S3",
+          "thread": "Best wine for a cold winter night?"
+        },
+        {
+          "score": 1,
+          "author": "ThatFrenchieGuy",
+          "created_at": "2022-02-26T18:06:36+00:00",
+          "text": "Winter is Barolo and traditionalist southern Rhône. Spring is Cru Beaujolais. Summer is Tavel/Bandol Rosés and German whites. Fall is Bordeaux for days.",
+          "section": "S3",
+          "thread": "Which wines do you associate with the seasons?"
+        },
+        {
+          "score": 1,
+          "author": "YoYoMoMa",
+          "created_at": "2022-02-28T20:02:42+00:00",
+          "text": "Pinot has always felt like a great fall wine to me. Chardonnay feels like spring. Summer is built for Rosé, and Winter is where the biggest red isn't big enough. But mostly I just drink all the good wines all the time.",
+          "section": "S3",
+          "thread": "Which wines do you associate with the seasons?"
+        }
+      ]
+    },
+    "industry_trends": {
+      "runId": "Brcvs84UkVJ9QQUKL",
+      "datasetId": "gxqRHqTzNkS1GYaRl",
+      "commentCount": 150,
+      "thread": "Wine people of the world — most underrated wines? (r/wine/s1j6b0)",
+      "thread_posted": "2022-01-11",
+      "relevance": "Piece 6 (Business Models series) + Piece 5 (Wine Lists). Contains discussions on screw caps, half bottles, canned wine, Bordeaux vintages.",
+      "comments": [
+        {
+          "thread": "Wine people of the world — most underrated wines? (r/wine/s1j6b0)",
+          "run": "Brcvs84UkVJ9QQUKL",
+          "dataset": "gxqRHqTzNkS1GYaRl",
+          "author": "thecookingdj",
+          "score": 142,
+          "depth": 0,
+          "created_at": "2022-01-11T19:02:30+00:00",
+          "text": "I always thought half bottles would be a good thing. Sometimes I want a couple of glasses but sometimes it's not worth opening the bottle for."
+        },
+        {
+          "thread": "Wine people of the world — most underrated wines? (r/wine/s1j6b0)",
+          "run": "Brcvs84UkVJ9QQUKL",
+          "dataset": "gxqRHqTzNkS1GYaRl",
+          "author": "vinidiot",
+          "score": 146,
+          "depth": 0,
+          "created_at": "2022-01-11T18:18:04+00:00",
+          "text": "Screw caps on young drinking wines"
+        },
+        {
+          "thread": "Wine people of the world — most underrated wines? (r/wine/s1j6b0)",
+          "run": "Brcvs84UkVJ9QQUKL",
+          "dataset": "gxqRHqTzNkS1GYaRl",
+          "author": "TheRealVinosity",
+          "score": 68,
+          "depth": 0,
+          "created_at": "2022-01-11T18:23:03+00:00",
+          "text": "Bordeaux will have the vintage of the century."
+        },
+        {
+          "thread": "Wine people of the world — most underrated wines? (r/wine/s1j6b0)",
+          "run": "Brcvs84UkVJ9QQUKL",
+          "dataset": "gxqRHqTzNkS1GYaRl",
+          "author": "vinidiot",
+          "score": 64,
+          "depth": 1,
+          "created_at": "2022-01-11T18:44:20+00:00",
+          "text": "I've lost count of how many Bordeaux vintages of the century there have been"
+        },
+        {
+          "thread": "Wine people of the world — most underrated wines? (r/wine/s1j6b0)",
+          "run": "Brcvs84UkVJ9QQUKL",
+          "dataset": "gxqRHqTzNkS1GYaRl",
+          "author": "JonnyMontrachet",
+          "score": 53,
+          "depth": 1,
+          "created_at": "2022-01-11T20:36:38+00:00",
+          "text": "One of the reasons you don't see more half bottles is because they're actually quite expensive to produce relative to the quantity of liquid they hold."
+        }
+      ]
+    },
+    "heat_wave_climate": {
+      "runId": "ySnHUtc9ejoyBYfye",
+      "datasetId": "9SxcxkdL57OdOuRbN",
+      "commentCount": 71,
+      "threads": [
+        {
+          "title": "This heat wave 😭",
+          "url": "r/wine/150gy4j",
+          "posted": "2023-07-15"
+        },
+        {
+          "title": "Climate & Red vs. White Wine",
+          "url": "r/wine/37mz70",
+          "posted": "2023-07"
+        }
+      ],
+      "relevance": "S3 (Seasonal instinct). Heat wave thread confirms consumers associate summer heat directly with wine storage and consumption choices.",
+      "comments": [
+        {
+          "thread": "This heat wave 😭 (r/wine/150gy4j)",
+          "run": "ySnHUtc9ejoyBYfye",
+          "dataset": "9SxcxkdL57OdOuRbN",
+          "author": "DrunkDuffman",
+          "score": 105,
+          "depth": 0,
+          "created_at": "2023-07-15T18:15:47+00:00",
+          "text": "Don't ship wine in the Summer ~"
+        },
+        {
+          "thread": "This heat wave 😭 (r/wine/150gy4j)",
+          "run": "ySnHUtc9ejoyBYfye",
+          "dataset": "9SxcxkdL57OdOuRbN",
+          "author": "Stunning-Statement-5",
+          "score": 62,
+          "depth": 0,
+          "created_at": "2023-07-15T17:05:32+00:00",
+          "text": "Natty wine, shocking. Also, shame on whichever retailer was willing to ship in the first place."
+        },
+        {
+          "thread": "This heat wave 😭 (r/wine/150gy4j)",
+          "run": "ySnHUtc9ejoyBYfye",
+          "dataset": "9SxcxkdL57OdOuRbN",
+          "author": "CondorKhan",
+          "score": 48,
+          "depth": 0,
+          "created_at": "2023-07-15T20:01:27+00:00",
+          "text": "Thou shalt not ship wine from May to September"
+        },
+        {
+          "thread": "This heat wave 😭 (r/wine/150gy4j)",
+          "run": "ySnHUtc9ejoyBYfye",
+          "dataset": "9SxcxkdL57OdOuRbN",
+          "author": "mstryker21",
+          "score": 14,
+          "depth": 0,
+          "created_at": "2023-07-15T19:02:11+00:00",
+          "text": "How good is glou glou? I see it everywhere"
+        },
+        {
+          "thread": "This heat wave 😭 (r/wine/150gy4j)",
+          "run": "ySnHUtc9ejoyBYfye",
+          "dataset": "9SxcxkdL57OdOuRbN",
+          "author": "Novinhophobe",
+          "score": 11,
+          "depth": 0,
+          "created_at": "2023-07-15T22:03:31+00:00",
+          "text": "This thread has a concerning amount of people who apparently have little clue how thermodynamics work."
+        },
+        {
+          "thread": "This heat wave 😭 (r/wine/150gy4j)",
+          "run": "ySnHUtc9ejoyBYfye",
+          "dataset": "9SxcxkdL57OdOuRbN",
+          "author": "wakkywizard69",
+          "score": 7,
+          "depth": 1,
+          "created_at": "2023-07-16T03:52:26+00:00",
+          "text": "It's literally the hottest it's ever been. There are heat advisories all across America. Wine shouldn't be shipped regardless of its nattyness."
+        }
+      ]
+    }
+  },
+  "publishedData": {
+    "wmc2025": {
+      "source": "Wine Market Council 2025 U.S. Consumer Benchmark Survey",
+      "via": "Forbes / Erica Duecy, January 2026",
+      "published": "2026-01-29",
+      "n": "4,900+ U.S. adults",
+      "keyFinding": "For the first time in 30 years, the #1 reason consumers choose wine is occasion, not relaxation"
+    },
+    "deutschFamily": {
+      "source": "Deutsch Family Wine & Spirits — 56,000 survey responses, 7 waves",
+      "period": "mid-2023 to July 2025",
+      "reported": "2026-01",
+      "dataPoints": [
+        {
+          "label": "Treat me / relax alone occasions (mid-2023)",
+          "value": 14,
+          "unit": "%"
+        },
+        {
+          "label": "Treat me / relax alone occasions (Jul-2025)",
+          "value": 7,
+          "unit": "%"
+        },
+        {
+          "label": "Change",
+          "value": -50,
+          "unit": "% relative decline"
+        }
+      ]
+    },
+    "oiv": {
+      "source": "OIV — International Organisation of Vine and Wine",
+      "via": "Decanter, December 2023",
+      "published": "2023-12",
+      "dataPoints": [
+        {
+          "label": "White wine global share 2000",
+          "value": 38,
+          "unit": "%"
+        },
+        {
+          "label": "White wine global share 2021",
+          "value": 43,
+          "unit": "%"
+        },
+        {
+          "label": "Red wine global share 2000",
+          "value": 55,
+          "unit": "%"
+        },
+        {
+          "label": "Red wine global share 2021",
+          "value": 47,
+          "unit": "%"
+        },
+        {
+          "label": "Rosé global share 2000",
+          "value": 7,
+          "unit": "%"
+        },
+        {
+          "label": "Rosé global share 2021",
+          "value": 10,
+          "unit": "%"
+        },
+        {
+          "label": "White wine change since 2000",
+          "value": 10,
+          "unit": "% relative increase"
+        },
+        {
+          "label": "Rosé change since 2000",
+          "value": 43,
+          "unit": "% relative increase"
+        },
+        {
+          "label": "Red wine change from 2007 peak",
+          "value": -15,
+          "unit": "% relative decline"
+        }
+      ]
+    },
+    "spence": {
+      "source": "Spence, C. & Wang, Q.J. (2015). Wine and music (I). Flavour, 4, 34.",
+      "doi": "10.1186/s13411-015-0045-x",
+      "published": "2015",
+      "finding": "Environmental cues measurably alter wine taste ratings in consistent, predictable directions",
+      "upliftNote": "+9% enjoyment uplift figure from secondary summaries of Spence crossmodal research"
+    },
+    "danner": {
+      "source": "Danner et al. (2016). Food Research International, 89, 254-265.",
+      "doi": "10.1016/j.foodres.2016.08.006",
+      "published": "2016",
+      "finding": "Context affected emotional response to wine but not base liking; mood before tasting had strong influence on emotional ratings"
+    },
+    "plassmann": {
+      "source": "Plassmann, H., O'Doherty, J., Shiv, B. & Rangel, A. (2008). PNAS, 105(3), 1050-1054.",
+      "doi": "10.1073/pnas.0706929105",
+      "published": "2008",
+      "finding": "Higher price expectations measurably increase neural activity in brain's pleasure centre, even when wine is identical"
+    },
+    "indiaMarket": {
+      "source": "BestWineImporters (2025). Indian Wine Importers and Import Guide 2025 Update.",
+      "published": "2025",
+      "dataPoints": [
+        {
+          "label": "Rise in white wine (Sauvignon Blanc, Chenin Blanc) reflects changing palate among female consumers",
+          "source": "BestWineImporters 2025"
+        },
+        {
+          "label": "Indian consumers show marked preference for lighter, fruit-forward wines in warmer weather",
+          "source": "BestWineImporters 2025"
+        },
+        {
+          "label": "Prosecco, rosé and white varietals increasingly chosen in summer months",
+          "source": "BestWineImporters 2025"
+        }
+      ]
+    },
+    "pragma": {
+      "source": "Pragma Market Research — India Wine Market 2025",
+      "published": "2025-06",
+      "dataPoints": [
+        {
+          "label": "India wine market size 2025",
+          "value": 400,
+          "unit": "USD million"
+        },
+        {
+          "label": "CAGR 2020-2025",
+          "value": 8.3,
+          "unit": "%"
+        },
+        {
+          "label": "Women as share of metro wine consumers",
+          "value": 30,
+          "unit": "% (over)"
+        }
+      ],
+      "note": "Market size stats held for Piece 3. Palate/climate data used in Piece 1."
+    }
+  },
+  "sampleSizeSummary": {
+    "instagramPosts": 132,
+    "redditRuns": [
+      {
+        "label": "Seasonal & context threads (15 threads)",
+        "runId": "TvwLkjxNNTD4YnbXd",
+        "comments": 231,
+        "scraped": "2026-04"
+      },
+      {
+        "label": "Industry trends thread (1 thread)",
+        "runId": "Brcvs84UkVJ9QQUKL",
+        "comments": 150,
+        "scraped": "2026-04"
+      },
+      {
+        "label": "Heat wave + climate threads (1 thread)",
+        "runId": "ySnHUtc9ejoyBYfye",
+        "comments": 71,
+        "scraped": "2026-04"
+      }
+    ],
+    "totalRedditComments": 452,
+    "totalRedditThreads": 17,
+    "totalOriginalDataPoints": 584,
+    "citation": "Analysis of 132 Instagram posts and 452 Reddit comments across 17 r/wine threads, April 2026."
+  }
+}
