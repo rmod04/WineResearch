@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Wine Meridian — Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --burgundy: #5C1A2E;
+    --cream: #F5ECD7;
+    --gold: #B8973A;
+    --rose: #C27A8A;
+    --charcoal: #2C2C2C;
+    --mid: #7A5A64;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--cream); color: var(--charcoal); font-family: 'Montserrat', sans-serif; }
+  h1,h2,h3,h4 { font-family: 'Cormorant Garamond', serif; }
+  img { display: block; width: 100%; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 24px 48px;
+    background: transparent;
+    transition: background .4s, padding .4s;
+  }
+  nav.scrolled { background: rgba(245,236,215,.96); backdrop-filter: blur(6px); padding: 14px 48px; box-shadow: 0 1px 0 rgba(0,0,0,.06); }
+  .nav-brand .name { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: var(--cream); letter-spacing: .04em; }
+  .nav-brand .sub { font-size: 9px; letter-spacing: .22em; text-transform: uppercase; color: rgba(245,236,215,.65); display: block; margin-top: 2px; }
+  nav.scrolled .nav-brand .name { color: var(--burgundy); }
+  nav.scrolled .nav-brand .sub { color: var(--mid); }
+  .nav-links { display: flex; gap: 32px; align-items: center; }
+  .nav-links a { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; text-decoration: none; color: rgba(245,236,215,.88); transition: color .2s; }
+  nav.scrolled .nav-links a { color: var(--charcoal); }
+  .nav-links a:hover { color: #fff; }
+  nav.scrolled .nav-links a:hover { color: var(--burgundy); }
+  .nav-cta {
+    font-size: 11px; letter-spacing: .18em; text-transform: uppercase; text-decoration: none;
+    padding: 10px 22px; border: 1px solid rgba(245,236,215,.85); color: rgba(245,236,215,.9);
+    transition: all .3s;
+  }
+  .nav-cta:hover { background: var(--cream); color: var(--burgundy); }
+  nav.scrolled .nav-cta { border-color: var(--burgundy); color: var(--burgundy); }
+  nav.scrolled .nav-cta:hover { background: var(--burgundy); color: var(--cream); }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative; height: 100vh; min-height: 600px;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1600&q=80') center/cover;
+  }
+  .hero-overlay { position: absolute; inset: 0; background: rgba(92,26,46,.60); }
+  .hero-content { position: relative; z-index: 2; text-align: center; padding: 0 24px; max-width: 900px; }
+  .hero-label { font-size: 11px; letter-spacing: .32em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
+  .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.5rem, 9vw, 7.5rem); font-weight: 300; color: var(--cream); line-height: 1; margin-bottom: 20px; }
+  .divider { width: 64px; height: 1px; background: var(--gold); margin: 0 auto 24px; }
+  .hero-sub { font-family: 'Cormorant Garamond', serif; font-size: clamp(1rem, 2vw, 1.35rem); font-style: italic; color: rgba(245,236,215,.88); line-height: 1.7; max-width: 560px; margin: 0 auto 40px; }
+  .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn-outline {
+    font-size: 11px; letter-spacing: .18em; text-transform: uppercase; text-decoration: none;
+    padding: 12px 32px; border: 1px solid rgba(245,236,215,.85); color: var(--cream);
+    transition: all .3s;
+  }
+  .btn-outline:hover { background: var(--cream); color: var(--burgundy); }
+  .scroll-hint { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); text-align: center; }
+  .scroll-hint span { display: block; font-size: 9px; letter-spacing: .3em; text-transform: uppercase; color: rgba(245,236,215,.55); margin-bottom: 8px; }
+  .scroll-line { width: 1px; height: 40px; background: rgba(245,236,215,.35); margin: 0 auto; }
+
+  /* ── MANIFESTO ── */
+  .manifesto { background: var(--cream); padding: 96px 24px; text-align: center; }
+  .section-label { font-size: 10px; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
+  .manifesto blockquote { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.3rem, 2.5vw, 1.85rem); font-style: italic; font-weight: 300; color: var(--burgundy); line-height: 1.75; max-width: 760px; margin: 0 auto; }
+  .divider-center { width: 64px; height: 1px; background: var(--gold); margin: 24px auto; }
+  .attribution { font-size: 12px; color: var(--mid); letter-spacing: .06em; }
+
+  /* ── TILES ── */
+  .tiles-section { background: var(--charcoal); padding: 96px 24px; }
+  .tiles-header { text-align: center; margin-bottom: 64px; }
+  .tiles-header h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 300; color: var(--cream); }
+  .tiles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(245,236,215,.12); max-width: 1280px; margin: 0 auto; }
+  .tile { position: relative; aspect-ratio: 3/4; overflow: hidden; text-decoration: none; display: flex; flex-direction: column; justify-content: flex-end; }
+  .tile-bg { position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform .7s; }
+  .tile:hover .tile-bg { transform: scale(1.05); }
+  .tile-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(92,26,46,.9) 0%, rgba(92,26,46,.25) 50%, transparent 100%); }
+  .tile-content { position: relative; z-index: 2; padding: 32px; }
+  .tile-label { font-size: 9px; letter-spacing: .32em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; display: block; }
+  .tile h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--cream); font-weight: 300; margin-bottom: 12px; line-height: 1.2; }
+  .tile p { font-size: 11px; color: rgba(245,236,215,.65); line-height: 1.7; margin-bottom: 20px; }
+  .tile-cta { font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); border-bottom: 1px solid rgba(184,151,58,.45); padding-bottom: 2px; }
+
+  /* ── CTA BANNER ── */
+  .cta-banner { position: relative; padding: 112px 24px; overflow: hidden; }
+  .cta-bg { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1400&q=80') center/cover; }
+  .cta-overlay { position: absolute; inset: 0; background: rgba(92,26,46,.76); }
+  .cta-content { position: relative; z-index: 2; text-align: center; max-width: 720px; margin: 0 auto; }
+  .cta-content h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 4vw, 3.5rem); font-weight: 300; color: var(--cream); line-height: 1.3; margin-bottom: 24px; }
+  .cta-content em { font-style: italic; display: block; margin-top: 8px; }
+
+  /* ── FOOTER ── */
+  footer { background: var(--burgundy); color: var(--cream); padding: 64px 48px 40px; }
+  .footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; max-width: 1280px; margin: 0 auto; }
+  .footer-brand-name { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; margin-bottom: 8px; }
+  .footer-brand-sub { font-size: 9px; letter-spacing: .28em; text-transform: uppercase; color: rgba(245,236,215,.5); margin-bottom: 16px; }
+  .footer-divider { width: 40px; height: 1px; background: var(--gold); margin-bottom: 16px; }
+  .footer-tagline { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-style: italic; color: rgba(245,236,215,.75); }
+  .footer-col-label { font-size: 10px; letter-spacing: .28em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
+  .footer-links { display: flex; flex-direction: column; gap: 12px; }
+  .footer-links a, .footer-links span { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: rgba(245,236,215,.65); text-decoration: none; transition: color .2s; }
+  .footer-links a:hover { color: var(--cream); }
+  .footer-links span { color: rgba(245,236,215,.35); }
+  .footer-bottom { max-width: 1280px; margin: 48px auto 0; padding-top: 32px; border-top: 1px solid rgba(245,236,215,.15); display: flex; justify-content: space-between; align-items: center; }
+  .footer-bottom p { font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: rgba(245,236,215,.35); }
+
+  /* ── PAGE LABEL ── */
+  .page-label { background: var(--burgundy); color: var(--cream); padding: 8px 16px; font-size: 9px; letter-spacing: .3em; text-transform: uppercase; display: inline-block; margin-bottom: 24px; }
+
+  @media (max-width: 768px) {
+    .tiles-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    nav { padding: 20px 20px; }
+    .nav-links { display: none; }
+    .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav id="navbar">
+  <div class="nav-brand">
+    <span class="name">Cork To Table</span>
+    <span class="sub">The Wine Meridian</span>
+  </div>
+  <div class="nav-links">
+    <a href="#wine-tourism">Wine Tourism</a>
+    <a href="#travel">Travel Planning</a>
+    <a href="#about">About</a>
+    <a href="#my-world">My World</a>
+    <a href="#contact">Contact</a>
+    <a href="#travel" class="nav-cta">Plan My Journey</a>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-label">Cork To Table · WSET Level 3, Distinction</p>
+    <h1>The Wine Meridian</h1>
+    <div class="divider"></div>
+    <p class="hero-sub">I plan journeys built around the world's great wine regions — immersive, personal, and deeply rooted in place.</p>
+    <div class="hero-buttons">
+      <a href="#wine-tourism" class="btn-outline">Explore Wine Tourism</a>
+      <a href="#travel" class="btn-outline">Plan My Journey</a>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ── MANIFESTO ── -->
+<section class="manifesto">
+  <p class="section-label">Our Philosophy</p>
+  <blockquote>"Wine should never feel intimidating: at its best, it is a shared language, a catalyst for community, and one of the most honest expressions of place and culture that exists. The guiding philosophy of Cork To Table is rooted in one core belief — make wine feel like it belongs to everyone."</blockquote>
+  <div class="divider-center"></div>
+  <p class="attribution">— Rohan Modwel, Wine Professional &amp; Travel Consultant</p>
+</section>
+
+<!-- ── THREE TILES ── -->
+<section class="tiles-section" id="wine-tourism">
+  <div class="tiles-header">
+    <p class="section-label">Where To Begin</p>
+    <h2>Explore the World</h2>
+  </div>
+  <div class="tiles-grid">
+    <a href="#" class="tile">
+      <div class="tile-bg" style="background-image: url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&q=80')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-content">
+        <span class="tile-label">Wine Tourism</span>
+        <h3>Wine Regions &amp; Partners</h3>
+        <p>Immersive journeys into the world's great wine regions. Our winery partners, curated experiences, and a trip shaped around your palate.</p>
+        <span class="tile-cta">Explore →</span>
+      </div>
+    </a>
+    <a href="#travel" class="tile">
+      <div class="tile-bg" style="background-image: url('https://images.unsplash.com/photo-1476364174823-3a23f4aa5229?w=800&q=80')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-content">
+        <span class="tile-label">The Questionnaire</span>
+        <h3>Plan Your Journey</h3>
+        <p>Tell us who you are, how you travel, and what wine means to you. We'll build something around that.</p>
+        <span class="tile-cta">Begin →</span>
+      </div>
+    </a>
+    <a href="#about" class="tile">
+      <div class="tile-bg" style="background-image: url('https://images.unsplash.com/photo-1504593811423-6dd665756598?w=800&q=80')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-content">
+        <span class="tile-label">About</span>
+        <h3>Rohan Modwel</h3>
+        <p>WSET Level 3 Distinction. Wine professional, writer, and travel consultant. The person behind every itinerary.</p>
+        <span class="tile-cta">Meet Rohan →</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ── CTA BANNER ── -->
+<section class="cta-banner" id="travel">
+  <div class="cta-bg"></div>
+  <div class="cta-overlay"></div>
+  <div class="cta-content">
+    <p class="section-label" style="color:var(--gold)">Ready to travel?</p>
+    <h2>Every great wine tells you where it came from.<em>Shouldn't you?</em></h2>
+    <div class="divider-center"></div>
+    <a href="#" class="btn-outline">Start the Questionnaire</a>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer id="contact">
+  <div class="footer-grid">
+    <div>
+      <p class="footer-brand-name">Cork To Table</p>
+      <p class="footer-brand-sub">The Wine Meridian</p>
+      <div class="footer-divider"></div>
+      <p class="footer-tagline">"Wine. Travel. Story."</p>
+    </div>
+    <div>
+      <p class="footer-col-label">Navigate</p>
+      <div class="footer-links">
+        <a href="#">Wine Tourism</a>
+        <a href="#">Travel Planning</a>
+        <a href="#">About Rohan</a>
+        <a href="#">My World</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+    <div>
+      <p class="footer-col-label">Connect</p>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/corktotable/" target="_blank">Instagram — @corktotable</a>
+        <span>Substack — Coming Soon</span>
+        <a href="mailto:corktotable@gmail.com">corktotable@gmail.com</a>
+        <a href="#">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Cork To Table · Rohan Modwel · New Delhi, India</p>
+    <p>WSET Level 3, Distinction</p>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+</script>
+
+</body>
+</html>

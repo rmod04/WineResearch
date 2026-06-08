@@ -1,0 +1,1137 @@
+{
+  "meta": {
+    "piece": "Every Wine Has Its Moment",
+    "compiled": "April 2026",
+    "author": "Rohan Modwel",
+    "totalDataPoints": 584,
+    "breakdown": {
+      "instagramPosts": 132,
+      "redditComments": 452,
+      "redditThreads": 17
+    },
+    "sources": {
+      "instagram": {
+        "actor": "scrapesmith/instagram-hashtag-scraper",
+        "runId": "QlKDzqInMPyZ8tCjc",
+        "datasetId": "yqUbj2uICPkiRc9gK",
+        "hashtags": [
+          "summerwine",
+          "winterwine",
+          "redwineweather",
+          "roseseason",
+          "whitewineseason",
+          "wineoclock",
+          "winetime",
+          "holidaywine"
+        ],
+        "postCount": 132
+      },
+      "reddit": [
+        {
+          "runId": "TvwLkjxNNTD4YnbXd",
+          "datasetId": "3TRDfaZBBcgHGdDEL",
+          "threads": 15,
+          "comments": 231,
+          "label": "Seasonal & Context threads"
+        },
+        {
+          "runId": "Brcvs84UkVJ9QQUKL",
+          "datasetId": "gxqRHqTzNkS1GYaRl",
+          "threads": 1,
+          "comments": 150,
+          "label": "Industry trends thread (s1j6b0)"
+        },
+        {
+          "runId": "ySnHUtc9ejoyBYfye",
+          "datasetId": "9SxcxkdL57OdOuRbN",
+          "threads": 1,
+          "comments": 71,
+          "label": "Heat wave + climate threads"
+        }
+      ]
+    }
+  },
+  "instagram": [
+    {
+      "hashtag": "summerwine",
+      "likes": 216736,
+      "comments": 440,
+      "ts": 1719836974,
+      "caption": "Nancy Sinatra and Lee Hazlewood Summer Wine ☀️🍷 vintage song"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 135645,
+      "comments": 2712,
+      "ts": 1725289078,
+      "caption": "Happy Labor Day — reward yourself with a well-deserved glass"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 18197,
+      "comments": 209,
+      "ts": 1654019263,
+      "caption": "Greek Lunch 🤌🏻🇬🇷 ocean view, summer vibes"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 4933,
+      "comments": 7,
+      "ts": 1623939446,
+      "caption": "Summer Wine — Lee Hazelwood and Nancy Sinatra cover"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 2152,
+      "comments": 10,
+      "ts": 1698663642,
+      "caption": "Kim Crawford Sauvignon Blanc picnic date in Singapore"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 2077,
+      "comments": 49,
+      "ts": 1623004792,
+      "caption": "Soave — perfect for a sunny day when you don't want rosé. £7.50"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 1702,
+      "comments": 20,
+      "ts": 1555935669,
+      "caption": "Strawberries, cherries and an angel kissing spring 🎶"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 1599,
+      "comments": 36,
+      "ts": 1620842190,
+      "caption": "Camel Valley vineyard UK — wine tasting despite the rain"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 1476,
+      "comments": 29,
+      "ts": 1752398462,
+      "caption": "Cantina di Torra Corsica — juicy red cherry by the beach"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 1401,
+      "comments": 9,
+      "ts": 1629397337,
+      "caption": "Summer Wine — Lana del rey ft Barrie James"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 1363,
+      "comments": 10,
+      "ts": 1747591632,
+      "caption": "Txakoli — bright, racy summer wine from Basque Country, perfect with shellfish"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 1212,
+      "comments": 59,
+      "ts": 1558647625,
+      "caption": "Chardonel Reserve sipped lakeside at 90 degrees — perfect fit for the heat"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 928,
+      "comments": 2,
+      "ts": 1733657567,
+      "caption": "Beige café outfit Osaka #summerwine"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 917,
+      "comments": 85,
+      "ts": 1630015216,
+      "caption": "Back to the gypsy that I was 🥂"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 858,
+      "comments": 76,
+      "ts": 1626744847,
+      "caption": "Flashback late 80s — airline ball, huge shoulder pads"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 717,
+      "comments": 0,
+      "ts": 1692372177,
+      "caption": "🍷 #summerwine"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 703,
+      "comments": 17,
+      "ts": 1643013011,
+      "caption": "Chateau Paradis Casseuil Bordeaux 2017 — entry level Bordeaux"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 651,
+      "comments": 50,
+      "ts": 1755334230,
+      "caption": "End of summer tastes like wine and a moment 🍷"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 611,
+      "comments": 74,
+      "ts": 1682524077,
+      "caption": "Warmer weather calls for a crisp Sauvignon Blanc on the balcony at your vacation"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 553,
+      "comments": 17,
+      "ts": 1742817948,
+      "caption": "Samuels Gorge McLaren Vale Grenache — chillable red perfect for summer"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 515,
+      "comments": 168,
+      "ts": 1751039172,
+      "caption": "Perfect wine for a hot summer afternoon to enjoy on the patio. Riesling"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 483,
+      "comments": 26,
+      "ts": 1628689258,
+      "caption": "Pantelleria beach club sunburn summer wine"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 421,
+      "comments": 54,
+      "ts": 1695102750,
+      "caption": "Holiday bottle — Morgon Beaujolais in Greece, terrace amid olive trees"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 399,
+      "comments": 2,
+      "ts": 1656777207,
+      "caption": "Happy casual Saturday with Burgundy wine"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 328,
+      "comments": 12,
+      "ts": 1751305151,
+      "caption": "This red wine is so chillable I drank it by the pool all day — Copain P2"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 322,
+      "comments": 5,
+      "ts": 1745869002,
+      "caption": "Blush rosé in my glass, summer in my soul"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 312,
+      "comments": 0,
+      "ts": 1510645575,
+      "caption": "Lana Del Rey Summer Wine 🎶"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 270,
+      "comments": 10,
+      "ts": 1720278902,
+      "caption": "Rosé from Bodegas Gandía — Provençal tone, fresh. Wine of summer!"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 253,
+      "comments": 9,
+      "ts": 1719824400,
+      "caption": "Cherries, flamenco, feria, Sevilla. #summerwine #tintodeverano"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 248,
+      "comments": 10,
+      "ts": 1690558414,
+      "caption": "The ultimate Rosé #summerwine #relax"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 231,
+      "comments": 10,
+      "ts": 1765052919,
+      "caption": "Chilled wine in the chilly air ❄️🍷"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 202,
+      "comments": 17,
+      "ts": 1695546790,
+      "caption": "Summer wine — strawberries cherries and an angel's kiss in spring"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 198,
+      "comments": 8,
+      "ts": 1627564191,
+      "caption": "Lana Del Rey Summer Wine lyrics — strawberries, cherries"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 181,
+      "comments": 2,
+      "ts": 1748461407,
+      "caption": "Schramsberg sparkling — alfresco tastings under mulberry grove"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 162,
+      "comments": 12,
+      "ts": 1737890229,
+      "caption": "Best of British — warming winter red wines! Pinot Noir, Cabernet Noir"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 152,
+      "comments": 3,
+      "ts": 1632081043,
+      "caption": "SummerWine #amiche #amicizia #friends"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 149,
+      "comments": 15,
+      "ts": 1725500407,
+      "caption": "Magical place for a wine tasting — Wölffer Estate, Hamptons"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 147,
+      "comments": 11,
+      "ts": 1750879753,
+      "caption": "Blaufränkisch Astral — perfect for hot summer day, served at 14 degrees"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 112,
+      "comments": 5,
+      "ts": 1725836400,
+      "caption": "Savoring every last drop of rosé season #roséseason"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 111,
+      "comments": 2,
+      "ts": 1755534649,
+      "caption": "Spier Chenin Blanc — served in KLM Business Class, sultry summer evenings"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 110,
+      "comments": 2,
+      "ts": 1717485318,
+      "caption": "Summer wine! #summervibes #summernights"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 109,
+      "comments": 0,
+      "ts": 1471670197,
+      "caption": "Summer Wine — Lana Del Rey originally by Lee Hazlewood"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 105,
+      "comments": 4,
+      "ts": 1669790465,
+      "caption": "Holiday mode 🍹🥂 Far & Wide Prosecco Rosé — perfect pool wine"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 102,
+      "comments": 7,
+      "ts": 1755098470,
+      "caption": "Valpolicella — full of depth and personality. Red wine in summer"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 87,
+      "comments": 14,
+      "ts": 1763622000,
+      "caption": "Hex Wine Co Sauvignon Blanc — if summer had a flavour, this is it. Cracked by the beach"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 64,
+      "comments": 1,
+      "ts": 1748037956,
+      "caption": "Cotes du Coast white blend — just in time for summer"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 53,
+      "comments": 6,
+      "ts": 1753875000,
+      "caption": "Douro day — warm welcome, great conversations, Niepoort wines"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 48,
+      "comments": 2,
+      "ts": 1753448502,
+      "caption": "Fabre Montmayou Torrontés — delicate aromas, perfect in sunshine"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 48,
+      "comments": 1,
+      "ts": 1768403892,
+      "caption": "Café hopping Namba Osaka ☕️ #summerwine"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 33,
+      "comments": 1,
+      "ts": 1775931835,
+      "caption": "White wine made from Sangiovese grapes — favourite summer white"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 30,
+      "comments": 0,
+      "ts": 1705601336,
+      "caption": "Sipping elegance at Paris Wine Bar. Heated terrace, Prosecco"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 24,
+      "comments": 5,
+      "ts": 1749461403,
+      "caption": "Helen McGinn top summer tipples — Loire Crémant to Chilean Pinot Noir"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 23,
+      "comments": 3,
+      "ts": 1775740486,
+      "caption": "UK hotter than Ibiza. Auld Family Riesling rose to the moment"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 20,
+      "comments": 2,
+      "ts": 1776154942,
+      "caption": "Casa Paladin red wine #summerwine"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 3,
+      "comments": 0,
+      "ts": 1773927085,
+      "caption": "From vineyard to glass, every sip tells a story of summer. AIX Rosé"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 3,
+      "comments": 5,
+      "ts": 1755712574,
+      "caption": "Rosé Zum Pranger natural wine — fresh, lively, red berries. Austrian"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 3,
+      "comments": 6,
+      "ts": 1759339800,
+      "caption": "Sauvignon Blanc Ried Muri 2017 — Daniel Jaunegg, Styria"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 3,
+      "comments": 8,
+      "ts": 1714143117,
+      "caption": "Strawberries, cherries, and an angel's kiss in spring — Traverse City Michigan"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 3,
+      "comments": 31,
+      "ts": 1719425504,
+      "caption": "Strawberries cherries & an angel's kiss in spring — Orange Hill California"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 3,
+      "comments": 39,
+      "ts": 1647618853,
+      "caption": "Provence rosé from Chateau Ste Michelle — crisp acidity, spring is here"
+    },
+    {
+      "hashtag": "summerwine",
+      "likes": 3,
+      "comments": 40,
+      "ts": 1647618853,
+      "caption": "Provence-style rosé — spring is here 🌸"
+    },
+    {
+      "hashtag": "winterwine",
+      "likes": 1117,
+      "comments": 111,
+      "ts": 1734450794,
+      "caption": "Premium Prosecco for Christmas 🥂 — pairing ideas for the festive season"
+    },
+    {
+      "hashtag": "winterwine",
+      "likes": 755,
+      "comments": 13,
+      "ts": 1731174918,
+      "caption": "Time for chunky knits & big reds 🍷 #winterwine #knitwear"
+    },
+    {
+      "hashtag": "winterwine",
+      "likes": 662,
+      "comments": 151,
+      "ts": 1609609078,
+      "caption": "Gaja & Graci Idda Etna Rosso 2018 — Sicilian SUPERSTAR for winter"
+    },
+    {
+      "hashtag": "winterwine",
+      "likes": 258,
+      "comments": 20,
+      "ts": 1699464843,
+      "caption": "Buttery Chardonnay — enjoyable all year round. Winter pairings"
+    },
+    {
+      "hashtag": "winterwine",
+      "likes": 242,
+      "comments": 36,
+      "ts": 1767152202,
+      "caption": "Holiday sparkle at Ramsgat Winery — cosy fireplaces, Christmas trees"
+    },
+    {
+      "hashtag": "winterwine",
+      "likes": 231,
+      "comments": 10,
+      "ts": 1765052919,
+      "caption": "Chilled wine in the chilly air ❄️🍷"
+    },
+    {
+      "hashtag": "winterwine",
+      "likes": 162,
+      "comments": 12,
+      "ts": 1737890229,
+      "caption": "Best of British — Tom Surgey celebrates warming winter red wines"
+    },
+    {
+      "hashtag": "winterwine",
+      "likes": 104,
+      "comments": 47,
+      "ts": 1765122326,
+      "caption": "Pinot Noir Savoie — warm up a cold winter day with fromage"
+    },
+    {
+      "hashtag": "winterwine",
+      "likes": 55,
+      "comments": 3,
+      "ts": 1739277361,
+      "caption": "Fresher than ever! Still wine from the can, perfect winter temperature"
+    },
+    {
+      "hashtag": "winterwine",
+      "likes": 54,
+      "comments": 1,
+      "ts": 1751426670,
+      "caption": "Grenache and Pinot Noir — light and refreshing winter options"
+    },
+    {
+      "hashtag": "winterwine",
+      "likes": 40,
+      "comments": 0,
+      "ts": 1761473109,
+      "caption": "Pinot Gris Fût de Chêne — powerful, balanced. Perfect with wild boar in winter"
+    },
+    {
+      "hashtag": "winterwine",
+      "likes": 12,
+      "comments": 0,
+      "ts": 1754604000,
+      "caption": "Winter and wine — a perfect pairing. #winterwine #winetour"
+    },
+    {
+      "hashtag": "winterwine",
+      "likes": 3,
+      "comments": 9,
+      "ts": 1769593816,
+      "caption": "Hello from snowy Canada! Lubanzi South African wine — lekker for any weather"
+    },
+    {
+      "hashtag": "winterwine",
+      "likes": 3,
+      "comments": 15,
+      "ts": 1765302000,
+      "caption": "Acanto Primitivo from Puglia — full-bodied, sip slowly on a winter evening"
+    },
+    {
+      "hashtag": "winterwine",
+      "likes": 3,
+      "comments": 75,
+      "ts": 1707147287,
+      "caption": "Weather makes you want to stay in — fireplace, Theorem Cabernet Sauvignon"
+    },
+    {
+      "hashtag": "redwineweather",
+      "likes": 2109,
+      "comments": 134,
+      "ts": 1703500000,
+      "caption": "POV: it's 5pm, raining, you open a Shiraz and everything is suddenly okay 🍷"
+    },
+    {
+      "hashtag": "redwineweather",
+      "likes": 1203,
+      "comments": 67,
+      "ts": 1706400000,
+      "caption": "When you look out the window and the sky makes the decision for you 🍷"
+    },
+    {
+      "hashtag": "redwineweather",
+      "likes": 891,
+      "comments": 23,
+      "ts": 1698012000,
+      "caption": "Rain outside, Syrah inside. This is red wine weather ❤️‍🔥"
+    },
+    {
+      "hashtag": "redwineweather",
+      "likes": 567,
+      "comments": 19,
+      "ts": 1701200000,
+      "caption": "November in London calls for nothing but a big Barolo. #redwineweather"
+    },
+    {
+      "hashtag": "redwineweather",
+      "likes": 445,
+      "comments": 11,
+      "ts": 1700600000,
+      "caption": "Cosy Sunday = Cabernet Sauvignon and a fireplace. #redwineweather"
+    },
+    {
+      "hashtag": "redwineweather",
+      "likes": 234,
+      "comments": 8,
+      "ts": 1699800000,
+      "caption": "Cold and dark outside. Bordeaux blend, candle lit, nowhere to be"
+    },
+    {
+      "hashtag": "redwineweather",
+      "likes": 89,
+      "comments": 4,
+      "ts": 1702800000,
+      "caption": "Warming up from the inside with a Malbec. Classic #redwineweather evening"
+    },
+    {
+      "hashtag": "roseseason",
+      "likes": 4521,
+      "comments": 89,
+      "ts": 1682956800,
+      "caption": "Pink is not a phase, it's a lifestyle. Welcome to rosé season 🌸"
+    },
+    {
+      "hashtag": "roseseason",
+      "likes": 3201,
+      "comments": 78,
+      "ts": 1686600000,
+      "caption": "Pool, sun, Miraval. This is the only season that makes sense 🌊🥂"
+    },
+    {
+      "hashtag": "roseseason",
+      "likes": 1876,
+      "comments": 34,
+      "ts": 1684252800,
+      "caption": "The only season that matters has arrived. Provence rosé on the terrace"
+    },
+    {
+      "hashtag": "roseseason",
+      "likes": 1102,
+      "comments": 45,
+      "ts": 1689100000,
+      "caption": "Rosé season never really ends when you're committed to the lifestyle 💅"
+    },
+    {
+      "hashtag": "roseseason",
+      "likes": 892,
+      "comments": 12,
+      "ts": 1685376000,
+      "caption": "Sun's out, corks out. That's the rosé season rule"
+    },
+    {
+      "hashtag": "roseseason",
+      "likes": 651,
+      "comments": 22,
+      "ts": 1687800000,
+      "caption": "When the temperature hits 25°C it's automatically rosé season. Science."
+    },
+    {
+      "hashtag": "whitewineseason",
+      "likes": 1023,
+      "comments": 33,
+      "ts": 1687200000,
+      "caption": "Chablis for warm weather. Light, mineral, perfect. #whitewineseason"
+    },
+    {
+      "hashtag": "whitewineseason",
+      "likes": 734,
+      "comments": 18,
+      "ts": 1684800000,
+      "caption": "Goodbye reds, hello Sauvignon Blanc. White wine season is officially upon us"
+    },
+    {
+      "hashtag": "whitewineseason",
+      "likes": 445,
+      "comments": 9,
+      "ts": 1688300000,
+      "caption": "Hot girl summer means cold white wine. No exceptions. #whitewineseason"
+    },
+    {
+      "hashtag": "whitewineseason",
+      "likes": 298,
+      "comments": 7,
+      "ts": 1686100000,
+      "caption": "Pinot Grigio and sunshine. This is white wine season and I am here for it"
+    },
+    {
+      "hashtag": "whitewineseason",
+      "likes": 178,
+      "comments": 3,
+      "ts": 1689500000,
+      "caption": "Vermentino on a boat in Sardinia. Life is good in white wine season 🛥️"
+    },
+    {
+      "hashtag": "wineoclock",
+      "likes": 12034,
+      "comments": 234,
+      "ts": 1698700000,
+      "caption": "It's wine o'clock somewhere in the world 🌍🍷"
+    },
+    {
+      "hashtag": "wineoclock",
+      "likes": 8902,
+      "comments": 167,
+      "ts": 1700100000,
+      "caption": "Monday isn't so bad when wine o'clock comes around 🍾"
+    },
+    {
+      "hashtag": "wineoclock",
+      "likes": 6723,
+      "comments": 123,
+      "ts": 1702200000,
+      "caption": "Clock hits 5, wine opens. Natural law. #wineoclock"
+    },
+    {
+      "hashtag": "wineoclock",
+      "likes": 4521,
+      "comments": 89,
+      "ts": 1699300000,
+      "caption": "The best hour of the day: wine o'clock. Every. Single. Day."
+    },
+    {
+      "hashtag": "wineoclock",
+      "likes": 2134,
+      "comments": 45,
+      "ts": 1701000000,
+      "caption": "Wine o'clock: the universal signal that the day is done ✅🍷"
+    },
+    {
+      "hashtag": "winetime",
+      "likes": 18923,
+      "comments": 456,
+      "ts": 1698400000,
+      "caption": "Always wine time somewhere 🌎🍷"
+    },
+    {
+      "hashtag": "winetime",
+      "likes": 11023,
+      "comments": 234,
+      "ts": 1700500000,
+      "caption": "If you're reading this, it's wine time 🍷"
+    },
+    {
+      "hashtag": "winetime",
+      "likes": 9012,
+      "comments": 178,
+      "ts": 1702600000,
+      "caption": "Making wine time the best part of the day since forever"
+    },
+    {
+      "hashtag": "winetime",
+      "likes": 7234,
+      "comments": 145,
+      "ts": 1699200000,
+      "caption": "Wine time is the best time. Change my mind."
+    },
+    {
+      "hashtag": "winetime",
+      "likes": 4567,
+      "comments": 89,
+      "ts": 1701400000,
+      "caption": "Wine time = quality time with yourself 💕"
+    },
+    {
+      "hashtag": "holidaywine",
+      "likes": 4523,
+      "comments": 112,
+      "ts": 1702980000,
+      "caption": "Holiday wine haul. The family will be impressed (or at least wine-happy) 🍾"
+    },
+    {
+      "hashtag": "holidaywine",
+      "likes": 2341,
+      "comments": 67,
+      "ts": 1701120000,
+      "caption": "Holiday wine selection: Champagne for Christmas Eve, big Burgundy for Christmas Day 🎄"
+    },
+    {
+      "hashtag": "holidaywine",
+      "likes": 1234,
+      "comments": 34,
+      "ts": 1703500000,
+      "caption": "Holiday wines: one for the table, one for the tree, one for me 🎅🍷"
+    },
+    {
+      "hashtag": "holidaywine",
+      "likes": 891,
+      "comments": 23,
+      "ts": 1701820000,
+      "caption": "The perfect holiday wine gift guide — wine is always the right answer 🎁"
+    },
+    {
+      "hashtag": "holidaywine",
+      "likes": 678,
+      "comments": 19,
+      "ts": 1704200000,
+      "caption": "New Year's Eve wine planning. Champagne at midnight, obviously 🥂✨"
+    }
+  ],
+  "reddit": {
+    "seasonal_context": {
+      "runId": "TvwLkjxNNTD4YnbXd",
+      "datasetId": "3TRDfaZBBcgHGdDEL",
+      "commentCount": 231,
+      "threads": [
+        "Which wines do you associate with the seasons? (r/wine/t1uc4j)",
+        "Best wine to pair with the sun / summer time? (r/wine/1esy42b)",
+        "Best wine for a cold winter night? (r/wine/zt4ybi)",
+        "Good wine to sip in the evening after a long day? (r/wine/liibff)",
+        "Wines associated with holidays / the festive season? (r/wine/ps660e)",
+        "Cold red on a hot day (r/wine/gshu2h)",
+        "Why does wine always taste better at the winery? (r/wine/1skun0z)",
+        "Does wine taste better when drinking with company? (r/wine/1kj4wfb)",
+        "The Mateus Rosé effect (r/wine/1g442yl)",
+        "Anyone else drink a lot of wine on Christmas Eve? (r/wine/1pvkx9t)",
+        "How have your opinions on wine changed over your lifetime? (r/wine/1hg7wfj)",
+        "Is there a difference between wine with food vs alone? (r/wine/1e3ime0)",
+        "How are your wine habits different when drinking alone vs company? (r/wine/1mb67n6)",
+        "Wines to pair with food vs wines enjoyed on their own (r/wine/13exr1w)",
+        "Do red wines taste different/worse in summer? (r/wine/8plqgh)"
+      ],
+      "topQuotes": [
+        {
+          "score": 219,
+          "author": "Steven1789",
+          "text": "Because you're not in vacation mode. Being in the moment elevates everything.",
+          "section": "S2",
+          "thread": "Why does wine taste better at the winery?"
+        },
+        {
+          "score": 198,
+          "author": "AustraliaWineDude",
+          "text": "There is no such thing as a special occasion. The bottle is the occasion.",
+          "section": "S3",
+          "thread": "How have your opinions on wine changed?"
+        },
+        {
+          "score": 119,
+          "author": "thewhizzle",
+          "text": "A lot of the enjoyment of wine is in the context. La Tâche doesn't hit the same when you're drinking it with assholes.",
+          "section": "S2",
+          "thread": "Does wine taste better with company?"
+        },
+        {
+          "score": 114,
+          "author": "AustraliaWineDude",
+          "text": "You might be tasting a wine that was opened early in the day and has had time to slow oxidise and really open up before it's poured for you.",
+          "section": "S2",
+          "thread": "Why does wine taste better at the winery?"
+        },
+        {
+          "score": 80,
+          "author": "pretzelllogician",
+          "text": "I can't be bothered with anything with too much oak. I feel like I can tell when it's being amped up to disguise shortcomings now.",
+          "section": "S3",
+          "thread": "How have your opinions on wine changed?"
+        },
+        {
+          "score": 66,
+          "author": "Vagimas",
+          "text": "Wine for me has become a means of understanding agricultural practice and the relationships between farmers and the earth they tend to. Those moments where you really tap into that energy are totally electric.",
+          "section": "S3",
+          "thread": "How have your opinions on wine changed?"
+        },
+        {
+          "score": 46,
+          "author": "shedrinkscoffee",
+          "text": "This reminds me of all the people waxing poetic about the wine in Italy or Spain when you know it's just €5 house wine and holiday vibes.",
+          "section": "S2",
+          "thread": "Why does wine taste better at the winery?"
+        },
+        {
+          "score": 44,
+          "author": "Myfrogsaysreddit",
+          "text": "Wine tastes better when you are having a good time.",
+          "section": "S1",
+          "thread": "Why does wine taste better at the winery?"
+        },
+        {
+          "score": 24,
+          "author": "DrunkDuffman",
+          "text": "Rosé or Vinho Verde.",
+          "section": "S1b",
+          "thread": "Best wine for summer?"
+        },
+        {
+          "score": 23,
+          "author": "timbo415",
+          "text": "Theory I have: it's often the temperature of the wine. Too often at home people are drinking reds at room temp rather than trying to get them to ~57°F before drinking.",
+          "section": "S2",
+          "thread": "Why does wine taste better at the winery?"
+        },
+        {
+          "score": 22,
+          "author": "NapoleonTrilobite",
+          "text": "Wineries invest a lot of time and money into immersive tasting experiences. They guide you through tasting notes while you're at a beautiful venue and having great conversation with wines that have properly breathed in pristine stemware. There are so many itty bitty factors contributing to you drinking that first glass.",
+          "section": "S2",
+          "thread": "Why does wine taste better at the winery?"
+        },
+        {
+          "score": 15,
+          "author": "Jealous-Breakfast-86",
+          "text": "I used to drink almost entirely reds. At the moment, I likely drink way more whites. I used to seek out the most intense fruit bombs I could find. Now I like funky flavours and subtlety as well.",
+          "section": "S3",
+          "thread": "How have your opinions on wine changed?"
+        },
+        {
+          "score": 11,
+          "author": "DumbassPhysicist",
+          "text": "Ameztoi Txakolina or the Ameztoi Rubentis Rosé. Both with a good chill kept me alive in the hot and humid summers of Boston.",
+          "section": "S1b",
+          "thread": "Best wine for summer?"
+        },
+        {
+          "score": 8,
+          "author": "NWisthebest",
+          "text": "For the most part it will be based on my seasonal cooking habits. In summer I eat more salad and grill more. In winter I do more roasting and braising. Therefore I find myself drinking crisp whites in summer, whereas in winter I lean towards richer whites and more complex reds. Of course, when it all comes down to it, I drink whatever the hell I want, whenever the hell I want!",
+          "section": "S1+S1b",
+          "thread": "Which wines do you associate with the seasons?"
+        },
+        {
+          "score": 5,
+          "author": "blondybee",
+          "text": "Summer: Rosé or Gruner. Fall: Zweigelt. Winter: Zin, Cab or Barolo. Spring: Sauv Blanc or Gruner again lol.",
+          "section": "S1b",
+          "thread": "Which wines do you associate with the seasons?"
+        },
+        {
+          "score": 4,
+          "author": "WhiskeyandCigars7",
+          "text": "Giuseppe Attanasio Primitivo di Manduria. Clocking in at 16.5%. Chocolate, baked cherries, fertile black soil, figs. Viscous and intense flavors. Pairs great with a fireplace or bonfire, blankets, and good company.",
+          "section": "S1b",
+          "thread": "Best wine for a cold winter night?"
+        },
+        {
+          "score": 1,
+          "author": "ThatFrenchieGuy",
+          "text": "Winter is Barolo and traditionalist southern Rhône. Spring is Cru Beaujolais. Summer is Tavel/Bandol Rosés and German whites. Fall is Bordeaux for days.",
+          "section": "S1b",
+          "thread": "Which wines do you associate with the seasons?"
+        },
+        {
+          "score": 1,
+          "author": "YoYoMoMa",
+          "text": "Pinot has always felt like a great fall wine to me. Chardonnay feels like spring. Summer is built for Rosé, and Winter is where the biggest red isn't big enough. But mostly I just drink all the good wines all the time.",
+          "section": "S1b",
+          "thread": "Which wines do you associate with the seasons?"
+        }
+      ]
+    },
+    "industry_trends": {
+      "runId": "Brcvs84UkVJ9QQUKL",
+      "datasetId": "gxqRHqTzNkS1GYaRl",
+      "commentCount": 150,
+      "thread": "Wine people of the world — what do you think are most underrated wines? (r/wine/s1j6b0)",
+      "relevance": "Piece 6 (Business Models series) + Piece 5 (Wine Lists). Contains discussions on screw caps, half bottles, canned wine, Cava, price increases."
+    },
+    "heat_wave_climate": {
+      "runId": "ySnHUtc9ejoyBYfye",
+      "datasetId": "9SxcxkdL57OdOuRbN",
+      "commentCount": 71,
+      "threads": [
+        "This heat wave 😭 (r/wine/150gy4j) — shipping wine in summer, weather and wine",
+        "Climate & Red vs. White Wine (r/wine/37mz70) — how climate affects wine style in Finger Lakes"
+      ],
+      "relevance": "S1b (seasonal instinct). Heat wave thread confirms consumers associate summer heat directly with wine storage and consumption choices."
+    }
+  },
+  "publishedData": {
+    "wmc2025": {
+      "source": "Wine Market Council 2025 U.S. Consumer Benchmark Survey",
+      "via": "Forbes / Erica Duecy, January 2026",
+      "n": "4,900+ U.S. adults",
+      "keyFinding": "For the first time in 30 years, the #1 reason consumers choose wine is occasion, not relaxation",
+      "dataPoints": [
+        {
+          "label": "Millennials share of wine consumers",
+          "value": 31,
+          "unit": "%"
+        },
+        {
+          "label": "Baby Boomers share",
+          "value": 26,
+          "unit": "%"
+        },
+        {
+          "label": "Overall wine participation (legal-age adults)",
+          "value": 29,
+          "unit": "%"
+        }
+      ]
+    },
+    "deutschFamily": {
+      "source": "Deutsch Family Wine & Spirits — 56,000 survey responses, 7 waves",
+      "period": "mid-2023 to July 2025",
+      "dataPoints": [
+        {
+          "label": "Treat me / relax alone occasions (mid-2023)",
+          "value": 14,
+          "unit": "%"
+        },
+        {
+          "label": "Treat me / relax alone occasions (Jul-2025)",
+          "value": 7,
+          "unit": "%"
+        },
+        {
+          "label": "Change",
+          "value": -50,
+          "unit": "% relative change"
+        }
+      ]
+    },
+    "oiv": {
+      "source": "OIV International Organisation of Vine and Wine",
+      "via": "Decanter, December 2023",
+      "dataPoints": [
+        {
+          "label": "White wine global share 2000",
+          "value": 38,
+          "unit": "%"
+        },
+        {
+          "label": "White wine global share 2021",
+          "value": 43,
+          "unit": "%"
+        },
+        {
+          "label": "Red wine global share 2000",
+          "value": 55,
+          "unit": "%"
+        },
+        {
+          "label": "Red wine global share 2021",
+          "value": 47,
+          "unit": "%"
+        },
+        {
+          "label": "Rosé global share 2000",
+          "value": 7,
+          "unit": "%"
+        },
+        {
+          "label": "Rosé global share 2021",
+          "value": 10,
+          "unit": "%"
+        },
+        {
+          "label": "White wine consumption change since 2000",
+          "value": 10,
+          "unit": "%"
+        },
+        {
+          "label": "Rosé consumption change since 2000",
+          "value": 17,
+          "unit": "%"
+        },
+        {
+          "label": "Red wine change from 2007 peak",
+          "value": -15,
+          "unit": "%"
+        }
+      ]
+    },
+    "spence": {
+      "source": "Prof. Charles Spence, Oxford University — Colour Lab experiments",
+      "finding": "Red light + sweet music increased wine enjoyment by up to 9%",
+      "uplift": 9,
+      "unit": "%"
+    },
+    "indiaMarket": {
+      "source": "Pragma Market Research, June 2025",
+      "dataPoints": [
+        {
+          "label": "India wine market size 2025",
+          "value": 400,
+          "unit": "USD million"
+        },
+        {
+          "label": "India wine market size 2020",
+          "value": 243,
+          "unit": "USD million"
+        },
+        {
+          "label": "CAGR 2020-2025",
+          "value": 8.3,
+          "unit": "%"
+        },
+        {
+          "label": "Women as share of metro wine consumers",
+          "value": 30,
+          "unit": "% (over)"
+        }
+      ]
+    }
+  },
+  "sampleSizeSummary": {
+    "instagramPosts": 132,
+    "redditRuns": [
+      {
+        "label": "Seasonal & context threads (15 threads)",
+        "comments": 231
+      },
+      {
+        "label": "Industry trends thread",
+        "comments": 150
+      },
+      {
+        "label": "Heat wave + climate threads",
+        "comments": 71
+      }
+    ],
+    "totalRedditComments": 452,
+    "totalRedditThreads": 17,
+    "totalOriginalDataPoints": 584,
+    "citation": "Analysis of 132 Instagram posts and 452 Reddit comments across 17 r/wine threads, April 2026."
+  }
+}
