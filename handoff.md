@@ -212,7 +212,11 @@ All user-facing text is separated into `/content/*.ts` files. **Never edit page 
 ### 🔴 Blocking (must do before going live)
 - [ ] **Formspree ID** — Replace `REPLACE_WITH_FORMSPREE_ID` in `components/ContactForm.tsx` line 16 with the real Formspree endpoint. Sign up at formspree.io, create a form, paste the ID.
 - [ ] **Register domain** — `corktotable.com` on Namecheap (or preferred registrar)
-- [ ] **Deploy to Vercel** — `vercel --prod` from project root, or connect GitHub repo via Vercel dashboard. Point custom domain once registered.
+- [x] **Reconcile main↔dev divergence — DONE (Jun 2026).** Audit confirmed `main` was a strict superset of the dev branch (`claude/personal-brand-website-E5EOF`): every shared file newer on main, nothing lost; dev's only unique file `.claude/launch.json` was copied in. Dev branch retired (local + remote), stale worktree removed. **`main` is now canonical** and the website is worked directly on it.
+- [ ] **Connect repo to Vercel** — Not yet connected. Connect the GitHub repo via the Vercel dashboard (preview deploys per push), production branch = `main`, then point the custom domain once registered.
+- [ ] **Delete redundant `Website` branch** — Still on GitHub. Confirmed 0 unique commits (fully contained in `main`). Housekeeping; run from the code tab.
+
+> **Two-pipeline note:** this repo also feeds the Substack visuals pipeline (`visual_*.html` → GitHub Pages via GitHub Actions, branch `claude/wine-substack-data-setup-H9HVg`). That deploy is independent and never merges to `main`. See `substackhandoff.md` and `CLAUDE.md` for the full split.
 
 ### 🟡 Soon after launch
 - [ ] **Add Substack URL** — one-line change in `content/site.ts`: set `substackUrl: 'https://...'`. This auto-activates the Substack link in footer, Stories & Trends, and About.
