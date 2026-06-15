@@ -14,8 +14,8 @@ export default function StoriesAndTrendsPage() {
       {/* ── Hero ─────────────────────────────────────────────────── */}
       <section className="relative h-[60vh] min-h-[450px] flex items-end overflow-hidden">
         <Image
-          src="/images/winery-thumb-1.jpg"
-          alt="Vineyard at dusk — the view that inspired the writing"
+          src="/images/photo-trade-tasting.jpg"
+          alt="Numbered wine glasses at a professional tasting"
           fill
           priority
           className="object-cover"
@@ -43,17 +43,18 @@ export default function StoriesAndTrendsPage() {
         </div>
       </section>
 
-      {/* ── Three pillars ────────────────────────────────────────── */}
+      {/* ── Two pillars ──────────────────────────────────────────── */}
       <section className="bg-cream pb-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
 
             {/* Tales from My Travels */}
             <div className="group">
               <div className="relative aspect-[4/3] overflow-hidden mb-6">
+                {/* [PLACEHOLDER] Replace with trade event / tasting notes image from Drive */}
                 <Image
-                  src="/images/winery-thumb-4.jpg"
-                  alt="Harvest — picking grapes in the vineyard"
+                  src="/images/winery-thumb-5.jpg"
+                  alt="Wine tasting in the vineyard"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
@@ -72,41 +73,13 @@ export default function StoriesAndTrendsPage() {
               </span>
             </div>
 
-            {/* Cork To Table Events */}
-            <div className="group">
-              <div className="relative aspect-[4/3] overflow-hidden mb-6">
-                <Image
-                  src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80"
-                  alt="Wine dinner table"
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-burgundy/20 group-hover:bg-burgundy/10 transition-colors duration-300" />
-              </div>
-              <p className="section-label mb-3">Supper Club · India</p>
-              <h3 className="font-cormorant text-2xl text-burgundy font-light mb-3">
-                Cork To Table Events
-              </h3>
-              <div className="w-8 h-px bg-gold mb-4" />
-              <p className="font-montserrat text-xs text-mid leading-relaxed mb-6">
-                Wine dinners, tasting evenings, and community gatherings based in India. Each event is a table set around a bottle — and the conversation it starts. Follow along on Instagram.
-              </p>
-              <a
-                href={site.instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-montserrat text-[10px] tracking-widest uppercase text-burgundy border-b border-burgundy/40 pb-0.5 hover:border-burgundy transition-colors"
-              >
-                {site.instagramHandle} on Instagram →
-              </a>
-            </div>
-
             {/* Cork To Data Table — Substack */}
             <div className="group">
               <div className="relative aspect-[4/3] overflow-hidden mb-6">
+                {/* [PLACEHOLDER] Replace with data+wine aesthetic image from Drive or keep Unsplash */}
                 <Image
-                  src="/images/winery-thumb-3.jpg"
-                  alt="Late harvest grapes on the vine"
+                  src="/images/winery-thumb-4.jpg"
+                  alt="Wine tasting samples and notes — data behind the glass"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />

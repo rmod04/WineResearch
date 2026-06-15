@@ -53,8 +53,8 @@ export default function TastingExperiencesPage() {
       {/* ── Hero ─────────────────────────────────────────────────── */}
       <section className="relative h-[70vh] min-h-[500px] flex items-end overflow-hidden">
         <Image
-          src="/images/winery-thumb-5.jpg"
-          alt="Wine glass and bottle overlooking Rioja vineyards"
+          src="/images/photo-dining-hero.jpg"
+          alt="Restaurant dining with wine and vineyard views"
           fill
           priority
           className="object-cover"
@@ -89,7 +89,7 @@ export default function TastingExperiencesPage() {
       <section className="bg-charcoal py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <p className="section-label mb-4">Evening Themes</p>
+            <p className="section-label text-gold mb-4">Evening Themes</p>
             <h2 className="font-cormorant text-4xl md:text-5xl font-light text-cream">
               Every evening has a story.
             </h2>
@@ -122,8 +122,8 @@ export default function TastingExperiencesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div className="relative aspect-[4/5] overflow-hidden">
               <Image
-                src="/images/personal-1.jpg"
-                alt="Tommasi Graticcio Appassionato — a wine chosen for the evening"
+                src="/images/photo-private-dinner.jpg"
+                alt="A private home dinner with wine pairing"
                 fill
                 className="object-cover"
               />

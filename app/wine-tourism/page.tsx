@@ -15,8 +15,8 @@ export default function WineTourismPage() {
       {/* ── Hero ─────────────────────────────────────────────────── */}
       <section className="relative h-[70vh] min-h-[500px] flex items-end overflow-hidden">
         <Image
-          src="/images/winery-2.jpg"
-          alt="Vineyard rows rolling into the hills"
+          src="/images/winery-thumb-1.jpg"
+          alt="Vineyard at dusk"
           fill
           priority
           className="object-cover"
@@ -48,7 +48,7 @@ export default function WineTourismPage() {
       <section className="bg-charcoal py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16">
-            <p className="section-label mb-4">Winery Partners</p>
+            <p className="section-label text-gold mb-4">Winery Partners</p>
             <h2 className="font-cormorant text-4xl md:text-5xl font-light text-cream max-w-2xl">
               Destinations we work with directly.
             </h2>

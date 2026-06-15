@@ -15,8 +15,8 @@ export const about = {
 
   credentials: [
     { label: 'WSET Level 3', detail: 'Award in Wines — Distinction' },
-    { label: 'Economics & Research', detail: 'LSE-trained background' },
+    { label: 'Economics & Research', detail: 'London School of Economics' },
     { label: 'Based in', detail: 'New Delhi, India' },
-    { label: 'Focus', detail: 'Wine Tourism · Events · Data Research' },
+    { label: 'Focus', detail: 'Wine Tourism · Tastings · Data-Led Stories' },
   ],
 }

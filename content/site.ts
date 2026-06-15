@@ -5,7 +5,7 @@
 export const site = {
   brandName: 'Cork To Table',
   websiteName: 'The Wine Meridian',
-  tagline: 'Wine. Travel. Story.',
+  tagline: 'Wine. Travel. Stories.',
   founderName: 'Rohan Modwel',
   founderTitle: 'Wine Professional & Travel Consultant',
   credentials: 'WSET Level 3, Distinction',

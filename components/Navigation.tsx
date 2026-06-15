@@ -43,15 +43,15 @@ export default function Navigation() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-10">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`font-montserrat text-[11px] tracking-widest uppercase transition-colors duration-200 ${
+              className={`font-montserrat text-[11px] font-semibold tracking-widest uppercase transition-colors duration-200 ${
                 scrolled
                   ? 'text-charcoal hover:text-burgundy'
-                  : 'text-cream/90 hover:text-cream'
+                  : 'text-cream hover:text-gold'
               }`}
             >
               {link.label}
@@ -61,18 +61,18 @@ export default function Navigation() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
+          className="lg:hidden flex flex-col gap-1.5 p-2"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
           {[0, 1, 2].map((i) => (
             <span
               key={i}
-              className={`block w-6 h-px transition-all duration-300 ${
-                scrolled ? 'bg-charcoal' : 'bg-cream'
-              } ${menuOpen && i === 0 ? 'rotate-45 translate-y-2' : ''} ${
+              className={`block w-6 h-0.5 transition-all duration-300 ${
+                menuOpen ? 'bg-cream' : scrolled ? 'bg-charcoal' : 'bg-cream'
+              } ${menuOpen && i === 0 ? 'rotate-45 translate-y-2.5' : ''} ${
                 menuOpen && i === 1 ? 'opacity-0' : ''
-              } ${menuOpen && i === 2 ? '-rotate-45 -translate-y-2' : ''}`}
+              } ${menuOpen && i === 2 ? '-rotate-45 -translate-y-2.5' : ''}`}
             />
           ))}
         </button>
@@ -80,17 +80,17 @@ export default function Navigation() {
 
       {/* Mobile menu */}
       <div
-        className={`md:hidden bg-cream/98 backdrop-blur-sm transition-all duration-300 overflow-hidden ${
-          menuOpen ? 'max-h-96 py-6' : 'max-h-0'
+        className={`lg:hidden bg-charcoal transition-all duration-300 overflow-hidden ${
+          menuOpen ? 'max-h-96 py-8' : 'max-h-0'
         }`}
       >
-        <nav className="flex flex-col items-center gap-6 px-6">
+        <nav className="flex flex-col items-center gap-7 px-6">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="font-montserrat text-[11px] tracking-widest uppercase text-charcoal hover:text-burgundy transition-colors"
+              className="font-montserrat text-[12px] tracking-widest uppercase font-semibold text-cream hover:text-gold transition-colors duration-200"
             >
               {link.label}
             </Link>
