@@ -13,7 +13,7 @@ export default function ContactForm() {
     setSending(true)
     setError('')
     try {
-      const res = await fetch('https://formspree.io/f/REPLACE_WITH_FORMSPREE_ID', {
+      const res = await fetch('https://formspree.io/f/REPLACE_WITH_CONTACT_FORM_ID', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
@@ -42,7 +42,7 @@ export default function ContactForm() {
         <div className="w-10 h-px bg-gold mx-auto mb-6" />
         <p className="font-cormorant text-2xl text-burgundy font-light mb-3">Message received.</p>
         <p className="font-montserrat text-xs text-mid leading-relaxed">
-          Thank you for getting in touch. We will be back with you soon.
+          Thank you for getting in touch. We&apos;ll be back with you shortly — in the meantime, pour yourself something nice.
         </p>
       </div>
     )
@@ -68,7 +68,7 @@ export default function ContactForm() {
       />
       <textarea
         rows={5}
-        placeholder="Your message — where are you dreaming of going?"
+        placeholder="Your message"
         required
         value={form.message}
         onChange={(e) => setForm((p) => ({ ...p, message: e.target.value }))}

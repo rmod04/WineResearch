@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { site } from '@/content/site'
 
 export default function Footer() {
@@ -11,6 +12,14 @@ export default function Footer() {
 
           {/* Brand column */}
           <div>
+            <div className="relative w-32 h-32 mb-4">
+              <Image
+                src="/images/logo-cream.png"
+                alt="Cork To Table"
+                fill
+                className="object-contain"
+              />
+            </div>
             <p className="font-cormorant text-3xl font-light mb-4">{site.brandName}</p>
             <div className="w-10 h-px bg-gold mb-4" />
             <p className="font-cormorant text-lg italic text-cream/80 leading-relaxed">
@@ -25,8 +34,8 @@ export default function Footer() {
             </p>
             <nav className="flex flex-col gap-3">
               {[
-                { href: '/wine-tourism', label: 'Wine Tourism' },
                 { href: '/tasting-experiences', label: 'Tasting Experiences' },
+                { href: '/wine-tourism', label: 'Wine Tourism' },
                 { href: '/stories-and-trends', label: 'Stories & Trends' },
                 { href: '/about', label: 'About' },
                 { href: '/contact', label: 'Contact' },
@@ -91,10 +100,10 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-16 pt-8 border-t border-cream/20 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="font-montserrat text-[10px] tracking-widest uppercase text-cream/40">
-            © {year} Cork To Table · {site.founderName} · {site.basedIn}
+            © {year} Cork To Table™
           </p>
           <p className="font-montserrat text-[10px] tracking-widest uppercase text-cream/40">
-            {site.credentials}
+            {site.founderName} · {site.credentials}
           </p>
         </div>
       </div>

@@ -20,11 +20,11 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: 'The Wine Meridian — Cork To Table',
+  title: 'Cork To Table',
   description: 'Wine tourism, bespoke travel, and curated wine experiences by Rohan Modwel. WSET Level 3 Distinction wine professional and travel consultant based in New Delhi.',
   keywords: 'wine tourism, wine travel, bespoke wine trips, cork to table, Rohan Modwel, WSET, wine experiences India',
   openGraph: {
-    title: 'The Wine Meridian — Cork To Table',
+    title: 'Cork To Table',
     description: 'Journeys built around the world\'s great wines.',
     type: 'website',
   },

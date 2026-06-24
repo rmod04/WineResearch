@@ -1,7 +1,7 @@
 # Cork To Table — Agent Handoff Document
-**Last updated:** June 2026  
-**Project root:** `/Users/rohanmodwel/WineResearch`  
-**Status:** Development complete, pre-deployment
+**Last updated:** June 2026 (post-design-pass)
+**Project root:** `/Users/rohanmodwel/WineResearch`
+**Status:** Development complete, pre-deployment. Design pass done. Content pass is next.
 
 ---
 
@@ -26,7 +26,7 @@ The brand name is **Cork To Table**. There is an older internal name ("The Wine 
 | Language | TypeScript |
 | Rendering | 100% static (SSG) — `npm run build` generates 13 HTML pages |
 | Images | `next/image` with `fill` + `object-cover` throughout |
-| Forms | Formspree (Contact page) |
+| Forms | Formspree (Contact form + legacy Questionnaire) |
 | Deployment target | Vercel (not yet deployed) |
 | Domain | `corktotable.com` (not yet registered) |
 
@@ -39,24 +39,35 @@ The brand name is **Cork To Table**. There is an older internal name ("The Wine 
 ## 3. Design System
 
 ### Colour palette (CSS variables in `app/globals.css` + Tailwind config)
+
 | Token | Hex | Usage |
 |---|---|---|
 | `--burgundy` / `bg-burgundy` | `#5C1A2E` | Primary brand, hero overlays, CTAs |
 | `--cream` / `bg-cream` | `#F5ECD7` | Page backgrounds, light sections |
-| `--gold` / `text-gold` | `#B8973A` | Labels, dividers, accent text |
+| `--gold` / `text-gold` | `#F2C94C` | Labels, dividers, accent text — brightened from original `#B8973A` |
 | `--rose` / `bg-rose` | `#C27A8A` | Hover/soft accent |
 | `--charcoal` / `bg-charcoal` | `#2C2C2C` | Dark sections, partner grid bg |
 | `--mid` / `text-mid` | `#7A5A64` | Secondary body text |
+
+**Gold usage rule:** `text-gold` is readable on solid dark backgrounds (charcoal, burgundy) and on tile cards (image has `opacity-40`). Hero overlay labels use `text-cream` instead — gold is unreadable over photos.
 
 ### Typography
 - **Cormorant Garamond** — all headings, display, blockquotes (`font-cormorant`)
 - **Montserrat** — all body text, labels, navigation, buttons (`font-montserrat`)
 
 ### Reusable CSS classes (defined in `app/globals.css`)
-- `.btn-outline` — white-border button with hover fill, used for all primary CTAs
-- `.section-label` — 10px Montserrat, wide letter-spacing, uppercase gold
+- `.btn-outline` — white-border button with hover fill
+- `.section-label` — 10px Montserrat, wide letter-spacing, uppercase; colour set contextually
 - `.divider-gold` — centred gold line divider
 - `.divider-gold-left` — left-aligned version
+
+### Hero pattern (all 6 hero sections)
+Every hero has two stacked gradient divs:
+```tsx
+<div className="absolute inset-0 bg-gradient-to-t from-burgundy/90 via-burgundy/40 to-transparent" />
+<div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-transparent" />
+```
+The bottom-up gradient anchors the headline; the top-down gradient darkens the nav area.
 
 ---
 
@@ -65,213 +76,209 @@ The brand name is **Cork To Table**. There is an older internal name ("The Wine 
 ```
 WineResearch/
 ├── app/
-│   ├── layout.tsx                  # Root layout: Navigation + Footer, font imports
-│   ├── globals.css                 # Tailwind base, CSS variables, reusable classes
+│   ├── layout.tsx
+│   ├── globals.css                 # CSS vars, reusable classes — gold is #F2C94C
 │   ├── page.tsx                    # Homepage
-│   ├── about/page.tsx              # About Rohan
-│   ├── contact/page.tsx            # Contact page (has ContactForm component)
-│   ├── wine-tourism/page.tsx       # Wine Tourism — intro + partners grid + experiences
-│   ├── tasting-experiences/page.tsx # Tasting Experiences — themes + private dinners
-│   ├── stories-and-trends/page.tsx # Stories & Trends — writing/research/Substack
-│   ├── partners/
-│   │   ├── bhutan-wine-company/page.tsx
-│   │   └── bischofliche-weinguter-trier/page.tsx
-│   ├── my-world/page.tsx           # LEGACY — redirects to /stories-and-trends (keep for now)
-│   └── travel-planning/page.tsx    # LEGACY — travel planning form, no longer linked
+│   ├── about/page.tsx
+│   ├── contact/page.tsx            # ⚠️ hero still uses Unsplash placeholder
+│   ├── wine-tourism/page.tsx
+│   ├── tasting-experiences/page.tsx
+│   ├── stories-and-trends/page.tsx
+│   ├── partners/bhutan-wine-company/page.tsx
+│   ├── partners/bischofliche-weinguter-trier/page.tsx
+│   ├── my-world/page.tsx           # LEGACY — keep as redirect
+│   └── travel-planning/page.tsx    # LEGACY — unlinked
 │
 ├── components/
-│   ├── Navigation.tsx              # Top nav (desktop + mobile hamburger)
-│   ├── Footer.tsx                  # Footer with nav, connect, copyright
-│   ├── ContactForm.tsx             # Formspree-backed contact form ⚠️ needs live ID
-│   └── Questionnaire.tsx           # LEGACY — travel questionnaire, no longer used
+│   ├── Navigation.tsx
+│   ├── Footer.tsx
+│   ├── ContactForm.tsx             # ⚠️ line 16: REPLACE_WITH_CONTACT_FORM_ID
+│   └── Questionnaire.tsx           # LEGACY — unlinked; ⚠️ line 133: REPLACE_WITH_QUESTIONNAIRE_FORM_ID
 │
-├── content/                        # All editable site content lives here
-│   ├── site.ts                     # Global: brand name, tagline, social links, email
-│   ├── about.ts                    # About page: bio paragraphs, credentials, philosophy
-│   ├── partners.ts                 # Partner wineries: slug, name, region, experiences
-│   └── experiences.ts             # Wine tourism experience types (icon + description)
+├── content/
+│   ├── site.ts                     # Global brand info, substackUrl (empty until live)
+│   ├── about.ts                    # Bio, credentials, philosophy
+│   ├── partners.ts                 # Partner wineries (all comingSoon: true)
+│   └── experiences.ts              # Wine Tourism signature experiences
 │
-├── public/
-│   └── images/                     # All real photos (Rohan's own, from Google Drive)
-│       ├── headshot.jpg            # Rohan's professional portrait — used on About page
-│       ├── winery-1.jpg            # Vineyard rows to rolling hills — Homepage hero
-│       ├── winery-2.jpg            # Wider vineyard landscape — Wine Tourism hero
-│       ├── winery-thumb-1.jpg      # Moody vineyard at dusk — Stories & Trends hero
-│       ├── winery-thumb-2.jpg      # Autumn red grape leaves — Homepage Wine Tourism tile
-│       ├── winery-thumb-3.jpg      # Late-harvest grapes — Stories & Trends data card
-│       ├── winery-thumb-4.jpg      # Gloved hand, white harvest grapes — Stories travel card
-│       ├── winery-thumb-5.jpg      # Eguren Ugarte bottle + glass, Rioja valley — Tasting Experiences hero
-│       └── personal-1.jpg          # Tommasi Graticcio bottle close-up — Tasting private dinners
-│
-├── tailwind.config.ts              # Custom colours, fonts, typography plugin
-├── package.json
-├── tsconfig.json
-└── postcss.config.js
+└── public/images/                  # All Rohan's own photos — see image map below
 ```
 
 ---
 
-## 5. Navigation Structure
-
-The live nav (in `Navigation.tsx` and `Footer.tsx`) is:
+## 5. Navigation
 
 ```
-Cork To Table   [logo / wordmark — links to /]
-
-Wine Tourism | Tasting Experiences | Stories & Trends | About | Contact
+Cork To Table  |  Wine Tourism  |  Tasting Experiences  |  Stories & Trends  |  About  |  Contact
 ```
 
-There is **no** "Plan My Journey" button. There is **no** Travel Planning tab. Both were removed.
+No "Plan My Journey" button. No Travel Planning tab. Do not add either.
 
 ---
 
 ## 6. Page-by-Page Summary
 
 ### `/` — Homepage
-- Full-screen hero: `winery-1.jpg` + burgundy overlay, "Cork To Table" / "Wine. Travel. Story." / two CTA buttons
-- Manifesto quote block (cream bg)
-- Three feature tiles (charcoal grid): Wine Tourism → `/wine-tourism`, Tasting Experiences → `/tasting-experiences`, Stories & Trends → `/stories-and-trends`
-- Bottom CTA banner: "Get In Touch" → `/contact`
+- Hero: `winery-1.jpg` + `bg-burgundy/60` + top-down nav gradient
+- Three tiles at `opacity-40`, `text-cream` labels, `from-charcoal/90 via-charcoal/30 to-transparent` gradient:
+  - Wine Tourism → `winery-thumb-2.jpg`
+  - Tasting Experiences → `photo-tasting-tile.jpg`
+  - Stories & Trends → `photo-writing-tile.jpg`
+- CTA banner: `photo-cta-outdoor.jpg`, label `text-cream`
 
 ### `/wine-tourism`
-- Hero: `winery-2.jpg`
-- Why Wine Travel? copy section
-- Partner winery cards grid (data from `content/partners.ts`)
-- Signature Experiences grid (data from `content/experiences.ts`)
-- CTA: "Get In Touch" → `/contact`
+- Hero: `photo-wine-tourism-hero.jpg` (fermentation hall, wooden vats, portrait, EXIF baked in)
 
 ### `/tasting-experiences`
-- Hero: `winery-thumb-5.jpg` (Rioja bottle + glass)
-- Intro: "Wine and food, in conversation with each other."
-- 6 themed evening cards on charcoal: Old World vs New World, Wine & Indian Cuisine, A Journey Through One Region, Bubbles Beyond Champagne, The Language of Terroir, Bespoke Theme
-- Private Dinners section: `personal-1.jpg` + copy
-- CTA: "Get In Touch" + Instagram link
+- Hero: `photo-dining-hero.jpg` (restaurant, dark brick walls, tilt corrected)
+- Private Dinners: `photo-private-dinner.jpg`
 
 ### `/stories-and-trends`
-- Hero: `winery-thumb-1.jpg`
-- Intro: "The wine world, told in stories and in data."
-- Three content pillars: Tales from My Travels (Coming Soon), Cork To Table Events (→ Instagram), Cork To Data Table (→ Substack, Coming Soon)
-- Substack embed placeholder (dashed box, charcoal section)
+- Hero: `photo-trade-tasting.jpg` (wine shop, left 21% cropped to remove wrapped bottle)
+- Data card: `photo-substack-chart.jpg` (matplotlib OIV chart, brand colours)
+- "Tales from My Travels" card: ⚠️ still `winery-thumb-5.jpg` with `[PLACEHOLDER]` comment in code
 
 ### `/about`
-- Hero: dark charcoal + subtle bg image, "Wine. Travel. Human Connection."
-- Bio section: `headshot.jpg` (Rohan's photo) + two bio paragraphs
-- Credential badge overlay on photo: WSET Level 3 Distinction / Rohan Modwel
-- Credentials grid (4 items) on burgundy bg
-- C2T three pillars: C2T Experiences, Cork To Table Events, Cork To Data Table
-- CTA: "Explore Wine Tourism" + "Get in Touch"
+- Hero: `photo-cellar.jpg` at `opacity-60`
+- Headshot: thumbnail `w-40 h-52`, `object-top`, with burgundy credential badge overlay
+- WSET credential uses `\n` + `whitespace-pre-line` for line break:
+  ```ts
+  { label: 'WSET Level 3', detail: 'Award in Wines\nDistinction' }
+  ```
 
 ### `/contact`
-- Formspree contact form (name, email, message)
-- Phone / email / WhatsApp / Instagram direct links
-
-### `/partners/bhutan-wine-company` and `/partners/bischofliche-weinguter-trier`
-- Both set to `comingSoon: true` in `content/partners.ts`
-- Full pages exist with experiences listed, but show "Coming Soon" badge on the wine-tourism grid
+- ⚠️ Hero still uses Unsplash: `https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1600&q=80` — replace before launch
 
 ---
 
-## 7. Content Files — What to Edit
+## 7. Formspree Setup
 
-All user-facing text is separated into `/content/*.ts` files. **Never edit page files for text changes** — use these:
+Two separate forms are needed so submissions are distinguishable:
 
-### `content/site.ts`
+| Component | File | Placeholder |
+|---|---|---|
+| Contact form (active, blocking) | `components/ContactForm.tsx` line 16 | `REPLACE_WITH_CONTACT_FORM_ID` |
+| Questionnaire (legacy, not blocking) | `components/Questionnaire.tsx` line 133 | `REPLACE_WITH_QUESTIONNAIRE_FORM_ID` |
+
+Sign up at formspree.io, create two forms, paste the IDs. Questionnaire is unlinked — can be done post-launch.
+
+---
+
+## 8. Content Files
+
+All user-facing copy lives in `/content/*.ts`. Never edit page files for text changes.
+
+### `content/site.ts` (key fields)
 ```ts
-{
-  brandName: 'Cork To Table',
-  tagline: 'Wine. Travel. Story.',
-  founderName: 'Rohan Modwel',
-  credentials: 'WSET Level 3, Distinction',
-  basedIn: 'New Delhi, India',
-  instagramHandle: '@corktotable',
-  instagramUrl: 'https://www.instagram.com/corktotable/',
-  substackUrl: '',          // ← ADD Substack URL here when live
-  substackLabel: 'Cork To Data Table',
-  contactEmail: 'corktotable@gmail.com',
-  whatsappUrl: 'https://wa.me/919871576702',
-}
+brandName: 'Cork To Table'
+tagline: 'Wine. Travel. Story.'
+founderName: 'Rohan Modwel'
+credentials: 'WSET Level 3, Distinction'
+substackUrl: ''          // ADD URL here when Substack is live
+substackLabel: 'Cork To Data Table'
+contactEmail: 'corktotable@gmail.com'
+whatsappUrl: 'https://wa.me/919871576702'
+instagramHandle: '@corktotable'
 ```
 
 ### `content/about.ts`
-- `headline` — hero H1 text
-- `bio[]` — array of bio paragraphs
-- `philosophy` — blockquote
-- `credentials[]` — the 4-item grid on the burgundy section
+`headline`, `bio[]`, `philosophy`, `credentials[]`
 
 ### `content/partners.ts`
-- Array of `Partner` objects with `slug`, `name`, `region`, `country`, `tagline`, `shortDescription`, `fullDescription`, `experiences[]`, `image`, `comingSoon`
-- Set `comingSoon: false` to activate a partner card
+Partner objects — set `comingSoon: false` to activate each card.
 
 ### `content/experiences.ts`
-- Array of `{ icon, title, description }` for the Wine Tourism "Signature Experiences" grid
+`{ icon, title, description }` for Wine Tourism signature experiences grid.
 
 ---
 
-## 8. Outstanding Tasks (Pre-Launch Checklist)
+## 9. Outstanding Tasks
 
-### 🔴 Blocking (must do before going live)
-- [ ] **Formspree ID** — Replace `REPLACE_WITH_FORMSPREE_ID` in `components/ContactForm.tsx` line 16 with the real Formspree endpoint. Sign up at formspree.io, create a form, paste the ID.
-- [ ] **Register domain** — `corktotable.com` on Namecheap (or preferred registrar)
-- [x] **Reconcile main↔dev divergence — DONE (Jun 2026).** Audit confirmed `main` was a strict superset of the dev branch (`claude/personal-brand-website-E5EOF`): every shared file newer on main, nothing lost; dev's only unique file `.claude/launch.json` was copied in. Dev branch retired (local + remote), stale worktree removed. **`main` is now canonical** and the website is worked directly on it.
-- [ ] **Connect repo to Vercel** — Not yet connected. Connect the GitHub repo via the Vercel dashboard (preview deploys per push), production branch = `main`, then point the custom domain once registered.
-- [ ] **Delete redundant `Website` branch** — Still on GitHub. Confirmed 0 unique commits (fully contained in `main`). Housekeeping; run from the code tab.
-
-> **Two-pipeline note:** this repo also feeds the Substack visuals pipeline (`visual_*.html` → GitHub Pages via GitHub Actions, branch `claude/wine-substack-data-setup-H9HVg`). That deploy is independent and never merges to `main`. See `substackhandoff.md` and `CLAUDE.md` for the full split.
+### 🔴 Blocking (before launch)
+- [ ] Replace `REPLACE_WITH_CONTACT_FORM_ID` in `components/ContactForm.tsx` line 16
+- [ ] Register `corktotable.com`
+- [x] Reconcile main↔dev — DONE (Jun 2026). `main` is canonical, dev branch retired.
+- [ ] Connect repo to Vercel (production branch = `main`), then point custom domain
+- [ ] Delete redundant `Website` branch on GitHub (0 unique commits)
 
 ### 🟡 Soon after launch
-- [ ] **Add Substack URL** — one-line change in `content/site.ts`: set `substackUrl: 'https://...'`. This auto-activates the Substack link in footer, Stories & Trends, and About.
-- [ ] **Activate partner pages** — set `comingSoon: false` in `content/partners.ts` for each partner once experiences are bookable.
-- [ ] **Replace About hero background** — `app/about/page.tsx` line 17 still uses an Unsplash image as the faint hero background. Replace with a real photo if desired.
-- [ ] **Delete legacy pages** — `app/my-world/` and `app/travel-planning/` are no longer linked anywhere. They can be removed or kept as silent redirects.
-- [ ] **Logo** — A C2T circular stamp PNG was discussed but never added. If Rohan provides it, swap the wordmark in `Navigation.tsx` for `<Image src="/images/logo.png" ... />`.
+- [ ] Replace Contact page hero (Unsplash placeholder at `app/contact/page.tsx` line 16)
+- [ ] Add `substackUrl` in `content/site.ts` when Substack is live
+- [ ] Activate partner pages (`comingSoon: false` in `content/partners.ts`)
+- [ ] Replace "Tales from My Travels" placeholder image (`winery-thumb-5.jpg`) in Stories & Trends
+- [ ] Delete or redirect legacy pages (`app/my-world/`, `app/travel-planning/`)
+- [ ] Swap nav wordmark for logo PNG if C2T stamp is provided
 
-### 🟢 Nice to have
-- [ ] **SEO meta** — Each page has a `metadata` export. Review descriptions and add `openGraph` image tags for social sharing.
-- [ ] **Analytics** — Add Vercel Analytics or Google Analytics 4 snippet to `app/layout.tsx`.
-- [ ] **More partner wineries** — Add new entries to `content/partners.ts` and create corresponding pages in `app/partners/[slug]/`.
-- [ ] **Substack embed** — `app/stories-and-trends/page.tsx` has a placeholder dashed box for Substack embeds. Replace with real `<iframe>` once articles are published.
+### 🟢 Agreed future roadmap (in order)
+1. **Content pass** ← next priority: review/update copy in all `content/*.ts` files and page-level headlines/CTAs
+2. **Motion layer**: add Framer Motion for page transitions and scroll reveals after content is finalised (stack stays Next.js — no platform migration)
+3. SEO meta + openGraph tags per page
+4. Vercel Analytics or GA4 in `app/layout.tsx`
+5. More partner winery pages
 
 ---
 
-## 9. Key Decisions Already Made
-
-These were explicitly decided and should **not** be reversed without Rohan's instruction:
+## 10. Key Decisions (do not reverse without Rohan's instruction)
 
 | Decision | Detail |
 |---|---|
-| No Travel Planning tab | Removed from nav, footer, and homepage. The `/travel-planning` page exists as a legacy file but is not linked. |
-| No separate form page | Contact form is only at `/contact` |
-| No "About Me" on homepage | Homepage has manifesto quote but no bio section |
-| No "Plan My Journey" button | Was removed from nav (desktop + mobile) |
-| Brand = Cork To Table only | "The Wine Meridian" name does not appear anywhere visible |
-| Static-only site | No API routes, no database, no auth. Pure SSG. |
-| All images local | `public/images/` — no CDN dependency except partner card fallbacks |
+| No Travel Planning tab | Removed from nav, footer, homepage |
+| No separate form page | Contact form only at `/contact` |
+| No "About Me" on homepage | Manifesto quote only |
+| No "Plan My Journey" button | Removed from nav |
+| Brand = Cork To Table only | "The Wine Meridian" not displayed anywhere |
+| Static-only site | No API routes, no database, no auth |
+| All images local | `public/images/` — no CDN except partner card fallbacks |
+| No individual label promotion | No images spotlighting a single wine label |
+| No image repeats | Every image on the site is unique |
+| Content before motion | Copy finalised first, then Framer Motion layer |
 
 ---
 
-## 10. Social & Contact Details
+## 11. Image Map
+
+All images are Rohan's personal photographs (JPEG/PNG only — no HEIC).
+
+| File | Subject | Used on |
+|---|---|---|
+| `headshot.jpg` | Rohan Modwel, navy blazer | About — thumbnail |
+| `photo-cellar.jpg` | Vaulted barrel cellar | About hero (opacity-60) |
+| `photo-cta-outdoor.jpg` | White wine glass outdoors, autumn | Homepage CTA banner |
+| `photo-dining-hero.jpg` | Restaurant table, wine glasses, dark brick | Tasting Experiences hero |
+| `photo-private-dinner.jpg` | Home dinner setting | Tasting Experiences private dinners |
+| `photo-substack-chart.jpg` | Matplotlib OIV colour-shift chart (brand colours) | Stories & Trends data card |
+| `photo-tasting-tile.jpg` | Wine & cheese board | Homepage tasting tile |
+| `photo-trade-tasting.jpg` | Wine shop bottle display, left 21% cropped | Stories & Trends hero |
+| `photo-wine-tourism-hero.jpg` | Fermentation hall, wooden vats (EXIF baked in, 4284×5712 portrait) | Wine Tourism hero |
+| `photo-writing-tile.jpg` | Wine Paris trade event | Homepage writing tile |
+| `winery-1.jpg` | Vineyard rows | Homepage main hero |
+| `winery-thumb-2.jpg` | Autumn red grape leaves | Homepage wine tourism tile |
+| `winery-thumb-5.jpg` | ⚠️ Eguren Ugarte bottle + glass | Stories & Trends "Tales" card — PLACEHOLDER |
+
+**EXIF note:** `photo-wine-tourism-hero.jpg` was saved after `ImageOps.exif_transpose()` — do not re-rotate it.
+
+---
+
+## 12. Social & Contact
 
 | Channel | Value |
 |---|---|
 | Instagram | [@corktotable](https://www.instagram.com/corktotable/) |
 | Email | corktotable@gmail.com |
 | WhatsApp | +91 98715 76702 |
-| Substack | Not yet live — `substackLabel` = "Cork To Data Table" |
+| Substack | Not yet live — label "Cork To Data Table" |
 
 ---
 
-## 11. Image Map
+## 13. Two-Pipeline Architecture
 
-All images in `public/images/` are Rohan's personal photographs sourced from his Google Drive.
+| Pipeline | Branch | Host | Content |
+|---|---|---|---|
+| Website | `main` | Vercel | Next.js site — `app/`, `components/`, `content/`, `public/` |
+| Substack visuals | `claude/wine-substack-data-setup-H9HVg` | GitHub Pages | `visual_*.html` only |
 
-| File | Subject | Used on |
-|---|---|---|
-| `headshot.jpg` | Rohan Modwel, navy blazer, arms crossed | About page — portrait |
-| `winery-1.jpg` | Vineyard rows leading to rolling hills (Australia) | Homepage hero |
-| `winery-2.jpg` | Wider vineyard landscape, same region | Wine Tourism hero |
-| `winery-thumb-1.jpg` | Vineyard rows, grapes, moody dusk sky | Stories & Trends hero |
-| `winery-thumb-2.jpg` | Dark grapes, vivid red/orange autumn leaves | Homepage — Wine Tourism tile |
-| `winery-thumb-3.jpg` | Late-harvest/botrytis-style grapes on vine | Stories & Trends — research card |
-| `winery-thumb-4.jpg` | Gloved hand holding white grape cluster at harvest | Stories & Trends — travel card |
-| `winery-thumb-5.jpg` | Eguren Ugarte (Rioja) bottle + wine glass, valley panorama | Tasting Experiences hero |
-| `personal-1.jpg` | Tommasi Graticcio Appassionato 2021 bottle close-up | Tasting Experiences — private dinners |
+Substack deploys via GitHub Actions (`.github/workflows/deploy-substack-visuals.yml`) — push to substack branch → live at `https://rmod04.github.io/WineResearch/` in ~60s. Never merge to `main`.
+
+Cowork sandbox has no git credentials — commits/pushes run from Claude Code or local terminal.
+
+See `substackhandoff.md` and `CLAUDE.md` for substack pipeline detail.

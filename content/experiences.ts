@@ -4,22 +4,22 @@
 
 export const experiences = [
   {
-    title: 'Harvest Trips',
-    icon: '🍇',
+    title: 'Food Pairings',
+    icon: '🧀',
     description:
-      'Join a working harvest at one of the world\'s great estates. Get your hands on the fruit, understand what a vintage really means, and share a table with the people who make the wine.',
+      'Pair your selection of wines with a cheese board, some nibbles, or if you\'re a bit more peckish, perhaps a selection of gourmet tapas would do just fine.',
   },
   {
-    title: 'Winemaker Dinners',
-    icon: '🍽️',
+    title: 'Private Sessions',
+    icon: '🍷',
     description:
-      'Intimate evenings with the men and women behind the labels — their stories, their philosophy, their wine, paired with food that speaks the same language.',
+      'A one-on-one chat that dives deep into the story and processes behind the labels. Understand the philosophy, taste the wine, pair it with food that speaks the same language.',
   },
   {
-    title: 'Cellar Door Tastings',
+    title: 'Cellar Tastings',
     icon: '🪵',
     description:
-      'Stand in the caves where the wine was born. Private tastings, barrel samples, and the kind of access that no retail shelf can replicate.',
+      'Stand in cellars and caves where the wine was born. Private tastings, barrel samples, and the kind of access that no retail shelf can replicate.',
   },
   {
     title: 'Vineyard Stays',
@@ -28,9 +28,9 @@ export const experiences = [
       'Wake up surrounded by vines. A curated selection of vineyard estates and wine-country hotels where the terroir extends from the glass to the room.',
   },
   {
-    title: 'Wine & Food Journeys',
-    icon: '🗺️',
+    title: 'Harvest Trips',
+    icon: '🍇',
     description:
-      'Itineraries built around the marriage of a region\'s wine and its food — market mornings, winery afternoons, long dinners. The full picture of a place.',
+      'Join a working harvest, get your hands on the fruit, understand what a vintage really means, and share a table with the people who make the wine.',
   },
 ]

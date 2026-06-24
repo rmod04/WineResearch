@@ -20,10 +20,10 @@ export default function ContactPage() {
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-burgundy/90 via-burgundy/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-transparent" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-16 w-full">
-          <p className="section-label text-gold mb-4">Contact</p>
-          <h1 className="font-cormorant text-5xl md:text-7xl font-light text-cream leading-tight">
-            Let&apos;s talk about your trip.
+          <h1 className="font-cormorant text-5xl md:text-7xl font-light text-cream leading-tight max-w-3xl">
+            Contact Us
           </h1>
         </div>
       </section>
@@ -36,12 +36,9 @@ export default function ContactPage() {
             {/* Left: contact info */}
             <div>
               <p className="section-label mb-6">Get in Touch</p>
-              <h2 className="font-cormorant text-3xl font-light text-burgundy leading-relaxed mb-6">
-                No fixed slots. Just a conversation.
-              </h2>
               <div className="divider-gold-left" />
               <p className="font-montserrat text-sm text-charcoal leading-loose mb-10">
-                Whether you have a destination in mind, a vague idea, or simply want to know what is possible — reach out and we will figure out the rest together.
+                Whether you&apos;d like to enquire about an event, host your own wine evening, have a travel destination in mind, or simply want to know what is possible — reach out and we will figure out the rest together over a glass, or a bottle!
               </p>
 
               <div className="flex flex-col gap-6">

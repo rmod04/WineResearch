@@ -10,40 +10,28 @@ export const metadata = {
 
 const themes = [
   {
-    icon: '🍷',
-    title: 'Old World vs New World',
-    description:
-      'A structured comparison of the same grape across continents — how soil, climate, and philosophy shape what ends up in the glass. Bordeaux versus Napa. Burgundy versus Oregon.',
-  },
-  {
-    icon: '🫒',
+    icon: '🍛',
     title: 'Wine & Indian Cuisine',
     description:
-      'India\'s food is among the most complex in the world. This evening explores what actually works — and why — from aromatic whites with spiced dishes to structured reds with slow-cooked meats.',
+      'We all know Indian food is among the most complex in the world. This evening explores what actually works, and why. Spiced dishes and slow cooked meats await.',
   },
   {
     icon: '🗺️',
     title: 'A Journey Through One Region',
     description:
-      'A single region, explored in depth. Burgundy, Mosel, Rioja, Barossa — six wines, one story. For those who want to understand not just taste, but place.',
-  },
-  {
-    icon: '🍾',
-    title: 'Bubbles Beyond Champagne',
-    description:
-      'Champagne is the benchmark, but the world of sparkling wine is vast. Crémant, Cava, Franciacorta, Pétillant Naturel — this evening makes the case for looking beyond the name.',
+      'A single region, explored in depth. Bordeaux, Tuscany, California, Mendoza, Barossa... the list goes on. Many wines, one common story.',
   },
   {
     icon: '🌿',
     title: 'The Language of Terroir',
     description:
-      'What does a wine taste like when the land it comes from has a distinct character? Volcanic soils, limestone, chalk, slate — this tasting is about geology you can drink.',
+      'What does a wine taste like when the land it comes from has a distinct character? Soil, altitude, weather systems, water bodies, hills. It all plays a subtle yet critical part.',
   },
   {
     icon: '✍️',
-    title: 'Bespoke Theme',
+    title: 'Choose Your Own Theme',
     description:
-      'Every occasion is different. A birthday, a corporate dinner, a curated experience for a specific guest list — we build the theme around the people and the moment.',
+      'Every occasion is different. A birthday celebration, a corporate dinner, a curated experience for a specific guest list. We can build the theme around the people and the moment.',
   },
 ]
 
@@ -60,10 +48,10 @@ export default function TastingExperiencesPage() {
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-burgundy/90 via-burgundy/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-transparent" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-16 w-full">
-          <p className="section-label text-gold mb-4">Tasting Experiences</p>
           <h1 className="font-cormorant text-5xl md:text-7xl font-light text-cream leading-tight max-w-3xl">
-            An evening built around the bottle.
+            Tasting Experiences
           </h1>
         </div>
       </section>
@@ -71,16 +59,12 @@ export default function TastingExperiencesPage() {
       {/* ── Intro ────────────────────────────────────────────────── */}
       <section className="bg-cream py-20 px-6">
         <div className="max-w-3xl mx-auto">
-          <p className="section-label mb-6">What We Host</p>
           <h2 className="font-cormorant text-3xl md:text-4xl font-light text-burgundy leading-relaxed mb-8">
-            Wine and food, in conversation with each other.
+            An evening built around the bottle.
           </h2>
           <div className="divider-gold-left" />
           <p className="font-montserrat text-sm text-charcoal leading-loose mb-6">
-            A tasting evening is not a class. There is no exam at the end, and no expectation that you arrive knowing anything. What we create instead is a table where wine and food are explored together — where the pairing is the point, and the conversation that follows is the experience.
-          </p>
-          <p className="font-montserrat text-sm text-charcoal leading-loose">
-            Each evening is built around a specific theme — a region, a contrast, a grape, a question worth asking. The food is chosen to complement or challenge the wines, and every bottle comes with the story of the place it came from.
+            The best thing about an evening with wine is that it gets better with company, food, and a bit of context. The kind that makes you look at a glass differently and think: I'd like another one of those. Bring an appetite, go back home with a memory.
           </p>
         </div>
       </section>
@@ -89,11 +73,13 @@ export default function TastingExperiencesPage() {
       <section className="bg-charcoal py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <p className="section-label text-gold mb-4">Evening Themes</p>
             <h2 className="font-cormorant text-4xl md:text-5xl font-light text-cream">
-              Every evening has a story.
+              Tasting Themes
             </h2>
             <div className="divider-gold" />
+            <p className="font-montserrat text-xs text-cream/60 leading-relaxed max-w-xl mx-auto">
+              Wine and food is such a vast domain. Here's some ways in which we narrow it down.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -135,13 +121,10 @@ export default function TastingExperiencesPage() {
               </h2>
               <div className="w-8 h-px bg-gold mb-8" />
               <p className="font-montserrat text-sm text-charcoal leading-loose mb-6">
-                Every tasting experience can be customised for a private setting — a dinner party, a celebration, a corporate evening, or an intimate gathering for guests who share a love of good wine.
-              </p>
-              <p className="font-montserrat text-sm text-charcoal leading-loose mb-6">
-                We work with the host to choose a theme that suits the occasion, curate the wines and food pairings, and lead the evening at whatever level of depth the table wants — from casual exploration to a more structured guided tasting.
+                Whether it's a larger dinner party or a more intimate gathering for guests, we work with the host to choose a theme that suits the occasion, curate the wines and food pairings, and lead the evening at whatever level of depth the table wants, all the way from casual exploration to a more structured guided tasting.
               </p>
               <p className="font-montserrat text-sm text-mid leading-loose italic">
-                Hosted in Delhi, and available for travel to other cities on request.
+                Can be hosted in a public venue or host's residence as per preference. Available for travel to other cities on request.
               </p>
             </div>
           </div>
@@ -151,9 +134,8 @@ export default function TastingExperiencesPage() {
       {/* ── CTA ──────────────────────────────────────────────────── */}
       <section className="bg-burgundy py-24 px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="section-label text-gold mb-4">Interested?</p>
           <h2 className="font-cormorant text-4xl md:text-5xl font-light text-cream mb-6">
-            Let&apos;s plan an evening around wine.
+            Planning an evening around wine?
           </h2>
           <div className="w-16 h-px bg-gold mx-auto mb-8" />
           <p className="font-montserrat text-xs text-cream/70 leading-loose max-w-xl mx-auto mb-10">

@@ -15,17 +15,17 @@ export default function WineTourismPage() {
       {/* ── Hero ─────────────────────────────────────────────────── */}
       <section className="relative h-[70vh] min-h-[500px] flex items-end overflow-hidden">
         <Image
-          src="/images/winery-thumb-1.jpg"
-          alt="Vineyard at dusk"
+          src="/images/photo-wine-tourism-hero.jpg"
+          alt="Winery exterior"
           fill
           priority
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-burgundy/90 via-burgundy/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-transparent" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-16 w-full">
-          <p className="section-label text-gold mb-4">Wine Tourism</p>
           <h1 className="font-cormorant text-5xl md:text-7xl font-light text-cream leading-tight max-w-3xl">
-            Where the journey begins in the vineyard.
+            Wine Tourism
           </h1>
         </div>
       </section>
@@ -33,13 +33,12 @@ export default function WineTourismPage() {
       {/* ── Manifesto ────────────────────────────────────────────── */}
       <section className="bg-cream py-20 px-6">
         <div className="max-w-3xl mx-auto">
-          <p className="section-label mb-6">Why Wine Travel?</p>
           <h2 className="font-cormorant text-3xl md:text-4xl font-light text-burgundy leading-relaxed mb-8">
             The best way to understand a wine is to stand in the place it came from.
           </h2>
           <div className="divider-gold-left" />
           <p className="font-montserrat text-sm text-charcoal leading-loose">
-            Wine tourism is not about collecting stamps in a passport or ticking off famous labels. It is about the conversation you have with a winemaker at the end of a long harvest day, the way the light falls across a valley at 6am, the meal that was never on any menu. We build trips for people who want to understand wine from the inside — and come home knowing a place, not just a bottle.
+            The story behind a wine is rarely on the label. It lives in the soil, the climate, and the moment you stand in front of a winemaker who has dedicated a lifetime to a single hillside. It's not what you taste, but what you take back home with you. Of course, you can take some wine too!
           </p>
         </div>
       </section>
@@ -48,12 +47,12 @@ export default function WineTourismPage() {
       <section className="bg-charcoal py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16">
-            <p className="section-label text-gold mb-4">Winery Partners</p>
-            <h2 className="font-cormorant text-4xl md:text-5xl font-light text-cream max-w-2xl">
-              Destinations we work with directly.
-            </h2>
-            <p className="font-montserrat text-xs text-cream/50 mt-4 max-w-xl leading-relaxed">
-              Every partnership on this page is personal. We have visited, tasted, and built relationships with the people behind each estate. These are not brochure recommendations — they are places we stand behind.
+            <p className="section-label text-gold mb-4">Our Partners</p>
+            <p className="font-montserrat text-xs text-cream/60 mt-4 max-w-2xl leading-relaxed">
+              Every partner on this page is based on a foundation of taste, experience, and value. Each estate effectively serves as the centre point of a curated itinerary that is designed to fit your style of travel perfectly and provide you with an unforgettable experience.
+            </p>
+            <p className="font-montserrat text-xs text-cream/60 mt-4 max-w-2xl leading-relaxed">
+              If you have a specific wine region or estate that you'd like to visit, no problem! Let us know and we'll do all the work behind the scenes.
             </p>
           </div>
 
@@ -116,11 +115,13 @@ export default function WineTourismPage() {
       <section className="bg-cream py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <p className="section-label mb-4">What We Do</p>
             <h2 className="font-cormorant text-4xl md:text-5xl font-light text-burgundy">
               Signature Wine Experiences
             </h2>
             <div className="divider-gold" />
+            <p className="font-montserrat text-xs text-mid leading-relaxed max-w-xl mx-auto">
+              A glimpse into some of the unique moments we can help create.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -146,16 +147,15 @@ export default function WineTourismPage() {
       {/* ── CTA ──────────────────────────────────────────────────── */}
       <section className="relative py-24 px-6 overflow-hidden bg-burgundy">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="section-label text-gold mb-4">Ready to plan?</p>
           <h2 className="font-cormorant text-4xl md:text-5xl font-light text-cream mb-6">
-            Tell us where you want to go.
+            Ready to plan?
           </h2>
           <div className="w-16 h-px bg-gold mx-auto mb-8" />
           <p className="font-montserrat text-xs text-cream/70 leading-loose max-w-xl mx-auto mb-10">
-            Every itinerary is built from scratch — around your pace, your palate, and the kind of travel that means something. Get in touch and we will take it from there.
+            Every itinerary is built from scratch and designed specifically around your pace, your palate, and your style, to create a journey that means something to you. Tell us about your plans and we will take it from there.
           </p>
-          <Link href="/contact" className="btn-outline">
-            Get In Touch
+          <Link href="/plan" className="btn-outline">
+            Start Planning
           </Link>
         </div>
       </section>
