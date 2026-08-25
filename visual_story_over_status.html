@@ -768,49 +768,52 @@
     }
   }
 
-  function resetDonut() {
+  function clearDonut() {
     arcH.classList.remove('dimmed', 'raised');
     arcT.classList.remove('dimmed', 'raised');
-    pct.textContent = '68%';
-    pct.style.color = 'var(--burgundy)';
-    pctLabel.textContent = 'story-led keywords';
   }
 
-  // ── Hover / touch isolation ──
-  // Touch devices do not fire mouseenter reliably, so a tap sticks the
-  // isolation on until the same cluster is tapped again. While a cluster
-  // is stuck, hover is ignored so the two do not fight each other.
-  let stuckCluster = null;
+  // The donut alternates between the two clusters on its own every 3s.
+  // There is no hover or tap handling: the reader just scrolls to it and
+  // watches, which behaves identically on desktop and on a phone.
+  const CYCLE_MS = 3000;
+  let showingHolistic = true;
+  let cycleTimer = null;
 
-  function hoverIsolate(cluster) {
-    if (stuckCluster !== null) return;
-    resetDonut();
-    isolate(cluster);
+  function stepDonut() {
+    clearDonut();
+    isolate(showingHolistic ? 'holistic' : 'trivial');
+    showingHolistic = !showingHolistic;
   }
 
-  function hoverReset() {
-    if (stuckCluster !== null) return;
-    resetDonut();
+  function startCycle() {
+    if (cycleTimer !== null) return;
+    stepDonut();
+    cycleTimer = setInterval(stepDonut, CYCLE_MS);
   }
 
-  document.querySelectorAll('.legend-group').forEach(group => {
-    const cluster = group.dataset.cluster;
+  function stopCycle() {
+    if (cycleTimer === null) return;
+    clearInterval(cycleTimer);
+    cycleTimer = null;
+  }
 
-    function toggleStuck(e) {
-      // Stops the browser firing a synthetic mouse event straight after
-      // the tap, which would immediately undo what we just did.
-      if (e.cancelable) e.preventDefault();
-      if (stuckCluster === cluster) {
-        stuckCluster = null;
-        resetDonut();
-      } else {
-        stuckCluster = cluster;
-        resetDonut();
-        isolate(cluster);
-      }
-    }
+  // Only run while the chart is actually on screen. Starts when the reader
+  // scrolls it into view and stops when it leaves, so it is never animating
+  // invisibly in the background.
+  const donutEl = document.getElementById('arcHolistic').closest('svg') || document.body;
 
-    group.addEventListener('touchstart', toggleStuck, { passive: false });
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver((entries) => {
+      entries.forEach(entry => entry.isIntersecting ? startCycle() : stopCycle());
+    }, { threshold: 0.25 }).observe(donutEl);
+  } else {
+    startCycle();
+  }
+
+  // Pause when the browser tab is hidden.
+  document.addEventListener('visibilitychange', () => {
+    document.visibilityState === 'hidden' ? stopCycle() : startCycle();
   });
 
   let activeIdx = null;
