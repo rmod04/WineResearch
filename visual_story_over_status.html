@@ -500,6 +500,39 @@
       .strip-stat { border-right: none; padding-right: 0; margin-right: 0;
         border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 10px; }
       .strip-stat:last-child { border-bottom: none; padding-bottom: 0; }
+
+      /* ── Mobile legend fix ──
+         On desktop each legend row is one flex line: a 128px fixed label,
+         then the bar, then the count. On a narrow phone those fixed widths
+         leave the bar almost no room (so it looked like the bars had gone)
+         and pushed the count off the right edge. On mobile the label gets
+         its own line and the bar takes the full width beneath it. */
+      .legend-item {
+        flex-wrap: wrap;
+        padding-left: 0;
+        gap: 4px 8px;
+        margin-bottom: 11px;
+      }
+      .legend-item-name {
+        width: auto;
+        flex: 1 1 100%;
+        font-size: 10px;
+      }
+      .legend-bar-track {
+        flex: 1 1 auto;
+        min-width: 0;      /* lets the bar shrink instead of overflowing */
+        height: 10px;
+      }
+      .legend-item-count {
+        width: auto;
+        min-width: 20px;
+        text-align: right;
+      }
+
+      /* Stop long labels and sentiment captions running off the edge. */
+      .legend-group-head { flex-wrap: wrap; gap: 4px; }
+      .legend-group-title { overflow-wrap: anywhere; }
+      .sentiment-label { font-size: 9px; overflow-wrap: anywhere; }
     }
   </style>
 </head>
