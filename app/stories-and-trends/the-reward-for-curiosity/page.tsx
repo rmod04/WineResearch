@@ -1,29 +1,11 @@
 import Link from 'next/link'
+import VisualEmbed, { VISUALS_BASE } from '@/components/VisualEmbed'
 import { site } from '@/content/site'
 
 export const metadata = {
   title: 'The Reward for Curiosity — Cork To Table',
   description:
     'The wine palate grows over time, and better wine doesn\'t have to cost more. A data-led look at how palates evolve, why price is a poor guide, and why curiosity is the most underrated quality in a wine drinker.',
-}
-
-const VISUALS_BASE = 'https://rmod04.github.io/WineResearch'
-
-function VisualEmbed({ src, title }: { src: string; title: string }) {
-  return (
-    <div className="my-10 border border-gold/20 overflow-hidden">
-      <iframe
-        src={src}
-        title={title}
-        className="w-full"
-        // 1.5x the viewport height on purpose: the frame is tall enough
-        // that a fast scroller cannot skip past a visual without landing
-        // inside it, and hover captions below the chart stay on screen.
-        style={{ height: '150vh', minHeight: '900px', border: 'none' }}
-        loading="lazy"
-      />
-    </div>
-  )
 }
 
 function DataCallout({ stat, context }: { stat: string; context: string }) {

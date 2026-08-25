@@ -1,29 +1,11 @@
 import Link from 'next/link'
+import VisualEmbed, { VISUALS_BASE } from '@/components/VisualEmbed'
 import { site } from '@/content/site'
 
 export const metadata = {
   title: 'Every Wine Has Its Moment — Cork To Table',
   description:
     'Why does a cold evening make you reach for something heavier? Why does a glass with friends feel different from the one alone? A data-led research piece on wine, occasion, and the moment that makes it all mean something.',
-}
-
-const VISUALS_BASE = 'https://rmod04.github.io/WineResearch'
-
-function VisualEmbed({ src, title }: { src: string; title: string }) {
-  return (
-    <div className="my-10 border border-gold/20 overflow-hidden">
-      <iframe
-        src={src}
-        title={title}
-        className="w-full"
-        // 1.5x the viewport height on purpose: the frame is tall enough
-        // that a fast scroller cannot skip past a visual without landing
-        // inside it, and hover captions below the chart stay on screen.
-        style={{ height: '150vh', minHeight: '900px', border: 'none' }}
-        loading="lazy"
-      />
-    </div>
-  )
 }
 
 function DataCallout({ stat, context }: { stat: string; context: string }) {
