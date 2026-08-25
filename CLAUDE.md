@@ -18,7 +18,11 @@ This one repo holds two separate deliverables, each with its own branch, host, a
 
 - The self-contained interactive HTML visuals (`visual_*.html`) for the Substack. Worked in the **Substack Cowork project**; see `substackhandoff.md` (Piece 1) and `Wine Substack/HANDOFF_2026-08-18.md` (current) for detail.
 - **Status, 18 Aug 2026:** the five Piece 2 visuals are live at `https://rmod04.github.io/WineResearch/` (`visual_palate_arc`, `visual_price_quality`, `visual_curiosity_ladder`, `visual_story_over_status`, `visual_where_value_lives`), committed at `0a0155c`. The five Piece 1 visuals remain live alongside them. Keep all these URLs stable; they are the link-out targets from Substack posts.
-- **Authored source lives in `Wine Substack/Piece 2/`**, inside the `main` worktree where the folder is untracked. Git tracks the copies at the substack worktree root.
+- **Authored source lives in `Wine Substack/Piece 2/`**, inside the `main` worktree. Git tracks the copies at the substack worktree root.
+- ⚠️ **`Wine Substack/` is now tracked on BOTH branches** (audited Aug 2026; an earlier version of this file wrongly said it was untracked on `main`). All five Piece 2 visuals were confirmed byte-identical across the two branches at the time of the audit, so nothing has drifted yet. Two consequences:
+  - **Only the substack branch deploys.** Editing a `visual_*.html` in `~/WineResearch` and pushing to `main` succeeds silently and publishes nothing. There is no error to catch it. **Always edit visuals in `~/WineResearch-substack`.** Treat the copies under `main` as a read-only archive of authored source.
+  - Because the same paths now exist on both branches, any future merge or rebase between them will conflict. Don't merge these branches; they are deliberately independent.
+  - Optional cleanup for after launch: `git rm -r --cached "Wine Substack/"` on `main` plus a `.gitignore` entry would restore the original design. Deferred as unnecessary risk during launch week.
 - Branch: `claude/wine-substack-data-setup-H9HVg` (canonical substack branch).
 - Deploy: Pages source is **GitHub Actions** (`.github/workflows/deploy-substack-visuals.yml`). Pushing a `visual_*.html` change to the substack branch publishes only the visuals to `https://rmod04.github.io/WineResearch/` in ~60s. No merge to `main` needed; website code never reaches Pages.
 
