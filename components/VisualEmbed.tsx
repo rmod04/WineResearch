@@ -64,7 +64,34 @@ export default function VisualEmbed({
     }
 
     window.addEventListener('message', onMessage)
-    return () => window.removeEventListener('message', onMessage)
+
+    // Ask the visual for its height rather than only waiting to be told.
+    //
+    // On a cached reload the iframe can finish loading before React has
+    // hydrated and attached the listener above, so the height it pushed
+    // arrives before anyone is listening and is lost. The frame then sits
+    // at FALLBACK_HEIGHT and the content looks clipped — which is exactly
+    // the "one refresh breaks it, the next fixes it" behaviour. Polling a
+    // few times covers both that race and charts that render late.
+    function requestHeight() {
+      frameRef.current?.contentWindow?.postMessage(
+        { type: 'c2t-request-height' },
+        VISUALS_ORIGIN
+      )
+    }
+
+    const timers = [0, 150, 500, 1200, 2500, 4000].map((delay) =>
+      window.setTimeout(requestHeight, delay)
+    )
+
+    // Covers back/forward navigation restoring the page from cache.
+    window.addEventListener('pageshow', requestHeight)
+
+    return () => {
+      window.removeEventListener('message', onMessage)
+      window.removeEventListener('pageshow', requestHeight)
+      timers.forEach(window.clearTimeout)
+    }
   }, [])
 
   // When a cap is set and the content exceeds it, the frame stops at the cap
@@ -86,6 +113,13 @@ export default function VisualEmbed({
             transition: 'height 0.25s ease',
           }}
           scrolling={isCapped ? 'yes' : 'no'}
+          onLoad={() => {
+            // Belt and braces: ask again the moment the frame reports ready.
+            frameRef.current?.contentWindow?.postMessage(
+              { type: 'c2t-request-height' },
+              VISUALS_ORIGIN
+            )
+          }}
         />
       </div>
       {isCapped && (

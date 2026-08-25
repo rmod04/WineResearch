@@ -12,7 +12,7 @@ export const metadata = {
 function DataCallout({ stat, context }: { stat: string; context: string }) {
   return (
     <div className="my-8 flex gap-6 border-l-4 border-gold pl-6 py-2">
-      <p className="font-cormorant text-4xl font-light text-gold shrink-0">{stat}</p>
+      <p className="font-cormorant text-4xl font-light text-burgundy shrink-0">{stat}</p>
       <p className="font-montserrat text-xs text-mid leading-relaxed self-center">{context}</p>
     </div>
   )
