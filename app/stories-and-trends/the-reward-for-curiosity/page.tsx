@@ -16,7 +16,10 @@ function VisualEmbed({ src, title }: { src: string; title: string }) {
         src={src}
         title={title}
         className="w-full"
-        style={{ height: '520px', border: 'none' }}
+        // Sized to fill most of the screen so hover captions and the
+        // text beneath the chart are visible without scrolling inside
+        // the frame. Capped so it never dominates a tall desktop monitor.
+        style={{ height: 'min(90vh, 880px)', minHeight: '620px', border: 'none' }}
         loading="lazy"
       />
     </div>
