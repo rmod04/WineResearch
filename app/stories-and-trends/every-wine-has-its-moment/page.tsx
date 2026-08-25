@@ -248,9 +248,13 @@ export default function EveryWineHasItsMomentPage() {
               Appendix: Consumer Voices
             </h2>
 
+            {/* Appendix-style quote list: runs to several thousand pixels, so
+                this one is capped and scrolls inside its own panel rather than
+                swamping the article. The only visual with a cap. */}
             <VisualEmbed
               src={`${VISUALS_BASE}/visual_reddit_voices.html`}
               title="Reddit voices: curated consumer quotes from r/wine"
+              maxHeight={760}
             />
 
             {/* References */}

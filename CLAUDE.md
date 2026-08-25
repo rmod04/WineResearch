@@ -45,6 +45,16 @@ This one repo holds two separate deliverables, each with its own branch, host, a
 
 Next.js 14 (App Router) · TypeScript · Tailwind CSS · 100% static (SSG, no API routes / DB / auth) · `next/image` (`fill` + `object-cover`) · Formspree for the contact form · deploy target Vercel · domain `corktotable.com` (not yet registered). All images are local in `public/images/` — no CDN dependency except partner-card fallbacks.
 
+### ⚠️ Gotcha: never import a plain constant from a `'use client'` module into a server component
+
+Pages here are server components by default. If one imports a **value** (not a component) from a file marked `'use client'`, Next.js does not give it the value — it gives back a client-reference proxy object. There is no error at any stage: `npm run build` passes, `tsc --noEmit` passes, types look right. The failure only shows up at runtime, where the proxy stringifies to `[object Object]`.
+
+This bit us in Aug 2026. `VISUALS_BASE` was exported from `components/VisualEmbed.tsx` (a client component) and imported by both Substack article pages. Every iframe `src` resolved to `https://[object Object]/visual_x.html`, so all ten visuals 404'd. Cost a round trip to diagnose because nothing in the build output pointed at it.
+
+**The rule:** shared constants live in `content/*.ts` (plain modules, no `'use client'`), and both server and client code import from there. `content/visuals.ts` holds `VISUALS_BASE` and `VISUALS_ORIGIN` for exactly this reason. Importing the *component* itself from a `'use client'` file is fine and expected — it is only bare values that break.
+
+**Symptom to recognise:** a URL, class name or config string that renders as `[object Object]` at runtime while the build is completely green.
+
 ## Design system
 
 Colours (CSS vars in `app/globals.css` + `tailwind.config.ts`):

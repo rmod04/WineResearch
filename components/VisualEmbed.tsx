@@ -21,7 +21,23 @@ const MAX_HEIGHT = 20000
  * listen for that and resize. Result: no inner scrollbar, and no dead space
  * above or below a short visual.
  */
-export default function VisualEmbed({ src, title }: { src: string; title: string }) {
+export default function VisualEmbed({
+  src,
+  title,
+  maxHeight,
+}: {
+  src: string
+  title: string
+  /**
+   * Optional cap, in pixels. Leave unset for the normal behaviour, where the
+   * frame grows to the full content height and never scrolls internally.
+   *
+   * Set it only for visuals that are genuinely too long to sit inline — the
+   * appendix-style quote lists run to many thousands of pixels and swamp the
+   * article. Those get a fixed window with their own scrollbar instead.
+   */
+  maxHeight?: number
+}) {
   const frameRef = useRef<HTMLIFrameElement>(null)
   const [height, setHeight] = useState<number>(FALLBACK_HEIGHT)
 
@@ -51,16 +67,32 @@ export default function VisualEmbed({ src, title }: { src: string; title: string
     return () => window.removeEventListener('message', onMessage)
   }, [])
 
+  // When a cap is set and the content exceeds it, the frame stops at the cap
+  // and scrolls internally. Otherwise it grows to fit and never scrolls.
+  const isCapped = typeof maxHeight === 'number' && height > maxHeight
+  const renderedHeight = isCapped ? (maxHeight as number) : height
+
   return (
-    <div className="my-10 border border-gold/20 overflow-hidden">
-      <iframe
-        ref={frameRef}
-        src={src}
-        title={title}
-        className="w-full block"
-        style={{ height: `${height}px`, border: 'none', transition: 'height 0.25s ease' }}
-        scrolling="no"
-      />
+    <div className="my-10">
+      <div className="border border-gold/20 overflow-hidden">
+        <iframe
+          ref={frameRef}
+          src={src}
+          title={title}
+          className="w-full block"
+          style={{
+            height: `${renderedHeight}px`,
+            border: 'none',
+            transition: 'height 0.25s ease',
+          }}
+          scrolling={isCapped ? 'yes' : 'no'}
+        />
+      </div>
+      {isCapped && (
+        <p className="font-montserrat text-[10px] tracking-widest uppercase text-mid/70 mt-2 text-right">
+          Scroll inside the panel to read more
+        </p>
+      )}
     </div>
   )
 }
