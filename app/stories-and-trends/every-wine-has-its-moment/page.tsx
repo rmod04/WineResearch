@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import VisualEmbed, { VISUALS_BASE } from '@/components/VisualEmbed'
+import VisualEmbed from '@/components/VisualEmbed'
+import { VISUALS_BASE } from '@/content/visuals'
 import { site } from '@/content/site'
 
 export const metadata = {

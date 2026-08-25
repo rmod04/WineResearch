@@ -2,14 +2,15 @@
 
 import { useEffect, useRef, useState } from 'react'
 
-// Where the interactive visuals are published from (the substack branch,
-// deployed to GitHub Pages). Kept here so both article pages share it.
-export const VISUALS_BASE = 'https://rmod04.github.io/WineResearch'
-const VISUALS_ORIGIN = 'https://rmod04.github.io'
+import { VISUALS_ORIGIN } from '@/content/visuals'
+
 
 // Used until the visual reports its real height, and as a floor if a
 // message never arrives (script blocked, very old browser, etc.).
 const FALLBACK_HEIGHT = 560
+
+// Only a sanity ceiling, not a layout constraint — see the clamp below.
+const MAX_HEIGHT = 20000
 
 /**
  * Embeds an interactive visual and sizes the frame to its exact content.
@@ -38,8 +39,11 @@ export default function VisualEmbed({ src, title }: { src: string; title: string
         isFinite(data.height) &&
         data.height > 0
       ) {
-        // Guard against a runaway value from a mis-measuring page.
-        setHeight(Math.min(Math.round(data.height), 6000))
+        // Guard against a runaway value from a mis-measuring page. The
+        // ceiling is deliberately generous: the frame has scrolling off, so
+        // anything clamped away is invisible and unreachable, and the long
+        // quote-list visuals genuinely run past 10,000px.
+        setHeight(Math.min(Math.round(data.height), MAX_HEIGHT))
       }
     }
 
