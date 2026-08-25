@@ -615,19 +615,47 @@
     }, 100);
   }
 
-  // ── Sector hover ──
+  // ── Sector hover / touch ──
+  // Mouse users get hover. Touch devices never fire mouseenter reliably,
+  // so tapping a sector selects it and it stays selected until another
+  // sector is tapped (there is no "un-tap" the way there is a mouseleave).
   const sectors = document.querySelectorAll('.sector');
+  let activePhase = null;
+
+  function selectPhase(sector, phase, sticky) {
+    // Reset every sector to its base colour first, so only one is lit.
+    sectors.forEach(other => {
+      other.setAttribute('fill', phases[other.dataset.phase].baseColor);
+    });
+    sector.setAttribute('fill', phases[phase].hoverColor);
+    renderDetail(+phase);
+    if (sticky) activePhase = phase;
+  }
 
   sectors.forEach(s => {
     const p = s.dataset.phase;
 
     s.addEventListener('mouseenter', () => {
-      s.setAttribute('fill', phases[p].hoverColor);
-      renderDetail(+p);
+      if (activePhase !== null) return; // a tap takes priority over hover
+      selectPhase(s, p, false);
     });
 
     s.addEventListener('mouseleave', () => {
+      if (activePhase !== null) return;
       s.setAttribute('fill', phases[p].baseColor);
+    });
+
+    // Touch: select on tap. preventDefault stops the browser also firing
+    // a synthetic mouse event straight afterwards, which would double-fire.
+    s.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      selectPhase(s, p, true);
+    }, { passive: false });
+
+    // Keeps things working for stylus, pen and any device that reports
+    // itself as neither cleanly mouse nor touch.
+    s.addEventListener('click', () => {
+      selectPhase(s, p, true);
     });
   });
 
