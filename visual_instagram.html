@@ -12,8 +12,7 @@
     --burgundy: #5C1A2E; --cream: #F5ECD7; --cream-dark: #EAD9BE;
     --gold: #B8973A; --rose: #C27A8A; --charcoal: #2C2C2C;
     --mid: #7A5A64; --light: #B09090; --bg: #FAF6EF;
-  }
-  body { background: var(--bg); font-family: 'Montserrat', sans-serif; padding: 24px 16px; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+  } body { background: var(--bg); font-family: 'Montserrat', sans-serif; padding: 24px 16px; display: flex; justify-content: center; }
   .card { background: #fff; border: 1px solid var(--cream-dark); max-width: 720px; width: 100%; box-shadow: 0 4px 40px rgba(92,26,46,0.08); }
   .header { background: linear-gradient(135deg, var(--charcoal) 0%, #1a0a10 100%); padding: 28px 32px 22px; }
   .eyebrow { font-size: 9px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
@@ -305,5 +304,38 @@ function setMetric(m) {
 
 render();
 </script>
+
+<!-- ── Auto-height reporter ──────────────────────────────────────────
+     Tells the parent page how tall this visual actually is, so the
+     embedding iframe can size itself exactly to the content: no inner
+     scrollbar, no dead space above or below. Harmless when the file is
+     opened directly (window.parent === window, so nothing is sent). -->
+<script>
+(function () {
+  if (window.parent === window) return;
+  var last = 0;
+  function report() {
+    var h = Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight,
+      document.body.offsetHeight,
+      document.documentElement.offsetHeight
+    );
+    h = Math.ceil(h);
+    if (h && Math.abs(h - last) > 2) {
+      last = h;
+      window.parent.postMessage({ type: 'c2t-visual-height', height: h }, '*');
+    }
+  }
+  window.addEventListener('load', report);
+  window.addEventListener('resize', report);
+  document.addEventListener('DOMContentLoaded', report);
+  if (window.ResizeObserver) new ResizeObserver(report).observe(document.body);
+  // Charts and webfonts settle after first paint; re-measure a few times.
+  [100, 400, 900, 1600, 2600].forEach(function (t) { setTimeout(report, t); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(report);
+})();
+</script>
+
 </body>
 </html>

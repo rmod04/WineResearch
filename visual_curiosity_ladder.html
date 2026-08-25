@@ -19,9 +19,7 @@
       --bg:         #FAF6EF;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
+    * { box-sizing: border-box; margin: 0; padding: 0; } body {
       font-family: 'Montserrat', sans-serif;
       background: var(--bg);
       display: flex;
@@ -279,5 +277,38 @@
 
   renderDetail(0);
 </script>
+
+<!-- ── Auto-height reporter ──────────────────────────────────────────
+     Tells the parent page how tall this visual actually is, so the
+     embedding iframe can size itself exactly to the content: no inner
+     scrollbar, no dead space above or below. Harmless when the file is
+     opened directly (window.parent === window, so nothing is sent). -->
+<script>
+(function () {
+  if (window.parent === window) return;
+  var last = 0;
+  function report() {
+    var h = Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight,
+      document.body.offsetHeight,
+      document.documentElement.offsetHeight
+    );
+    h = Math.ceil(h);
+    if (h && Math.abs(h - last) > 2) {
+      last = h;
+      window.parent.postMessage({ type: 'c2t-visual-height', height: h }, '*');
+    }
+  }
+  window.addEventListener('load', report);
+  window.addEventListener('resize', report);
+  document.addEventListener('DOMContentLoaded', report);
+  if (window.ResizeObserver) new ResizeObserver(report).observe(document.body);
+  // Charts and webfonts settle after first paint; re-measure a few times.
+  [100, 400, 900, 1600, 2600].forEach(function (t) { setTimeout(report, t); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(report);
+})();
+</script>
+
 </body>
 </html>
