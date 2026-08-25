@@ -1,5 +1,5 @@
 CORK TO TABLE — SUBSTACK URL SLUGS
-Last updated: 18 August 2026
+Last updated: 24 August 2026
 Maintained by: Substack Cowork project. Read by: C2T Website project.
 
 --------------------------------------------------------------------------
@@ -10,8 +10,34 @@ The website slug is set in content/articles.ts. The Substack slug is chosen
 during the SEO pass for search intent. This file maps one to the other so
 the website's empty substackUrl fields can be filled in correctly.
 
-Substack publication base URL: NOT YET CONFIRMED
-Once known, replace <BASE> below. Expected form: https://<name>.substack.com
+--------------------------------------------------------------------------
+PUBLICATION IDENTITY (decided 24 August 2026)
+--------------------------------------------------------------------------
+Publication name (masthead) : The Deeper Pour
+Subdomain / base URL        : https://corktotable.substack.com
+Author byline               : Rohan Modwel
+
+The display name and the subdomain are deliberately different. The masthead
+carries the editorial identity; the URL carries the Cork to Table brand and
+matches the canonical domain. Substack keeps these as separate settings.
+
+Reasons on record:
+ - "Cork to table" does not describe the data-led nature of the writing.
+ - The subdomain is effectively permanent. Changing it breaks all links, and
+   the redirect-preserving change can be used only once, so it is held at
+   corktotable.substack.com to match the canonical domain.
+ - The publication name is free to change at any time in Settings > Basics,
+   so the masthead stays a low-risk decision.
+ - Collision check, 24 Aug 2026: no wine publication, podcast or brand found
+   using "The Deeper Pour". Nearest neighbour is The Pour Over, a general
+   news newsletter in a different category.
+
+Tagline (working)  : Data-led wine stories from Cork to Table
+About page must state that every article links to its page on corktotable.com
+for the interactive visuals. That line is what connects the two names for a
+reader who arrives at only one of them.
+
+<BASE> below resolves to https://corktotable.substack.com
 
 --------------------------------------------------------------------------
 PIECE 1 — Every Wine Has Its Moment (April 2026)

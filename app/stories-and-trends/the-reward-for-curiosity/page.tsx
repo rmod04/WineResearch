@@ -16,10 +16,10 @@ function VisualEmbed({ src, title }: { src: string; title: string }) {
         src={src}
         title={title}
         className="w-full"
-        // Sized to fill most of the screen so hover captions and the
-        // text beneath the chart are visible without scrolling inside
-        // the frame. Capped so it never dominates a tall desktop monitor.
-        style={{ height: 'min(90vh, 880px)', minHeight: '620px', border: 'none' }}
+        // 1.5x the viewport height on purpose: the frame is tall enough
+        // that a fast scroller cannot skip past a visual without landing
+        // inside it, and hover captions below the chart stay on screen.
+        style={{ height: '150vh', minHeight: '900px', border: 'none' }}
         loading="lazy"
       />
     </div>
