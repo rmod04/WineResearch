@@ -743,6 +743,43 @@
     pctLabel.textContent = 'story-led keywords';
   }
 
+  // ── Hover / touch isolation ──
+  // Touch devices do not fire mouseenter reliably, so a tap sticks the
+  // isolation on until the same cluster is tapped again. While a cluster
+  // is stuck, hover is ignored so the two do not fight each other.
+  let stuckCluster = null;
+
+  function hoverIsolate(cluster) {
+    if (stuckCluster !== null) return;
+    resetDonut();
+    isolate(cluster);
+  }
+
+  function hoverReset() {
+    if (stuckCluster !== null) return;
+    resetDonut();
+  }
+
+  document.querySelectorAll('.legend-group').forEach(group => {
+    const cluster = group.dataset.cluster;
+
+    function toggleStuck(e) {
+      // Stops the browser firing a synthetic mouse event straight after
+      // the tap, which would immediately undo what we just did.
+      if (e.cancelable) e.preventDefault();
+      if (stuckCluster === cluster) {
+        stuckCluster = null;
+        resetDonut();
+      } else {
+        stuckCluster = cluster;
+        resetDonut();
+        isolate(cluster);
+      }
+    }
+
+    group.addEventListener('touchstart', toggleStuck, { passive: false });
+  });
+
   let activeIdx = null;
 
   function selectCard(idx) {
