@@ -72,7 +72,7 @@
     </div>
 
     <div class="detail-panel" id="detail-panel">
-      <div class="detail-placeholder">↑ Click any bar to see hashtag details, top caption, and key insight</div>
+      <div class="detail-placeholder">↑ Hover/touch any bar to see hashtag details, top caption, and key insight</div>
     </div>
 
     <div class="findings">
@@ -299,7 +299,7 @@ function setMetric(m) {
   document.querySelectorAll('.metric-btn').forEach((b,i) => {
     b.classList.toggle('active', ['likes','comments','ratio','posts'][i] === m);
   });
-  document.getElementById('detail-panel').innerHTML = '<div class="detail-placeholder">↑ Click any bar to see hashtag details, top caption, and key insight</div>';
+  document.getElementById('detail-panel').innerHTML = '<div class="detail-placeholder">↑ Hover/touch any bar to see hashtag details, top caption, and key insight</div>';
   render();
 }
 
