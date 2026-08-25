@@ -1,0 +1,218 @@
+{
+  "file": "quote_source_records.json",
+  "purpose": "Verbatim source record for every community quote used in Cork to Table pieces. One entry per quote. No quote may appear in a doc or visual unless it has a record here.",
+  "piece": 2,
+  "pieceTitle": "The Reward for Curiosity",
+  "lastUpdated": "2026-08-18",
+  "protocol": [
+    "Capture the exact verbatim text at pull time, never a paraphrase or a reconstruction from memory.",
+    "Record author, score, item type (post or comment), permalink, creation date and capture date.",
+    "Scores drift. The score printed in a doc or visual must match the score in this file, and this file states when it was captured.",
+    "Store the fuller passage here. Excerpts used in the article or visuals must be exact substrings of verbatimText, apart from typographic normalisation noted in usageNotes.",
+    "Attribute publicly as 'a wine community member', never by username. Usernames stay in this file only."
+  ],
+  "records": [
+    {
+      "quoteId": "Q1",
+      "author": "Vagimas",
+      "type": "comment",
+      "score": 67,
+      "scoreCapturedAt": "2026-06-21",
+      "thread": "How have your opinions on wine changed over your wine journey?",
+      "threadUrl": "https://www.reddit.com/r/wine/comments/1hg7wfj/how_have_your_opinions_on_wine_changed_over_your/",
+      "createdAt": "2024-11-08",
+      "verbatimText": "Wine for me has become a means of understanding agricultural practice and the relationships between farmers and the earth they tend to. [...] Wine is just booze for a lot of folks, but those moments where one can connect with what a winemaker is doing and really tap into that energy are totally electric.",
+      "sourceFile": "reddit_palate_arc_scrape.json",
+      "usedIn": [
+        "Doc S3 and visual_story_over_status.html, card 1: the winemaker-connection half",
+        "Doc S5 and visual_where_value_lives.html: the agricultural-practice half"
+      ],
+      "usageNotes": "Deliberate split. The two excerpts share no wording. An earlier capture in Working Data Document v2 recorded this at 66 with a compressed second sentence; the June 2026 scrape is the fuller and correct version.",
+      "verificationStatus": "VERIFIED"
+    },
+    {
+      "quoteId": "Q2",
+      "author": "kaynelucas",
+      "type": "comment",
+      "score": 97,
+      "scoreCapturedAt": "2026-08-11",
+      "previousScore": 96,
+      "thread": "Anyone else hope the \"natural wine\" fad ends soon?",
+      "threadUrl": "https://www.reddit.com/r/wine/comments/1hhlnih/anyone_else_hope_the_natural_wine_fad_ends_soon/",
+      "permalink": "https://www.reddit.com/r/wine/comments/1hhlnih/anyone_else_hope_the_natural_wine_fad_ends_soon/m2sklxy/",
+      "createdAt": "2024-12-19",
+      "verbatimText": "The thing is, natural wine isn't about rejecting tradition—it's about connecting with it. Farming responsibly, letting the grape and terroir speak for themselves, and yeah, sometimes it's messy. But the best bottles? They're alive, they're expressive, and they're not going away just because some shops lean too hard into the aesthetics.",
+      "usedIn": [
+        "Doc S3: the 'rejecting tradition' sentence",
+        "visual_story_over_status.html, card 3 'Tradition as foundation'"
+      ],
+      "usageNotes": "Both previously circulating versions are real and come from this one comment. The doc used the first half, the visual used a reworded second half ('The best bottles are alive, they're expressive'), which is not verbatim. Corrected to exact wording. The original contains an em dash after 'tradition'; rendered as a comma in the piece per house style, the only permitted alteration.",
+      "verificationStatus": "VERIFIED"
+    },
+    {
+      "quoteId": "Q3",
+      "author": "Hayden750",
+      "type": "post",
+      "score": 654,
+      "scoreCapturedAt": "2026-08-11",
+      "previousScore": 659,
+      "thread": "Anyone else hope the \"natural wine\" fad ends soon?",
+      "threadUrl": "https://www.reddit.com/r/wine/comments/1hhlnih/anyone_else_hope_the_natural_wine_fad_ends_soon/",
+      "createdAt": "2024-12-19",
+      "verbatimText": "For context, I'm a sales rep for an importer/distributor that focuses on smaller, family-owned producers that focus on organic, sustainable, or biodynamic practices. I'm all for producing wines that are true to form, express the grape and terroir, but fuck, the idea behind natural wine has gone so far from what it truly means.",
+      "usedIn": [
+        "visual_story_over_status.html, card 2 'Terroir over the label'"
+      ],
+      "usageNotes": "This is the original post, not a comment, so the score is a post score. The excerpt used takes the pro-terroir clause out of a post that is otherwise critical of the natural wine trend. The speaker does hold the terroir view, but the surrounding argument is a rant, so the excerpt should not be presented as an endorsement of natural wine.",
+      "verificationStatus": "VERIFIED"
+    },
+    {
+      "quoteId": "Q4",
+      "author": "noltan",
+      "type": "post",
+      "score": 281,
+      "scoreCapturedAt": "2026-08-11",
+      "previousScore": 282,
+      "thread": "Confessions of a professional wino...modesty is more exciting than luxury",
+      "threadUrl": "https://www.reddit.com/r/wine/comments/1d7dxrn/confessions_of_a_professional_winomodesty_is_more/",
+      "createdAt": "2024-06-03",
+      "verbatimText": "I think what I want to tell everyone is that yes, it's important to taste benchmark wines. I'll never tell anyone \"those\" wines aren't amazing. [...] Yeah, those wines are great, but mostly they've provided me with the context to know what good wine can be. [...] I guess the TL:DR is that inexpensive wine can be very exciting and rewarding, you just gotta do a little leg work.",
+      "authorContext": "States 17 years in the wine industry; wine retail then production, left an upper management production job in Oregon.",
+      "usedIn": [
+        "Doc S5: the fuller passage",
+        "visual_where_value_lives.html: the 'little leg work' sentence"
+      ],
+      "usageNotes": "This is the original post, not a comment. The doc previously rendered the opening as 'Those benchmark wines are great', which is a paraphrase; the actual wording is 'Yeah, those wines are great'. Corrected.",
+      "verificationStatus": "VERIFIED"
+    },
+    {
+      "quoteId": "Q5",
+      "author": "MyNoodleLard",
+      "type": "comment",
+      "score": 155,
+      "scoreCapturedAt": "2026-06-12",
+      "thread": "Getting into wine is a bit overwhelming, where to start?",
+      "threadUrl": "https://www.reddit.com/r/wine/comments/vnnv0a/getting_into_wine_is_a_bit_overwhelming_where_to/",
+      "createdAt": "2022-06-29",
+      "verbatimText": "Pick one and start drinking bruh. You plant a forest one tree at a time, enjoy the journey",
+      "sourceFile": "reddit_raw_data_piece2.json",
+      "usedIn": [
+        "Doc S2"
+      ],
+      "verificationStatus": "VERIFIED"
+    },
+    {
+      "quoteId": "Q6",
+      "author": "SixPack1776",
+      "type": "comment",
+      "score": 130,
+      "scoreCapturedAt": "2026-06-12",
+      "thread": "How do we save the wine culture?",
+      "threadUrl": "https://www.reddit.com/r/wine/comments/1sy1oo5/how_do_we_save_the_wine_culture/",
+      "createdAt": "2026-04-28",
+      "verbatimText": "For me, it is just a cost issue. I can't justify paying $13-14 for single pour and $100+ for a bottle that I know costs $20. I'd rather just drink at home at those prices.",
+      "sourceFile": "reddit_raw_data_piece2.json",
+      "usedIn": [
+        "Doc S4"
+      ],
+      "usageNotes": "Doc renders the price range as '$13 to $14'; original is '$13-14'.",
+      "verificationStatus": "VERIFIED"
+    },
+    {
+      "quoteId": "Q7",
+      "author": "givemegoodtimes",
+      "type": "comment",
+      "score": 171,
+      "scoreCapturedAt": "2026-06-12",
+      "thread": "Who are some of the wine critics worth a follow?",
+      "threadUrl": "https://www.reddit.com/r/wine/comments/1nhw6n3/who_are_some_of_the_wine_critics_worth_a_follow/",
+      "createdAt": "2025-09-15",
+      "verbatimText": "Suckling is the worst. He is literally charging people for points. In any other industry this would be a scam.",
+      "sourceFile": "reddit_raw_data_piece2.json",
+      "usedIn": [
+        "Doc S4"
+      ],
+      "verificationStatus": "VERIFIED"
+    },
+    {
+      "quoteId": "Q8",
+      "author": "TheBobInSonoma",
+      "type": "comment",
+      "score": 4,
+      "thread": "Palate changing with age",
+      "threadUrl": "https://www.reddit.com/r/wine/comments/1ck3mzx/palate_changing_with_age/",
+      "verbatimText": "My tastes gradually changed over the years. Part due to what was available and popular at the time. I started with weird whites (anyone remember Green Hungarian?), petite sirah, and cab. Now it's more about balance and finesse rather than power though I like both. Losing my tolerance for tannins. I see it as a journey, not an age thing.",
+      "sourceFile": "reddit_palate_arc_scrape.json",
+      "usedIn": [
+        "Doc S1"
+      ],
+      "usageNotes": "The doc uses a compressed excerpt; elisions marked with […].",
+      "verificationStatus": "VERIFIED",
+      "scoreCapturedAt": "2026-08-18"
+    },
+    {
+      "quoteId": "Q9",
+      "author": "PieThat7304",
+      "type": "comment",
+      "score": 13,
+      "thread": "How have your opinions on wine changed over your wine journey?",
+      "threadUrl": "https://www.reddit.com/r/wine/comments/1hg7wfj/how_have_your_opinions_on_wine_changed_over_your/",
+      "verbatimText": "Starting out, I had much more tolerance for later-picked, oaky reds. These days I like a fresher, lighter-bodied, underoaked style. I believe that is the natural progression for most wine lovers.",
+      "sourceFile": "reddit_palate_arc_scrape.json",
+      "usedIn": [
+        "Doc S1"
+      ],
+      "usageNotes": "Used verbatim in full.",
+      "verificationStatus": "VERIFIED",
+      "scoreCapturedAt": "2026-08-18"
+    },
+    {
+      "quoteId": "Q10",
+      "author": "fakeit-makeit",
+      "type": "comment",
+      "score": 2,
+      "thread": "Palate changing with age",
+      "threadUrl": "https://www.reddit.com/r/wine/comments/1ck3mzx/palate_changing_with_age/",
+      "verbatimText": "If you drink enough wine, for long enough, you'll end up in burgundy. Usual path starts with sweet and jammy reds, runs to tannin (structure), and ultimately to Burgundian nuance. I think that's one of the reasons that some burgundy gets so expensive; there is a core customer group that is older with disposable income.",
+      "sourceFile": "reddit_palate_arc_scrape.json",
+      "usedIn": [
+        "Doc S1"
+      ],
+      "usageNotes": "The doc joins the opening clause to the closing clause; elision marked with […]. Original lowercases the first 'burgundy'; capitalised in the piece.",
+      "verificationStatus": "VERIFIED",
+      "scoreCapturedAt": "2026-08-18"
+    }
+  ],
+  "captureLog": [
+    {
+      "date": "2026-06-12",
+      "scope": "Initial Piece 2 sweep, 450 comments across 15 threads",
+      "outputFile": "reddit_raw_data_piece2.json"
+    },
+    {
+      "date": "2026-06-21",
+      "scope": "Palate arc thread sweep",
+      "outputFile": "reddit_palate_arc_scrape.json"
+    },
+    {
+      "date": "2026-08-11",
+      "scope": "Re-pull of the two threads behind Q2, Q3 and Q4, which had no saved source record. 336 items across both threads.",
+      "threads": [
+        "https://www.reddit.com/r/wine/comments/1hhlnih/anyone_else_hope_the_natural_wine_fad_ends_soon/",
+        "https://www.reddit.com/r/wine/comments/1d7dxrn/confessions_of_a_professional_winomodesty_is_more/"
+      ],
+      "runDatasetId": "rUQU8iGIx2Zo5QZOz",
+      "outcome": "Q2 wording conflict resolved, both circulating versions traced to one comment. Q3 and Q4 identified as posts rather than comments. Three scores corrected."
+    },
+    {
+      "date": "2026-08-18",
+      "scope": "Re-pull of the two palate threads to capture the missing scores for Q8, Q9 and Q10, which had never been recorded. 140 items across both threads.",
+      "threads": [
+        "https://www.reddit.com/r/wine/comments/1ck3mzx/palate_changing_with_age/",
+        "https://www.reddit.com/r/wine/comments/1hg7wfj/how_have_your_opinions_on_wine_changed_over_your/"
+      ],
+      "runDatasetId": "84xGGRadbYl7cJRqQ",
+      "outcome": "Q8 = 4, Q9 = 13, Q10 = 2. Q1 (Vagimas) independently re-confirmed at 67."
+    }
+  ]
+}

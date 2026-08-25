@@ -63,7 +63,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="font-montserrat text-[11px] tracking-widest uppercase text-cream/70 hover:text-cream transition-colors"
               >
-                Instagram — {site.instagramHandle}
+                Instagram · {site.instagramHandle}
               </a>
               {site.substackUrl ? (
                 <a
@@ -72,11 +72,11 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="font-montserrat text-[11px] tracking-widest uppercase text-cream/70 hover:text-cream transition-colors"
                 >
-                  Substack — {site.substackLabel}
+                  Substack · {site.substackLabel}
                 </a>
               ) : (
                 <span className="font-montserrat text-[11px] tracking-widest uppercase text-cream/40">
-                  Substack — Coming Soon
+                  Substack · Coming Soon
                 </span>
               )}
               <a
@@ -99,9 +99,18 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-16 pt-8 border-t border-cream/20 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="font-montserrat text-[10px] tracking-widest uppercase text-cream/40">
-            © {year} Cork To Table™
-          </p>
+          <div className="flex items-center gap-3">
+            <p className="font-montserrat text-[10px] tracking-widest uppercase text-cream/40">
+              © {year} Cork To Table™
+            </p>
+            <span className="font-montserrat text-[10px] text-cream/25">·</span>
+            <Link
+              href="/privacy"
+              className="font-montserrat text-[10px] tracking-widest uppercase text-cream/40 hover:text-cream/70 transition-colors"
+            >
+              Privacy Policy
+            </Link>
+          </div>
           <p className="font-montserrat text-[10px] tracking-widest uppercase text-cream/40">
             {site.founderName} · {site.credentials}
           </p>

@@ -9,12 +9,33 @@ export type Article = {
   thumbnailAlt: string
   isSubstack?: boolean
   substackUrl?: string
+  /**
+   * Set true to pull an article off the site without deleting it.
+   * Hidden articles are filtered out of the Stories & Trends listing,
+   * and their route folder should be prefixed with an underscore so
+   * Next.js stops building the page (see app/stories-and-trends/).
+   */
+  hidden?: boolean
 }
 
 export const articles: Article[] = [
   {
+    slug: 'the-reward-for-curiosity',
+    title: 'The Reward for Curiosity',
+    subtitle: 'The wine palate grows over time, and better wine doesn\'t have to cost more',
+    dateLabel: 'August 2026',
+    category: 'Research · Substack',
+    excerpt:
+      'There is a quiet assumption that evolving preferences in wine means wanting rarer, pricier, and more intimidating bottles. In practice the opposite tends to happen. The data has a more interesting story to tell.',
+    thumbnail: '/images/photo-palate-arc.jpg',
+    thumbnailAlt: 'The palate arc — a four-phase wheel of wine preference',
+    isSubstack: true,
+    substackUrl: '',
+  },
+  {
     slug: 'every-wine-has-its-moment',
     title: 'Every Wine Has Its Moment',
+    subtitle: 'How season, setting, company and even music change the wine in your glass',
     dateLabel: 'April 2026',
     category: 'Research · Substack',
     excerpt:
@@ -34,6 +55,14 @@ export const articles: Article[] = [
       'Driving out of Madrid, the flat plains of the Meseta eventually give way to river valleys and vine-covered slopes. Three wineries, one grape variety, three completely different stories about soil, altitude, and commitment.',
     thumbnail: '/images/photo-spain-hero.jpg',
     thumbnailAlt: 'Vineyards along a Spanish river valley',
+    // HIDDEN Aug 2026 — Liquid Magazine (India) is publishing this piece
+    // in October 2026 and asked for it to come off the site until then.
+    // TO RESTORE after their issue is out:
+    //   1. delete this `hidden: true` line
+    //   2. rename app/stories-and-trends/_spain-wine-travel-diaries
+    //      back to spain-wine-travel-diaries (drop the underscore)
+    //   3. add a "First published in Liquid Magazine, October 2026" credit
+    hidden: true,
   },
   {
     slug: 'wine-paris-2026',

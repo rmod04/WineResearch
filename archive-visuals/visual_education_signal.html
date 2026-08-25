@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Education Signal — Cork To Table</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;500;600&display=swap');
+
+    :root {
+      --burgundy:   #5C1A2E;
+      --cream:      #F5ECD7;
+      --cream-dark: #EAD9BE;
+      --gold:       #B8973A;
+      --rose:       #C27A8A;
+      --charcoal:   #2C2C2C;
+      --mid:        #7A5A64;
+      --light:      #B09090;
+      --bg:         #FAF6EF;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--bg);
+      display: flex;
+      justify-content: center;
+      padding: 32px 16px;
+    }
+
+    .container {
+      width: 760px;
+      background: var(--bg);
+    }
+
+    /* ── Header ── */
+    .header {
+      background: var(--burgundy);
+      padding: 28px 36px 24px;
+    }
+
+    .title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--cream);
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-size: 11px;
+      font-weight: 400;
+      color: rgba(245,236,215,0.6);
+      line-height: 1.6;
+      margin-top: 6px;
+    }
+
+    /* ── Stats strip ── */
+    .stats-strip {
+      background: var(--charcoal);
+      display: flex;
+      padding: 14px 36px;
+    }
+
+    .strip-stat {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      border-right: 1px solid rgba(255,255,255,0.08);
+      padding-right: 24px;
+      margin-right: 24px;
+    }
+
+    .strip-stat:last-child {
+      border-right: none;
+      padding-right: 0;
+      margin-right: 0;
+    }
+
+    .strip-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .strip-label {
+      font-size: 9px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.3px;
+    }
+
+    /* ── Main ── */
+    .main {
+      padding: 28px 36px 24px;
+    }
+
+    /* ── Metric toggles ── */
+    .toggle-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .toggle-btn {
+      padding: 6px 14px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9.5px;
+      font-weight: 600;
+      border: 1px solid var(--cream-dark);
+      background: transparent;
+      color: var(--mid);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .toggle-btn:hover {
+      border-color: var(--mid);
+      color: var(--charcoal);
+    }
+
+    .toggle-btn.active {
+      background: var(--burgundy);
+      border-color: var(--burgundy);
+      color: var(--cream);
+    }
+
+    /* ── Chart ── */
+    .chart-wrap {
+      position: relative;
+      height: 260px;
+      margin-bottom: 20px;
+    }
+
+    /* ── Detail box ── */
+    .detail-box {
+      background: var(--cream);
+      padding: 22px 26px;
+      border-left: 3px solid var(--burgundy);
+      min-height: 120px;
+    }
+
+    .detail-hashtag {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--burgundy);
+      margin-bottom: 10px;
+    }
+
+    .detail-stats-row {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 14px;
+    }
+
+    .detail-stat {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .detail-stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--charcoal);
+      line-height: 1;
+    }
+
+    .detail-stat-label {
+      font-size: 8.5px;
+      font-weight: 500;
+      color: var(--light);
+    }
+
+    .detail-insight {
+      font-size: 11px;
+      color: var(--mid);
+      line-height: 1.65;
+      border-top: 1px solid var(--cream-dark);
+      padding-top: 12px;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      border-top: 1px solid var(--cream-dark);
+      margin-top: 24px;
+      padding-top: 12px;
+      font-size: 9.5px;
+      color: var(--light);
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="title">The education signal</div>
+    <div class="subtitle">How wine learning communities engage on Instagram</div>
+  </div>
+
+  <div class="stats-strip">
+    <div class="strip-stat">
+      <span class="strip-num">10.44%</span>
+      <span class="strip-label">#wset comment/like ratio — highest of all 7 hashtags</span>
+    </div>
+    <div class="strip-stat">
+      <span class="strip-num">7,622</span>
+      <span class="strip-label">#wineeducation average likes — highest raw engagement</span>
+    </div>
+    <div class="strip-stat">
+      <span class="strip-num">4.68%</span>
+      <span class="strip-label">#naturalwine comment/like ratio — most polarising hashtag</span>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <div class="toggle-row" id="toggleRow">
+      <button class="toggle-btn active" onclick="setMetric('avgLikes')">Avg likes</button>
+      <button class="toggle-btn" onclick="setMetric('avgComments')">Avg comments</button>
+      <button class="toggle-btn" onclick="setMetric('ratio')">Comment/like ratio</button>
+      <button class="toggle-btn" onclick="setMetric('postCount')">Post count</button>
+    </div>
+
+    <div class="chart-wrap">
+      <canvas id="barChart"></canvas>
+    </div>
+
+    <div class="detail-box" id="detailBox"></div>
+
+    <div class="footer">
+      Source: Instagram engagement data obtained from seven wine hashtags, June 2026. 39–42 posts per hashtag; figures may not reflect platform totals.
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+  const hashtags = [
+    {
+      tag: '#naturalwine',
+      postCount: 42,
+      avgLikes: 1328.1,
+      avgComments: 62.2,
+      ratio: 4.68,
+      insight: 'High comment/like ratio (4.68%) — content here drives debate and disagreement. Natural wine is polarising in a way that maps directly to the complexity paradox thesis. The audience is engaged, opinionated, and not easily impressed.',
+    },
+    {
+      tag: '#lowinterventionwine',
+      postCount: 39,
+      avgLikes: 132.7,
+      avgComments: 10.6,
+      ratio: 8.0,
+      insight: 'Smallest and most niche hashtag. High comment/like ratio (8%) points to a tight, committed community — producers and serious enthusiasts talking to each other rather than broadcasting to a mass audience.',
+    },
+    {
+      tag: '#winevalue',
+      postCount: 42,
+      avgLikes: 1480.2,
+      avgComments: 41.5,
+      ratio: 2.81,
+      insight: 'Solid median engagement and a healthy comment/like ratio. Value discussions attract genuine audience interest — relevant to the piece\'s argument that price is no longer the signal educated drinkers rely on.',
+    },
+    {
+      tag: '#wineeducation',
+      postCount: 42,
+      avgLikes: 7621.9,
+      avgComments: 156.8,
+      ratio: 2.06,
+      insight: 'Highest average likes and highest absolute comment count. Educational wine content has mainstream crossover appeal — the viral ceiling here is enormous. Wine education is not a niche pursuit; it is a high-interest content category.',
+    },
+    {
+      tag: '#wset',
+      postCount: 42,
+      avgLikes: 407.6,
+      avgComments: 42.5,
+      ratio: 10.44,
+      insight: 'Highest comment/like ratio of all 7 hashtags (10.44%). People studying for WSET are intensely conversational — sharing experiences, asking questions, celebrating passes. This community is small in reach but the most interactive subset of wine social media.',
+    },
+    {
+      tag: '#orangewine',
+      postCount: 42,
+      avgLikes: 1138.6,
+      avgComments: 22.6,
+      ratio: 1.99,
+      insight: 'High viral ceiling (32k likes max) with a low median. Orange wine is primarily a visual and aesthetic hashtag — people pause to like but rarely comment. Passive appreciation rather than active engagement.',
+    },
+    {
+      tag: '#everydaywine',
+      postCount: 42,
+      avgLikes: 2324.9,
+      avgComments: 31.5,
+      ratio: 1.36,
+      insight: 'Second-highest average likes but extreme outlier skew — median is just 72. A small number of posts break through to mass audiences while most get modest engagement. The accessibility story in one dataset: wine is for everyone, but everyday wine content rarely sparks serious conversation.',
+    },
+  ];
+
+  const metrics = {
+    avgLikes:    { key: 'avgLikes',    label: 'Average likes',          format: v => v.toLocaleString(undefined, {maximumFractionDigits:0}) },
+    avgComments: { key: 'avgComments', label: 'Average comments',       format: v => v.toFixed(1) },
+    ratio:       { key: 'ratio',       label: 'Comment/like ratio (%)', format: v => v.toFixed(2) + '%' },
+    postCount:   { key: 'postCount',   label: 'Post count',             format: v => v },
+  };
+
+  let activeMetric = 'avgLikes';
+  let activeIdx = 0;
+  let chart;
+
+  function getBarColors(activeI) {
+    return hashtags.map((_, i) => i === activeI ? '#B8973A' : '#5C1A2E');
+  }
+
+  function renderDetail(idx) {
+    const h = hashtags[idx];
+    const m = metrics[activeMetric];
+    document.getElementById('detailBox').innerHTML = `
+      <div class="detail-hashtag">${h.tag}</div>
+      <div class="detail-stats-row">
+        <div class="detail-stat">
+          <span class="detail-stat-num">${h.avgLikes.toLocaleString(undefined,{maximumFractionDigits:0})}</span>
+          <span class="detail-stat-label">Avg likes</span>
+        </div>
+        <div class="detail-stat">
+          <span class="detail-stat-num">${h.avgComments.toFixed(1)}</span>
+          <span class="detail-stat-label">Avg comments</span>
+        </div>
+        <div class="detail-stat">
+          <span class="detail-stat-num">${h.ratio.toFixed(2)}%</span>
+          <span class="detail-stat-label">Comment/like ratio</span>
+        </div>
+        <div class="detail-stat">
+          <span class="detail-stat-num">${h.postCount}</span>
+          <span class="detail-stat-label">Posts sampled</span>
+        </div>
+      </div>
+      <div class="detail-insight">${h.insight}</div>
+    `;
+  }
+
+  function selectBar(idx) {
+    activeIdx = idx;
+    renderDetail(idx);
+    if (chart) {
+      chart.data.datasets[0].backgroundColor = getBarColors(idx);
+      chart.update('none');
+    }
+  }
+
+  function setMetric(key) {
+    activeMetric = key;
+
+    // Update toggle buttons
+    document.querySelectorAll('.toggle-btn').forEach((btn, i) => {
+      const keys = ['avgLikes', 'avgComments', 'ratio', 'postCount'];
+      btn.classList.toggle('active', keys[i] === key);
+    });
+
+    // Update chart data
+    if (chart) {
+      chart.data.datasets[0].data = hashtags.map(h => h[key]);
+      chart.options.scales.y.title.text = metrics[key].label + ' →';
+      chart.options.plugins.tooltip.callbacks.label = (item) =>
+        `  ${metrics[key].format(item.parsed.y)}`;
+      chart.update();
+    }
+  }
+
+  function initChart() {
+    const ctx = document.getElementById('barChart').getContext('2d');
+
+    chart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: hashtags.map(h => h.tag),
+        datasets: [{
+          data: hashtags.map(h => h[activeMetric]),
+          backgroundColor: getBarColors(0),
+          borderRadius: 1,
+          borderSkipped: false,
+        }],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: { duration: 350 },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              title: (items) => hashtags[items[0].dataIndex].tag,
+              label: (item) => `  ${metrics[activeMetric].format(item.parsed.y)}`,
+            },
+            backgroundColor: '#2C2C2C',
+            titleFont: { family: 'Montserrat', size: 11, weight: '600' },
+            bodyFont: { family: 'Montserrat', size: 10 },
+            padding: 10,
+            cornerRadius: 1,
+          },
+        },
+        scales: {
+          x: {
+            border: { display: false },
+            grid: { display: false },
+            ticks: {
+              font: { family: 'Montserrat', size: 9, weight: '500' },
+              color: '#7A5A64',
+              maxRotation: 30,
+              minRotation: 0,
+            },
+          },
+          y: {
+            border: { display: false },
+            grid: {
+              color: 'rgba(0,0,0,0.04)',
+              drawTicks: false,
+            },
+            ticks: {
+              font: { family: 'Montserrat', size: 9 },
+              color: '#B09090',
+              padding: 6,
+            },
+            title: {
+              display: true,
+              text: 'Average likes →',
+              font: { family: 'Montserrat', size: 9 },
+              color: '#B09090',
+            },
+          },
+        },
+        onClick(e, elements) {
+          if (elements.length > 0) selectBar(elements[0].index);
+        },
+        onHover(e, elements) {
+          e.native.target.style.cursor = elements.length > 0 ? 'pointer' : 'default';
+        },
+      },
+    });
+  }
+
+  setTimeout(initChart, 60);
+  selectBar(0);
+</script>
+</body>
+</html>

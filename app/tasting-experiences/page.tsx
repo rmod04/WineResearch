@@ -64,7 +64,13 @@ export default function TastingExperiencesPage() {
           </h2>
           <div className="divider-gold-left" />
           <p className="font-montserrat text-sm text-charcoal leading-loose mb-6">
-            The best thing about an evening with wine is that it gets better with company, food, and a bit of context. The kind that makes you look at a glass differently and think: I'd like another one of those. Bring an appetite, go back home with a memory.
+            The best thing about an evening with wine is that it gets better with company, food, and a bit of context. The kind that makes you look at a glass differently and think: I&apos;d like another one of those.
+          </p>
+          <p className="font-montserrat text-sm text-charcoal leading-loose mb-6">
+            We curate wine and food evenings, each built around a theme and a small table. Every event pairs a set of wines with a menu chosen to match them, alongside context-building and interactive exercises that explain the wine and the pairings in detail. Open evenings bring together a mixed group of guests. Private dinners are designed around your occasion, your guest list, and your menu.
+          </p>
+          <p className="font-montserrat text-sm text-charcoal leading-loose">
+            Bring an appetite, go home with a memory!
           </p>
         </div>
       </section>
@@ -78,7 +84,7 @@ export default function TastingExperiencesPage() {
             </h2>
             <div className="divider-gold" />
             <p className="font-montserrat text-xs text-cream/60 leading-relaxed max-w-xl mx-auto">
-              Wine and food is such a vast domain. Here's some ways in which we narrow it down.
+              Wine and food are a vast domain. Here are a few ways we narrow it down.
             </p>
           </div>
 
@@ -121,10 +127,10 @@ export default function TastingExperiencesPage() {
               </h2>
               <div className="w-8 h-px bg-gold mb-8" />
               <p className="font-montserrat text-sm text-charcoal leading-loose mb-6">
-                Whether it's a larger dinner party or a more intimate gathering for guests, we work with the host to choose a theme that suits the occasion, curate the wines and food pairings, and lead the evening at whatever level of depth the table wants, all the way from casual exploration to a more structured guided tasting.
+                Whether it's a larger dinner party or a more intimate dinner, we work with the host to choose a theme that suits the occasion, curate the wines and food pairings, and lead the evening at whatever level of depth the table wants, all the way from casual exploration to a more structured guided tasting.
               </p>
               <p className="font-montserrat text-sm text-mid leading-loose italic">
-                Can be hosted in a public venue or host's residence as per preference. Available for travel to other cities on request.
+                Can be hosted at a venue or at home. Available for travel to other cities on request.
               </p>
             </div>
           </div>

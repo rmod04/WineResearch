@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The curiosity ladder · Cork To Table</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;500;600&display=swap');
+
+    :root {
+      --burgundy:   #5C1A2E;
+      --cream:      #F5ECD7;
+      --cream-dark: #EAD9BE;
+      --gold:       #B8973A;
+      --rose:       #C27A8A;
+      --charcoal:   #2C2C2C;
+      --mid:        #7A5A64;
+      --light:      #B09090;
+      --bg:         #FAF6EF;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--bg);
+      display: flex;
+      justify-content: center;
+      padding: 28px 12px;
+    }
+
+    .container { width: 100%; max-width: 760px; background: var(--bg); }
+
+    /* Header */
+    .header { background: var(--burgundy); padding: 28px 36px 24px; }
+    .title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px; font-weight: 400; color: var(--cream); line-height: 1.2;
+    }
+    .subtitle {
+      font-size: 11px; font-weight: 400; color: rgba(245,236,215,0.6);
+      line-height: 1.6; margin-top: 6px;
+    }
+
+    /* Stats strip */
+    .stats-strip { background: var(--charcoal); display: flex; padding: 14px 36px; }
+    .strip-stat {
+      flex: 1; display: flex; flex-direction: column; gap: 3px;
+      border-right: 1px solid rgba(255,255,255,0.08);
+      padding-right: 20px; margin-right: 20px;
+    }
+    .strip-stat:last-child { border-right: none; padding-right: 0; margin-right: 0; }
+    .strip-num {
+      font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600;
+      color: var(--gold); line-height: 1;
+    }
+    .strip-label { font-size: 9px; font-weight: 500; color: rgba(255,255,255,0.45); line-height: 1.4; }
+
+    /* Main */
+    .main { padding: 26px 36px 24px; }
+    .climb-note { font-size: 10px; color: var(--mid); line-height: 1.5; margin-bottom: 26px; }
+
+    /* Widening ladder */
+    .ladder {
+      position: relative;
+      display: flex; flex-direction: column; align-items: center;
+      gap: 14px;
+      margin-bottom: 4px;
+    }
+    .rails { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; }
+
+    .rung {
+      position: relative; z-index: 1;
+      display: flex; align-items: stretch;
+      min-height: 84px;
+      background: var(--cream);
+      border: 1px solid var(--cream-dark);
+      cursor: pointer;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .rung[data-rung="1"] { width: 62%; }
+    .rung[data-rung="2"] { width: 81%; }
+    .rung[data-rung="3"] { width: 100%; }
+
+    .rung:hover { background: #EFE8D6; border-color: var(--rose); }
+    .rung.active { background: #EFE8D6; border-color: var(--gold); }
+
+    .rung-num {
+      font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600;
+      color: var(--light); width: 44px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      border-right: 1px solid var(--cream-dark);
+    }
+    .rung.active .rung-num { color: var(--gold); }
+
+    .rung-body {
+      padding: 10px 14px; flex: 1; min-width: 0;
+      display: flex; flex-direction: column; justify-content: center; gap: 3px;
+    }
+    .rung-label {
+      font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 600;
+      color: var(--burgundy); line-height: 1.2;
+    }
+    .rung-tag { font-size: 8.5px; color: var(--mid); font-style: italic; line-height: 1.3; }
+    .rung-vol { font-size: 9px; color: var(--mid); line-height: 1.2; margin-top: 1px; }
+    .rung-vol b {
+      font-family: 'Cormorant Garamond', serif; font-size: 13px; font-weight: 600;
+      color: var(--gold);
+    }
+
+    .ladder-caption {
+      font-size: 9px; color: var(--light); font-style: italic; line-height: 1.4;
+      margin-top: 16px; margin-bottom: 18px;
+    }
+
+    /* Detail box */
+    .detail-box {
+      background: var(--cream); padding: 18px 22px; border-left: 3px solid var(--gold);
+    }
+    .detail-head {
+      font-size: 9px; font-weight: 600; letter-spacing: 0.4px; color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .q-list { list-style: none; margin: 0 0 12px 0; padding: 0; }
+    .q-list li {
+      font-family: 'Cormorant Garamond', serif; font-size: 14px; font-style: italic;
+      color: var(--charcoal); line-height: 1.5; padding: 2px 0 2px 16px; position: relative;
+    }
+    .q-list li::before {
+      content: '"'; position: absolute; left: 2px; color: var(--rose); font-size: 14px;
+    }
+    .detail-insight {
+      font-size: 11px; color: var(--mid); line-height: 1.65;
+      border-top: 1px solid var(--cream-dark); padding-top: 10px;
+    }
+    .detail-insight strong { color: var(--charcoal); font-weight: 600; }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid var(--cream-dark); margin-top: 22px; padding-top: 12px;
+      font-size: 9.5px; color: var(--light); font-style: italic; line-height: 1.5;
+    }
+
+    /* Narrow screens */
+    @media (max-width: 540px) {
+      .header, .stats-strip, .main { padding-left: 18px; padding-right: 18px; }
+      .rung[data-rung="1"] { width: 78%; }
+      .rung[data-rung="2"] { width: 90%; }
+      .stats-strip { flex-direction: column; gap: 10px; }
+      .strip-stat { border-right: none; padding-right: 0; margin-right: 0;
+        border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 10px; }
+      .strip-stat:last-child { border-bottom: none; padding-bottom: 0; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="title">The curiosity ladder</div>
+    <div class="subtitle">The questions people actually type, from how do I start to where is this from</div>
+  </div>
+
+  <div class="stats-strip">
+    <div class="strip-stat">
+      <span class="strip-num">75%</span>
+      <span class="strip-label">of people find the rules of wine intimidating</span>
+    </div>
+    <div class="strip-stat">
+      <span class="strip-num">43%</span>
+      <span class="strip-label">of origin-curiosity searches name a specific region or grape</span>
+    </div>
+    <div class="strip-stat">
+      <span class="strip-num">~30,000</span>
+      <span class="strip-label">combined monthly global searches across these questions</span>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <div class="climb-note">
+      Each rung is a real cluster of Google searches. As drinkers climb, the questions shift from anxiety about doing it right to curiosity about where the wine comes from, and the search interest widens with them. Once the basics click, the pull to learn a wine's origin draws by far the most searches of all. Click a rung to read the questions.
+    </div>
+
+    <div class="ladder" id="ladder">
+      <svg class="rails" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <line x1="19" y1="100" x2="0"   y2="0" stroke="#5C1A2E" stroke-width="3" vector-effect="non-scaling-stroke" />
+        <line x1="81" y1="100" x2="100" y2="0" stroke="#5C1A2E" stroke-width="3" vector-effect="non-scaling-stroke" />
+      </svg>
+
+      <div class="rung" data-rung="3" onclick="selectStep(2)">
+        <div class="rung-num">03</div>
+        <div class="rung-body">
+          <div class="rung-label">Where is this from?</div>
+          <div class="rung-tag">curiosity: the story breaks the barrier</div>
+          <div class="rung-vol"><b>22,800</b> searches / month</div>
+        </div>
+      </div>
+
+      <div class="rung" data-rung="2" onclick="selectStep(1)">
+        <div class="rung-num">02</div>
+        <div class="rung-body">
+          <div class="rung-label">What does this mean?</div>
+          <div class="rung-tag">orientation: learning the language</div>
+          <div class="rung-vol"><b>4,200</b> searches / month</div>
+        </div>
+      </div>
+
+      <div class="rung active" data-rung="1" onclick="selectStep(0)">
+        <div class="rung-num">01</div>
+        <div class="rung-body">
+          <div class="rung-label">Am I doing this right?</div>
+          <div class="rung-tag">the barrier: anxiety about getting it wrong</div>
+          <div class="rung-vol"><b>2,800</b> searches / month</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ladder-caption">Numbers show combined monthly global Google searches for the example questions in each rung (Google Keyword Planner, 2026). Rung widths are illustrative, not to scale.</div>
+
+    <div class="detail-box" id="detailBox"></div>
+
+    <div class="footer">
+      Sources: Search-interest data obtained from Google Keyword Planner and Google autocomplete, July 2026. Intimidation figure from a brand-commissioned OnePoll survey for Woodbridge, 2022.
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const rungs = [
+    {
+      head: 'Rung 01 · am I doing this right?',
+      questions: [
+        'how to drink wine correctly',
+        'how to drink wine for the first time',
+        'how to drink wine etiquette',
+        'how to choose the right wine',
+        'wine for beginners',
+      ],
+      insight: 'The first questions are about permission. People search how to drink wine <strong>correctly</strong>, <strong>properly</strong>, with the right <strong>etiquette</strong>, worried about getting it wrong. This is the barrier in its own words: wine feels like a set of rules before it feels like a drink.',
+    },
+    {
+      head: 'Rung 02 · what does this mean?',
+      questions: [
+        'what does dry wine mean',
+        'does dry wine mean bitter',
+        'what does off dry wine mean',
+        'how to taste and describe wine',
+        'how to taste wine like a sommelier',
+      ],
+      insight: 'The next rung is vocabulary. As the fear settles, curiosity turns to meaning: what does dry actually mean, how do you taste and describe what is in the glass. The questions still centre on the drinker, but the anxiety is fading.',
+    },
+    {
+      head: 'Rung 03 · where is this from?',
+      questions: [
+        'where is wine from originally',
+        'what grape is Barolo',
+        'what grape is grown in Burgundy',
+        'wine regions of France',
+        'where is Rioja wine from',
+      ],
+      insight: 'At the top rung the questions change character entirely. The focus moves off the drinker and onto the wine itself: its grape, its region, where it comes from. <strong>These origin questions draw by far the most searches of the three rungs, and 43% of them name a specific place or grape.</strong> Once the basics click, the desire to learn where a wine comes from is close to universal. Curiosity about the story is what carries someone over the barrier, and it is exactly where the next section begins.',
+    },
+  ];
+
+  function renderDetail(i) {
+    const r = rungs[i];
+    document.getElementById('detailBox').innerHTML =
+      '<div class="detail-head">' + r.head + '</div>' +
+      '<ul class="q-list">' + r.questions.map(q => '<li>' + q + '</li>').join('') + '</ul>' +
+      '<div class="detail-insight">' + r.insight + '</div>';
+  }
+
+  function selectStep(i) {
+    document.querySelectorAll('.rung').forEach((s) => s.classList.toggle('active', s.getAttribute('data-rung') === String(i + 1)));
+    renderDetail(i);
+  }
+
+  renderDetail(0);
+</script>
+</body>
+</html>

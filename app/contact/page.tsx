@@ -38,7 +38,7 @@ export default function ContactPage() {
               <p className="section-label mb-6">Get in Touch</p>
               <div className="divider-gold-left" />
               <p className="font-montserrat text-sm text-charcoal leading-loose mb-10">
-                Whether you&apos;d like to enquire about an event, host your own wine evening, have a travel destination in mind, or simply want to know what is possible — reach out and we will figure out the rest together over a glass, or a bottle!
+                Whether you&apos;d like to enquire about an event, host your own wine evening, have a travel destination in mind, or simply want to know which wine to buy: reach out and we will figure out the rest together over a glass, or a bottle!
               </p>
 
               <div className="flex flex-col gap-6">

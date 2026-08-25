@@ -1,0 +1,2918 @@
+{
+ "piece": 2,
+ "visual": "Price does not predict quality (scatter)",
+ "source": "Vivino via Apify (mrbridge/vivino-powerful-scraper), red wines, US market, USD, July 2026",
+ "method": "Stratified sample across price bands (0-20, 21+, 40-80, 80-200, 200-2000), deduped by wineId, minRating 2.5, sorted by ratings_count",
+ "n": 288,
+ "pearson_price_rating": 0.356,
+ "pearson_logprice_rating": 0.713,
+ "r2_logprice": 0.509,
+ "priceRange": [
+  10.15,
+  6999.99
+ ],
+ "ratingRange": [
+  3.4,
+  4.7
+ ],
+ "samplingBias": "Vivino community ratings compress toward 3.4-4.5; popular/expensive wines attract more and higher ratings. Sample favours popular wines (sorted by ratings_count).",
+ "points": [
+  {
+   "name": "Pinot Noir",
+   "winery": "Meiomi",
+   "vintage": "",
+   "price": 19.44,
+   "rating": 4.1,
+   "ratingsCount": 185970,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Mucho Más Tinto",
+   "winery": "Félix Solís",
+   "vintage": "N.V.",
+   "price": 11.99,
+   "rating": 4.1,
+   "ratingsCount": 116939,
+   "region": "Vino de España",
+   "country": "Espagne"
+  },
+  {
+   "name": "Red Blend",
+   "winery": "19 Crimes",
+   "vintage": "",
+   "price": 11.35,
+   "rating": 4.0,
+   "ratingsCount": 110348,
+   "region": "Victoria",
+   "country": "Australie"
+  },
+  {
+   "name": "Memoro Rosso",
+   "winery": "Piccini",
+   "vintage": "N.V.",
+   "price": 17.54,
+   "rating": 3.8,
+   "ratingsCount": 79399,
+   "region": "Toscane",
+   "country": "Italie"
+  },
+  {
+   "name": "Sonoma Zinfandel",
+   "winery": "Seghesio",
+   "vintage": 2024,
+   "price": 19.79,
+   "rating": 4.1,
+   "ratingsCount": 62047,
+   "region": "Sonoma County",
+   "country": "États-Unis"
+  },
+  {
+   "name": "The Banished Dark Red",
+   "winery": "19 Crimes",
+   "vintage": "",
+   "price": 11.48,
+   "rating": 4.0,
+   "ratingsCount": 47443,
+   "region": "Australie du Sud-Est",
+   "country": "Australie"
+  },
+  {
+   "name": "Cabernet Sauvignon Lot",
+   "winery": "Bonanza",
+   "vintage": "N.V.",
+   "price": 16.49,
+   "rating": 4.1,
+   "ratingsCount": 45999,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "The Uprising Red",
+   "winery": "19 Crimes",
+   "vintage": "",
+   "price": 11.35,
+   "rating": 4.0,
+   "ratingsCount": 41465,
+   "region": "Australie du Sud-Est",
+   "country": "Australie"
+  },
+  {
+   "name": "Founders' Estate Cabernet Sauvignon",
+   "winery": "Beringer",
+   "vintage": 2024,
+   "price": 10.27,
+   "rating": 3.7,
+   "ratingsCount": 40953,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "Liberty School",
+   "vintage": 2024,
+   "price": 18.39,
+   "rating": 3.9,
+   "ratingsCount": 37637,
+   "region": "Paso Robles",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Essential Red",
+   "winery": "Bogle",
+   "vintage": 2023,
+   "price": 11.95,
+   "rating": 3.8,
+   "ratingsCount": 36437,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "337 Cabernet Sauvignon",
+   "winery": "Noble Vines",
+   "vintage": 2024,
+   "price": 14.95,
+   "rating": 3.7,
+   "ratingsCount": 35209,
+   "region": "Lodi",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "H3 Wines",
+   "vintage": 2024,
+   "price": 15.95,
+   "rating": 3.8,
+   "ratingsCount": 28945,
+   "region": "Horse Heaven Hills",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Vint Pinot Noir",
+   "winery": "Robert Mondavi Private Selection",
+   "vintage": 2024,
+   "price": 12.95,
+   "rating": 3.6,
+   "ratingsCount": 28817,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "The Dreaming Tree",
+   "vintage": 2024,
+   "price": 11.95,
+   "rating": 3.7,
+   "ratingsCount": 22936,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Tarima Monastrell",
+   "winery": "Volver",
+   "vintage": 2024,
+   "price": 14.24,
+   "rating": 3.7,
+   "ratingsCount": 22920,
+   "region": "Alicante",
+   "country": "Espagne"
+  },
+  {
+   "name": "Pinot Noir",
+   "winery": "Le Grand Noir",
+   "vintage": 2023,
+   "price": 14.99,
+   "rating": 3.7,
+   "ratingsCount": 19736,
+   "region": "Pays d'Oc",
+   "country": "France"
+  },
+  {
+   "name": "Old Vine Zinfandel",
+   "winery": "Predator",
+   "vintage": 2024,
+   "price": 16.93,
+   "rating": 3.9,
+   "ratingsCount": 18814,
+   "region": "Lodi",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Red Blend",
+   "winery": "Troublemaker",
+   "vintage": "N.V.",
+   "price": 16.95,
+   "rating": 3.8,
+   "ratingsCount": 18227,
+   "region": "Paso Robles",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Malbec",
+   "winery": "Tilia",
+   "vintage": 2025,
+   "price": 15.95,
+   "rating": 3.6,
+   "ratingsCount": 18211,
+   "region": "Mendoza",
+   "country": "Argentine"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "Cannonball",
+   "vintage": 2023,
+   "price": 15.95,
+   "rating": 3.8,
+   "ratingsCount": 18152,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Pinot Noir",
+   "winery": "A to Z Wineworks",
+   "vintage": 2023,
+   "price": 17.81,
+   "rating": 3.7,
+   "ratingsCount": 17677,
+   "region": "Oregon",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Rosso Dolce – Sweet Red",
+   "winery": "Roscato",
+   "vintage": "",
+   "price": 13.99,
+   "rating": 4.2,
+   "ratingsCount": 17558,
+   "region": "Provincia di Pavia",
+   "country": "Italie"
+  },
+  {
+   "name": "Pinot Noir",
+   "winery": "Cline",
+   "vintage": 2023,
+   "price": 19.99,
+   "rating": 3.8,
+   "ratingsCount": 16994,
+   "region": "Sonoma Coast",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Beringer Bros. Bourbon Barrel Aged Cabernet Sauvignon",
+   "winery": "Beringer",
+   "vintage": 2024,
+   "price": 16.93,
+   "rating": 4.1,
+   "ratingsCount": 16847,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Big Red Blend",
+   "winery": "Dark Horse",
+   "vintage": "N.V.",
+   "price": 10.15,
+   "rating": 3.5,
+   "ratingsCount": 16737,
+   "region": "Sonoma County",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Boom Boom! Syrah",
+   "winery": "Charles Smith",
+   "vintage": 2023,
+   "price": 17.95,
+   "rating": 3.6,
+   "ratingsCount": 16354,
+   "region": "Washington",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Barbera d'Asti Tre Vigne",
+   "winery": "Vietti",
+   "vintage": 2023,
+   "price": 19.78,
+   "rating": 3.9,
+   "ratingsCount": 15645,
+   "region": "Barbera d'Asti",
+   "country": "Italie"
+  },
+  {
+   "name": "Malbec Reserva",
+   "winery": "Kaiken",
+   "vintage": 2020,
+   "price": 16.5,
+   "rating": 3.6,
+   "ratingsCount": 14767,
+   "region": "Mendoza",
+   "country": "Argentine"
+  },
+  {
+   "name": "Crianza Rioja",
+   "winery": "Ramón Bilbao",
+   "vintage": 2019,
+   "price": 17.99,
+   "rating": 4.0,
+   "ratingsCount": 14030,
+   "region": "Rioja",
+   "country": "Espagne"
+  },
+  {
+   "name": "Double Black Red Blend (Limited Edition)",
+   "winery": "1924 Wines",
+   "vintage": 2024,
+   "price": 12.09,
+   "rating": 3.9,
+   "ratingsCount": 13971,
+   "region": "Lodi",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Old Vine Zinfandel",
+   "winery": "Boneshaker",
+   "vintage": 2024,
+   "price": 17.95,
+   "rating": 4.0,
+   "ratingsCount": 13843,
+   "region": "Lodi",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Grand Selection Cabernet Sauvignon",
+   "winery": "Lapostolle",
+   "vintage": 2024,
+   "price": 18.95,
+   "rating": 3.6,
+   "ratingsCount": 13811,
+   "region": "Rapel Valley",
+   "country": "Chili"
+  },
+  {
+   "name": "Armador Cabernet Sauvignon",
+   "winery": "Odfjell",
+   "vintage": 2024,
+   "price": 16.32,
+   "rating": 3.6,
+   "ratingsCount": 13800,
+   "region": "Maipo Valley",
+   "country": "Chili"
+  },
+  {
+   "name": "Red Blend",
+   "winery": "Casa Santos Lima",
+   "vintage": 2024,
+   "price": 10.88,
+   "rating": 3.7,
+   "ratingsCount": 13687,
+   "region": "Lisbonne",
+   "country": "Portugal"
+  },
+  {
+   "name": "Valpolicella",
+   "winery": "Allegrini",
+   "vintage": 2025,
+   "price": 17.99,
+   "rating": 3.7,
+   "ratingsCount": 13551,
+   "region": "Valpolicella",
+   "country": "Italie"
+  },
+  {
+   "name": "Chianti Classico",
+   "winery": "Castello di Querceto",
+   "vintage": 2024,
+   "price": 16.95,
+   "rating": 3.7,
+   "ratingsCount": 13252,
+   "region": "Chianti Classico",
+   "country": "Italie"
+  },
+  {
+   "name": "Pinot Noir",
+   "winery": "Prophecy",
+   "vintage": 2024,
+   "price": 13.95,
+   "rating": 3.7,
+   "ratingsCount": 13216,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Pessimist Red Blend",
+   "winery": "DAOU",
+   "vintage": 2018,
+   "price": 17.99,
+   "rating": 4.1,
+   "ratingsCount": 13068,
+   "region": "Paso Robles",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Nero d'Avola",
+   "winery": "Stemmari",
+   "vintage": 2024,
+   "price": 15.95,
+   "rating": 3.6,
+   "ratingsCount": 13021,
+   "region": "Sicilia",
+   "country": "Italie"
+  },
+  {
+   "name": "Tinto",
+   "winery": "São Miguel do Sul",
+   "vintage": 2023,
+   "price": 13.3,
+   "rating": 3.6,
+   "ratingsCount": 12668,
+   "region": "Alentejano",
+   "country": "Portugal"
+  },
+  {
+   "name": "Merlot",
+   "winery": "14 Hands",
+   "vintage": 2023,
+   "price": 17.95,
+   "rating": 3.7,
+   "ratingsCount": 12428,
+   "region": "Columbia Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "Benziger",
+   "vintage": 2023,
+   "price": 15.95,
+   "rating": 3.8,
+   "ratingsCount": 12396,
+   "region": "Sonoma County",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Shiraz",
+   "winery": "19 Crimes",
+   "vintage": "",
+   "price": 11.48,
+   "rating": 3.7,
+   "ratingsCount": 11971,
+   "region": "Australie du Sud-Est",
+   "country": "Australie"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "Murphy-Goode",
+   "vintage": 2023,
+   "price": 13.95,
+   "rating": 3.7,
+   "ratingsCount": 11793,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Valley Oaks Cabernet Sauvignon",
+   "winery": "Fetzer",
+   "vintage": 2022,
+   "price": 16.04,
+   "rating": 3.5,
+   "ratingsCount": 11502,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "Storypoint",
+   "vintage": 2023,
+   "price": 16.01,
+   "rating": 4.0,
+   "ratingsCount": 11183,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Pinot Noir (Caiden's Vineyards)",
+   "winery": "Block Nine",
+   "vintage": 2024,
+   "price": 16.75,
+   "rating": 3.7,
+   "ratingsCount": 11014,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Paulucci Malbec (Angel Paulucci Vineyard)",
+   "winery": "La Posta",
+   "vintage": 2024,
+   "price": 18.06,
+   "rating": 4.0,
+   "ratingsCount": 10949,
+   "region": "Mendoza",
+   "country": "Argentine"
+  },
+  {
+   "name": "Pinot Noir",
+   "winery": "Estancia",
+   "vintage": 2024,
+   "price": 14.51,
+   "rating": 3.5,
+   "ratingsCount": 10921,
+   "region": "Monterey County",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Merlot",
+   "winery": "Josh Cellars",
+   "vintage": 2024,
+   "price": 14.99,
+   "rating": 3.7,
+   "ratingsCount": 10919,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "Le Grand Noir",
+   "vintage": 2024,
+   "price": 14.99,
+   "rating": 3.9,
+   "ratingsCount": 10792,
+   "region": "Minervois",
+   "country": "France"
+  },
+  {
+   "name": "Old Vine Red (OVR)",
+   "winery": "Marietta",
+   "vintage": "N.V.",
+   "price": 17.0,
+   "rating": 3.7,
+   "ratingsCount": 10479,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "La Petite Grace Pinot Noir",
+   "winery": "Diora",
+   "vintage": 2024,
+   "price": 19.65,
+   "rating": 4.1,
+   "ratingsCount": 10363,
+   "region": "Monterey",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Decadence Cabernet Sauvignon",
+   "winery": "Ménage à Trois",
+   "vintage": 2024,
+   "price": 14.95,
+   "rating": 3.8,
+   "ratingsCount": 10272,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Unshackled Red Blend",
+   "winery": "The Prisoner",
+   "vintage": 2024,
+   "price": 19.95,
+   "rating": 4.0,
+   "ratingsCount": 10074,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Pinot Noir",
+   "winery": "The Pinot Project",
+   "vintage": 2023,
+   "price": 19.97,
+   "rating": 3.5,
+   "ratingsCount": 10068,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Oak Cask Cabernet Sauvignon",
+   "winery": "Trapiche",
+   "vintage": 2025,
+   "price": 12.95,
+   "rating": 3.5,
+   "ratingsCount": 10058,
+   "region": "Mendoza",
+   "country": "Argentine"
+  },
+  {
+   "name": "Montepulciano d'Abruzzo",
+   "winery": "La Piuma",
+   "vintage": 2024,
+   "price": 14.95,
+   "rating": 3.4,
+   "ratingsCount": 9790,
+   "region": "Montepulciano d'Abruzzo",
+   "country": "Italie"
+  },
+  {
+   "name": "Pinot Noir",
+   "winery": "Sea Sun",
+   "vintage": 2024,
+   "price": 19.95,
+   "rating": 3.9,
+   "ratingsCount": 9733,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Pinot Noir",
+   "winery": "Gnarly Head",
+   "vintage": 1924,
+   "price": 19.95,
+   "rating": 3.6,
+   "ratingsCount": 9646,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Puro Malbec",
+   "winery": "Dieter Meier",
+   "vintage": 2025,
+   "price": 18.95,
+   "rating": 3.9,
+   "ratingsCount": 9541,
+   "region": "Mendoza",
+   "country": "Argentine"
+  },
+  {
+   "name": "North Coast Cabernet Sauvignon",
+   "winery": "William Hill",
+   "vintage": 2023,
+   "price": 16.95,
+   "rating": 3.7,
+   "ratingsCount": 9150,
+   "region": "Côte nord",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Pinot Noir",
+   "winery": "Imagery",
+   "vintage": 2024,
+   "price": 19.95,
+   "rating": 3.8,
+   "ratingsCount": 9140,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Montepulciano d'Abruzzo",
+   "winery": "Vini La Quercia",
+   "vintage": 2023,
+   "price": 14.51,
+   "rating": 4.0,
+   "ratingsCount": 8786,
+   "region": "Montepulciano d'Abruzzo",
+   "country": "Italie"
+  },
+  {
+   "name": "Chianti Classico",
+   "winery": "Cecchi",
+   "vintage": 2023,
+   "price": 17.95,
+   "rating": 3.4,
+   "ratingsCount": 8572,
+   "region": "Chianti Classico",
+   "country": "Italie"
+  },
+  {
+   "name": "Heritage Reserve Pinot Noir",
+   "winery": "DeLoach",
+   "vintage": 2024,
+   "price": 13.3,
+   "rating": 3.8,
+   "ratingsCount": 8384,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Garnacha de Fuego",
+   "winery": "Breca",
+   "vintage": 2023,
+   "price": 16.44,
+   "rating": 3.5,
+   "ratingsCount": 8336,
+   "region": "Calatayud",
+   "country": "Espagne"
+  },
+  {
+   "name": "Petite Sirah",
+   "winery": "Spellbound",
+   "vintage": 2023,
+   "price": 14.51,
+   "rating": 3.8,
+   "ratingsCount": 8262,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "TerraNoble",
+   "vintage": 2024,
+   "price": 12.89,
+   "rating": 3.4,
+   "ratingsCount": 8047,
+   "region": "Vallée centrale",
+   "country": "Chili"
+  },
+  {
+   "name": "Reserva",
+   "winery": "Marqués de Riscal",
+   "vintage": 1957,
+   "price": 824.95,
+   "rating": 4.1,
+   "ratingsCount": 261114,
+   "region": "Rioja",
+   "country": "Espagne"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "Caymus Vineyards",
+   "vintage": 1979,
+   "price": 499.99,
+   "rating": 4.6,
+   "ratingsCount": 195941,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "I Gran Reserva",
+   "winery": "Bodegas Faustino",
+   "vintage": 1955,
+   "price": 999.95,
+   "rating": 4.1,
+   "ratingsCount": 106846,
+   "region": "Rioja Alavesa",
+   "country": "Espagne"
+  },
+  {
+   "name": "Austin Hope Cabernet Sauvignon",
+   "winery": "Austin Hope",
+   "vintage": 2024,
+   "price": 59.35,
+   "rating": 4.5,
+   "ratingsCount": 80051,
+   "region": "Paso Robles",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Edizione Cinque Autoctoni",
+   "winery": "Fantini",
+   "vintage": "N.V.",
+   "price": 65.51,
+   "rating": 4.3,
+   "ratingsCount": 78246,
+   "region": "Abruzzo (Abruzzes)",
+   "country": "Italie"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "Decoy",
+   "vintage": 2024,
+   "price": 27.95,
+   "rating": 4.0,
+   "ratingsCount": 73195,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Alexander Valley Cabernet Sauvignon",
+   "winery": "Silver Oak",
+   "vintage": 1979,
+   "price": 279.99,
+   "rating": 4.4,
+   "ratingsCount": 60160,
+   "region": "Alexander Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Ca'Marcanda Promis Toscana",
+   "winery": "Gaja",
+   "vintage": 2024,
+   "price": 79.9,
+   "rating": 4.1,
+   "ratingsCount": 57617,
+   "region": "Toscane",
+   "country": "Italie"
+  },
+  {
+   "name": "Château Margaux (Premier Grand Cru Classé)",
+   "winery": "Château Margaux",
+   "vintage": 1949,
+   "price": 6999.99,
+   "rating": 4.6,
+   "ratingsCount": 56387,
+   "region": "Margaux",
+   "country": "France"
+  },
+  {
+   "name": "Napa Valley Cabernet Sauvignon",
+   "winery": "Silver Oak",
+   "vintage": 1979,
+   "price": 299.99,
+   "rating": 4.5,
+   "ratingsCount": 56186,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Sonoma Coast Pinot Noir",
+   "winery": "La Crema",
+   "vintage": 2024,
+   "price": 24.99,
+   "rating": 4.0,
+   "ratingsCount": 54006,
+   "region": "Sonoma Coast",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Jumilla Silver Label",
+   "winery": "Juan Gil",
+   "vintage": 2006,
+   "price": 52.49,
+   "rating": 4.0,
+   "ratingsCount": 50951,
+   "region": "Jumilla",
+   "country": "Espagne"
+  },
+  {
+   "name": "Abstract",
+   "winery": "Orin Swift",
+   "vintage": 2024,
+   "price": 36.79,
+   "rating": 4.2,
+   "ratingsCount": 49785,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Special Selection Cabernet Sauvignon",
+   "winery": "Caymus Vineyards",
+   "vintage": 1976,
+   "price": 799.99,
+   "rating": 4.6,
+   "ratingsCount": 47797,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Napa Valley Cabernet Sauvignon",
+   "winery": "Duckhorn",
+   "vintage": 1982,
+   "price": 199.99,
+   "rating": 4.3,
+   "ratingsCount": 46307,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "V Reserva",
+   "winery": "Bodegas Faustino",
+   "vintage": 1985,
+   "price": 172.95,
+   "rating": 3.8,
+   "ratingsCount": 44253,
+   "region": "Rioja Alavesa",
+   "country": "Espagne"
+  },
+  {
+   "name": "Las Alturas Vineyard Pinot Noir",
+   "winery": "Belle Glos",
+   "vintage": 2024,
+   "price": 32.99,
+   "rating": 4.4,
+   "ratingsCount": 44041,
+   "region": "Santa Lucia Highlands",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Saldo Zinfandel",
+   "winery": "The Prisoner",
+   "vintage": "",
+   "price": 24.99,
+   "rating": 4.2,
+   "ratingsCount": 41053,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Crianza",
+   "winery": "Bodegas Muga",
+   "vintage": 1978,
+   "price": 219.95,
+   "rating": 3.9,
+   "ratingsCount": 40926,
+   "region": "Rioja",
+   "country": "Espagne"
+  },
+  {
+   "name": "Gran Reserva",
+   "winery": "Campo Viejo",
+   "vintage": 1987,
+   "price": 167.95,
+   "rating": 3.9,
+   "ratingsCount": 39675,
+   "region": "Rioja",
+   "country": "Espagne"
+  },
+  {
+   "name": "Papillon",
+   "winery": "Orin Swift",
+   "vintage": 2023,
+   "price": 89.99,
+   "rating": 4.5,
+   "ratingsCount": 36691,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Rioja Reserva",
+   "winery": "Imperial",
+   "vintage": 1968,
+   "price": 774.95,
+   "rating": 4.2,
+   "ratingsCount": 36179,
+   "region": "Rioja",
+   "country": "Espagne"
+  },
+  {
+   "name": "Red Blend (Aged in Bourbon Barrels)",
+   "winery": "Cooper & Thief",
+   "vintage": 2023,
+   "price": 29.95,
+   "rating": 4.1,
+   "ratingsCount": 32338,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "La Fiole du Pape Père Anselme Châteauneuf-du-Pape",
+   "winery": "Brotte",
+   "vintage": "",
+   "price": 36.93,
+   "rating": 4.1,
+   "ratingsCount": 31906,
+   "region": "Châteauneuf-du-Pape",
+   "country": "France"
+  },
+  {
+   "name": "Berardenga Chianti Classico",
+   "winery": "Fèlsina",
+   "vintage": 1937,
+   "price": 21.95,
+   "rating": 3.8,
+   "ratingsCount": 30111,
+   "region": "Chianti Classico",
+   "country": "Italie"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "Heitz Cellar",
+   "vintage": 1971,
+   "price": 499.99,
+   "rating": 4.2,
+   "ratingsCount": 28329,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Rioja Gran Reserva",
+   "winery": "Beronia",
+   "vintage": 1987,
+   "price": 207.95,
+   "rating": 4.1,
+   "ratingsCount": 25799,
+   "region": "Rioja",
+   "country": "Espagne"
+  },
+  {
+   "name": "Dagromis Barolo",
+   "winery": "Gaja",
+   "vintage": 2022,
+   "price": 161.5,
+   "rating": 4.3,
+   "ratingsCount": 25170,
+   "region": "Barolo",
+   "country": "Italie"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "Cakebread",
+   "vintage": 2023,
+   "price": 91.99,
+   "rating": 4.4,
+   "ratingsCount": 24594,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Cocodrilo Red Blend",
+   "winery": "Viña Cobos",
+   "vintage": 2023,
+   "price": 29.49,
+   "rating": 4.3,
+   "ratingsCount": 24025,
+   "region": "Mendoza",
+   "country": "Argentine"
+  },
+  {
+   "name": "Il Pino di Biserno",
+   "winery": "Biserno",
+   "vintage": 2024,
+   "price": 79.95,
+   "rating": 4.3,
+   "ratingsCount": 23605,
+   "region": "Toscane",
+   "country": "Italie"
+  },
+  {
+   "name": "Haut-Médoc",
+   "winery": "Château Citran",
+   "vintage": 1962,
+   "price": 299.99,
+   "rating": 3.9,
+   "ratingsCount": 23601,
+   "region": "Haut-Médoc",
+   "country": "France"
+  },
+  {
+   "name": "Nero D'Avola - Frappato SP68",
+   "winery": "Occhipinti",
+   "vintage": 2025,
+   "price": 36.79,
+   "rating": 3.9,
+   "ratingsCount": 23122,
+   "region": "Terre Siciliane",
+   "country": "Italie"
+  },
+  {
+   "name": "Barrua",
+   "winery": "Punica",
+   "vintage": 2022,
+   "price": 54.95,
+   "rating": 4.2,
+   "ratingsCount": 22846,
+   "region": "Isola dei Nuraghi",
+   "country": "Italie"
+  },
+  {
+   "name": "Estate Cabernet Sauvignon",
+   "winery": "Alexander Valley Vineyards",
+   "vintage": 1995,
+   "price": 89.99,
+   "rating": 3.9,
+   "ratingsCount": 22499,
+   "region": "Alexander Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Overture",
+   "winery": "Opus One",
+   "vintage": "",
+   "price": 215.99,
+   "rating": 4.5,
+   "ratingsCount": 21953,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Signature Brioso",
+   "winery": "Susana Balbo",
+   "vintage": 2024,
+   "price": 28.74,
+   "rating": 4.2,
+   "ratingsCount": 21398,
+   "region": "Agrelo",
+   "country": "Argentine"
+  },
+  {
+   "name": "Mountain Cuvée",
+   "winery": "Chappellet",
+   "vintage": 2024,
+   "price": 42.95,
+   "rating": 4.2,
+   "ratingsCount": 20793,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Anderson Valley Pinot Noir",
+   "winery": "Goldeneye",
+   "vintage": 2023,
+   "price": 44.8,
+   "rating": 4.3,
+   "ratingsCount": 20113,
+   "region": "Anderson Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Crognolo Toscana",
+   "winery": "Tenuta Sette Ponti",
+   "vintage": 2024,
+   "price": 41.95,
+   "rating": 4.0,
+   "ratingsCount": 19966,
+   "region": "Toscane",
+   "country": "Italie"
+  },
+  {
+   "name": "Geyserville",
+   "winery": "Ridge Vineyards",
+   "vintage": 1990,
+   "price": 110.99,
+   "rating": 4.2,
+   "ratingsCount": 19960,
+   "region": "Alexander Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Saint-Estèphe",
+   "winery": "Château Meyney",
+   "vintage": 2023,
+   "price": 41.39,
+   "rating": 4.0,
+   "ratingsCount": 19048,
+   "region": "Saint-Estèphe",
+   "country": "France"
+  },
+  {
+   "name": "Pinot Noir",
+   "winery": "Domaine Drouhin",
+   "vintage": 2024,
+   "price": 45.99,
+   "rating": 4.1,
+   "ratingsCount": 18939,
+   "region": "Dundee Hills",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "Mount Veeder Winery",
+   "vintage": 2023,
+   "price": 49.99,
+   "rating": 4.1,
+   "ratingsCount": 18876,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "Clos du Val",
+   "vintage": 2023,
+   "price": 42.99,
+   "rating": 4.1,
+   "ratingsCount": 18379,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Reserve Selection Cabernet Sauvignon",
+   "winery": "Raymond",
+   "vintage": 1994,
+   "price": 78.74,
+   "rating": 4.1,
+   "ratingsCount": 18342,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Cuvée Réservée Châteauneuf-du-Pape Rouge",
+   "winery": "Pegau",
+   "vintage": 2023,
+   "price": 70.99,
+   "rating": 4.2,
+   "ratingsCount": 17802,
+   "region": "Châteauneuf-du-Pape",
+   "country": "France"
+  },
+  {
+   "name": "Hillside Cabernet Sauvignon",
+   "winery": "Juggernaut",
+   "vintage": 2017,
+   "price": 52.95,
+   "rating": 4.2,
+   "ratingsCount": 17460,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Prima",
+   "winery": "Bodegas San Román",
+   "vintage": 2022,
+   "price": 22.99,
+   "rating": 3.8,
+   "ratingsCount": 17228,
+   "region": "Toro",
+   "country": "Espagne"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "Napa Cellars",
+   "vintage": 1978,
+   "price": 169.99,
+   "rating": 3.9,
+   "ratingsCount": 16901,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Rioja Reserva",
+   "winery": "Federico Paternina",
+   "vintage": 1965,
+   "price": 279.95,
+   "rating": 3.7,
+   "ratingsCount": 16704,
+   "region": "Rioja",
+   "country": "Espagne"
+  },
+  {
+   "name": "Garnacha",
+   "winery": "Alto Moncayo",
+   "vintage": 2003,
+   "price": 119.99,
+   "rating": 4.4,
+   "ratingsCount": 16532,
+   "region": "Campo de Borja",
+   "country": "Espagne"
+  },
+  {
+   "name": "Oreno Toscana",
+   "winery": "Tenuta Sette Ponti",
+   "vintage": 2024,
+   "price": 129.99,
+   "rating": 4.3,
+   "ratingsCount": 16438,
+   "region": "Toscane",
+   "country": "Italie"
+  },
+  {
+   "name": "Georges De Latour Private Reserve Cabernet Sauvignon",
+   "winery": "Beaulieu Vineyard (BV)",
+   "vintage": 1971,
+   "price": 179.99,
+   "rating": 4.4,
+   "ratingsCount": 16249,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Arcanum Il Fauno di Arcanum",
+   "winery": "Arceno",
+   "vintage": 2023,
+   "price": 34.95,
+   "rating": 4.2,
+   "ratingsCount": 15986,
+   "region": "Toscane",
+   "country": "Italie"
+  },
+  {
+   "name": "Médoc",
+   "winery": "Château Greysac",
+   "vintage": 1976,
+   "price": 69.99,
+   "rating": 3.8,
+   "ratingsCount": 15744,
+   "region": "Médoc",
+   "country": "France"
+  },
+  {
+   "name": "Les Forts de Latour Pauillac",
+   "winery": "Château Latour",
+   "vintage": 2020,
+   "price": 341.24,
+   "rating": 4.4,
+   "ratingsCount": 15697,
+   "region": "Pauillac",
+   "country": "France"
+  },
+  {
+   "name": "Limited Edition 10 Vendemmie",
+   "winery": "Tenuta Ulisse",
+   "vintage": "N.V.",
+   "price": 37.99,
+   "rating": 4.4,
+   "ratingsCount": 15600,
+   "region": "Montepulciano d'Abruzzo",
+   "country": "Italie"
+  },
+  {
+   "name": "Fontalloro",
+   "winery": "Fèlsina",
+   "vintage": 2002,
+   "price": 83.95,
+   "rating": 4.2,
+   "ratingsCount": 15450,
+   "region": "Toscane",
+   "country": "Italie"
+  },
+  {
+   "name": "Unico Reserva Especial Edición",
+   "winery": "Vega Sicilia",
+   "vintage": 2025,
+   "price": 1037.56,
+   "rating": 4.7,
+   "ratingsCount": 15408,
+   "region": "Ribera del Duero",
+   "country": "Espagne"
+  },
+  {
+   "name": "Marquis de Calon Saint-Estèphe",
+   "winery": "Château Calon-Ségur",
+   "vintage": 2023,
+   "price": 47.07,
+   "rating": 3.9,
+   "ratingsCount": 15237,
+   "region": "Saint-Estèphe",
+   "country": "France"
+  },
+  {
+   "name": "Barolo Lecinquevigne",
+   "winery": "Damilano",
+   "vintage": 2022,
+   "price": 39.89,
+   "rating": 4.1,
+   "ratingsCount": 15216,
+   "region": "Barolo",
+   "country": "Italie"
+  },
+  {
+   "name": "Castello di Brolio Gran Selezione Chianti Classico",
+   "winery": "Ricasoli",
+   "vintage": 2023,
+   "price": 69.99,
+   "rating": 4.2,
+   "ratingsCount": 15110,
+   "region": "Chianti Classico",
+   "country": "Italie"
+  },
+  {
+   "name": "Priorat",
+   "winery": "Clos Mogador",
+   "vintage": 2023,
+   "price": 151.92,
+   "rating": 4.4,
+   "ratingsCount": 15104,
+   "region": "Priorat",
+   "country": "Espagne"
+  },
+  {
+   "name": "Zinfandel",
+   "winery": "1000 Stories",
+   "vintage": 2016,
+   "price": 31.49,
+   "rating": 4.1,
+   "ratingsCount": 15019,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Gran Reserva Rioja (Finca Ygay)",
+   "winery": "Marqués de Murrieta",
+   "vintage": 1990,
+   "price": 1295.0,
+   "rating": 4.3,
+   "ratingsCount": 14832,
+   "region": "Rioja",
+   "country": "Espagne"
+  },
+  {
+   "name": "Rosso di Montalcino",
+   "winery": "Casanova di Neri",
+   "vintage": 2024,
+   "price": 43.99,
+   "rating": 3.9,
+   "ratingsCount": 14822,
+   "region": "Rosso di Montalcino",
+   "country": "Italie"
+  },
+  {
+   "name": "Austin Paso Robles Cabernet Sauvignon",
+   "winery": "Austin Hope",
+   "vintage": "N.V.",
+   "price": 22.99,
+   "rating": 4.2,
+   "ratingsCount": 14736,
+   "region": "Paso Robles",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Patriota Malbec - Bonarda",
+   "winery": "Tikal",
+   "vintage": 2023,
+   "price": 28.79,
+   "rating": 4.0,
+   "ratingsCount": 14693,
+   "region": "Mendoza",
+   "country": "Argentine"
+  },
+  {
+   "name": "Brunello di Montalcino",
+   "winery": "La Poderina",
+   "vintage": 2021,
+   "price": 50.81,
+   "rating": 4.1,
+   "ratingsCount": 14603,
+   "region": "Brunello di Montalcino",
+   "country": "Italie"
+  },
+  {
+   "name": "Médoc",
+   "winery": "Château Rollan de By",
+   "vintage": 2023,
+   "price": 62.05,
+   "rating": 3.9,
+   "ratingsCount": 14445,
+   "region": "Médoc",
+   "country": "France"
+  },
+  {
+   "name": "Echo de Lynch-Bages Pauillac",
+   "winery": "Château Lynch-Bages",
+   "vintage": 2023,
+   "price": 55.19,
+   "rating": 4.0,
+   "ratingsCount": 13267,
+   "region": "Pauillac",
+   "country": "France"
+  },
+  {
+   "name": "Brunello di Montalcino",
+   "winery": "Caprili",
+   "vintage": 2021,
+   "price": 54.95,
+   "rating": 4.3,
+   "ratingsCount": 12333,
+   "region": "Brunello di Montalcino",
+   "country": "Italie"
+  },
+  {
+   "name": "Tancredi",
+   "winery": "Donnafugata",
+   "vintage": 2021,
+   "price": 67.19,
+   "rating": 4.0,
+   "ratingsCount": 12311,
+   "region": "Terre Siciliane",
+   "country": "Italie"
+  },
+  {
+   "name": "Amarone della Valpolicella Classico",
+   "winery": "Bolla",
+   "vintage": 1990,
+   "price": 79.99,
+   "rating": 4.1,
+   "ratingsCount": 12047,
+   "region": "Amarone della Valpolicella Classico",
+   "country": "Italie"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "Rutherford Ranch",
+   "vintage": 2022,
+   "price": 42.95,
+   "rating": 3.9,
+   "ratingsCount": 11813,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Brunello di Montalcino",
+   "winery": "Collosorbo",
+   "vintage": 2021,
+   "price": 60.47,
+   "rating": 4.3,
+   "ratingsCount": 11227,
+   "region": "Brunello di Montalcino",
+   "country": "Italie"
+  },
+  {
+   "name": "Amiral de Beychevelle Saint-Julien",
+   "winery": "Château Beychevelle",
+   "vintage": 2023,
+   "price": 52.79,
+   "rating": 4.1,
+   "ratingsCount": 10955,
+   "region": "Saint-Julien",
+   "country": "France"
+  },
+  {
+   "name": "Bosan Valpolicella Ripasso Superiore",
+   "winery": "Cesari",
+   "vintage": 2021,
+   "price": 46.19,
+   "rating": 4.0,
+   "ratingsCount": 10503,
+   "region": "Valpolicella Ripasso",
+   "country": "Italie"
+  },
+  {
+   "name": "Tinto",
+   "winery": "Cortes de Cima",
+   "vintage": 2021,
+   "price": 50.64,
+   "rating": 4.0,
+   "ratingsCount": 10424,
+   "region": "Alentejano",
+   "country": "Portugal"
+  },
+  {
+   "name": "Estate Grown Cabernet Sauvignon",
+   "winery": "Obsidian Ridge",
+   "vintage": 2022,
+   "price": 41.99,
+   "rating": 4.1,
+   "ratingsCount": 10076,
+   "region": "Red Hills Lake County",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Bonarda",
+   "winery": "Alamos",
+   "vintage": 2004,
+   "price": 41.99,
+   "rating": 3.7,
+   "ratingsCount": 9702,
+   "region": "Mendoza",
+   "country": "Argentine"
+  },
+  {
+   "name": "Grand Reserve Cabernet Sauvignon",
+   "winery": "Kendall-Jackson",
+   "vintage": 1990,
+   "price": 64.99,
+   "rating": 3.9,
+   "ratingsCount": 9586,
+   "region": "Sonoma County",
+   "country": "États-Unis"
+  },
+  {
+   "name": "East Bench Zinfandel",
+   "winery": "Ridge Vineyards",
+   "vintage": 2024,
+   "price": 42.95,
+   "rating": 4.1,
+   "ratingsCount": 9558,
+   "region": "Dry Creek Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Saint-Joseph Selection Offerus",
+   "winery": "Domaine Jean-Louis Chave",
+   "vintage": 2024,
+   "price": 51.0,
+   "rating": 4.0,
+   "ratingsCount": 9371,
+   "region": "Saint-Joseph",
+   "country": "France"
+  },
+  {
+   "name": "Châteauneuf-du-Pape",
+   "winery": "Clos du Mont-Olivet",
+   "vintage": 2024,
+   "price": 50.59,
+   "rating": 4.0,
+   "ratingsCount": 9143,
+   "region": "Châteauneuf-du-Pape",
+   "country": "France"
+  },
+  {
+   "name": "Barolo",
+   "winery": "Oddero",
+   "vintage": 2022,
+   "price": 73.91,
+   "rating": 4.1,
+   "ratingsCount": 8923,
+   "region": "Barolo",
+   "country": "Italie"
+  },
+  {
+   "name": "Pinot Noir Te Muna Road Vineyard",
+   "winery": "Craggy Range",
+   "vintage": 2005,
+   "price": 79.99,
+   "rating": 4.0,
+   "ratingsCount": 8867,
+   "region": "Martinborough",
+   "country": "New Zealand"
+  },
+  {
+   "name": "Barolo",
+   "winery": "Ascheri",
+   "vintage": 2022,
+   "price": 50.39,
+   "rating": 4.0,
+   "ratingsCount": 8666,
+   "region": "Barolo",
+   "country": "Italie"
+  },
+  {
+   "name": "Black Chicken Zinfandel",
+   "winery": "Robert Biale Vineyards",
+   "vintage": 2024,
+   "price": 67.52,
+   "rating": 4.3,
+   "ratingsCount": 8652,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Bourgogne Cuvée Margot",
+   "winery": "Olivier Leflaive",
+   "vintage": 2023,
+   "price": 45.97,
+   "rating": 3.8,
+   "ratingsCount": 8532,
+   "region": "Bourgogne",
+   "country": "France"
+  },
+  {
+   "name": "Caravan Cabernet Sauvignon",
+   "winery": "Darioush",
+   "vintage": 2022,
+   "price": 58.19,
+   "rating": 4.3,
+   "ratingsCount": 8508,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Freestone Vineyards Pinot Noir",
+   "winery": "Joseph Phelps Vineyards",
+   "vintage": 2023,
+   "price": 65.95,
+   "rating": 4.2,
+   "ratingsCount": 8327,
+   "region": "Sonoma Coast",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Vintner's Collection Merlot",
+   "winery": "Sterling Vineyards",
+   "vintage": 2001,
+   "price": 52.49,
+   "rating": 3.7,
+   "ratingsCount": 7881,
+   "region": "Central Coast",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Cumberland Reserve Pinot Noir",
+   "winery": "Bergström",
+   "vintage": 2024,
+   "price": 49.99,
+   "rating": 4.2,
+   "ratingsCount": 7758,
+   "region": "Willamette Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Pinot Noir",
+   "winery": "Failla",
+   "vintage": 2024,
+   "price": 54.95,
+   "rating": 4.2,
+   "ratingsCount": 7458,
+   "region": "Sonoma Coast",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Rutherford Cabernet Sauvignon",
+   "winery": "Beaulieu Vineyard (BV)",
+   "vintage": 1985,
+   "price": 79.99,
+   "rating": 4.1,
+   "ratingsCount": 7414,
+   "region": "Rutherford",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Pinot Noir",
+   "winery": "Paul Hobbs",
+   "vintage": 2023,
+   "price": 59.97,
+   "rating": 4.3,
+   "ratingsCount": 7337,
+   "region": "Russian River Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Slander Pinot Noir",
+   "winery": "Orin Swift",
+   "vintage": 2024,
+   "price": 43.95,
+   "rating": 4.2,
+   "ratingsCount": 7298,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Brunello di Montalcino",
+   "winery": "Uccelliera",
+   "vintage": 2021,
+   "price": 78.19,
+   "rating": 4.3,
+   "ratingsCount": 7099,
+   "region": "Brunello di Montalcino",
+   "country": "Italie"
+  },
+  {
+   "name": "Pauillac",
+   "winery": "Château Pibran",
+   "vintage": 1982,
+   "price": 69.99,
+   "rating": 4.0,
+   "ratingsCount": 7073,
+   "region": "Pauillac",
+   "country": "France"
+  },
+  {
+   "name": "Bordeaux Supérieur",
+   "winery": "Château de Parenchère",
+   "vintage": 1999,
+   "price": 59.95,
+   "rating": 3.8,
+   "ratingsCount": 6830,
+   "region": "Bordeaux-supérieur",
+   "country": "France"
+  },
+  {
+   "name": "Merlot",
+   "winery": "Meerlust",
+   "vintage": 1989,
+   "price": 49.99,
+   "rating": 4.1,
+   "ratingsCount": 6587,
+   "region": "Stellenbosch",
+   "country": "Afrique du Sud"
+  },
+  {
+   "name": "Crianza",
+   "winery": "Tinto Pesquera",
+   "vintage": 2018,
+   "price": 49.99,
+   "rating": 4.1,
+   "ratingsCount": 6489,
+   "region": "Ribera del Duero",
+   "country": "Espagne"
+  },
+  {
+   "name": "Lion Tamer Napa Valley Red Blend",
+   "winery": "The Hess Collection",
+   "vintage": 2023,
+   "price": 45.99,
+   "rating": 4.3,
+   "ratingsCount": 6308,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Châteauneuf-du-Pape",
+   "winery": "Pierre Usseglio",
+   "vintage": 2022,
+   "price": 57.89,
+   "rating": 4.2,
+   "ratingsCount": 6305,
+   "region": "Châteauneuf-du-Pape",
+   "country": "France"
+  },
+  {
+   "name": "Brunello di Montalcino",
+   "winery": "La Serena",
+   "vintage": 2021,
+   "price": 61.63,
+   "rating": 4.2,
+   "ratingsCount": 6160,
+   "region": "Brunello di Montalcino",
+   "country": "Italie"
+  },
+  {
+   "name": "Symmetry Meritage Red",
+   "winery": "Rodney Strong",
+   "vintage": 2020,
+   "price": 51.99,
+   "rating": 4.2,
+   "ratingsCount": 6097,
+   "region": "Alexander Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Tous Ensemble Pinot Noir",
+   "winery": "Copain",
+   "vintage": 2021,
+   "price": 59.99,
+   "rating": 4.1,
+   "ratingsCount": 6088,
+   "region": "Anderson Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Granit 30 Cornas",
+   "winery": "Vincent Paris",
+   "vintage": 2024,
+   "price": 46.95,
+   "rating": 4.0,
+   "ratingsCount": 6018,
+   "region": "Cornas",
+   "country": "France"
+  },
+  {
+   "name": "Arise",
+   "winery": "Blackbird Vineyards",
+   "vintage": 2025,
+   "price": 46.99,
+   "rating": 4.2,
+   "ratingsCount": 5996,
+   "region": "Oak Knoll District",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Châteauneuf-du-Pape Rouge",
+   "winery": "Domaine Juliette Avril",
+   "vintage": 2024,
+   "price": 47.03,
+   "rating": 4.1,
+   "ratingsCount": 5943,
+   "region": "Châteauneuf-du-Pape",
+   "country": "France"
+  },
+  {
+   "name": "Chianti Classico Riserva",
+   "winery": "Coltibuono",
+   "vintage": 2022,
+   "price": 40.99,
+   "rating": 3.9,
+   "ratingsCount": 5874,
+   "region": "Chianti Classico",
+   "country": "Italie"
+  },
+  {
+   "name": "Marsannay Rouge",
+   "winery": "Louis Latour",
+   "vintage": 2024,
+   "price": 42.95,
+   "rating": 3.8,
+   "ratingsCount": 5811,
+   "region": "Marsannay",
+   "country": "France"
+  },
+  {
+   "name": "Nebukadnesar",
+   "winery": "Babylonstoren",
+   "vintage": 2024,
+   "price": 44.95,
+   "rating": 4.4,
+   "ratingsCount": 5750,
+   "region": "Simonsberg-Paarl",
+   "country": "Afrique du Sud"
+  },
+  {
+   "name": "Anaperenna",
+   "winery": "Glaetzer",
+   "vintage": 2004,
+   "price": 79.99,
+   "rating": 4.3,
+   "ratingsCount": 5736,
+   "region": "Vallée de la Barossa",
+   "country": "Australie"
+  },
+  {
+   "name": "Domaine du Clos de Sixte",
+   "winery": "Alain Jaume",
+   "vintage": 2022,
+   "price": 51.99,
+   "rating": 3.9,
+   "ratingsCount": 5700,
+   "region": "Lirac",
+   "country": "France"
+  },
+  {
+   "name": "Hallberg Ranch",
+   "winery": "Emeritus Vineyards",
+   "vintage": 2022,
+   "price": 52.91,
+   "rating": 4.3,
+   "ratingsCount": 5571,
+   "region": "Russian River Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Cabernet Sauvignon (Estate Grown)",
+   "winery": "Frog's Leap",
+   "vintage": 1986,
+   "price": 112.99,
+   "rating": 4.2,
+   "ratingsCount": 14437,
+   "region": "Rutherford",
+   "country": "États-Unis"
+  },
+  {
+   "name": "FAY Cabernet Sauvignon",
+   "winery": "Stag's Leap Wine Cellars",
+   "vintage": 2023,
+   "price": 181.95,
+   "rating": 4.5,
+   "ratingsCount": 13134,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "Chimney Rock",
+   "vintage": 2023,
+   "price": 89.99,
+   "rating": 4.4,
+   "ratingsCount": 12638,
+   "region": "Stags Leap District",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Saint-Julien",
+   "winery": "Château Lalande-Borie",
+   "vintage": 1982,
+   "price": 89.99,
+   "rating": 4.0,
+   "ratingsCount": 12587,
+   "region": "Saint-Julien",
+   "country": "France"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "Clos du Bois",
+   "vintage": 1979,
+   "price": 99.99,
+   "rating": 3.5,
+   "ratingsCount": 11618,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Alpilles Rouge",
+   "winery": "Domaine de Trévallon",
+   "vintage": 2023,
+   "price": 154.99,
+   "rating": 4.3,
+   "ratingsCount": 10840,
+   "region": "Alpilles",
+   "country": "France"
+  },
+  {
+   "name": "Reserva",
+   "winery": "Contino",
+   "vintage": 1986,
+   "price": 184.95,
+   "rating": 4.1,
+   "ratingsCount": 10795,
+   "region": "Rioja",
+   "country": "Espagne"
+  },
+  {
+   "name": "Ribera Del Duero Crianza",
+   "winery": "Bodegas Valduero",
+   "vintage": 1989,
+   "price": 94.95,
+   "rating": 4.0,
+   "ratingsCount": 10493,
+   "region": "Ribera del Duero",
+   "country": "Espagne"
+  },
+  {
+   "name": "Carnival of Love Shiraz",
+   "winery": "Mollydooker",
+   "vintage": 2023,
+   "price": 84.95,
+   "rating": 4.4,
+   "ratingsCount": 10425,
+   "region": "McLaren Vale",
+   "country": "Australie"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "Peju",
+   "vintage": 1997,
+   "price": 99.99,
+   "rating": 4.3,
+   "ratingsCount": 9747,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "Girard",
+   "vintage": 1982,
+   "price": 99.99,
+   "rating": 4.0,
+   "ratingsCount": 9495,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "The Leap Cabernet Sauvignon",
+   "winery": "Stags' Leap",
+   "vintage": 2022,
+   "price": 96.95,
+   "rating": 4.3,
+   "ratingsCount": 9223,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Cold Creek Vineyard Cabernet Sauvignon",
+   "winery": "Chateau Ste. Michelle",
+   "vintage": 1970,
+   "price": 149.99,
+   "rating": 4.1,
+   "ratingsCount": 9164,
+   "region": "Columbia Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "Paul Hobbs",
+   "vintage": 2022,
+   "price": 99.97,
+   "rating": 4.5,
+   "ratingsCount": 8888,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "Dry Creek Vineyard",
+   "vintage": 1986,
+   "price": 99.99,
+   "rating": 3.9,
+   "ratingsCount": 8831,
+   "region": "Dry Creek Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Maestro",
+   "winery": "Robert Mondavi Winery",
+   "vintage": 2023,
+   "price": 129.99,
+   "rating": 4.1,
+   "ratingsCount": 8602,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Brunello di Montalcino",
+   "winery": "Conti Costanti",
+   "vintage": 2021,
+   "price": 118.95,
+   "rating": 4.3,
+   "ratingsCount": 8525,
+   "region": "Brunello di Montalcino",
+   "country": "Italie"
+  },
+  {
+   "name": "Howell Mountain Cabernet Sauvignon",
+   "winery": "Dunn",
+   "vintage": 2022,
+   "price": 194.99,
+   "rating": 4.5,
+   "ratingsCount": 8182,
+   "region": "Howell Mountain",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Russian River Valley Pinot Noir",
+   "winery": "Williams Selyem",
+   "vintage": 2024,
+   "price": 155.39,
+   "rating": 4.5,
+   "ratingsCount": 8124,
+   "region": "Russian River Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Chianti Classico Riserva",
+   "winery": "Castello di Querceto",
+   "vintage": 1995,
+   "price": 94.49,
+   "rating": 3.8,
+   "ratingsCount": 7280,
+   "region": "Chianti Classico",
+   "country": "Italie"
+  },
+  {
+   "name": "Brunello di Montalcino",
+   "winery": "Banfi",
+   "vintage": 2010,
+   "price": 199.99,
+   "rating": 4.3,
+   "ratingsCount": 7247,
+   "region": "Brunello di Montalcino",
+   "country": "Italie"
+  },
+  {
+   "name": "Gevrey-Chambertin",
+   "winery": "Joseph Drouhin",
+   "vintage": 2023,
+   "price": 104.54,
+   "rating": 4.1,
+   "ratingsCount": 7042,
+   "region": "Gevrey-Chambertin",
+   "country": "France"
+  },
+  {
+   "name": "Three Palms Vineyard Merlot",
+   "winery": "Duckhorn",
+   "vintage": 2023,
+   "price": 119.99,
+   "rating": 4.4,
+   "ratingsCount": 6938,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Trilogy",
+   "winery": "Flora Springs",
+   "vintage": 2022,
+   "price": 84.99,
+   "rating": 4.4,
+   "ratingsCount": 6886,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "Paradigm",
+   "vintage": 2022,
+   "price": 96.79,
+   "rating": 4.4,
+   "ratingsCount": 6831,
+   "region": "Oakville",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "Pride Mountain Vineyards",
+   "vintage": 2023,
+   "price": 82.97,
+   "rating": 4.4,
+   "ratingsCount": 6785,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Jack London Vineyard Cabernet Sauvignon",
+   "winery": "Kenwood",
+   "vintage": 1978,
+   "price": 199.99,
+   "rating": 4.0,
+   "ratingsCount": 6655,
+   "region": "Sonoma Mountain",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Emilio Moro",
+   "winery": "Emilio Moro",
+   "vintage": 2020,
+   "price": 82.17,
+   "rating": 4.2,
+   "ratingsCount": 6339,
+   "region": "Ribera del Duero",
+   "country": "Espagne"
+  },
+  {
+   "name": "Brunello di Montalcino",
+   "winery": "Geografico",
+   "vintage": 2000,
+   "price": 99.99,
+   "rating": 4.1,
+   "ratingsCount": 6093,
+   "region": "Brunello di Montalcino",
+   "country": "Italie"
+  },
+  {
+   "name": "Château Corton Grancey Grand Cru",
+   "winery": "Louis Latour",
+   "vintage": 2023,
+   "price": 193.19,
+   "rating": 4.3,
+   "ratingsCount": 5867,
+   "region": "Corton Grand Cru",
+   "country": "France"
+  },
+  {
+   "name": "Red",
+   "winery": "Col Solare",
+   "vintage": 2021,
+   "price": 86.99,
+   "rating": 4.3,
+   "ratingsCount": 5855,
+   "region": "Red Mountain",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "Dunn",
+   "vintage": 2022,
+   "price": 134.95,
+   "rating": 4.4,
+   "ratingsCount": 5832,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Paso Robles Zinfandel",
+   "winery": "Ridge Vineyards",
+   "vintage": 1976,
+   "price": 89.99,
+   "rating": 4.1,
+   "ratingsCount": 5629,
+   "region": "Paso Robles",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Saint-Émilion Grand Cru",
+   "winery": "Château Lapelletrie",
+   "vintage": 1970,
+   "price": 124.99,
+   "rating": 4.0,
+   "ratingsCount": 5625,
+   "region": "Saint-Émilion Grand Cru",
+   "country": "France"
+  },
+  {
+   "name": "Saint-Joseph",
+   "winery": "Domaine Jean-Louis Chave",
+   "vintage": 2023,
+   "price": 149.6,
+   "rating": 4.3,
+   "ratingsCount": 5518,
+   "region": "Saint-Joseph",
+   "country": "France"
+  },
+  {
+   "name": "Barolo Ginestra Casa Maté",
+   "winery": "Elio Grasso",
+   "vintage": 1990,
+   "price": 199.99,
+   "rating": 4.3,
+   "ratingsCount": 5422,
+   "region": "Barolo",
+   "country": "Italie"
+  },
+  {
+   "name": "Campolongo di Torbe Amarone della Valpolicella Classico",
+   "winery": "Masi",
+   "vintage": 2016,
+   "price": 183.99,
+   "rating": 4.5,
+   "ratingsCount": 5394,
+   "region": "Amarone della Valpolicella Classico",
+   "country": "Italie"
+  },
+  {
+   "name": "Russian River Valley Pinot Noir",
+   "winery": "Kistler",
+   "vintage": 2024,
+   "price": 97.74,
+   "rating": 4.3,
+   "ratingsCount": 5353,
+   "region": "Russian River Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Isosceles Reserve",
+   "winery": "Justin",
+   "vintage": 2022,
+   "price": 159.0,
+   "rating": 4.6,
+   "ratingsCount": 5316,
+   "region": "Paso Robles",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Soul of a Lion",
+   "winery": "DAOU",
+   "vintage": 2023,
+   "price": 147.95,
+   "rating": 4.5,
+   "ratingsCount": 5210,
+   "region": "Paso Robles",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Rouge (Gaston Hochar)",
+   "winery": "Château Musar",
+   "vintage": 1998,
+   "price": 153.99,
+   "rating": 4.3,
+   "ratingsCount": 5133,
+   "region": "Bekaa Valley",
+   "country": "Liban"
+  },
+  {
+   "name": "Barolo Gallinotto",
+   "winery": "Mauro Molino",
+   "vintage": 2022,
+   "price": 84.4,
+   "rating": 4.2,
+   "ratingsCount": 5079,
+   "region": "Barolo",
+   "country": "Italie"
+  },
+  {
+   "name": "Westside Road Neighbors Pinot Noir",
+   "winery": "Williams Selyem",
+   "vintage": 2024,
+   "price": 180.59,
+   "rating": 4.6,
+   "ratingsCount": 4902,
+   "region": "Russian River Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Ultreia Valtuille Mencía",
+   "winery": "Raúl Pérez",
+   "vintage": 2023,
+   "price": 92.39,
+   "rating": 4.1,
+   "ratingsCount": 4841,
+   "region": "Bierzo",
+   "country": "Espagne"
+  },
+  {
+   "name": "Perpetual",
+   "winery": "Familia Torres",
+   "vintage": 2020,
+   "price": 94.49,
+   "rating": 4.3,
+   "ratingsCount": 4822,
+   "region": "Priorat",
+   "country": "Espagne"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "La Jota",
+   "vintage": 1984,
+   "price": 199.99,
+   "rating": 4.4,
+   "ratingsCount": 4804,
+   "region": "Howell Mountain",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Estate Sta. Rita Hills Pinot Noir",
+   "winery": "Melville",
+   "vintage": 2007,
+   "price": 131.24,
+   "rating": 4.0,
+   "ratingsCount": 4714,
+   "region": "Sta. Rita Hills",
+   "country": "États-Unis"
+  },
+  {
+   "name": "ExcelsuS",
+   "winery": "Banfi",
+   "vintage": 2020,
+   "price": 92.95,
+   "rating": 4.2,
+   "ratingsCount": 4685,
+   "region": "Toscane",
+   "country": "Italie"
+  },
+  {
+   "name": "Rioja Gran Reserva 904",
+   "winery": "La Rioja Alta",
+   "vintage": 2007,
+   "price": 159.99,
+   "rating": 4.4,
+   "ratingsCount": 4677,
+   "region": "Rioja",
+   "country": "Espagne"
+  },
+  {
+   "name": "Napa Valley Cabernet Sauvignon",
+   "winery": "Keenan",
+   "vintage": 1979,
+   "price": 159.99,
+   "rating": 4.2,
+   "ratingsCount": 4672,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Branding Iron Vineyard Cabernet Sauvignon",
+   "winery": "Nickel & Nickel",
+   "vintage": 2023,
+   "price": 99.95,
+   "rating": 4.5,
+   "ratingsCount": 4552,
+   "region": "Oakville",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "Grgich Hills",
+   "vintage": 1980,
+   "price": 674.95,
+   "rating": 4.2,
+   "ratingsCount": 14424,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Le Pergole Torte",
+   "winery": "Montevertine",
+   "vintage": 1982,
+   "price": 1199.99,
+   "rating": 4.5,
+   "ratingsCount": 13979,
+   "region": "Toscane",
+   "country": "Italie"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "Trefethen",
+   "vintage": 1976,
+   "price": 224.99,
+   "rating": 4.2,
+   "ratingsCount": 13874,
+   "region": "Oak Knoll District",
+   "country": "États-Unis"
+  },
+  {
+   "name": "The Montelena Estate Cabernet Sauvignon",
+   "winery": "Chateau Montelena",
+   "vintage": 1980,
+   "price": 299.99,
+   "rating": 4.5,
+   "ratingsCount": 13804,
+   "region": "Calistoga",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Montepulciano d'Abruzzo",
+   "winery": "Emidio Pepe",
+   "vintage": 1993,
+   "price": 634.95,
+   "rating": 4.3,
+   "ratingsCount": 13014,
+   "region": "Montepulciano d'Abruzzo",
+   "country": "Italie"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "Freemark Abbey",
+   "vintage": 1969,
+   "price": 799.99,
+   "rating": 4.2,
+   "ratingsCount": 12505,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Estate Cabernet Sauvignon",
+   "winery": "Ridge Vineyards",
+   "vintage": 1984,
+   "price": 629.95,
+   "rating": 4.3,
+   "ratingsCount": 11426,
+   "region": "Montagnes de Santa Cruz",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Amarone della Valpolicella Classico",
+   "winery": "Quintarelli Giuseppe",
+   "vintage": 1986,
+   "price": 1495.0,
+   "rating": 4.7,
+   "ratingsCount": 11045,
+   "region": "Amarone della Valpolicella Classico",
+   "country": "Italie"
+  },
+  {
+   "name": "L'Hermitage",
+   "winery": "Domaine Jean-Louis Chave",
+   "vintage": 2023,
+   "price": 459.0,
+   "rating": 4.6,
+   "ratingsCount": 10971,
+   "region": "Hermitage",
+   "country": "France"
+  },
+  {
+   "name": "Bandol Rouge",
+   "winery": "Domaine Tempier",
+   "vintage": 1989,
+   "price": 794.95,
+   "rating": 4.2,
+   "ratingsCount": 10805,
+   "region": "Bandol",
+   "country": "France"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "Inglenook",
+   "vintage": 1975,
+   "price": 299.99,
+   "rating": 4.3,
+   "ratingsCount": 9799,
+   "region": "Rutherford",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Barolo Monprivato",
+   "winery": "Mascarello Giuseppe e Figlio",
+   "vintage": 2021,
+   "price": 389.95,
+   "rating": 4.4,
+   "ratingsCount": 9179,
+   "region": "Barolo",
+   "country": "Italie"
+  },
+  {
+   "name": "Pomerol",
+   "winery": "Château Trotanoy",
+   "vintage": 2021,
+   "price": 637.0,
+   "rating": 4.4,
+   "ratingsCount": 8986,
+   "region": "Pomerol",
+   "country": "France"
+  },
+  {
+   "name": "L'Heritage de Chasse-Spleen Haut-Médoc (L'Ermitage de Chasse-Spleen)",
+   "winery": "Château Chasse-Spleen",
+   "vintage": 1989,
+   "price": 286.0,
+   "rating": 3.8,
+   "ratingsCount": 8957,
+   "region": "Haut-Médoc",
+   "country": "France"
+  },
+  {
+   "name": "Saint-Émilion Grand Cru (Premier Grand Cru Classé)",
+   "winery": "Château Ausone",
+   "vintage": 2020,
+   "price": 1162.0,
+   "rating": 4.6,
+   "ratingsCount": 8483,
+   "region": "Saint-Émilion Grand Cru",
+   "country": "France"
+  },
+  {
+   "name": "S.L.V. Cabernet Sauvignon",
+   "winery": "Stag's Leap Wine Cellars",
+   "vintage": 1977,
+   "price": 399.99,
+   "rating": 4.5,
+   "ratingsCount": 8189,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Viña Tondonia Reserva",
+   "winery": "R. López de Heredia",
+   "vintage": 2007,
+   "price": 303.8,
+   "rating": 4.2,
+   "ratingsCount": 8182,
+   "region": "Rioja",
+   "country": "Espagne"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "Ghost Block",
+   "vintage": 2023,
+   "price": 304.0,
+   "rating": 4.4,
+   "ratingsCount": 8129,
+   "region": "Oakville",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Opus One",
+   "winery": "Opus One",
+   "vintage": 2012,
+   "price": 624.99,
+   "rating": 4.6,
+   "ratingsCount": 8023,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Reserve Cabernet Sauvignon",
+   "winery": "Robert Mondavi Winery",
+   "vintage": 1982,
+   "price": 349.99,
+   "rating": 4.3,
+   "ratingsCount": 6919,
+   "region": "Oakville",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Sonoma County Cabernet Sauvignon",
+   "winery": "Château St. Jean",
+   "vintage": 1974,
+   "price": 584.95,
+   "rating": 3.7,
+   "ratingsCount": 6782,
+   "region": "Sonoma County",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Beaune 1er Cru 'Clos des Mouches'",
+   "winery": "Joseph Drouhin",
+   "vintage": 2023,
+   "price": 213.29,
+   "rating": 4.3,
+   "ratingsCount": 6438,
+   "region": "Beaune 1er Cru Le Clos des Mouches",
+   "country": "France"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "Spottswoode",
+   "vintage": 1984,
+   "price": 790.0,
+   "rating": 4.5,
+   "ratingsCount": 6389,
+   "region": "Sainte-Hélène",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Toro",
+   "winery": "Pintia",
+   "vintage": 2015,
+   "price": 294.95,
+   "rating": 4.5,
+   "ratingsCount": 6325,
+   "region": "Toro",
+   "country": "Espagne"
+  },
+  {
+   "name": "Tignanello",
+   "winery": "Antinori",
+   "vintage": 2021,
+   "price": 224.99,
+   "rating": 4.5,
+   "ratingsCount": 5741,
+   "region": "Toscane",
+   "country": "Italie"
+  },
+  {
+   "name": "Brunello di Montalcino",
+   "winery": "Tenuta Corte Pavone",
+   "vintage": 1991,
+   "price": 329.95,
+   "rating": 4.3,
+   "ratingsCount": 5608,
+   "region": "Brunello di Montalcino",
+   "country": "Italie"
+  },
+  {
+   "name": "Côte-Rôtie La Mouline",
+   "winery": "E. Guigal",
+   "vintage": 2021,
+   "price": 583.99,
+   "rating": 4.6,
+   "ratingsCount": 5605,
+   "region": "Côte-Rôtie",
+   "country": "France"
+  },
+  {
+   "name": "Pagani Ranch Zinfandel",
+   "winery": "Ridge Vineyards",
+   "vintage": 1991,
+   "price": 399.95,
+   "rating": 4.2,
+   "ratingsCount": 5574,
+   "region": "Sonoma Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Brunello di Montalcino",
+   "winery": "Salvioni",
+   "vintage": 2021,
+   "price": 275.99,
+   "rating": 4.5,
+   "ratingsCount": 5529,
+   "region": "Brunello di Montalcino",
+   "country": "Italie"
+  },
+  {
+   "name": "Pritchard Hill Cabernet Sauvignon",
+   "winery": "Chappellet",
+   "vintage": 1971,
+   "price": 949.99,
+   "rating": 4.6,
+   "ratingsCount": 5265,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Zinfandel",
+   "winery": "A. Rafanelli",
+   "vintage": 2001,
+   "price": 299.0,
+   "rating": 4.4,
+   "ratingsCount": 5248,
+   "region": "Dry Creek Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Cave Collection Cabernet Sauvignon",
+   "winery": "Far Niente",
+   "vintage": 1994,
+   "price": 495.0,
+   "rating": 4.6,
+   "ratingsCount": 5158,
+   "region": "Oakville",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Les Pavots",
+   "winery": "Peter Michael",
+   "vintage": 2022,
+   "price": 239.0,
+   "rating": 4.6,
+   "ratingsCount": 5099,
+   "region": "Knights Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Cabernet Sauvignon",
+   "winery": "Eisele Vineyard",
+   "vintage": 2020,
+   "price": 499.99,
+   "rating": 4.6,
+   "ratingsCount": 4935,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Valbuena 5º (Reserva)",
+   "winery": "Vega Sicilia",
+   "vintage": 2016,
+   "price": 506.4,
+   "rating": 4.7,
+   "ratingsCount": 4917,
+   "region": "Ribera del Duero",
+   "country": "Espagne"
+  },
+  {
+   "name": "Generations Cabernet Sauvignon",
+   "winery": "Raymond",
+   "vintage": 1999,
+   "price": 272.99,
+   "rating": 4.4,
+   "ratingsCount": 4891,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Ermitage Le Pavillon",
+   "winery": "M. Chapoutier",
+   "vintage": 2019,
+   "price": 1307.0,
+   "rating": 4.5,
+   "ratingsCount": 4878,
+   "region": "Hermitage",
+   "country": "France"
+  },
+  {
+   "name": "Sorì San Lorenzo",
+   "winery": "Gaja",
+   "vintage": 1981,
+   "price": 679.99,
+   "rating": 4.6,
+   "ratingsCount": 4737,
+   "region": "Barbaresco",
+   "country": "Italie"
+  },
+  {
+   "name": "Ark Vineyard Cabernet Sauvignon",
+   "winery": "Hundred Acre",
+   "vintage": 2022,
+   "price": 784.95,
+   "rating": 4.7,
+   "ratingsCount": 4633,
+   "region": "Howell Mountain",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Estate Cabernet Sauvignon",
+   "winery": "Staglin",
+   "vintage": 2022,
+   "price": 293.95,
+   "rating": 4.6,
+   "ratingsCount": 4613,
+   "region": "Rutherford",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Châteauneuf-du-Pape",
+   "winery": "Château de Beaucastel",
+   "vintage": 2016,
+   "price": 376.0,
+   "rating": 4.4,
+   "ratingsCount": 4551,
+   "region": "Châteauneuf-du-Pape",
+   "country": "France"
+  },
+  {
+   "name": "Le Petit Cheval Saint-Émilion Grand Cru",
+   "winery": "Château Cheval Blanc",
+   "vintage": 2021,
+   "price": 481.0,
+   "rating": 4.4,
+   "ratingsCount": 4537,
+   "region": "Saint-Émilion Grand Cru",
+   "country": "France"
+  },
+  {
+   "name": "Pieve Santa Restituta Sugarille Brunello di Montalcino",
+   "winery": "Gaja",
+   "vintage": 2020,
+   "price": 241.91,
+   "rating": 4.5,
+   "ratingsCount": 4522,
+   "region": "Brunello di Montalcino",
+   "country": "Italie"
+  },
+  {
+   "name": "Pommard 1er Cru 'Clos des Epeneaux' Monopole",
+   "winery": "Comte Armand",
+   "vintage": 2022,
+   "price": 297.65,
+   "rating": 4.3,
+   "ratingsCount": 4456,
+   "region": "Pommard 1er Cru Clos des Epeneaux",
+   "country": "France"
+  },
+  {
+   "name": "Zinfandel",
+   "winery": "Chateau Montelena",
+   "vintage": 2007,
+   "price": 222.0,
+   "rating": 4.1,
+   "ratingsCount": 4399,
+   "region": "Calistoga",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Pauillac (Grand Cru Classé)",
+   "winery": "Château Lynch-Bages",
+   "vintage": 2000,
+   "price": 594.95,
+   "rating": 4.5,
+   "ratingsCount": 4293,
+   "region": "Pauillac",
+   "country": "France"
+  },
+  {
+   "name": "Castillo Ygay Gran Reserva Especial Tinto",
+   "winery": "Marqués de Murrieta",
+   "vintage": 2007,
+   "price": 419.0,
+   "rating": 4.5,
+   "ratingsCount": 4270,
+   "region": "Rioja",
+   "country": "Espagne"
+  },
+  {
+   "name": "Falletto Barbaresco Asili",
+   "winery": "Bruno Giacosa",
+   "vintage": 2020,
+   "price": 786.49,
+   "rating": 4.4,
+   "ratingsCount": 4213,
+   "region": "Barbaresco",
+   "country": "Italie"
+  },
+  {
+   "name": "Pomerol",
+   "winery": "Château Lafleur",
+   "vintage": 2023,
+   "price": 1454.95,
+   "rating": 4.5,
+   "ratingsCount": 4206,
+   "region": "Pomerol",
+   "country": "France"
+  }
+ ],
+ "white_added": true,
+ "combined": {
+  "n": 535,
+  "reds": 288,
+  "whites": 247,
+  "pearson_linear": 0.397,
+  "pearson_log": 0.755,
+  "bandAverages": {
+   "$0-15": 3.72,
+   "$15-30": 3.84,
+   "$30-60": 4.04,
+   "$60-150": 4.18,
+   "$150+": 4.36
+  },
+  "ratingLift": 0.64,
+  "note": "Red and white show the same rising pattern (white slightly stronger). Combined into one sighted line. Vivino ratings are non-blind, so they include the price-expectation halo."
+ }
+}

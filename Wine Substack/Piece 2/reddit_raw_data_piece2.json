@@ -1,0 +1,172 @@
+{
+  "piece": 2,
+  "title": "The Complexity Paradox",
+  "dataset": "RM62bYbSZanJCtQee",
+  "scrapeRunId": "8fF4VnzCiEvcKYPRp",
+  "totalComments": 450,
+  "threads": 15,
+  "collectedAt": "2026-06-12",
+
+  "topQuotes": {
+    "S1": {
+      "label": "The Palate Journey",
+      "description": "Developing discernment, learning to taste, navigating complexity",
+      "quotes": [
+        {
+          "author": "fddfgs",
+          "score": 492,
+          "text": "Good natural wines have been around for centuries. Shit modern \"natural wines\" can get in the fucking bin.",
+          "thread": "anyone_else_hope_the_natural_wine_fad_ends_soon",
+          "post_url": "https://reddit.com/r/wine/comments/1hhlnih/anyone_else_hope_the_natural_wine_fad_ends_soon/",
+          "created_at": "2024-12-19T05:25:30+00:00",
+          "insight": "The discerning palate distinguishes quality from category label — not all 'natural' is equal, not all conventional is bad"
+        },
+        {
+          "author": "toastedclown",
+          "score": 209,
+          "text": "Civilians have this intuitive notion that wine = fermented grape juice, when what the average consumer drinks, at least in the US, is something more akin to Coca-Cola. I think we owe it to everyone to show a clear picture of what that 'fermented grapes' ideal actually looks like so we can be honest with ourselves about how much intervention we actually want in our wine.",
+          "thread": "anyone_else_hope_the_natural_wine_fad_ends_soon",
+          "post_url": "https://reddit.com/r/wine/comments/1hhlnih/anyone_else_hope_the_natural_wine_fad_ends_soon/",
+          "created_at": "2024-12-19T05:49:45+00:00",
+          "insight": "Most commercial wine is heavily processed; the educated palate recognises the gap between marketing and reality"
+        },
+        {
+          "author": "j3w",
+          "score": 37,
+          "text": "Tasting wine is a craft and a skill. Crafts must be honed and perfected. If you grab 50 people off the street and throw them in Norm Abrams' woodshop and they can't build a Queen Anne side table — it doesn't mean that nobody in the world can build such a table, it means that 50 random people cannot. Anyone can drink wine. To taste wine and analyze it intelligently is a craft that requires learning and skill. Just because you have a tongue doesn't make you a wine taster.",
+          "thread": "all_is_talk_about_wine_tasting_is_bullshit_is",
+          "post_url": "https://reddit.com/r/wine/comments/1dzb6x/all_is_talk_about_wine_tasting_is_bullshit_is/",
+          "created_at": "2013-05-09T05:01:49+00:00",
+          "insight": "Wine appreciation is a learnable craft — studies showing 'no one can taste' are testing untrained people on a trained skill"
+        },
+        {
+          "author": "JayTheGiant",
+          "score": 59,
+          "text": "The way I attack it, is I choose what I want to drink before I look for it. Pinot Noir? Ok. Burgundy or Oregon or else? Burgundy. Then I look what's available. You can even narrow it down more. If I just look at everything at large, it's overwhelming.",
+          "thread": "is_choosing_wine_harder_now_because_there_are_too",
+          "post_url": "https://reddit.com/r/wine/comments/1qi38oe/is_choosing_wine_harder_now_because_there_are_too/",
+          "created_at": "2026-01-20T15:02:04+00:00",
+          "insight": "The educated drinker navigates complexity through framework — starting with intention rather than browsing"
+        },
+        {
+          "author": "jackloganoliver",
+          "score": 6,
+          "text": "Yes it's harder to make the choice. There's too much information and too many wines. But if I don't want to make the effort, my chances of success at finding something good are probably better than ever. If that makes sense.",
+          "thread": "is_choosing_wine_harder_now_because_there_are_too",
+          "post_url": "https://reddit.com/r/wine/comments/1qi38oe/is_choosing_wine_harder_now_because_there_are_too/",
+          "created_at": "2026-01-20T15:04:44+00:00",
+          "insight": "The complexity paradox in one comment — more options makes the engaged choice harder, but the quality floor has risen for anyone willing to engage"
+        }
+      ]
+    },
+
+    "S2": {
+      "label": "Price Was Never the Point",
+      "description": "Value, access, score inflation, democratisation of wine culture",
+      "quotes": [
+        {
+          "author": "the_deadcactus",
+          "score": 414,
+          "text": "This is why they charge for tastings now. Wine tasting shifted from something people did while planning to buy a few bottles from the winery to something tourists do for scenic on-premise drinking. But if you're paying for the tasting and tipping the associate, that's now the transaction and I would feel zero pressure to buy a bottle.",
+          "thread": "poor_people_going_wine_tasting",
+          "post_url": "https://reddit.com/r/wine/comments/1rvee3o/poor_people_going_wine_tasting/",
+          "created_at": "2026-03-16T16:50:56+00:00",
+          "insight": "The transactional model of wine tasting has shifted — tasting as paid experience means no implicit obligation to buy; access has been reframed"
+        },
+        {
+          "author": "Borgweare",
+          "score": 214,
+          "text": "I doubt Cali producers are going to be able to offload to the global export market, either. Here in the UK, if you've money to spend, you're going to be buying old-world wine, not US stuff.",
+          "thread": "california_wine_is_in_crisis_but_for_consumers_it",
+          "post_url": "https://reddit.com/r/wine/comments/1iahjy9/california_wine_is_in_crisis_but_for_consumers_it/",
+          "created_at": "2025-01-26T15:56:19+00:00",
+          "insight": "Old-world wine commands both taste and value premium with discerning buyers globally — the California overpricing problem is structural"
+        },
+        {
+          "author": "Borgweare",
+          "score": 85,
+          "text": "I live in Sonoma County and in the past year, I have been buying more and more old world wine. Partly to explore and learn more but also because I can get decent/good old world wines for less than a lot of local producers which is crazy to me. I'm not going to abandon the wonderful wine here but for an everyday bottle, I'll keep exploring the old world.",
+          "thread": "california_wine_is_in_crisis_but_for_consumers_it",
+          "post_url": "https://reddit.com/r/wine/comments/1iahjy9/california_wine_is_in_crisis_but_for_consumers_it/",
+          "created_at": "2025-01-26T16:29:51+00:00",
+          "insight": "Even local producers' fans are pivoting to old-world on value — palate evolution and price reality converging"
+        },
+        {
+          "author": "calinet6",
+          "score": 172,
+          "text": "I made a comment that there could be 2-3 years before we actually see prices come down, and I'm happy to eat my words.",
+          "thread": "california_wine_is_in_crisis_but_for_consumers_it",
+          "post_url": "https://reddit.com/r/wine/comments/1iahjy9/california_wine_is_in_crisis_but_for_consumers_it/",
+          "created_at": "2025-01-26T15:52:16+00:00",
+          "insight": "The California correction happening faster than expected — a concrete signal of the structural value shift underway"
+        },
+        {
+          "author": "SixPack1776",
+          "score": 130,
+          "text": "For me, it is just a cost issue. I can't justify paying $13-14 for single pour and $100+ for a bottle that I know costs $20. I'd rather just drink at home at those prices.",
+          "thread": "how_do_we_save_the_wine_culture",
+          "post_url": "https://reddit.com/r/wine/comments/1sy1oo5/how_do_we_save_the_wine_culture/",
+          "created_at": "2026-04-28T15:43:28+00:00",
+          "insight": "Price transparency is eroding the mystique premium — consumers increasingly know what bottles cost and are acting on it"
+        },
+        {
+          "author": "jaynyc1122",
+          "score": 49,
+          "text": "The younger generation has been priced out. I'm in my 30s and I'm the only one of my friends that takes wine seriously and collects (I use this term loosely).",
+          "thread": "how_do_we_save_the_wine_culture",
+          "post_url": "https://reddit.com/r/wine/comments/1sy1oo5/how_do_we_save_the_wine_culture/",
+          "created_at": "2026-04-28T14:27:01+00:00",
+          "insight": "Economic exclusion is breaking the intergenerational transmission of wine culture"
+        },
+        {
+          "author": "MyNoodleLard",
+          "score": 155,
+          "text": "Pick one and start drinking bruh. You plant a forest one tree at a time, enjoy the journey",
+          "thread": "getting_into_wine_is_a_bit_overwhelming_where_to",
+          "post_url": "https://reddit.com/r/wine/comments/vnnv0a/getting_into_wine_is_a_bit_overwhelming_where_to/",
+          "created_at": "2022-06-29T20:19:37+00:00",
+          "insight": "The democratic counter — complexity is real, but entry is simple. Don't let the system intimidate you out of starting."
+        },
+        {
+          "author": "givemegoodtimes",
+          "score": 171,
+          "text": "Suckling is the worst. He is literally charging people for points. In any other industry this would be a scam.",
+          "thread": "who_are_some_of_the_wine_critics_worth_a_follow",
+          "post_url": "https://reddit.com/r/wine/comments/1nhw6n3/who_are_some_of_the_wine_critics_worth_a_follow/",
+          "created_at": "2025-09-15T19:55:17+00:00",
+          "insight": "Score inflation has corrupted the signalling system — the complexity paradox is partly manufactured by critics whose incentives are misaligned"
+        },
+        {
+          "author": "FiglarAndNoot",
+          "score": 94,
+          "text": "One of the most bullshit-averse people I've run into in the industry: so much so that I've had numerous people come away from events commenting that she seemed 'blunt,' 'antisocial,' or 'distracted,' while to me it always just seems like she speaks when she has something to say, doesn't when she doesn't, and never sees it as her job to engage with ad-copy when the wine itself is right there.",
+          "author_note": "About Jancis Robinson",
+          "thread": "who_are_some_of_the_wine_critics_worth_a_follow",
+          "post_url": "https://reddit.com/r/wine/comments/1nhw6n3/who_are_some_of_the_wine_critics_worth_a_follow/",
+          "created_at": "2025-09-15T20:09:47+00:00",
+          "insight": "Authenticity over spectacle — the counterweight to Suckling. Genuine criticism requires no performance."
+        }
+      ]
+    }
+  },
+
+  "threadSummary": [
+    { "thread": "anyone_else_hope_the_natural_wine_fad_ends_soon", "section": "S1", "topScore": 492 },
+    { "thread": "what_i_learned_zero_to_certfied_somm", "section": "S1", "topScore": 92 },
+    { "thread": "who_are_some_of_the_wine_critics_worth_a_follow", "section": "S2", "topScore": 171 },
+    { "thread": "how_do_you_get_into_wine", "section": "S2", "topScore": 46 },
+    { "thread": "all_is_talk_about_wine_tasting_is_bullshit_is", "section": "S1", "topScore": 37 },
+    { "thread": "getting_into_wine_is_a_bit_overwhelming_where_to", "section": "S2", "topScore": 155 },
+    { "thread": "poor_people_going_wine_tasting", "section": "S2", "topScore": 414 },
+    { "thread": "really_disappointed_by_the_wine_experience_at_a_3", "section": "background", "topScore": 371 },
+    { "thread": "organic_vs_biodynamic_natural_wine", "section": "S1", "topScore": 96 },
+    { "thread": "how_do_we_save_the_wine_culture", "section": "S2", "topScore": 130 },
+    { "thread": "california_wine_is_in_crisis_but_for_consumers_it", "section": "S2", "topScore": 214 },
+    { "thread": "burgundy_and_pricing", "section": "S2", "topScore": 154 },
+    { "thread": "cline_zinfandel_is_the_best_wine_under_15_dollars", "section": "S2", "topScore": 101 },
+    { "thread": "is_choosing_wine_harder_now_because_there_are_too", "section": "S1", "topScore": 59 },
+    { "thread": "my_journey_to_find_my_favourite_red_wine_in_my", "section": "background", "topScore": 56 }
+  ],
+
+  "notes": "Dataset scraped via crawlerbros/reddit-comment-scraper. All quotes include created_at timestamps. Threads curated from 7 discovery runs (labrat011/reddit-scraper) across palate-evolution and value/approachability themes. India-specific data reserved for Piece 3."
+}

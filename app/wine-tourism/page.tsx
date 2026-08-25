@@ -34,11 +34,20 @@ export default function WineTourismPage() {
       <section className="bg-cream py-20 px-6">
         <div className="max-w-3xl mx-auto">
           <h2 className="font-cormorant text-3xl md:text-4xl font-light text-burgundy leading-relaxed mb-8">
-            The best way to understand a wine is to stand in the place it came from.
+            No wine label can tell you what a journey to its origin will.
           </h2>
           <div className="divider-gold-left" />
+          <p className="font-montserrat text-sm text-charcoal leading-loose mb-6">
+            The story behind a wine is rarely on the label. It lives in the soil, the climate, and the moment you stand in front of a winemaker who has dedicated a lifetime to a single hillside.
+          </p>
+          <p className="font-montserrat text-sm text-charcoal leading-loose mb-6">
+            We design travel itineraries where wine takes centre stage. Winery visits, tastings with the people who actually make the wine, and the stays and detours that surround them. Every itinerary is built from scratch around your dates, your pace, and your budget.
+          </p>
+          <p className="font-montserrat text-sm text-charcoal leading-loose mb-6">
+            Wine does not have to be the whole trip. If you want a single winery day inside a fortnight of nature, museums and cocktail bars, we will happily plan all of it.
+          </p>
           <p className="font-montserrat text-sm text-charcoal leading-loose">
-            The story behind a wine is rarely on the label. It lives in the soil, the climate, and the moment you stand in front of a winemaker who has dedicated a lifetime to a single hillside. It's not what you taste, but what you take back home with you. Of course, you can take some wine too!
+            It&apos;s about the memories you take back home with you. Of course, you may take back some wine too!
           </p>
         </div>
       </section>
@@ -49,7 +58,7 @@ export default function WineTourismPage() {
           <div className="mb-16">
             <p className="section-label text-gold mb-4">Our Partners</p>
             <p className="font-montserrat text-xs text-cream/60 mt-4 max-w-2xl leading-relaxed">
-              Every partner on this page is based on a foundation of taste, experience, and value. Each estate effectively serves as the centre point of a curated itinerary that is designed to fit your style of travel perfectly and provide you with an unforgettable experience.
+              Every partner on this page was chosen for their taste, experience, and value. Each estate sits at the heart of a curated itinerary designed around your travel style.
             </p>
             <p className="font-montserrat text-xs text-cream/60 mt-4 max-w-2xl leading-relaxed">
               If you have a specific wine region or estate that you'd like to visit, no problem! Let us know and we'll do all the work behind the scenes.
@@ -105,7 +114,13 @@ export default function WineTourismPage() {
               More partnerships in development.
             </p>
             <p className="font-montserrat text-[10px] tracking-widest uppercase text-cream/30">
-              New destinations announced as confirmed
+              New destinations will be added as they are confirmed
+            </p>
+            <p className="font-montserrat text-[10px] tracking-widest uppercase text-cream/30 mt-2">
+              <Link href="/contact" className="text-gold border-b border-gold/50 pb-0.5 hover:border-gold transition-colors">
+                Contact us
+              </Link>{' '}
+              to register your interest
             </p>
           </div>
         </div>
@@ -152,7 +167,7 @@ export default function WineTourismPage() {
           </h2>
           <div className="w-16 h-px bg-gold mx-auto mb-8" />
           <p className="font-montserrat text-xs text-cream/70 leading-loose max-w-xl mx-auto mb-10">
-            Every itinerary is built from scratch and designed specifically around your pace, your palate, and your style, to create a journey that means something to you. Tell us about your plans and we will take it from there.
+            Every itinerary is designed from scratch around your pace, your palate, and your style. Tell us about your plans and we will take it from there.
           </p>
           <Link href="/plan" className="btn-outline">
             Start Planning

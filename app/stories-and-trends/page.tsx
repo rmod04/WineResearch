@@ -38,7 +38,7 @@ export default function StoriesAndTrendsPage() {
           </h2>
           <div className="divider-gold-left" />
           <p className="font-montserrat text-sm text-charcoal leading-loose">
-            Wine has a way of making things worth writing about. Travel dispatches from wine regions, data-led research on consumer behaviour and where the market is heading, or the occasional piece that refuses to fit neatly into either category. Pour a glass and settle in.
+            Wine has a way of making things worth writing about. Travel dispatches from wine regions, data-led research on consumer behaviour and where the market is heading, or the occasional piece that refuses to fit neatly into any category. Pour a glass and settle in.
           </p>
         </div>
       </section>
@@ -47,7 +47,7 @@ export default function StoriesAndTrendsPage() {
       <section className="bg-cream pb-24 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="divide-y divide-gold/20">
-            {articles.map((article) => (
+            {articles.filter((a) => !a.hidden).map((article) => (
               <article key={article.slug} className="py-12 first:pt-0">
                 <Link
                   href={`/stories-and-trends/${article.slug}`}

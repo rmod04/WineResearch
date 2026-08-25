@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Price doesn't always determine quality · Cork To Table</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;500;600&display=swap');
+
+    :root {
+      --burgundy:   #5C1A2E;
+      --cream:      #F5ECD7;
+      --cream-dark: #EAD9BE;
+      --gold:       #B8973A;
+      --rose:       #C27A8A;
+      --charcoal:   #2C2C2C;
+      --mid:        #7A5A64;
+      --light:      #B09090;
+      --bg:         #FAF6EF;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--bg);
+      display: flex;
+      justify-content: center;
+      padding: 28px 12px;
+    }
+
+    .container { width: 100%; max-width: 760px; background: var(--bg); }
+
+    /* Header */
+    .header { background: var(--burgundy); padding: 28px 36px 24px; }
+    .title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px; font-weight: 400; color: var(--cream); line-height: 1.2;
+    }
+    .subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px; font-weight: 400; font-style: italic;
+      color: rgba(245,236,215,0.85); line-height: 1.4; margin-top: 6px;
+    }
+
+    /* Stats strip */
+    .stats-strip { background: var(--charcoal); display: flex; padding: 14px 36px; }
+    .strip-stat {
+      flex: 1; display: flex; flex-direction: column; gap: 3px;
+      border-right: 1px solid rgba(255,255,255,0.08);
+      padding-right: 20px; margin-right: 20px;
+    }
+    .strip-stat:last-child { border-right: none; padding-right: 0; margin-right: 0; }
+    .strip-num {
+      font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600;
+      color: var(--gold); line-height: 1;
+    }
+    .strip-label { font-size: 9px; font-weight: 500; color: rgba(255,255,255,0.45); line-height: 1.4; }
+
+    /* Main */
+    .main { padding: 26px 36px 24px; }
+
+    .toggle-row { display: flex; gap: 8px; margin-bottom: 18px; flex-wrap: wrap; }
+    .toggle-btn {
+      padding: 8px 15px; font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 600;
+      border: 1px solid var(--cream-dark); background: transparent; color: var(--mid); cursor: pointer;
+      transition: all 0.15s; display: flex; align-items: center; gap: 7px;
+    }
+    .toggle-btn:hover { border-color: var(--mid); color: var(--charcoal); }
+    .toggle-btn.active { background: var(--burgundy); border-color: var(--burgundy); color: var(--cream); }
+    .tdot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+    .tdot.visible { background: var(--burgundy); }
+    .tdot.hidden { background: var(--gold); }
+    .tdot.halo { background: var(--rose); }
+    .toggle-btn.active .tdot.visible { background: var(--cream); }
+
+    .chart-wrap { position: relative; height: 270px; margin-bottom: 20px; }
+
+    .detail-box {
+      background: var(--cream); padding: 18px 22px; border-left: 3px solid var(--burgundy);
+      min-height: 108px;
+    }
+    .detail-tag {
+      font-size: 9px; font-weight: 600; letter-spacing: 0.4px; color: var(--gold); margin-bottom: 10px;
+    }
+    .detail-insight { font-size: 12px; color: var(--mid); line-height: 1.7; }
+    .detail-insight strong { color: var(--charcoal); font-weight: 600; }
+
+    .disclaimer {
+      font-size: 9px; color: var(--light); line-height: 1.55; margin-top: 16px;
+      padding-left: 12px; border-left: 2px solid var(--cream-dark);
+    }
+
+    .footer {
+      border-top: 1px solid var(--cream-dark); margin-top: 18px; padding-top: 12px;
+      font-size: 9.5px; color: var(--light); font-style: italic; line-height: 1.5;
+    }
+
+    @media (max-width: 540px) {
+      .header, .stats-strip, .main { padding-left: 18px; padding-right: 18px; }
+      .stats-strip { flex-direction: column; gap: 10px; }
+      .strip-stat { border-right: none; padding-right: 0; margin-right: 0;
+        border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 10px; }
+      .strip-stat:last-child { border-bottom: none; padding-bottom: 0; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="title">Price doesn't always determine quality</div>
+    <div class="subtitle">...but price awareness can shape perception</div>
+  </div>
+
+  <div class="stats-strip">
+    <div class="strip-stat">
+      <span class="strip-num">+0.40</span>
+      <span class="strip-label">a moderate positive correlation between price and rating when the label is visible (Vivino, 535 wines)</span>
+    </div>
+    <div class="strip-stat">
+      <span class="strip-num">&asymp; 0</span>
+      <span class="strip-label">that correlation once the price is hidden, slightly negative for non-expert blind tasters (Goldstein, 6,000+ tastings)</span>
+    </div>
+    <div class="strip-stat">
+      <span class="strip-num">0.6&#9733;</span>
+      <span class="strip-label">how much the average rating rises from the cheapest wines to the priciest</span>
+    </div>
+    <div class="strip-stat">
+      <span class="strip-num">9%</span>
+      <span class="strip-label">of drinkers are confident they could tell a $10 bottle from a $100 one</span>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <div class="toggle-row" id="toggleRow">
+      <button class="toggle-btn" onclick="setView(0)"><span class="tdot visible"></span>Price visible</button>
+      <button class="toggle-btn" onclick="setView(1)"><span class="tdot hidden"></span>Price hidden</button>
+      <button class="toggle-btn active" onclick="setView(2)"><span class="tdot halo"></span>The price halo</button>
+    </div>
+
+    <div class="chart-wrap">
+      <canvas id="haloChart"></canvas>
+    </div>
+
+    <div class="detail-box" id="detailBox"></div>
+
+    <div class="disclaimer">
+      A note on the data: both measures reflect perception and preference rather than a standardized quality score. The blind study used non-expert tasters, who may weigh a wine by different criteria. Plenty of pricier wine is genuinely worth it. What the comparison shows is that price awareness can shape how a wine is perceived. The blind line is anchored to the cheapest wines and drawn to show the direction the study reported (flat to slightly negative).
+    </div>
+
+    <div class="footer">
+      Sources: Wine rating and price data obtained from Vivino, US market, July 2026. Blind-tasting findings from a US-based study by Goldstein et al., Journal of Wine Economics, 2008. Price-perception figure from YouGov, March 2024.
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+  const labels = ['$10–15', '$15–30', '$30–60', '$60–150', '$150+'];
+  const sighted = [3.72, 3.84, 4.04, 4.18, 4.36];   // combined red + white, real Vivino averages
+  const blind   = [3.72, 3.71, 3.69, 3.67, 3.64];   // Goldstein direction, anchored + schematic
+
+  const views = [
+    {
+      tag: 'Price visible · Vivino, 535 red and white wines',
+      insight: 'When the price is on the label, ratings tend to rise with it. Across 535 red and white wines on Vivino, the average score climbs gently from about <strong>3.7 for the cheapest wines to 4.4 for the priciest</strong>, a moderate positive correlation. Plenty of expensive wines are genuinely excellent.',
+    },
+    {
+      tag: 'Price hidden · 6,000+ blind tastings',
+      insight: 'In blind tastings, that correlation softens. Across more than <strong>6,000 tastings where non-experts could not see the price, pricier wines scored no higher on average</strong>, and slightly lower in some cases (Goldstein, 2008). These are preference judgements from non-experts rather than standardized quality scores.',
+    },
+    {
+      tag: 'The price halo',
+      insight: 'The gap between the two lines points to price expectation playing a role in how good a wine seems, alongside the wine itself. <strong>Many expensive bottles are clearly worth the money.</strong> The finding is narrower: the price on the label can colour how a wine is perceived, which is worth keeping in mind.',
+    },
+  ];
+
+  let active = 2;
+  let chart;
+
+  function styleDatasets() {
+    chart.data.datasets[0].borderWidth = (active === 1) ? 1.5 : 3;
+    chart.data.datasets[0].borderColor = (active === 1) ? 'rgba(92,26,46,0.35)' : '#5C1A2E';
+    chart.data.datasets[0].pointRadius = (active === 1) ? 2 : 4;
+    chart.data.datasets[1].borderWidth = (active === 0) ? 1.5 : 3;
+    chart.data.datasets[1].borderColor = (active === 0) ? 'rgba(184,151,58,0.4)' : '#B8973A';
+    chart.data.datasets[1].pointRadius = (active === 0) ? 2 : 4;
+    chart.data.datasets[0].backgroundColor = (active === 2) ? 'rgba(194,122,138,0.20)' : 'rgba(194,122,138,0.07)';
+    chart.update();
+  }
+
+  function setView(i) {
+    active = i;
+    document.querySelectorAll('.toggle-btn').forEach((b, idx) => b.classList.toggle('active', idx === i));
+    const v = views[i];
+    document.getElementById('detailBox').innerHTML =
+      '<div class="detail-tag">' + v.tag + '</div><div class="detail-insight">' + v.insight + '</div>';
+    if (chart) styleDatasets();
+  }
+
+  function initChart() {
+    const ctx = document.getElementById('haloChart').getContext('2d');
+    chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [
+          {
+            label: 'Price visible (Vivino, 535 wines)',
+            data: sighted,
+            borderColor: '#5C1A2E',
+            backgroundColor: 'rgba(194,122,138,0.20)',
+            fill: '+1',
+            tension: 0.35,
+            borderWidth: 3,
+            pointBackgroundColor: '#5C1A2E',
+            pointBorderColor: '#5C1A2E',
+            pointRadius: 4,
+            pointHoverRadius: 6,
+          },
+          {
+            label: 'Price hidden (blind tastings)',
+            data: blind,
+            borderColor: '#B8973A',
+            backgroundColor: 'transparent',
+            fill: false,
+            borderDash: [5, 4],
+            tension: 0.35,
+            borderWidth: 3,
+            pointBackgroundColor: '#B8973A',
+            pointBorderColor: '#B8973A',
+            pointRadius: 4,
+            pointHoverRadius: 6,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: { duration: 400 },
+        plugins: {
+          legend: {
+            display: true, position: 'top', align: 'start',
+            labels: { font: { family: 'Montserrat', size: 10 }, color: '#7A5A64', boxWidth: 22, padding: 14, usePointStyle: false },
+          },
+          tooltip: {
+            callbacks: { label: (it) => '  ' + it.dataset.label.split(' (')[0] + ': ' + it.parsed.y.toFixed(2) + ' / 5' },
+            backgroundColor: '#2C2C2C', titleFont: { family: 'Montserrat', size: 10, weight: '600' },
+            bodyFont: { family: 'Montserrat', size: 10 }, padding: 10, cornerRadius: 1,
+          },
+        },
+        scales: {
+          x: {
+            border: { display: false }, grid: { display: false },
+            ticks: { font: { family: 'Montserrat', size: 10, weight: '500' }, color: '#7A5A64' },
+            title: { display: true, text: 'bottle price', font: { family: 'Montserrat', size: 9 }, color: '#B09090' },
+          },
+          y: {
+            min: 3.4, max: 4.6,
+            border: { display: false },
+            grid: { color: 'rgba(0,0,0,0.04)', drawTicks: false },
+            ticks: { font: { family: 'Montserrat', size: 9 }, color: '#B09090', padding: 6, stepSize: 0.2,
+              callback: (v) => v.toFixed(1) },
+            title: { display: true, text: 'average rating (out of 5)', font: { family: 'Montserrat', size: 9 }, color: '#B09090' },
+          },
+        },
+      },
+    });
+    styleDatasets();
+  }
+
+  setTimeout(initChart, 60);
+  setView(2);
+</script>
+</body>
+</html>

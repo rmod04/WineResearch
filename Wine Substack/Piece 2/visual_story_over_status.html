@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Story is the new status · Cork To Table</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;500;600&display=swap');
+
+    :root {
+      --burgundy:   #5C1A2E;
+      --cream:      #F5ECD7;
+      --cream-dark: #EAD9BE;
+      --gold:       #B8973A;
+      --rose:       #C27A8A;
+      --charcoal:   #2C2C2C;
+      --mid:        #7A5A64;
+      --light:      #B09090;
+      --bg:         #FAF6EF;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--bg);
+      display: flex;
+      justify-content: center;
+      padding: 28px 12px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 760px;
+      background: var(--bg);
+    }
+
+    /* ── Header ── */
+    .header {
+      background: var(--burgundy);
+      padding: 28px 36px 24px;
+    }
+
+    .title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--cream);
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-size: 11px;
+      font-weight: 400;
+      color: rgba(245,236,215,0.6);
+      line-height: 1.6;
+      margin-top: 6px;
+    }
+
+    /* ── Stats strip ── */
+    .stats-strip {
+      background: var(--charcoal);
+      display: flex;
+      padding: 14px 36px;
+    }
+
+    .strip-stat {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      border-right: 1px solid rgba(255,255,255,0.08);
+      padding-right: 24px;
+      margin-right: 24px;
+    }
+
+    .strip-stat:last-child {
+      border-right: none;
+      padding-right: 0;
+      margin-right: 0;
+    }
+
+    .strip-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .strip-label {
+      font-size: 9px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.3px;
+    }
+
+    /* ── Main ── */
+    .main {
+      padding: 28px 36px 24px;
+    }
+
+    /* ── Chart section ── */
+    .chart-section {
+      margin-bottom: 28px;
+    }
+
+    .chart-label {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+
+    .chart-sublabel {
+      font-size: 9px;
+      color: var(--mid);
+      line-height: 1.55;
+      margin-bottom: 20px;
+    }
+
+    /* ── Donut layout ── */
+    .donut-layout {
+      display: flex;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .donut-wrap {
+      position: relative;
+      width: 176px;
+      height: 176px;
+      flex-shrink: 0;
+    }
+
+    .donut-svg {
+      width: 176px;
+      height: 176px;
+      transform: rotate(-90deg);
+    }
+
+    .donut-arc {
+      fill: none;
+      stroke-width: 15;
+      transition: opacity 0.2s, stroke-width 0.2s;
+    }
+
+    .donut-arc.holistic { stroke: var(--burgundy); }
+    .donut-arc.trivial  { stroke: #D8C4AE; }
+
+    .donut-arc.dimmed { opacity: 0.28; }
+    .donut-arc.raised { stroke-width: 17; }
+
+    .donut-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      pointer-events: none;
+    }
+
+    .donut-pct {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 40px;
+      font-weight: 600;
+      color: var(--burgundy);
+      line-height: 0.9;
+      transition: color 0.2s;
+    }
+
+    .donut-pct-label {
+      font-size: 8.5px;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      color: var(--mid);
+      margin-top: 5px;
+    }
+
+    /* ── Legend ── */
+    .legend {
+      flex: 1;
+    }
+
+    .legend-group {
+      margin-bottom: 16px;
+    }
+
+    .legend-group:last-child { margin-bottom: 0; }
+
+    .legend-group-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 9px;
+      cursor: default;
+    }
+
+    .legend-group-title {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 9.5px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+
+    .legend-swatch {
+      width: 9px;
+      height: 9px;
+      flex-shrink: 0;
+    }
+
+    .legend-swatch.holistic { background: var(--burgundy); }
+    .legend-swatch.trivial  { background: #D8C4AE; }
+
+    .legend-group-title.holistic { color: var(--charcoal); }
+    .legend-group-title.trivial  { color: var(--mid); }
+
+    .legend-group-total {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .legend-group-total.holistic { color: var(--burgundy); }
+    .legend-group-total.trivial  { color: var(--light); }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 5px;
+      padding-left: 16px;
+    }
+
+    .legend-item-name {
+      font-size: 9px;
+      color: var(--mid);
+      width: 128px;
+      flex-shrink: 0;
+    }
+
+    .legend-bar-track {
+      flex: 1;
+      height: 8px;
+      background: rgba(0,0,0,0.035);
+    }
+
+    .legend-bar-fill {
+      height: 100%;
+      transition: width 0.6s ease;
+    }
+
+    .legend-bar-fill.holistic { background: rgba(92,26,46,0.55); }
+    .legend-bar-fill.trivial  { background: rgba(176,144,144,0.4); }
+
+    .legend-item-count {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--mid);
+      width: 22px;
+      flex-shrink: 0;
+      text-align: right;
+    }
+
+    /* ── Sentiment overlay ── */
+    .sentiment-bar {
+      margin-top: 10px;
+      padding-left: 16px;
+    }
+
+    .sentiment-track {
+      display: flex;
+      height: 6px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .sentiment-affirm { background: var(--burgundy); height: 100%; }
+    .sentiment-crit   { background: rgba(176,144,144,0.35); height: 100%; }
+
+    .sentiment-label {
+      font-size: 8.5px;
+      color: var(--light);
+      margin-top: 5px;
+      letter-spacing: 0.2px;
+    }
+
+    .sentiment-label .aff {
+      color: var(--burgundy);
+      font-weight: 600;
+    }
+
+    .chart-note {
+      font-size: 8.5px;
+      color: var(--light);
+      font-style: italic;
+      margin-top: 14px;
+      line-height: 1.5;
+      border-top: 1px solid var(--cream-dark);
+      padding-top: 10px;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      height: 1px;
+      background: var(--cream-dark);
+      margin: 24px 0;
+    }
+
+    /* ── Split layout ── */
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 28px 1fr;
+      gap: 0;
+      margin-bottom: 4px;
+    }
+
+    /* ── Column labels ── */
+    .side-label {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+
+    .side-left .side-label { color: var(--light); }
+    .side-right .side-label { color: var(--burgundy); }
+
+    .side-label .reveal-hint {
+      font-weight: 500;
+      font-style: italic;
+      letter-spacing: 0;
+      color: var(--gold);
+      text-transform: none;
+      margin-left: 6px;
+    }
+
+    /* ── Left cards (muted, with hover) ── */
+    .shortcut-card {
+      background: var(--cream);
+      border: 1px solid var(--cream-dark);
+      border-left: 3px solid var(--cream-dark);
+      padding: 14px 16px;
+      margin-bottom: 8px;
+      cursor: default;
+      transition: border-left-color 0.18s, background 0.18s;
+    }
+
+    .shortcut-card:hover {
+      border-left-color: var(--mid);
+      background: #EFE8D6;
+    }
+
+    .shortcut-card:hover .shortcut-name { color: var(--mid); }
+    .shortcut-card:hover .shortcut-desc { color: var(--mid); }
+
+    .shortcut-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--light);
+      margin-bottom: 4px;
+      transition: color 0.18s;
+    }
+
+    .shortcut-desc {
+      font-size: 9.5px;
+      color: rgba(176,144,144,0.8);
+      line-height: 1.55;
+      transition: color 0.18s;
+    }
+
+    /* ── Arrow divider ── */
+    .arrow-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 22px;
+    }
+
+    .arrow {
+      font-size: 16px;
+      color: var(--cream-dark);
+    }
+
+    /* ── Right cards (story signals, clickable) ── */
+    .story-card {
+      background: var(--cream);
+      border: 1px solid var(--cream-dark);
+      border-left: 3px solid var(--burgundy);
+      padding: 14px 16px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: border-left-color 0.15s, background 0.15s;
+    }
+
+    .story-card:hover {
+      border-left-color: var(--gold);
+      background: #EFE8D6;
+    }
+
+    .story-card.active {
+      border-left-color: var(--gold);
+      background: #EFE8D6;
+    }
+
+    .story-signal {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--burgundy);
+      margin-bottom: 4px;
+    }
+
+    .story-preview {
+      font-size: 9.5px;
+      color: var(--mid);
+      line-height: 1.55;
+      font-style: italic;
+    }
+
+    .story-meta {
+      font-size: 8.5px;
+      color: var(--light);
+      margin-top: 6px;
+    }
+
+    /* ── Detail / quote box ── */
+    .detail-box {
+      background: var(--cream);
+      padding: 22px 26px;
+      border-left: 3px solid var(--gold);
+      margin-top: 16px;
+      display: none;
+    }
+
+    .detail-box.visible {
+      display: block;
+    }
+
+    .detail-signal {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .detail-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 19px;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--charcoal);
+      line-height: 1.5;
+      margin-bottom: 14px;
+    }
+
+    .detail-attribution {
+      font-size: 10px;
+      color: var(--mid);
+      margin-bottom: 10px;
+    }
+
+    .detail-insight {
+      font-size: 11px;
+      color: var(--mid);
+      line-height: 1.65;
+      border-top: 1px solid var(--cream-dark);
+      padding-top: 12px;
+    }
+
+    /* ── Click prompt ── */
+    .click-prompt {
+      font-size: 9.5px;
+      color: var(--light);
+      font-style: italic;
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      border-top: 1px solid var(--cream-dark);
+      margin-top: 24px;
+      padding-top: 12px;
+      font-size: 9.5px;
+      color: var(--light);
+      font-style: italic;
+    }
+
+    @media (max-width: 540px) {
+      .header, .stats-strip, .main { padding-left: 18px; padding-right: 18px; }
+      .stats-strip { flex-direction: column; gap: 10px; }
+      .strip-stat { border-right: none; padding-right: 0; margin-right: 0;
+        border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 10px; }
+      .strip-stat:last-child { border-bottom: none; padding-bottom: 0; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="title">Story is the new status</div>
+    <div class="subtitle">How provenance replaces price, score, and label to become the real measure of a wine worth having</div>
+  </div>
+
+  <div class="stats-strip">
+    <div class="strip-stat">
+      <span class="strip-num">915+</span>
+      <span class="strip-label">community upvotes on story and provenance observations, surveyed from 450 comments</span>
+    </div>
+    <div class="strip-stat">
+      <span class="strip-num">0</span>
+      <span class="strip-label">top-ranked comments defending price or score as reliable quality signals</span>
+    </div>
+    <div class="strip-stat">
+      <span class="strip-num">3–7 yrs</span>
+      <span class="strip-label">into the wine journey when story-seeking typically begins</span>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <!-- Chart -->
+    <div class="chart-section">
+      <div class="chart-label">How wine drinkers talk about quality</div>
+      <div class="chart-sublabel">Two-thirds of all keywords are story-led. The sentiment split below shows the rest of the story. Hover a cluster to isolate it.</div>
+
+      <div class="donut-layout">
+
+        <div class="donut-wrap">
+          <svg class="donut-svg" viewBox="0 0 200 200">
+            <!-- holistic: 67.9% of 502.65 = 341.3 -->
+            <circle id="arcHolistic" class="donut-arc holistic" cx="100" cy="100" r="80"
+              stroke-dasharray="341.3 502.65" stroke-dashoffset="0"></circle>
+            <!-- transactional: 32.1% = 161.4, offset by -341.3 -->
+            <circle id="arcTrivial" class="donut-arc trivial" cx="100" cy="100" r="80"
+              stroke-dasharray="161.4 502.65" stroke-dashoffset="-341.3"></circle>
+          </svg>
+          <div class="donut-center">
+            <div class="donut-pct" id="donutPct">68%</div>
+            <div class="donut-pct-label" id="donutPctLabel">story-led keywords</div>
+          </div>
+        </div>
+
+        <div class="legend">
+
+          <div class="legend-group" data-cluster="holistic"
+               onmouseenter="isolate('holistic')" onmouseleave="resetDonut()">
+            <div class="legend-group-head">
+              <span class="legend-group-title holistic">
+                <span class="legend-swatch holistic"></span>Holistic · story-led
+              </span>
+              <span class="legend-group-total holistic">133</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-item-name">Farming / process</span>
+              <div class="legend-bar-track"><div class="legend-bar-fill holistic" style="width:100%"></div></div>
+              <span class="legend-item-count">66</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-item-name">Terroir / place</span>
+              <div class="legend-bar-track"><div class="legend-bar-fill holistic" style="width:41%"></div></div>
+              <span class="legend-item-count">27</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-item-name">Winemaker / producer</span>
+              <div class="legend-bar-track"><div class="legend-bar-fill holistic" style="width:32%"></div></div>
+              <span class="legend-item-count">21</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-item-name">Story / authenticity</span>
+              <div class="legend-bar-track"><div class="legend-bar-fill holistic" style="width:29%"></div></div>
+              <span class="legend-item-count">19</span>
+            </div>
+            <div class="sentiment-bar">
+              <div class="sentiment-track">
+                <div class="sentiment-affirm" style="width:66%"></div>
+                <div class="sentiment-crit" style="width:34%"></div>
+              </div>
+              <div class="sentiment-label"><span class="aff">66% affirm the keyword</span> · 34% critique</div>
+            </div>
+          </div>
+
+          <div class="legend-group" data-cluster="trivial"
+               onmouseenter="isolate('trivial')" onmouseleave="resetDonut()">
+            <div class="legend-group-head">
+              <span class="legend-group-title trivial">
+                <span class="legend-swatch trivial"></span>Transactional · shortcuts
+              </span>
+              <span class="legend-group-total trivial">63</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-item-name">Label / brand / hype</span>
+              <div class="legend-bar-track"><div class="legend-bar-fill trivial" style="width:68%"></div></div>
+              <span class="legend-item-count">45</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-item-name">Price / cost</span>
+              <div class="legend-bar-track"><div class="legend-bar-fill trivial" style="width:24%"></div></div>
+              <span class="legend-item-count">16</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-item-name">Score / rating</span>
+              <div class="legend-bar-track"><div class="legend-bar-fill trivial" style="width:3%"></div></div>
+              <span class="legend-item-count">2</span>
+            </div>
+            <div class="sentiment-bar">
+              <div class="sentiment-track">
+                <div class="sentiment-affirm" style="width:25%"></div>
+                <div class="sentiment-crit" style="width:75%"></div>
+              </div>
+              <div class="sentiment-label">just <span class="aff">25% defend the shortcut</span> · 75% criticise it</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Split layout -->
+    <div class="split">
+
+      <!-- Left: early shortcuts -->
+      <div class="side-left">
+        <div class="side-label">What beginners reach for</div>
+
+        <div class="shortcut-card">
+          <div class="shortcut-name">Price</div>
+          <div class="shortcut-desc">A higher number signals a safer bet. When you can't taste the difference yet, cost is the only proxy that makes sense.</div>
+        </div>
+
+        <div class="shortcut-card">
+          <div class="shortcut-name">Score</div>
+          <div class="shortcut-desc">90+ Parker points. A bronze medal sticker. Third-party validation that does the analytical work so you don't have to.</div>
+        </div>
+
+        <div class="shortcut-card">
+          <div class="shortcut-name">Label / brand</div>
+          <div class="shortcut-desc">A recognisable name. A famous appellation. Something you can point to at a dinner table and feel confident about.</div>
+        </div>
+      </div>
+
+      <!-- Arrow -->
+      <div class="arrow-col">
+        <div class="arrow">→</div>
+      </div>
+
+      <!-- Right: story signals -->
+      <div class="side-right">
+        <div class="side-label">What replaces them</div>
+
+        <div class="story-card" id="card0" onclick="selectCard(0)">
+          <div class="story-signal">The winemaker's intent</div>
+          <div class="story-preview">"those moments where one can connect with what a winemaker is doing..."</div>
+          <div class="story-meta">r/wine · &uarr; 67</div>
+        </div>
+
+        <div class="story-card" id="card1" onclick="selectCard(1)">
+          <div class="story-signal">Terroir over the label</div>
+          <div class="story-preview">"wines that are true to form, express the grape and terroir"</div>
+          <div class="story-meta">r/wine · &uarr; 654</div>
+        </div>
+
+        <div class="story-card" id="card2" onclick="selectCard(2)">
+          <div class="story-signal">Tradition as foundation</div>
+          <div class="story-preview">"Natural wine isn't about rejecting tradition, it's about connecting with it..."</div>
+          <div class="story-meta">r/wine · &uarr; 97</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="click-prompt" id="clickPrompt">Click any theme on the right to reveal the full discussion</div>
+
+    <div class="detail-box" id="detailBox"></div>
+
+    <div class="footer">
+      Source: Original analysis of 4,872 words of wine community discussion, June 2026.
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const cards = [
+    {
+      signal: 'The winemaker\'s intent',
+      quote: 'Those moments where one can connect with what a winemaker is doing and really tap into that energy are totally electric.',
+      attribution: 'r/wine · &uarr; 67',
+      insight: 'This is the moment the emphasis changes. What matters now is the philosophy of the person who made the wine, ahead of the label or the score. Once a drinker starts seeking that connection, price becomes secondary to the practice. Story is now the guide.',
+    },
+    {
+      signal: 'Terroir over the label',
+      quote: 'I\'m all for producing wines that are true to form, express the grape and terroir.',
+      attribution: 'r/wine · &uarr; 654',
+      insight: 'Terroir is provenance: the grape, the place, and the farming behind the bottle. Experienced drinkers learn to read a wine by where it comes from and how it was grown. The name on the label and the number on the score sheet matter less.',
+    },
+    {
+      signal: 'Tradition as foundation',
+      quote: 'Natural wine isn\'t about rejecting tradition, it\'s about connecting with it. Farming responsibly, letting the grape and terroir speak for themselves… But the best bottles? They\'re alive, they\'re expressive.',
+      attribution: 'r/wine · &uarr; 97',
+      insight: 'The shift from status to story often looks like a rejection of convention, but the drinkers who arrive here are reaching for something older. Provenance, farming philosophy, and the character of a place are what wine was always supposed to express, long before scores and shelf-talkers simplified the conversation.',
+    },
+  ];
+
+  // ── Donut hover isolate ──
+  const arcH = document.getElementById('arcHolistic');
+  const arcT = document.getElementById('arcTrivial');
+  const pct = document.getElementById('donutPct');
+  const pctLabel = document.getElementById('donutPctLabel');
+
+  function isolate(cluster) {
+    if (cluster === 'holistic') {
+      arcT.classList.add('dimmed');
+      arcH.classList.add('raised');
+      pct.textContent = '68%';
+      pct.style.color = 'var(--burgundy)';
+      pctLabel.textContent = 'story-led keywords';
+    } else {
+      arcH.classList.add('dimmed');
+      arcT.classList.add('raised');
+      pct.textContent = '32%';
+      pct.style.color = 'var(--light)';
+      pctLabel.textContent = 'transactional keywords';
+    }
+  }
+
+  function resetDonut() {
+    arcH.classList.remove('dimmed', 'raised');
+    arcT.classList.remove('dimmed', 'raised');
+    pct.textContent = '68%';
+    pct.style.color = 'var(--burgundy)';
+    pctLabel.textContent = 'story-led keywords';
+  }
+
+  let activeIdx = null;
+
+  function selectCard(idx) {
+    if (activeIdx === idx) {
+      document.getElementById('card' + idx).classList.remove('active');
+      document.getElementById('detailBox').classList.remove('visible');
+      activeIdx = null;
+      return;
+    }
+    if (activeIdx !== null) {
+      document.getElementById('card' + activeIdx).classList.remove('active');
+    }
+    activeIdx = idx;
+    document.getElementById('card' + idx).classList.add('active');
+
+    const c = cards[idx];
+    document.getElementById('detailBox').innerHTML = `
+      <div class="detail-signal">${c.signal}</div>
+      <div class="detail-quote">"${c.quote}"</div>
+      <div class="detail-attribution">${c.attribution}</div>
+      <div class="detail-insight">${c.insight}</div>
+    `;
+    document.getElementById('detailBox').classList.add('visible');
+  }
+</script>
+</body>
+</html>

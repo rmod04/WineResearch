@@ -1,0 +1,2475 @@
+{
+ "white_points": [
+  {
+   "name": "Vinho Verde",
+   "winery": "Casal Garcia",
+   "vintage": "N.V.",
+   "price": 10.19,
+   "rating": 3.8,
+   "ratingsCount": 96374,
+   "region": "Vinho Verde",
+   "country": "Portugal"
+  },
+  {
+   "name": "Mucho Más Blanco",
+   "winery": "Félix Solís",
+   "vintage": "N.V.",
+   "price": 12.99,
+   "rating": 4.0,
+   "ratingsCount": 34208,
+   "region": "Castille",
+   "country": "Espagne"
+  },
+  {
+   "name": "Moscato",
+   "winery": "Barefoot",
+   "vintage": 2023,
+   "price": 11.99,
+   "rating": 3.8,
+   "ratingsCount": 20835,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Sauvignon Blanc",
+   "winery": "Joel Gott",
+   "vintage": 2024,
+   "price": 17.95,
+   "rating": 3.7,
+   "ratingsCount": 18012,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "California Butter Chardonnay",
+   "winery": "JaM Cellars",
+   "vintage": 2023,
+   "price": 16.97,
+   "rating": 3.8,
+   "ratingsCount": 16699,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Sauvignon Blanc",
+   "winery": "Peter Yealands",
+   "vintage": 2025,
+   "price": 14.39,
+   "rating": 4.0,
+   "ratingsCount": 13787,
+   "region": "Marlborough",
+   "country": "New Zealand"
+  },
+  {
+   "name": "Reserve Chardonnay",
+   "winery": "Mer Soleil",
+   "vintage": 2024,
+   "price": 19.99,
+   "rating": 4.1,
+   "ratingsCount": 13770,
+   "region": "Monterey County",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Verdejo",
+   "winery": "Bodegas Marqués de Cáceres",
+   "vintage": 2024,
+   "price": 11.55,
+   "rating": 3.6,
+   "ratingsCount": 12626,
+   "region": "Rueda",
+   "country": "Espagne"
+  },
+  {
+   "name": "Hugues de Beauvignac (HB) Picpoul de Pinet",
+   "winery": "Les Costières de Pomerols",
+   "vintage": 2025,
+   "price": 12.04,
+   "rating": 3.8,
+   "ratingsCount": 11070,
+   "region": "Picpoul de Pinet",
+   "country": "France"
+  },
+  {
+   "name": "Chardonnay",
+   "winery": "SIMI",
+   "vintage": 2024,
+   "price": 16.95,
+   "rating": 3.7,
+   "ratingsCount": 10814,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Riesling Relax",
+   "winery": "Schmitt Söhne",
+   "vintage": 2024,
+   "price": 11.99,
+   "rating": 3.8,
+   "ratingsCount": 10811,
+   "region": "Mosel",
+   "country": "Allemagne"
+  },
+  {
+   "name": "Mâcon-Villages",
+   "winery": "Joseph Drouhin",
+   "vintage": 2024,
+   "price": 21.59,
+   "rating": 3.8,
+   "ratingsCount": 10214,
+   "region": "Mâcon Villages",
+   "country": "France"
+  },
+  {
+   "name": "Sauvignon Blanc",
+   "winery": "Emmolo",
+   "vintage": 2025,
+   "price": 18.95,
+   "rating": 3.9,
+   "ratingsCount": 10047,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Chardonnay",
+   "winery": "Hess Select",
+   "vintage": 2025,
+   "price": 14.39,
+   "rating": 3.6,
+   "ratingsCount": 10029,
+   "region": "Monterey",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Blanc",
+   "winery": "Claude Val",
+   "vintage": 2025,
+   "price": 19.95,
+   "rating": 3.7,
+   "ratingsCount": 10000,
+   "region": "Pays d'Oc",
+   "country": "France"
+  },
+  {
+   "name": "Pinot Grigio",
+   "winery": "Kris",
+   "vintage": 2025,
+   "price": 14.95,
+   "rating": 3.6,
+   "ratingsCount": 9830,
+   "region": "delle Venezie",
+   "country": "Italie"
+  },
+  {
+   "name": "Monterey Chardonnay",
+   "winery": "La Crema",
+   "vintage": 2024,
+   "price": 17.97,
+   "rating": 3.8,
+   "ratingsCount": 9679,
+   "region": "Monterey",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Albariño",
+   "winery": "Burgáns",
+   "vintage": 2025,
+   "price": 20.59,
+   "rating": 3.8,
+   "ratingsCount": 9459,
+   "region": "Rías Baixas",
+   "country": "Espagne"
+  },
+  {
+   "name": "San Angelo Pinot Grigio",
+   "winery": "Banfi",
+   "vintage": 2025,
+   "price": 20.39,
+   "rating": 3.8,
+   "ratingsCount": 9210,
+   "region": "Toscane",
+   "country": "Italie"
+  },
+  {
+   "name": "Gewürztraminer",
+   "winery": "Villa Wolf",
+   "vintage": 2025,
+   "price": 14.39,
+   "rating": 4.0,
+   "ratingsCount": 9043,
+   "region": "Palatinat rhénan",
+   "country": "Allemagne"
+  },
+  {
+   "name": "Principessa Gavia",
+   "winery": "Banfi",
+   "vintage": 2025,
+   "price": 20.39,
+   "rating": 3.9,
+   "ratingsCount": 8616,
+   "region": "Gavi",
+   "country": "Italie"
+  },
+  {
+   "name": "Sauvignon Blanc",
+   "winery": "Prophecy",
+   "vintage": 2024,
+   "price": 13.19,
+   "rating": 3.7,
+   "ratingsCount": 7794,
+   "region": "Marlborough",
+   "country": "New Zealand"
+  },
+  {
+   "name": "Muros Antigos Escolha",
+   "winery": "Anselmo Mendes",
+   "vintage": 2025,
+   "price": 16.88,
+   "rating": 3.7,
+   "ratingsCount": 7657,
+   "region": "Vinho Verde",
+   "country": "Portugal"
+  },
+  {
+   "name": "Noble House Riesling",
+   "winery": "Dr. Pauly-Bergweiler",
+   "vintage": 2025,
+   "price": 17.95,
+   "rating": 3.8,
+   "ratingsCount": 7589,
+   "region": "Rheinhessen",
+   "country": "Allemagne"
+  },
+  {
+   "name": "Chenin Blanc (Free-Run Steen)",
+   "winery": "MAN",
+   "vintage": 2025,
+   "price": 9.59,
+   "rating": 3.6,
+   "ratingsCount": 7422,
+   "region": "Région côtière",
+   "country": "Afrique du Sud"
+  },
+  {
+   "name": "Tempranillo Blanco",
+   "winery": "Nivarius",
+   "vintage": 2025,
+   "price": 19.99,
+   "rating": 3.9,
+   "ratingsCount": 7373,
+   "region": "Rioja",
+   "country": "Espagne"
+  },
+  {
+   "name": "Pinot Grigio",
+   "winery": "Riff",
+   "vintage": 2025,
+   "price": 13.95,
+   "rating": 3.5,
+   "ratingsCount": 7269,
+   "region": "Venezia",
+   "country": "Italie"
+  },
+  {
+   "name": "Grand Estates Chardonnay",
+   "winery": "Columbia Crest",
+   "vintage": 2023,
+   "price": 12.99,
+   "rating": 3.7,
+   "ratingsCount": 7175,
+   "region": "Washington",
+   "country": "États-Unis"
+  },
+  {
+   "name": "446 Chardonnay",
+   "winery": "Noble Vines",
+   "vintage": 2024,
+   "price": 12.99,
+   "rating": 3.6,
+   "ratingsCount": 7123,
+   "region": "Monterey",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Barrel Fermented Chardonnay",
+   "winery": "Harken",
+   "vintage": 2025,
+   "price": 15.59,
+   "rating": 4.0,
+   "ratingsCount": 6956,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Mongris Collio Pinot Grigio",
+   "winery": "Marco Felluga",
+   "vintage": 2025,
+   "price": 23.95,
+   "rating": 3.8,
+   "ratingsCount": 6945,
+   "region": "Collio",
+   "country": "Italie"
+  },
+  {
+   "name": "Pinot Grigio",
+   "winery": "Cielo e Terra",
+   "vintage": 2024,
+   "price": 15.99,
+   "rating": 3.7,
+   "ratingsCount": 6753,
+   "region": "delle Venezie",
+   "country": "Italie"
+  },
+  {
+   "name": "Pinot Grigio",
+   "winery": "Tiefenbrunner",
+   "vintage": 2025,
+   "price": 19.95,
+   "rating": 3.8,
+   "ratingsCount": 6695,
+   "region": "Südtirol - Alto Adige",
+   "country": "Italie"
+  },
+  {
+   "name": "Evolution Lucky # 9",
+   "winery": "Sokol Blosser",
+   "vintage": "",
+   "price": 17.95,
+   "rating": 4.0,
+   "ratingsCount": 6590,
+   "region": "Dundee Hills",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Vinho Verde Branco",
+   "winery": "Arca Nova",
+   "vintage": 2025,
+   "price": 15.95,
+   "rating": 3.9,
+   "ratingsCount": 6581,
+   "region": "Vinho Verde",
+   "country": "Portugal"
+  },
+  {
+   "name": "Da Vinci Pinot Grigio",
+   "winery": "Cantine Leonardo da Vinci",
+   "vintage": 2025,
+   "price": 15.95,
+   "rating": 3.6,
+   "ratingsCount": 6243,
+   "region": "delle Venezie",
+   "country": "Italie"
+  },
+  {
+   "name": "Sweet White",
+   "winery": "New Age",
+   "vintage": "N.V.",
+   "price": 13.95,
+   "rating": 3.9,
+   "ratingsCount": 6153,
+   "region": "Mendoza",
+   "country": "Argentine"
+  },
+  {
+   "name": "Petit Clos Sauvignon Blanc",
+   "winery": "Clos Henri Vineyard",
+   "vintage": 2024,
+   "price": 17.99,
+   "rating": 3.8,
+   "ratingsCount": 5944,
+   "region": "Marlborough",
+   "country": "New Zealand"
+  },
+  {
+   "name": "Chardonnay",
+   "winery": "Cupcake",
+   "vintage": 2024,
+   "price": 12.95,
+   "rating": 3.2,
+   "ratingsCount": 5887,
+   "region": "Monterey County",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Submission Chardonnay",
+   "winery": "689 - Six Eight Nine",
+   "vintage": 2024,
+   "price": 19.95,
+   "rating": 3.8,
+   "ratingsCount": 5833,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "North Coast Viognier",
+   "winery": "Cline",
+   "vintage": 2024,
+   "price": 15.59,
+   "rating": 3.7,
+   "ratingsCount": 5787,
+   "region": "Côte nord",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Pinot Grigio",
+   "winery": "Alois Lageder",
+   "vintage": 2025,
+   "price": 19.54,
+   "rating": 3.8,
+   "ratingsCount": 5601,
+   "region": "Südtirol - Alto Adige",
+   "country": "Italie"
+  },
+  {
+   "name": "Touraine Sauvignon",
+   "winery": "Paul Buisse",
+   "vintage": 2025,
+   "price": 17.99,
+   "rating": 3.9,
+   "ratingsCount": 5534,
+   "region": "Touraine",
+   "country": "France"
+  },
+  {
+   "name": "Chardonnay",
+   "winery": "Rodney Strong",
+   "vintage": 2024,
+   "price": 12.83,
+   "rating": 3.6,
+   "ratingsCount": 5487,
+   "region": "Sonoma County",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Central Coast Chardonnay",
+   "winery": "William Hill",
+   "vintage": 2024,
+   "price": 16.97,
+   "rating": 3.7,
+   "ratingsCount": 5440,
+   "region": "Central Coast",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Trentino Pinot Grigio",
+   "winery": "Maso Canali",
+   "vintage": 2025,
+   "price": 18.99,
+   "rating": 3.9,
+   "ratingsCount": 5433,
+   "region": "Trentin",
+   "country": "Italie"
+  },
+  {
+   "name": "Charlotte's Home Estate Sauvignon Blanc",
+   "winery": "Rodney Strong",
+   "vintage": 2024,
+   "price": 14.39,
+   "rating": 3.6,
+   "ratingsCount": 5430,
+   "region": "Sonoma County",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Dry Riesling",
+   "winery": "Hermann J. Wiemer",
+   "vintage": 2024,
+   "price": 23.99,
+   "rating": 4.0,
+   "ratingsCount": 5141,
+   "region": "Seneca Lake",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Sauvignon Blanc",
+   "winery": "Oyster Bay",
+   "vintage": 2022,
+   "price": 14.99,
+   "rating": 3.9,
+   "ratingsCount": 5121,
+   "region": "Marlborough",
+   "country": "New Zealand"
+  },
+  {
+   "name": "Riesling",
+   "winery": "Pewsey Vale",
+   "vintage": 2025,
+   "price": 21.99,
+   "rating": 3.7,
+   "ratingsCount": 5053,
+   "region": "Eden Valley",
+   "country": "Australie"
+  },
+  {
+   "name": "Verdicchio di Matelica",
+   "winery": "ColleStefano",
+   "vintage": 2025,
+   "price": 22.5,
+   "rating": 3.7,
+   "ratingsCount": 4893,
+   "region": "Verdicchio di Matelica",
+   "country": "Italie"
+  },
+  {
+   "name": "Max Reserva Chardonnay",
+   "winery": "Errazuriz",
+   "vintage": 2021,
+   "price": 20.95,
+   "rating": 3.7,
+   "ratingsCount": 4831,
+   "region": "Vallée de l'Aconcagua",
+   "country": "Chili"
+  },
+  {
+   "name": "Chardonnay",
+   "winery": "Tilia",
+   "vintage": 2024,
+   "price": 15.95,
+   "rating": 3.5,
+   "ratingsCount": 4771,
+   "region": "Mendoza",
+   "country": "Argentine"
+  },
+  {
+   "name": "Blanco",
+   "winery": "Shaya",
+   "vintage": 2024,
+   "price": 19.95,
+   "rating": 3.7,
+   "ratingsCount": 4640,
+   "region": "Rueda",
+   "country": "Espagne"
+  },
+  {
+   "name": "Sauvignon Blanc",
+   "winery": "Woodbridge by Robert Mondavi",
+   "vintage": 2021,
+   "price": 11.99,
+   "rating": 3.3,
+   "ratingsCount": 4599,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Eve Chardonnay",
+   "winery": "Charles Smith",
+   "vintage": 2023,
+   "price": 13.95,
+   "rating": 3.4,
+   "ratingsCount": 4586,
+   "region": "Washington",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Chardonnay",
+   "winery": "Franciscan",
+   "vintage": 2024,
+   "price": 15.59,
+   "rating": 3.8,
+   "ratingsCount": 4537,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Domaine Le Peu de La Moriette Vouvray",
+   "winery": "Domaine Pichot",
+   "vintage": 2024,
+   "price": 23.66,
+   "rating": 3.9,
+   "ratingsCount": 4533,
+   "region": "Vouvray",
+   "country": "France"
+  },
+  {
+   "name": "Riesling Dry",
+   "winery": "Dr. Konstantin Frank",
+   "vintage": 2025,
+   "price": 20.32,
+   "rating": 3.9,
+   "ratingsCount": 4493,
+   "region": "Finger Lakes",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Alisia Pinot Grigio",
+   "winery": "Astoria",
+   "vintage": 2025,
+   "price": 18.85,
+   "rating": 3.8,
+   "ratingsCount": 4466,
+   "region": "delle Venezie",
+   "country": "Italie"
+  },
+  {
+   "name": "Sauvignon Blanc",
+   "winery": "Hanna",
+   "vintage": 2025,
+   "price": 20.95,
+   "rating": 3.9,
+   "ratingsCount": 4464,
+   "region": "Russian River Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Riesling",
+   "winery": "Barefoot",
+   "vintage": 2023,
+   "price": 11.99,
+   "rating": 3.7,
+   "ratingsCount": 4387,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Chardonnay",
+   "winery": "Starmont",
+   "vintage": 2023,
+   "price": 21.95,
+   "rating": 3.8,
+   "ratingsCount": 4356,
+   "region": "Los Carneros",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Vint Pinot Grigio",
+   "winery": "Robert Mondavi Private Selection",
+   "vintage": 2025,
+   "price": 10.99,
+   "rating": 3.4,
+   "ratingsCount": 4296,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Sauvignon Blanc",
+   "winery": "Whitehaven",
+   "vintage": 2021,
+   "price": 20.0,
+   "rating": 4.1,
+   "ratingsCount": 4285,
+   "region": "Marlborough",
+   "country": "New Zealand"
+  },
+  {
+   "name": "Fantini Trebbiano d’Abruzzo",
+   "winery": "Fantini",
+   "vintage": 2025,
+   "price": 22.95,
+   "rating": 3.5,
+   "ratingsCount": 4245,
+   "region": "Trebbiano d'Abruzzo",
+   "country": "Italie"
+  },
+  {
+   "name": "Vermentino di Gallura",
+   "winery": "Piero Mancini",
+   "vintage": 2025,
+   "price": 22.99,
+   "rating": 3.7,
+   "ratingsCount": 4234,
+   "region": "Vermentino di Gallura",
+   "country": "Italie"
+  },
+  {
+   "name": "Sauvignon",
+   "winery": "Tramin",
+   "vintage": 2025,
+   "price": 24.95,
+   "rating": 3.9,
+   "ratingsCount": 4164,
+   "region": "Südtirol - Alto Adige",
+   "country": "Italie"
+  },
+  {
+   "name": "Sonoma Coast Chardonnay",
+   "winery": "MacRostie",
+   "vintage": 2024,
+   "price": 19.95,
+   "rating": 3.9,
+   "ratingsCount": 4099,
+   "region": "Sonoma Coast",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Cirò Bianco (Segno)",
+   "winery": "Librandi",
+   "vintage": 2025,
+   "price": 17.95,
+   "rating": 3.7,
+   "ratingsCount": 4095,
+   "region": "Cirò",
+   "country": "Italie"
+  },
+  {
+   "name": "Pinot Grigio",
+   "winery": "Santa Margherita",
+   "vintage": 2025,
+   "price": 25.99,
+   "rating": 3.9,
+   "ratingsCount": 52903,
+   "region": "Valdadige",
+   "country": "Italie"
+  },
+  {
+   "name": "Chablis Saint-Martin",
+   "winery": "Laroche",
+   "vintage": 2025,
+   "price": 45.99,
+   "rating": 3.9,
+   "ratingsCount": 17803,
+   "region": "Chablis",
+   "country": "France"
+  },
+  {
+   "name": "Sancerre Les Baronnes Blanc",
+   "winery": "Henri Bourgeois",
+   "vintage": 2025,
+   "price": 34.99,
+   "rating": 4.0,
+   "ratingsCount": 17131,
+   "region": "Sancerre",
+   "country": "France"
+  },
+  {
+   "name": "Gavi dei Gavi (Black label)",
+   "winery": "La Scolca",
+   "vintage": 2025,
+   "price": 55.43,
+   "rating": 4.1,
+   "ratingsCount": 14445,
+   "region": "Gavi",
+   "country": "Italie"
+  },
+  {
+   "name": "Chardonnay",
+   "winery": "Cakebread",
+   "vintage": 2024,
+   "price": 44.99,
+   "rating": 4.2,
+   "ratingsCount": 13849,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Riesling Trocken",
+   "winery": "Dönnhoff",
+   "vintage": 2025,
+   "price": 27.57,
+   "rating": 3.8,
+   "ratingsCount": 13809,
+   "region": "Nahe",
+   "country": "Allemagne"
+  },
+  {
+   "name": "Castello della Sala Conte della Vipera",
+   "winery": "Antinori",
+   "vintage": 2025,
+   "price": 37.95,
+   "rating": 4.1,
+   "ratingsCount": 13509,
+   "region": "Ombrie",
+   "country": "Italie"
+  },
+  {
+   "name": "Mâcon-Verzé",
+   "winery": "Domaine Leflaive",
+   "vintage": 2024,
+   "price": 89.99,
+   "rating": 4.0,
+   "ratingsCount": 13092,
+   "region": "Mâcon Villages",
+   "country": "France"
+  },
+  {
+   "name": "Pouilly-Fuissé",
+   "winery": "Louis Latour",
+   "vintage": 2024,
+   "price": 33.56,
+   "rating": 4.0,
+   "ratingsCount": 12132,
+   "region": "Pouilly-Fuissé",
+   "country": "France"
+  },
+  {
+   "name": "Sauvignon Blanc",
+   "winery": "Merry Edwards",
+   "vintage": 2024,
+   "price": 47.89,
+   "rating": 4.4,
+   "ratingsCount": 10829,
+   "region": "Russian River Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Sauvignon Blanc",
+   "winery": "Cakebread",
+   "vintage": 2025,
+   "price": 37.44,
+   "rating": 4.1,
+   "ratingsCount": 10349,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Weisser Mulatschak",
+   "winery": "Meinklang",
+   "vintage": 2025,
+   "price": 29.89,
+   "rating": 4.1,
+   "ratingsCount": 9976,
+   "region": "Burgenland",
+   "country": "Autriche"
+  },
+  {
+   "name": "Les Noisetiers",
+   "winery": "Kistler",
+   "vintage": 2024,
+   "price": 78.95,
+   "rating": 4.4,
+   "ratingsCount": 9781,
+   "region": "Sonoma Coast",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Chablis",
+   "winery": "J. Moreau & Fils",
+   "vintage": 2021,
+   "price": 32.95,
+   "rating": 3.8,
+   "ratingsCount": 9756,
+   "region": "Chablis",
+   "country": "France"
+  },
+  {
+   "name": "Assyrtiko by Gaia Wild Ferment",
+   "winery": "Gaía",
+   "vintage": 2025,
+   "price": 87.95,
+   "rating": 4.0,
+   "ratingsCount": 9518,
+   "region": "Santorin",
+   "country": "Grèce"
+  },
+  {
+   "name": "Sancerre Blanc",
+   "winery": "Comte Lafond",
+   "vintage": 2025,
+   "price": 54.95,
+   "rating": 4.1,
+   "ratingsCount": 9470,
+   "region": "Sancerre",
+   "country": "France"
+  },
+  {
+   "name": "Bouzeron",
+   "winery": "Domaine A. et P. de Villaine",
+   "vintage": 2024,
+   "price": 67.59,
+   "rating": 3.9,
+   "ratingsCount": 9358,
+   "region": "Bouzeron",
+   "country": "France"
+  },
+  {
+   "name": "Soave",
+   "winery": "Tamellini",
+   "vintage": 2025,
+   "price": 27.29,
+   "rating": 3.8,
+   "ratingsCount": 9162,
+   "region": "Soave",
+   "country": "Italie"
+  },
+  {
+   "name": "Ribolla Gialla",
+   "winery": "Gravner",
+   "vintage": 2018,
+   "price": 169.95,
+   "rating": 4.3,
+   "ratingsCount": 9092,
+   "region": "Venezia Giulia",
+   "country": "Italie"
+  },
+  {
+   "name": "Chablis 'Champs Royaux'",
+   "winery": "William Fèvre",
+   "vintage": 2024,
+   "price": 38.59,
+   "rating": 3.9,
+   "ratingsCount": 9078,
+   "region": "Chablis",
+   "country": "France"
+  },
+  {
+   "name": "Etna Bianco",
+   "winery": "Tenuta delle Terre Nere",
+   "vintage": 2025,
+   "price": 37.94,
+   "rating": 3.9,
+   "ratingsCount": 8965,
+   "region": "Etna",
+   "country": "Italie"
+  },
+  {
+   "name": "Bordeaux Blanc",
+   "winery": "Clarendelle",
+   "vintage": 2025,
+   "price": 39.95,
+   "rating": 3.7,
+   "ratingsCount": 8874,
+   "region": "Bordeaux",
+   "country": "France"
+  },
+  {
+   "name": "Mannequin",
+   "winery": "Orin Swift",
+   "vintage": 2023,
+   "price": 39.99,
+   "rating": 4.1,
+   "ratingsCount": 8751,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Grande Réserve Sancerre Blanc",
+   "winery": "Henri Bourgeois",
+   "vintage": 2025,
+   "price": 40.7,
+   "rating": 4.0,
+   "ratingsCount": 8695,
+   "region": "Sancerre",
+   "country": "France"
+  },
+  {
+   "name": "Chardonnay",
+   "winery": "Robert Mondavi Winery",
+   "vintage": 2020,
+   "price": 31.99,
+   "rating": 3.8,
+   "ratingsCount": 8676,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Ronco delle Mele Sauvignon",
+   "winery": "Venica & Venica",
+   "vintage": 2025,
+   "price": 90.1,
+   "rating": 4.3,
+   "ratingsCount": 8213,
+   "region": "Collio",
+   "country": "Italie"
+  },
+  {
+   "name": "Albariño",
+   "winery": "Pazo Barrantes",
+   "vintage": 2021,
+   "price": 54.95,
+   "rating": 3.8,
+   "ratingsCount": 7763,
+   "region": "Rías Baixas",
+   "country": "Espagne"
+  },
+  {
+   "name": "Greco Di Tufo Cutizzi",
+   "winery": "Feudi di San Gregorio",
+   "vintage": 2024,
+   "price": 25.81,
+   "rating": 3.8,
+   "ratingsCount": 7710,
+   "region": "Greco di Tufo",
+   "country": "Italie"
+  },
+  {
+   "name": "Chablis 1er Cru 'Fourchaume'",
+   "winery": "La Chablisienne",
+   "vintage": 2023,
+   "price": 105.4,
+   "rating": 4.1,
+   "ratingsCount": 7671,
+   "region": "Chablis 1er Cru Fourchaume",
+   "country": "France"
+  },
+  {
+   "name": "Palette Blanc",
+   "winery": "Château Simone",
+   "vintage": 2023,
+   "price": 92.39,
+   "rating": 4.2,
+   "ratingsCount": 7401,
+   "region": "Palette",
+   "country": "France"
+  },
+  {
+   "name": "Otto Soave Classico",
+   "winery": "Prà",
+   "vintage": 2025,
+   "price": 25.29,
+   "rating": 3.9,
+   "ratingsCount": 7158,
+   "region": "Soave Classico",
+   "country": "Italie"
+  },
+  {
+   "name": "Drouhin - Vaudon Chablis",
+   "winery": "Joseph Drouhin",
+   "vintage": 2024,
+   "price": 33.59,
+   "rating": 3.8,
+   "ratingsCount": 7072,
+   "region": "Chablis",
+   "country": "France"
+  },
+  {
+   "name": "Puligny-Montrachet",
+   "winery": "Olivier Leflaive",
+   "vintage": 2023,
+   "price": 131.25,
+   "rating": 4.3,
+   "ratingsCount": 6887,
+   "region": "Puligny-Montrachet",
+   "country": "France"
+  },
+  {
+   "name": "Condrieu La Doriane",
+   "winery": "E. Guigal",
+   "vintage": 2024,
+   "price": 175.99,
+   "rating": 4.3,
+   "ratingsCount": 6883,
+   "region": "Condrieu",
+   "country": "France"
+  },
+  {
+   "name": "Grüner Veltliner Kamptal Terrassen",
+   "winery": "Weingut Bründlmayer",
+   "vintage": 2025,
+   "price": 36.58,
+   "rating": 3.8,
+   "ratingsCount": 6816,
+   "region": "Kamptal",
+   "country": "Autriche"
+  },
+  {
+   "name": "Vigna Cicogna Greco di Tufo",
+   "winery": "Benito Ferrara",
+   "vintage": 2025,
+   "price": 41.15,
+   "rating": 4.2,
+   "ratingsCount": 6387,
+   "region": "Greco di Tufo",
+   "country": "Italie"
+  },
+  {
+   "name": "El Gordo del Circo Verdejo",
+   "winery": "Casa Rojo",
+   "vintage": 2025,
+   "price": 47.95,
+   "rating": 3.9,
+   "ratingsCount": 6374,
+   "region": "Rueda",
+   "country": "Espagne"
+  },
+  {
+   "name": "Les Vieux Clos",
+   "winery": "Nicolas Joly",
+   "vintage": 2024,
+   "price": 120.74,
+   "rating": 4.0,
+   "ratingsCount": 6311,
+   "region": "Savennières",
+   "country": "France"
+  },
+  {
+   "name": "Semillón",
+   "winery": "El Enemigo",
+   "vintage": 2024,
+   "price": 39.95,
+   "rating": 4.2,
+   "ratingsCount": 6089,
+   "region": "Mendoza",
+   "country": "Argentine"
+  },
+  {
+   "name": "Chablis",
+   "winery": "Domaine Long Depaquit",
+   "vintage": 2024,
+   "price": 32.79,
+   "rating": 3.9,
+   "ratingsCount": 6051,
+   "region": "Chablis",
+   "country": "France"
+  },
+  {
+   "name": "Aile d'Argent Blanc Bordeaux",
+   "winery": "Château Mouton Rothschild",
+   "vintage": 2024,
+   "price": 302.44,
+   "rating": 4.3,
+   "ratingsCount": 5849,
+   "region": "Bordeaux",
+   "country": "France"
+  },
+  {
+   "name": "Chablis",
+   "winery": "Billaud-Simon",
+   "vintage": 2024,
+   "price": 57.95,
+   "rating": 3.9,
+   "ratingsCount": 5812,
+   "region": "Chablis",
+   "country": "France"
+  },
+  {
+   "name": "Essence Riesling",
+   "winery": "S.A. Prüm",
+   "vintage": 2007,
+   "price": 36.74,
+   "rating": 3.9,
+   "ratingsCount": 5678,
+   "region": "Mosel",
+   "country": "Allemagne"
+  },
+  {
+   "name": "Sancerre Blanc",
+   "winery": "Bernard Reverdy & Fils",
+   "vintage": 2025,
+   "price": 34.95,
+   "rating": 4.0,
+   "ratingsCount": 5614,
+   "region": "Sancerre",
+   "country": "France"
+  },
+  {
+   "name": "Chablis",
+   "winery": "Domaine du Colombier",
+   "vintage": 2024,
+   "price": 32.99,
+   "rating": 3.9,
+   "ratingsCount": 5471,
+   "region": "Chablis",
+   "country": "France"
+  },
+  {
+   "name": "Wachenheimer Riesling",
+   "winery": "Dr. Bürklin-Wolf",
+   "vintage": 2024,
+   "price": 33.76,
+   "rating": 3.9,
+   "ratingsCount": 5414,
+   "region": "Palatinat rhénan",
+   "country": "Allemagne"
+  },
+  {
+   "name": "Oberhäuser Leistenberg Riesling Kabinett",
+   "winery": "Dönnhoff",
+   "vintage": 2025,
+   "price": 39.38,
+   "rating": 4.1,
+   "ratingsCount": 5360,
+   "region": "Nahe",
+   "country": "Allemagne"
+  },
+  {
+   "name": "Les Pierris Sancerre Blanc",
+   "winery": "Roger Champault",
+   "vintage": 2025,
+   "price": 32.19,
+   "rating": 3.8,
+   "ratingsCount": 5325,
+   "region": "Sancerre",
+   "country": "France"
+  },
+  {
+   "name": "Blanc (Gaston Hochar)",
+   "winery": "Château Musar",
+   "vintage": 1990,
+   "price": 275.0,
+   "rating": 4.0,
+   "ratingsCount": 5302,
+   "region": "Bekaa Valley",
+   "country": "Liban"
+  },
+  {
+   "name": "Riesling",
+   "winery": "Falkenstein",
+   "vintage": 2024,
+   "price": 37.39,
+   "rating": 4.0,
+   "ratingsCount": 5267,
+   "region": "Südtirol - Alto Adige",
+   "country": "Italie"
+  },
+  {
+   "name": "Puligny-Montrachet 1er Cru 'Clavoillon'",
+   "winery": "Domaine Leflaive",
+   "vintage": 2023,
+   "price": 627.95,
+   "rating": 4.4,
+   "ratingsCount": 5028,
+   "region": "Puligny-Montrachet 1er Cru Clavaillon",
+   "country": "France"
+  },
+  {
+   "name": "Maximin Riesling",
+   "winery": "Maximin Grünhaus",
+   "vintage": 2025,
+   "price": 26.95,
+   "rating": 4.1,
+   "ratingsCount": 4974,
+   "region": "Mosel",
+   "country": "Allemagne"
+  },
+  {
+   "name": "Caroline Graves",
+   "winery": "Château de Chantegrive",
+   "vintage": 2024,
+   "price": 32.99,
+   "rating": 3.9,
+   "ratingsCount": 4955,
+   "region": "Graves",
+   "country": "France"
+  },
+  {
+   "name": "Sauvignon Blanc",
+   "winery": "Illumination",
+   "vintage": 2025,
+   "price": 39.99,
+   "rating": 4.3,
+   "ratingsCount": 4919,
+   "region": "Californie",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Russian River Valley Chardonnay",
+   "winery": "La Crema",
+   "vintage": 2024,
+   "price": 34.95,
+   "rating": 4.1,
+   "ratingsCount": 4881,
+   "region": "Russian River Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "I Frati Lugana",
+   "winery": "Cà dei Frati",
+   "vintage": 2024,
+   "price": 26.44,
+   "rating": 4.2,
+   "ratingsCount": 4828,
+   "region": "Lugana",
+   "country": "Italie"
+  },
+  {
+   "name": "Wehlener Sonnenuhr Riesling Kabinett",
+   "winery": "Joh. Jos. Prüm",
+   "vintage": 2001,
+   "price": 149.99,
+   "rating": 4.1,
+   "ratingsCount": 4803,
+   "region": "Wehlen",
+   "country": "Allemagne"
+  },
+  {
+   "name": "Riesling",
+   "winery": "Hugel",
+   "vintage": 2024,
+   "price": 27.89,
+   "rating": 3.7,
+   "ratingsCount": 4789,
+   "region": "Alsace",
+   "country": "France"
+  },
+  {
+   "name": "Greco di Tufo Loggia della Serra",
+   "winery": "Terredora",
+   "vintage": 2023,
+   "price": 36.29,
+   "rating": 3.8,
+   "ratingsCount": 4775,
+   "region": "Greco di Tufo",
+   "country": "Italie"
+  },
+  {
+   "name": "Ramì Blanco",
+   "winery": "COS",
+   "vintage": 2002,
+   "price": 31.95,
+   "rating": 3.9,
+   "ratingsCount": 4767,
+   "region": "Terre Siciliane",
+   "country": "Italie"
+  },
+  {
+   "name": "Puligny-Montrachet 1er Cru Les Pucelles",
+   "winery": "Domaine Leflaive",
+   "vintage": 2023,
+   "price": 1163.89,
+   "rating": 4.5,
+   "ratingsCount": 4753,
+   "region": "Puligny-Montrachet Premier Cru",
+   "country": "France"
+  },
+  {
+   "name": "Sancerre à Chavignol Blanc",
+   "winery": "Gérard Boulay",
+   "vintage": 2025,
+   "price": 42.95,
+   "rating": 4.1,
+   "ratingsCount": 4735,
+   "region": "Sancerre",
+   "country": "France"
+  },
+  {
+   "name": "Crozes-Hermitage Blanc",
+   "winery": "Alain Graillot",
+   "vintage": 2024,
+   "price": 50.64,
+   "rating": 3.9,
+   "ratingsCount": 4703,
+   "region": "Crozes-Hermitage",
+   "country": "France"
+  },
+  {
+   "name": "Chardonnay",
+   "winery": "Tyler",
+   "vintage": 2024,
+   "price": 29.95,
+   "rating": 4.1,
+   "ratingsCount": 4691,
+   "region": "Santa Barbara County",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Douro Reserva Redoma Branco",
+   "winery": "Niepoort",
+   "vintage": 2024,
+   "price": 67.52,
+   "rating": 4.3,
+   "ratingsCount": 4652,
+   "region": "Douro",
+   "country": "Portugal"
+  },
+  {
+   "name": "La Trucha Albariño",
+   "winery": "Finca Garabelos",
+   "vintage": 2025,
+   "price": 29.95,
+   "rating": 4.1,
+   "ratingsCount": 4534,
+   "region": "Rías Baixas",
+   "country": "Espagne"
+  },
+  {
+   "name": "Blanc de Morgex et de la Salle",
+   "winery": "Pavese Ermes",
+   "vintage": 2002,
+   "price": 46.95,
+   "rating": 3.9,
+   "ratingsCount": 4499,
+   "region": "Vallée d'Aoste",
+   "country": "Italie"
+  },
+  {
+   "name": "Sancerre La Bourgeoise Blanc",
+   "winery": "Henri Bourgeois",
+   "vintage": 2025,
+   "price": 40.69,
+   "rating": 4.1,
+   "ratingsCount": 4455,
+   "region": "Sancerre",
+   "country": "France"
+  },
+  {
+   "name": "Mercurey Clos Rochette",
+   "winery": "Faiveley",
+   "vintage": 2024,
+   "price": 74.8,
+   "rating": 4.1,
+   "ratingsCount": 4335,
+   "region": "Mercurey",
+   "country": "France"
+  },
+  {
+   "name": "Cuvée Marguerite",
+   "winery": "Matassa",
+   "vintage": 2025,
+   "price": 55.89,
+   "rating": 4.2,
+   "ratingsCount": 4258,
+   "region": "Vin de France",
+   "country": "France"
+  },
+  {
+   "name": "Estate Chardonnay",
+   "winery": "Ridge Vineyards",
+   "vintage": 2024,
+   "price": 77.95,
+   "rating": 4.2,
+   "ratingsCount": 4244,
+   "region": "Montagnes de Santa Cruz",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Sancerre Blanc 'Les Belles Vignes'",
+   "winery": "Domaine Fournier Père et Fils",
+   "vintage": 2025,
+   "price": 41.99,
+   "rating": 4.0,
+   "ratingsCount": 4194,
+   "region": "Sancerre",
+   "country": "France"
+  },
+  {
+   "name": "Ronco del Cerò Sauvignon",
+   "winery": "Venica & Venica",
+   "vintage": 2025,
+   "price": 40.8,
+   "rating": 4.1,
+   "ratingsCount": 4131,
+   "region": "Collio",
+   "country": "Italie"
+  },
+  {
+   "name": "Sancerre",
+   "winery": "Domaine Hippolyte Reverdy",
+   "vintage": 2025,
+   "price": 49.99,
+   "rating": 4.2,
+   "ratingsCount": 4023,
+   "region": "Sancerre",
+   "country": "France"
+  },
+  {
+   "name": "Arbois Savagnin Ouillé",
+   "winery": "Domaine du Pelican",
+   "vintage": 2024,
+   "price": 64.95,
+   "rating": 4.1,
+   "ratingsCount": 3992,
+   "region": "Jura",
+   "country": "France"
+  },
+  {
+   "name": "Montagny 1er Cru",
+   "winery": "J.M. Boillot",
+   "vintage": 2024,
+   "price": 50.95,
+   "rating": 4.2,
+   "ratingsCount": 3964,
+   "region": "Montagny Premier Cru",
+   "country": "France"
+  },
+  {
+   "name": "Vire-Clessé",
+   "winery": "Les Héritiers du Comte Lafon",
+   "vintage": 2024,
+   "price": 50.59,
+   "rating": 4.1,
+   "ratingsCount": 3938,
+   "region": "Viré-Clessé",
+   "country": "France"
+  },
+  {
+   "name": "Tonschiefer Riesling Trocken",
+   "winery": "Dönnhoff",
+   "vintage": 2025,
+   "price": 41.64,
+   "rating": 3.9,
+   "ratingsCount": 3906,
+   "region": "Nahe",
+   "country": "Allemagne"
+  },
+  {
+   "name": "Mülheimer Sonnenlay Riesling",
+   "winery": "Weingut Max Ferd. Richter",
+   "vintage": 2007,
+   "price": 57.74,
+   "rating": 3.9,
+   "ratingsCount": 3814,
+   "region": "Mosel",
+   "country": "Allemagne"
+  },
+  {
+   "name": "Chardonnay",
+   "winery": "Mayacamas",
+   "vintage": 2024,
+   "price": 77.65,
+   "rating": 4.2,
+   "ratingsCount": 3625,
+   "region": "Mount Veeder",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Graacher Himmelreich Riesling Spätlese",
+   "winery": "Joh. Jos. Prüm",
+   "vintage": 2024,
+   "price": 76.99,
+   "rating": 4.2,
+   "ratingsCount": 3566,
+   "region": "Graach",
+   "country": "Allemagne"
+  },
+  {
+   "name": "Pierre Précieuse Pouilly-Fumé",
+   "winery": "Alexandre Bain",
+   "vintage": 2020,
+   "price": 54.59,
+   "rating": 4.1,
+   "ratingsCount": 3468,
+   "region": "Pouilly-Fumé",
+   "country": "France"
+  },
+  {
+   "name": "Mainqué Chardonnay",
+   "winery": "Chacra",
+   "vintage": 2025,
+   "price": 79.9,
+   "rating": 4.2,
+   "ratingsCount": 3396,
+   "region": "Patagonie",
+   "country": "Argentine"
+  },
+  {
+   "name": "1583 Albariño de Fefiñanes",
+   "winery": "Fefiñanes",
+   "vintage": 2024,
+   "price": 49.99,
+   "rating": 4.0,
+   "ratingsCount": 3376,
+   "region": "Rías Baixas",
+   "country": "Espagne"
+  },
+  {
+   "name": "Pessac-Léognan Blanc (Grand Cru Classé de Graves)",
+   "winery": "Château Couhins-Lurton",
+   "vintage": 2022,
+   "price": 55.19,
+   "rating": 3.9,
+   "ratingsCount": 3299,
+   "region": "Pessac-Léognan",
+   "country": "France"
+  },
+  {
+   "name": "Vermentino (Etichetta Grigia/Grey Label)",
+   "winery": "Lunae",
+   "vintage": 2025,
+   "price": 51.95,
+   "rating": 3.8,
+   "ratingsCount": 3211,
+   "region": "Colli di Luni",
+   "country": "Italie"
+  },
+  {
+   "name": "Coume de l'Olla Blanc",
+   "winery": "Matassa",
+   "vintage": 2025,
+   "price": 46.79,
+   "rating": 4.2,
+   "ratingsCount": 3199,
+   "region": "Vin de France",
+   "country": "France"
+  },
+  {
+   "name": "Viognier (Signature)",
+   "winery": "Darioush",
+   "vintage": 2025,
+   "price": 62.95,
+   "rating": 4.3,
+   "ratingsCount": 3174,
+   "region": "Napa Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Chablis",
+   "winery": "Moreau-Naudet",
+   "vintage": 2024,
+   "price": 42.95,
+   "rating": 4.1,
+   "ratingsCount": 3149,
+   "region": "Chablis",
+   "country": "France"
+  },
+  {
+   "name": "Leon Pouilly-Fumé",
+   "winery": "Jonathan Didier Pabiot",
+   "vintage": 2024,
+   "price": 41.95,
+   "rating": 4.1,
+   "ratingsCount": 3139,
+   "region": "Pouilly-Fumé",
+   "country": "France"
+  },
+  {
+   "name": "Ried Renner 1 ÖTW",
+   "winery": "Schloss Gobelsburg",
+   "vintage": 2024,
+   "price": 61.31,
+   "rating": 4.2,
+   "ratingsCount": 3085,
+   "region": "Kamptal",
+   "country": "Autriche"
+  },
+  {
+   "name": "Santorini Assyrtiko Grande Reserve",
+   "winery": "Santo Wines",
+   "vintage": 2022,
+   "price": 59.99,
+   "rating": 4.1,
+   "ratingsCount": 2970,
+   "region": "Santorin",
+   "country": "Grèce"
+  },
+  {
+   "name": "Arbois Chardonnay",
+   "winery": "Domaine du Pelican",
+   "vintage": 2024,
+   "price": 74.8,
+   "rating": 4.1,
+   "ratingsCount": 2902,
+   "region": "Arbois",
+   "country": "France"
+  },
+  {
+   "name": "Les Argiles Vouvray",
+   "winery": "François Chidaine",
+   "vintage": 2024,
+   "price": 47.82,
+   "rating": 4.1,
+   "ratingsCount": 2820,
+   "region": "Vouvray",
+   "country": "France"
+  },
+  {
+   "name": "Les Bournais Montlouis Sur Loire",
+   "winery": "François Chidaine",
+   "vintage": 2024,
+   "price": 61.9,
+   "rating": 4.2,
+   "ratingsCount": 2795,
+   "region": "Montlouis-sur-Loire",
+   "country": "France"
+  },
+  {
+   "name": "Riesling (Petracine) Langhe",
+   "winery": "G.D. Vajra",
+   "vintage": 2025,
+   "price": 41.95,
+   "rating": 3.9,
+   "ratingsCount": 2773,
+   "region": "Langhe",
+   "country": "Italie"
+  },
+  {
+   "name": "Saumur Blanc",
+   "winery": "Château Yvonne",
+   "vintage": 2024,
+   "price": 52.95,
+   "rating": 4.2,
+   "ratingsCount": 2737,
+   "region": "Saumur",
+   "country": "France"
+  },
+  {
+   "name": "Sauvignon Blanc",
+   "winery": "Spottswoode",
+   "vintage": 2025,
+   "price": 52.95,
+   "rating": 4.1,
+   "ratingsCount": 2720,
+   "region": "Côte nord",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Chardonnay",
+   "winery": "RoseRock",
+   "vintage": 2024,
+   "price": 44.39,
+   "rating": 4.0,
+   "ratingsCount": 2658,
+   "region": "Eola-Amity Hills",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Biancosesto",
+   "winery": "La Tunella",
+   "vintage": 2024,
+   "price": 40.18,
+   "rating": 4.0,
+   "ratingsCount": 2644,
+   "region": "Colli Orientali del Friuli",
+   "country": "Italie"
+  },
+  {
+   "name": "Federspiel Grüner Veltliner",
+   "winery": "Nikolaihof",
+   "vintage": 2023,
+   "price": 43.89,
+   "rating": 3.9,
+   "ratingsCount": 2616,
+   "region": "Wachau",
+   "country": "Autriche"
+  },
+  {
+   "name": "Gelblack Riesling Feinherb",
+   "winery": "Schloss Johannisberg",
+   "vintage": 2025,
+   "price": 41.9,
+   "rating": 4.0,
+   "ratingsCount": 2608,
+   "region": "Rheingau",
+   "country": "Allemagne"
+  },
+  {
+   "name": "Ronco delle Cime Friulano",
+   "winery": "Venica & Venica",
+   "vintage": 2025,
+   "price": 62.9,
+   "rating": 4.0,
+   "ratingsCount": 2579,
+   "region": "Collio",
+   "country": "Italie"
+  },
+  {
+   "name": "Brauneberger Juffer Sonnenuhr Riesling Spätlese",
+   "winery": "Fritz Haag",
+   "vintage": 2024,
+   "price": 48.56,
+   "rating": 4.2,
+   "ratingsCount": 2565,
+   "region": "Brauneberg",
+   "country": "Allemagne"
+  },
+  {
+   "name": "Brauneberger Juffer Riesling Kabinett",
+   "winery": "Fritz Haag",
+   "vintage": 2025,
+   "price": 44.95,
+   "rating": 4.0,
+   "ratingsCount": 2531,
+   "region": "Brauneberg",
+   "country": "Allemagne"
+  },
+  {
+   "name": "Sancerre",
+   "winery": "Domaine Éric Louis",
+   "vintage": 2025,
+   "price": 40.95,
+   "rating": 3.9,
+   "ratingsCount": 2516,
+   "region": "Sancerre",
+   "country": "France"
+  },
+  {
+   "name": "Chablis Premier Cru 'Montmains'",
+   "winery": "Gerard Duplessis",
+   "vintage": 2023,
+   "price": 79.99,
+   "rating": 4.2,
+   "ratingsCount": 2461,
+   "region": "Chablis 1er Cru Montmains",
+   "country": "France"
+  },
+  {
+   "name": "Chardonnay",
+   "winery": "Planeta",
+   "vintage": 2022,
+   "price": 56.95,
+   "rating": 4.2,
+   "ratingsCount": 2417,
+   "region": "Menfi",
+   "country": "Italie"
+  },
+  {
+   "name": "Sancerre Blanc",
+   "winery": "La Poussie",
+   "vintage": 2025,
+   "price": 58.95,
+   "rating": 4.0,
+   "ratingsCount": 2349,
+   "region": "Sancerre",
+   "country": "France"
+  },
+  {
+   "name": "Chardonnay",
+   "winery": "Kistler",
+   "vintage": 2024,
+   "price": 77.27,
+   "rating": 4.4,
+   "ratingsCount": 2263,
+   "region": "Sonoma Mountain",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Sancerre Jadis",
+   "winery": "Henri Bourgeois",
+   "vintage": 2023,
+   "price": 61.99,
+   "rating": 4.2,
+   "ratingsCount": 2238,
+   "region": "Sancerre",
+   "country": "France"
+  },
+  {
+   "name": "Les Maranches Mâcon-Uchizy",
+   "winery": "Les Héritiers du Comte Lafon",
+   "vintage": 2024,
+   "price": 50.64,
+   "rating": 3.9,
+   "ratingsCount": 2204,
+   "region": "Mâcon-Uchizy",
+   "country": "France"
+  },
+  {
+   "name": "Les Hauts de Husseau",
+   "winery": "La Taille Aux Loups",
+   "vintage": 2024,
+   "price": 50.39,
+   "rating": 4.2,
+   "ratingsCount": 2203,
+   "region": "Montlouis-sur-Loire",
+   "country": "France"
+  },
+  {
+   "name": "Old Stones Chardonnay",
+   "winery": "Bergström",
+   "vintage": 2023,
+   "price": 54.04,
+   "rating": 4.0,
+   "ratingsCount": 2183,
+   "region": "Willamette Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Chablis",
+   "winery": "Domaine Pinson",
+   "vintage": 2024,
+   "price": 45.02,
+   "rating": 3.9,
+   "ratingsCount": 2181,
+   "region": "Chablis",
+   "country": "France"
+  },
+  {
+   "name": "Yarden Odem Organic Vineyard Chardonnay",
+   "winery": "Golan Heights Winery",
+   "vintage": 2024,
+   "price": 48.95,
+   "rating": 4.0,
+   "ratingsCount": 2134,
+   "region": "Galilée",
+   "country": "Israël"
+  },
+  {
+   "name": "L'Etoile",
+   "winery": "Domaine de Montbourgeau",
+   "vintage": 2023,
+   "price": 44.99,
+   "rating": 3.8,
+   "ratingsCount": 2124,
+   "region": "L'Étoile",
+   "country": "France"
+  },
+  {
+   "name": "Russian River Valley Chardonnay",
+   "winery": "Migration",
+   "vintage": 2022,
+   "price": 69.95,
+   "rating": 4.0,
+   "ratingsCount": 2083,
+   "region": "Russian River Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Nerina Etna Bianco",
+   "winery": "Girolamo Russo",
+   "vintage": 2025,
+   "price": 61.94,
+   "rating": 4.0,
+   "ratingsCount": 2076,
+   "region": "Etna",
+   "country": "Italie"
+  },
+  {
+   "name": "Rully Montagne La Folie",
+   "winery": "Domaine Claudie Jobard",
+   "vintage": 2024,
+   "price": 62.46,
+   "rating": 4.1,
+   "ratingsCount": 2029,
+   "region": "Rully",
+   "country": "France"
+  },
+  {
+   "name": "Chardonnay Reserve",
+   "winery": "Cakebread",
+   "vintage": 2023,
+   "price": 71.75,
+   "rating": 4.4,
+   "ratingsCount": 1996,
+   "region": "Los Carneros",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Pavillon Blanc du Château Margaux",
+   "winery": "Château Margaux",
+   "vintage": 2023,
+   "price": 241.99,
+   "rating": 4.3,
+   "ratingsCount": 4516,
+   "region": "Bordeaux",
+   "country": "France"
+  },
+  {
+   "name": "Meursault-Blagny Premier Cru Château de Blagny",
+   "winery": "Louis Latour",
+   "vintage": 2023,
+   "price": 112.99,
+   "rating": 4.2,
+   "ratingsCount": 3960,
+   "region": "Meursault 1er Cru Blagny",
+   "country": "France"
+  },
+  {
+   "name": "Châteauneuf-du-Pape (La Crau) Blanc",
+   "winery": "Domaine du Vieux Télégraphe",
+   "vintage": 2024,
+   "price": 109.19,
+   "rating": 4.3,
+   "ratingsCount": 3825,
+   "region": "Châteauneuf-du-Pape",
+   "country": "France"
+  },
+  {
+   "name": "Chardonnay (Hyde Vineyard)",
+   "winery": "HDV",
+   "vintage": 2023,
+   "price": 95.99,
+   "rating": 4.3,
+   "ratingsCount": 3681,
+   "region": "Los Carneros",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Sauvignon Blanc",
+   "winery": "Joseph Phelps Vineyards",
+   "vintage": 2024,
+   "price": 89.99,
+   "rating": 4.2,
+   "ratingsCount": 3395,
+   "region": "Sainte-Hélène",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Chablis",
+   "winery": "Domaine Laurent Tribut",
+   "vintage": 2024,
+   "price": 83.41,
+   "rating": 3.9,
+   "ratingsCount": 3264,
+   "region": "Chablis",
+   "country": "France"
+  },
+  {
+   "name": "Puligny-Montrachet",
+   "winery": "Louis Latour",
+   "vintage": 2024,
+   "price": 134.99,
+   "rating": 4.3,
+   "ratingsCount": 3119,
+   "region": "Puligny-Montrachet",
+   "country": "France"
+  },
+  {
+   "name": "Ungeheuer GG",
+   "winery": "Von Winning",
+   "vintage": 2024,
+   "price": 90.02,
+   "rating": 4.3,
+   "ratingsCount": 3058,
+   "region": "Palatinat rhénan",
+   "country": "Allemagne"
+  },
+  {
+   "name": "Chablis 1er Cru 'Montee de Tonnerre'",
+   "winery": "Billaud-Simon",
+   "vintage": 2024,
+   "price": 136.0,
+   "rating": 4.1,
+   "ratingsCount": 3042,
+   "region": "Chablis 1er Cru Montée de Tonnerre",
+   "country": "France"
+  },
+  {
+   "name": "Puligny-Montrachet Premier Cru Folatières",
+   "winery": "Joseph Drouhin",
+   "vintage": 2023,
+   "price": 269.97,
+   "rating": 4.3,
+   "ratingsCount": 2963,
+   "region": "Puligny-Montrachet Premier Cru",
+   "country": "France"
+  },
+  {
+   "name": "Chablis Premier Cru Les Vaillons Vieilles Vignes",
+   "winery": "Laroche",
+   "vintage": 2024,
+   "price": 100.3,
+   "rating": 4.1,
+   "ratingsCount": 2907,
+   "region": "Chablis 1er Cru Vaillons",
+   "country": "France"
+  },
+  {
+   "name": "Blanc",
+   "winery": "Château-Grillet",
+   "vintage": 2023,
+   "price": 193.99,
+   "rating": 4.4,
+   "ratingsCount": 2661,
+   "region": "Château-Grillet",
+   "country": "France"
+  },
+  {
+   "name": "Selection Hermitage Blanche",
+   "winery": "Domaine Jean-Louis Chave",
+   "vintage": 2022,
+   "price": 103.7,
+   "rating": 4.3,
+   "ratingsCount": 2652,
+   "region": "Hermitage",
+   "country": "France"
+  },
+  {
+   "name": "Puligny-Montrachet",
+   "winery": "Jean Chartron",
+   "vintage": 2024,
+   "price": 118.39,
+   "rating": 4.3,
+   "ratingsCount": 2614,
+   "region": "Puligny-Montrachet",
+   "country": "France"
+  },
+  {
+   "name": "L'Hermitage Blanc",
+   "winery": "Domaine Jean-Louis Chave",
+   "vintage": 2023,
+   "price": 459.0,
+   "rating": 4.4,
+   "ratingsCount": 2433,
+   "region": "Hermitage",
+   "country": "France"
+  },
+  {
+   "name": "Castello della Sala Cervaro della Sala",
+   "winery": "Antinori",
+   "vintage": 2022,
+   "price": 81.28,
+   "rating": 4.4,
+   "ratingsCount": 2417,
+   "region": "Ombrie",
+   "country": "Italie"
+  },
+  {
+   "name": "Meursault 'Clos de Mazeray' Blanc (Monopole)",
+   "winery": "Domaine Jacques Prieur",
+   "vintage": 2023,
+   "price": 165.98,
+   "rating": 4.3,
+   "ratingsCount": 2391,
+   "region": "Meursault",
+   "country": "France"
+  },
+  {
+   "name": "Puligny-Montrachet Les Combettes Premier Cru",
+   "winery": "Domaine Jacques Prieur",
+   "vintage": 2023,
+   "price": 267.26,
+   "rating": 4.4,
+   "ratingsCount": 2347,
+   "region": "Puligny-Montrachet Premier Cru",
+   "country": "France"
+  },
+  {
+   "name": "Scharzhofberger Riesling Auslese",
+   "winery": "Egon Müller - Scharzhof",
+   "vintage": 2023,
+   "price": 1752.95,
+   "rating": 4.6,
+   "ratingsCount": 2298,
+   "region": "Wiltingen",
+   "country": "Allemagne"
+  },
+  {
+   "name": "Meursault 1er Cru Sous Le Dos d'Ane",
+   "winery": "Domaine Leflaive",
+   "vintage": 2023,
+   "price": 620.5,
+   "rating": 4.4,
+   "ratingsCount": 2264,
+   "region": "Meursault Premier Cru",
+   "country": "France"
+  },
+  {
+   "name": "Meursault",
+   "winery": "Faiveley",
+   "vintage": 2024,
+   "price": 139.4,
+   "rating": 4.2,
+   "ratingsCount": 2261,
+   "region": "Meursault",
+   "country": "France"
+  },
+  {
+   "name": "L'Après-Midi Sauvignon Blanc",
+   "winery": "Peter Michael",
+   "vintage": 2024,
+   "price": 80.49,
+   "rating": 4.3,
+   "ratingsCount": 2241,
+   "region": "Knights Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Puligny-Montrachet 1er Cru Les Folatières",
+   "winery": "Domaine Leflaive",
+   "vintage": 2023,
+   "price": 918.0,
+   "rating": 4.4,
+   "ratingsCount": 2239,
+   "region": "Puligny-Montrachet Premier Cru",
+   "country": "France"
+  },
+  {
+   "name": "Bourgogne Chardonnay",
+   "winery": "Pierre Morey",
+   "vintage": 2023,
+   "price": 81.6,
+   "rating": 3.9,
+   "ratingsCount": 2162,
+   "region": "Bourgogne",
+   "country": "France"
+  },
+  {
+   "name": "Chablis 1er Cru 'Vaillons'",
+   "winery": "Billaud-Simon",
+   "vintage": 2023,
+   "price": 93.5,
+   "rating": 4.0,
+   "ratingsCount": 2121,
+   "region": "Chablis 1er Cru Vaillons",
+   "country": "France"
+  },
+  {
+   "name": "Scharzhofberger Riesling Spätlese",
+   "winery": "Egon Müller - Scharzhof",
+   "vintage": 1983,
+   "price": 599.99,
+   "rating": 4.5,
+   "ratingsCount": 2112,
+   "region": "Wiltingen",
+   "country": "Allemagne"
+  },
+  {
+   "name": "Clos Des Perrières Meursault 1er Cru",
+   "winery": "Albert Grivault",
+   "vintage": 2023,
+   "price": 238.99,
+   "rating": 4.3,
+   "ratingsCount": 2013,
+   "region": "Meursault Premier Cru",
+   "country": "France"
+  },
+  {
+   "name": "Chardonnay",
+   "winery": "Mount Eden Vineyards",
+   "vintage": 2000,
+   "price": 149.99,
+   "rating": 4.2,
+   "ratingsCount": 2012,
+   "region": "Montagnes de Santa Cruz",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Chablis Grand Cru 'Les Clos'",
+   "winery": "Louis Moreau",
+   "vintage": 2022,
+   "price": 136.25,
+   "rating": 4.2,
+   "ratingsCount": 2006,
+   "region": "Chablis Grand Cru Les Clos",
+   "country": "France"
+  },
+  {
+   "name": "Hermitage Blanc",
+   "winery": "E. Guigal",
+   "vintage": 2020,
+   "price": 91.91,
+   "rating": 4.1,
+   "ratingsCount": 1995,
+   "region": "Hermitage",
+   "country": "France"
+  },
+  {
+   "name": "Meursault 'Les Narvaux'",
+   "winery": "Vincent Girardin",
+   "vintage": 2023,
+   "price": 127.95,
+   "rating": 4.2,
+   "ratingsCount": 1963,
+   "region": "Meursault",
+   "country": "France"
+  },
+  {
+   "name": "Viña Tondonia Gran Reserva Blanco",
+   "winery": "R. López de Heredia",
+   "vintage": 1973,
+   "price": 1148.95,
+   "rating": 4.3,
+   "ratingsCount": 1960,
+   "region": "Rioja Alta",
+   "country": "Espagne"
+  },
+  {
+   "name": "Chablis Grand Cru 'Vaudesir'",
+   "winery": "Louis Michel & Fils",
+   "vintage": 2023,
+   "price": 128.09,
+   "rating": 4.2,
+   "ratingsCount": 1886,
+   "region": "Chablis Grand Cru",
+   "country": "France"
+  },
+  {
+   "name": "Coddington Chardonnay",
+   "winery": "Kumeu River",
+   "vintage": 2024,
+   "price": 102.0,
+   "rating": 4.1,
+   "ratingsCount": 1877,
+   "region": "Kumeu",
+   "country": "New Zealand"
+  },
+  {
+   "name": "Meursault Blanc",
+   "winery": "Louis Latour",
+   "vintage": 2024,
+   "price": 114.39,
+   "rating": 4.1,
+   "ratingsCount": 1861,
+   "region": "Meursault",
+   "country": "France"
+  },
+  {
+   "name": "Chablis Premier Cru Vaulorent",
+   "winery": "Domaine William Fèvre",
+   "vintage": 2023,
+   "price": 114.95,
+   "rating": 4.2,
+   "ratingsCount": 1822,
+   "region": "Chablis Premier Cru",
+   "country": "France"
+  },
+  {
+   "name": "Meursault 1er Cru 'Genevrières' Blanc",
+   "winery": "Bouchard Père & Fils",
+   "vintage": 2022,
+   "price": 217.99,
+   "rating": 4.2,
+   "ratingsCount": 1789,
+   "region": "Meursault 1er Cru Genevrières",
+   "country": "France"
+  },
+  {
+   "name": "Chassagne-Montrachet Blanc",
+   "winery": "Louis Latour",
+   "vintage": 2024,
+   "price": 119.99,
+   "rating": 4.2,
+   "ratingsCount": 1787,
+   "region": "Chassagne-Montrachet",
+   "country": "France"
+  },
+  {
+   "name": "Nonnenberg Monopol Riesling",
+   "winery": "Georg Breuer",
+   "vintage": 2023,
+   "price": 174.42,
+   "rating": 4.2,
+   "ratingsCount": 1721,
+   "region": "Rheingau",
+   "country": "Allemagne"
+  },
+  {
+   "name": "Chardonnay",
+   "winery": "Chacra",
+   "vintage": 2025,
+   "price": 161.5,
+   "rating": 4.3,
+   "ratingsCount": 1720,
+   "region": "Patagonie",
+   "country": "Argentine"
+  },
+  {
+   "name": "Condrieu Le Grand Vallon",
+   "winery": "Francois Villard",
+   "vintage": 2023,
+   "price": 105.4,
+   "rating": 4.2,
+   "ratingsCount": 1720,
+   "region": "Condrieu",
+   "country": "France"
+  },
+  {
+   "name": "Ma Belle-Fille Chardonnay",
+   "winery": "Peter Michael",
+   "vintage": 2022,
+   "price": 422.0,
+   "rating": 4.5,
+   "ratingsCount": 1709,
+   "region": "Knights Valley",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Chardonnay Hyde Vineyard",
+   "winery": "Ramey",
+   "vintage": 2023,
+   "price": 91.99,
+   "rating": 4.3,
+   "ratingsCount": 1693,
+   "region": "Los Carneros",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Marcassin Vineyard Chardonnay",
+   "winery": "Marcassin",
+   "vintage": 2017,
+   "price": 1288.0,
+   "rating": 4.6,
+   "ratingsCount": 1687,
+   "region": "Sonoma Coast",
+   "country": "États-Unis"
+  },
+  {
+   "name": "Chablis 1er Cru 'Mont de Milieu'",
+   "winery": "Billaud-Simon",
+   "vintage": 2024,
+   "price": 115.6,
+   "rating": 4.0,
+   "ratingsCount": 1683,
+   "region": "Chablis 1er Cru Mont de Milieu",
+   "country": "France"
+  },
+  {
+   "name": "Mandolás Furmint",
+   "winery": "Oremus",
+   "vintage": 2020,
+   "price": 143.84,
+   "rating": 4.1,
+   "ratingsCount": 1652,
+   "region": "Tokaj",
+   "country": "Hongrie"
+  },
+  {
+   "name": "Pouilly-Fuissé",
+   "winery": "Domaine Leflaive",
+   "vintage": 2024,
+   "price": 207.4,
+   "rating": 4.2,
+   "ratingsCount": 1631,
+   "region": "Pouilly-Fuissé",
+   "country": "France"
+  },
+  {
+   "name": "Chevalier-Montrachet Grand Cru Blanc",
+   "winery": "Bouchard Père & Fils",
+   "vintage": 2022,
+   "price": 854.99,
+   "rating": 4.5,
+   "ratingsCount": 1607,
+   "region": "Chevalier-Montrachet Grand Cru",
+   "country": "France"
+  },
+  {
+   "name": "Chassagne-Montrachet 1er Cru 'Les Vergers'",
+   "winery": "Domaine Marc Morey & Fils",
+   "vintage": 2023,
+   "price": 136.49,
+   "rating": 4.4,
+   "ratingsCount": 1579,
+   "region": "Chassagne-Montrachet 1er Cru Les Vergers",
+   "country": "France"
+  },
+  {
+   "name": "Meursault",
+   "winery": "Jean-Philippe Fichet",
+   "vintage": 2024,
+   "price": 107.95,
+   "rating": 4.2,
+   "ratingsCount": 1562,
+   "region": "Meursault",
+   "country": "France"
+  },
+  {
+   "name": "Clos de Beaujeu Sancerre",
+   "winery": "Gérard Boulay",
+   "vintage": 2024,
+   "price": 91.95,
+   "rating": 4.2,
+   "ratingsCount": 1541,
+   "region": "Sancerre",
+   "country": "France"
+  },
+  {
+   "name": "Kiedrich Gräfenberg Riesling Spätlese",
+   "winery": "Robert Weil",
+   "vintage": 2023,
+   "price": 106.39,
+   "rating": 4.2,
+   "ratingsCount": 1515,
+   "region": "Kiedrich",
+   "country": "Allemagne"
+  },
+  {
+   "name": "Puligny-Montrachet 1er Cru 'Les Combettes'",
+   "winery": "Etienne Sauzet",
+   "vintage": 2022,
+   "price": 327.99,
+   "rating": 4.4,
+   "ratingsCount": 1483,
+   "region": "Puligny-Montrachet 1er Cru Les Combettes",
+   "country": "France"
+  },
+  {
+   "name": "Berg Roseneck Riesling",
+   "winery": "Georg Breuer",
+   "vintage": 2019,
+   "price": 135.04,
+   "rating": 4.2,
+   "ratingsCount": 1460,
+   "region": "Rüdesheim",
+   "country": "Allemagne"
+  },
+  {
+   "name": "Bâtard-Montrachet Grand Cru",
+   "winery": "Olivier Leflaive",
+   "vintage": 2023,
+   "price": 1495.57,
+   "rating": 4.5,
+   "ratingsCount": 1437,
+   "region": "Bâtard-Montrachet Grand Cru",
+   "country": "France"
+  },
+  {
+   "name": "Meursault-Poruzots 1er Cru",
+   "winery": "Francois et Antoine Jobard",
+   "vintage": 2023,
+   "price": 369.99,
+   "rating": 4.3,
+   "ratingsCount": 1418,
+   "region": "Meursault 1er Cru Porusot",
+   "country": "France"
+  }
+ ],
+ "white_n": 247
+}

@@ -1,0 +1,113 @@
+{
+  "piece": 2,
+  "title": "The Complexity Paradox",
+  "dataset": "DCHLBYyEeZJm5ybdA",
+  "scrapeRunId": "hTQqMhiYGTuSoeXPH",
+  "totalPosts": 291,
+  "postsPerHashtag": 42,
+  "collectedAt": "2026-06-12",
+  "hashtags": ["naturalwine", "lowinterventionwine", "winevalue", "wineeducation", "wset", "orangewine", "everydaywine"],
+
+  "summary": {
+    "naturalwine": {
+      "postCount": 42,
+      "avgLikes": 1328.1,
+      "medianLikes": 272.0,
+      "avgComments": 62.2,
+      "commentLikeRatioPct": 4.68,
+      "maxLikes": 24561,
+      "maxComments": 1479,
+      "insight": "High comment/like ratio (4.68%) — content here drives debate and disagreement. Naturalwine is polarising in a way that maps directly to the complexity paradox thesis. Engaged, opinionated audience."
+    },
+    "lowinterventionwine": {
+      "postCount": 39,
+      "avgLikes": 132.7,
+      "medianLikes": 87.0,
+      "avgComments": 10.6,
+      "commentLikeRatioPct": 8.0,
+      "maxLikes": 812,
+      "maxComments": 90,
+      "insight": "Smallest and most niche hashtag. High comment/like ratio (8%) suggests a tight, engaged community rather than broad reach. Producers and enthusiasts talking to each other — not a discovery channel."
+    },
+    "winevalue": {
+      "postCount": 42,
+      "avgLikes": 1480.2,
+      "medianLikes": 225.5,
+      "avgComments": 41.5,
+      "commentLikeRatioPct": 2.81,
+      "maxLikes": 24395,
+      "maxComments": 554,
+      "insight": "Solid median engagement (225 likes) and good comment/like ratio. Value discussions attract genuine audience interest. Directly relevant to S2 (Price Was Never the Point)."
+    },
+    "wineeducation": {
+      "postCount": 42,
+      "avgLikes": 7621.9,
+      "medianLikes": 423.0,
+      "avgComments": 156.8,
+      "commentLikeRatioPct": 2.06,
+      "maxLikes": 208037,
+      "maxComments": 1479,
+      "insight": "Highest average and median likes. Viral ceiling is enormous. Educational wine content has mainstream crossover appeal — the highest engagement numbers of all 7 hashtags confirm wine education is a high-interest content category on Instagram."
+    },
+    "wset": {
+      "postCount": 42,
+      "avgLikes": 407.6,
+      "medianLikes": 133.5,
+      "avgComments": 42.5,
+      "commentLikeRatioPct": 10.44,
+      "maxLikes": 3060,
+      "maxComments": 282,
+      "insight": "HIGHEST comment/like ratio of all 7 hashtags (10.44%). People studying WSET are intensely conversational — sharing experiences, asking questions, celebrating passes. The education community is the most interactive subset of wine social media despite lower raw reach."
+    },
+    "orangewine": {
+      "postCount": 42,
+      "avgLikes": 1138.6,
+      "medianLikes": 134.0,
+      "avgComments": 22.6,
+      "commentLikeRatioPct": 1.99,
+      "maxLikes": 32060,
+      "maxComments": 291,
+      "insight": "High viral ceiling (32k likes), low median (134). Orange wine is a visual/aesthetic hashtag — people like and scroll but don't discuss much. Passive appreciation vs. active engagement."
+    },
+    "everydaywine": {
+      "postCount": 42,
+      "avgLikes": 2324.9,
+      "medianLikes": 72.5,
+      "avgComments": 31.5,
+      "commentLikeRatioPct": 1.36,
+      "maxLikes": 86569,
+      "maxComments": 694,
+      "insight": "Second highest avg likes but extreme outlier skew (max 86k, median only 72). Everydaywine is the democratisation signal — a small number of posts break through to mass audiences, but most get modest engagement. The accessibility story in one dataset."
+    }
+  },
+
+  "keyFindings": [
+    {
+      "finding": "Education drives the most engaged conversations",
+      "data": "#wset has a 10.44% comment/like ratio — highest of all 7 hashtags. #wineeducation has the highest average likes (7,622) and median engagement (423). Wine learners are the most interactive community on Instagram.",
+      "relevance": "S1 — The Palate Journey: the appetite for wine education is real and growing"
+    },
+    {
+      "finding": "Natural wine is the most polarising hashtag",
+      "data": "#naturalwine has a 4.68% comment/like ratio — second highest — with posts regularly driving hundreds of comments. The debate mirrors Reddit: quality vs. category, authenticity vs. intervention.",
+      "relevance": "S1 — supports the complexity paradox framing: naturalwine discourse adds labels and noise, not clarity"
+    },
+    {
+      "finding": "Value content punches above its weight",
+      "data": "#winevalue has the strongest median/average balance of the mid-tier hashtags (median 225, avg 1,480, comment/like 2.81%). Value conversations are stable, not viral.",
+      "relevance": "S2 — Price Was Never the Point: there is a genuine engaged audience for value/QPR content"
+    },
+    {
+      "finding": "Everydaywine shows democratisation but not depth",
+      "data": "#everydaywine median likes: 72. Max: 86,569. Extreme skew suggests accessibility of wine content but shallow engagement — people like and scroll, not discuss.",
+      "relevance": "S2 — the accessibility paradox: wine is 'for everyone' but most everyday wine content doesn't generate serious conversation"
+    },
+    {
+      "finding": "Low-intervention community is niche but committed",
+      "data": "#lowinterventionwine: 39 posts, median 87 likes, 8% comment/like ratio. Small audience, highly engaged. A community of producers and serious enthusiasts.",
+      "relevance": "S1 — niche expertise communities form around real taste preferences, not just marketing categories"
+    }
+  ],
+
+  "notes": "Posts scraped via scrapesmith/instagram-hashtag-scraper, 20 posts per hashtag (39–42 actual). Dataset includes full caption, timestamps, likes, comments, owner. Raw dataset ID: DCHLBYyEeZJm5ybdA. Instagram data cannot be relied on for 100% accuracy due to platform API limits."
+}

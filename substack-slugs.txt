@@ -1,0 +1,113 @@
+CORK TO TABLE — SUBSTACK URL SLUGS
+Last updated: 18 August 2026
+Maintained by: Substack Cowork project. Read by: C2T Website project.
+
+--------------------------------------------------------------------------
+PURPOSE
+--------------------------------------------------------------------------
+The website and the Substack use DIFFERENT slugs for the same article.
+The website slug is set in content/articles.ts. The Substack slug is chosen
+during the SEO pass for search intent. This file maps one to the other so
+the website's empty substackUrl fields can be filled in correctly.
+
+Substack publication base URL: NOT YET CONFIRMED
+Once known, replace <BASE> below. Expected form: https://<name>.substack.com
+
+--------------------------------------------------------------------------
+PIECE 1 — Every Wine Has Its Moment (April 2026)
+--------------------------------------------------------------------------
+Website slug   : every-wine-has-its-moment
+Substack slug  : why-wine-tastes-different-in-summer
+Full URL       : <BASE>/p/why-wine-tastes-different-in-summer
+Subtitle       : How season, setting, company and even music change the wine in your glass
+Status         : Live on the C2T website. NOT yet published on Substack.
+
+--------------------------------------------------------------------------
+PIECE 2 — The Reward for Curiosity (August 2026)
+--------------------------------------------------------------------------
+Website slug   : the-reward-for-curiosity
+Substack slug  : does-expensive-wine-taste-better
+Full URL       : <BASE>/p/does-expensive-wine-taste-better
+Subtitle       : The wine palate grows over time, and better wine doesn't have to cost more
+Status         : Final draft complete. NOT yet published on Substack.
+
+--------------------------------------------------------------------------
+PIECE 3 — not yet written
+--------------------------------------------------------------------------
+Website slug   : TBC
+Substack slug  : TBC
+Notes          : India-focused. India examples were deliberately held back from
+                 Pieces 1 and 2 and reserved for this piece.
+
+--------------------------------------------------------------------------
+HOW THE WEBSITE USES THIS
+--------------------------------------------------------------------------
+In content/articles.ts, fill the substackUrl field on the matching entry:
+
+  {
+    slug: 'every-wine-has-its-moment',
+    ...
+    substackUrl: '<BASE>/p/why-wine-tastes-different-in-summer',
+  },
+
+  {
+    slug: 'the-reward-for-curiosity',
+    ...
+    substackUrl: '<BASE>/p/does-expensive-wine-taste-better',
+  },
+
+Also in content/site.ts, substackUrl is the publication homepage, not an
+article. Set it to <BASE> once live. It currently reads '' and that empty
+value is what keeps Substack links hidden in the footer, on Stories & Trends,
+and on About.
+
+--------------------------------------------------------------------------
+CANONICAL URL RULE (decided 18 August 2026)
+--------------------------------------------------------------------------
+The full article text is published in BOTH places: on the website and on
+Substack. Neither is condensed. That creates duplicate content, so the
+website is declared canonical and Substack points back to it.
+
+At publish time, in Substack's post settings, set the canonical URL to the
+matching website page:
+
+  Piece 1 -> https://corktotable.com/stories-and-trends/every-wine-has-its-moment
+  Piece 2 -> https://corktotable.com/stories-and-trends/the-reward-for-curiosity
+
+Why: search credit accrues to corktotable.com, which is the owned asset and
+carries the contact form, wine tourism and tasting pages. Substack still does
+the distribution. Without this, Google picks one version itself and will
+usually favour Substack early on, since a new domain has no authority yet.
+
+SEQUENCING WARNING: do not publish on Substack before the website is live at
+its final domain. The canonical must point at a working URL. corktotable.com
+was not registered as of this note, so register the domain and deploy the
+site first, Substack second.
+
+Also note: Substack does not render iframes, so the five interactive visuals
+cannot run inside a Substack post. Use static images there and link out to
+the website or to the GitHub Pages URLs for the interactive versions.
+
+--------------------------------------------------------------------------
+RULES
+--------------------------------------------------------------------------
+1. Slugs are set BEFORE publishing. Changing a slug after publication breaks
+   every existing link, and Substack does not always redirect.
+2. Do not sync the website slug to the Substack slug or vice versa. They are
+   deliberately different: the website slug carries the editorial title, the
+   Substack slug carries search intent.
+3. When a new piece is added, update this file at the same time as the SEO
+   pass, not at publish time.
+
+--------------------------------------------------------------------------
+GITHUB PAGES (interactive visuals, separate from the above)
+--------------------------------------------------------------------------
+Base: https://rmod04.github.io/WineResearch/
+These URLs must stay stable. Do not rename visual_*.html files.
+
+Piece 2 visuals:
+  visual_palate_arc.html
+  visual_price_quality.html
+  visual_curiosity_ladder.html
+  visual_story_over_status.html
+  visual_where_value_lives.html

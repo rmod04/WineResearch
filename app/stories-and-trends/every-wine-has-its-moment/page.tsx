@@ -71,7 +71,7 @@ export default function EveryWineHasItsMomentPage() {
               </a>
             ) : (
               <span className="font-montserrat text-[10px] tracking-widest uppercase text-cream/30">
-                Substack — Coming Soon
+                Substack · Coming Soon
               </span>
             )}
           </div>
@@ -84,13 +84,13 @@ export default function EveryWineHasItsMomentPage() {
           <div className="font-montserrat text-sm text-charcoal leading-loose space-y-6">
 
             <p>
-              It all started with a bottle of Riesling years ago. One that was pleasant on the palate, very refreshing, but nothing out of the ordinary. I opened it to pair with a quiet dinner at home, had a glass, and stored it in the fridge. The next day, I hosted a small get-together; it was a warm day and everyone was in the mood for something chilled. I thought, before I crack open something new, why not give the previously opened bottle another go? To my surprise, it turned into something that fit the moment perfectly. And in that moment, we decided to open one more of the same, and followed it with a summer evening full of conversation, laughter, and music. (I will add that we were down a couple of G&Ts before trying the wine, but that is beside the point. Or maybe it isn&apos;t. We shall see.)
+              It all started with a bottle of Riesling years ago. One that was pleasant on the palate, very refreshing, but nothing out of the ordinary. I opened it to pair with a quiet dinner at home, had a glass, and stored it in the fridge. The next day, I hosted a small get-together; it was a warm day and everyone was in the mood for something chilled. I thought, before I crack open something new, why not give the previously opened bottle another go? To my surprise, it turned into something that fit the moment perfectly. And in that moment, we decided to open one more of the same, and followed it with a summer evening full of conversation, laughter, and music. (I will add that we were down a couple of G&Ts before trying the wine, but that is beside the point&hellip;or maybe it isn&apos;t. We shall see.)
             </p>
             <p>
               To categorise wine consumption merely as a food accompaniment or a cultural norm would be unfair. It goes way beyond that; it&apos;s a philosophy. Why does a cold evening make you reach for something heavier without thinking? Why do you crave a particular bottle in front of a warm fireplace, or when it&apos;s raining outside? Why does this glass with friends feel different from the one alone? What is actually going on?
             </p>
             <p className="font-cormorant text-xl italic text-burgundy leading-relaxed">
-              Whatever your answer is, you are right. That is the point of this piece.
+              If you&apos;re asking these questions, you&apos;re not alone. That is the essence of this piece.
             </p>
 
             <h2 className="font-cormorant text-2xl md:text-3xl font-light text-burgundy pt-4">
@@ -100,7 +100,7 @@ export default function EveryWineHasItsMomentPage() {
               For the first time in nearly 30 years of tracking, the top reason U.S. consumers choose wine is no longer simply for relaxation at home; it is that wine makes the occasion feel special.¹ Context is everything. Wine has officially migrated from a solitary reward to a social and occasion marker.
             </p>
             <p>
-              The instinct to match wine to a moment is not a quirk, but reflects deeply ingrained social psychology. At some point, there is bound to be an &lsquo;out with the old, in with the new&rsquo; moment. The question is: why wine, and why now? Perhaps drinking alone has fallen out of fashion and newer generations simply need a different hook when they go out and engage with the world. Perhaps the emergence of newer, more accessible styles has led a variety of demanding palates to collectively embrace wine as their casual and trustworthy companion. What we do know for certain is that wine is being established more significantly in its association with fun and celebration.
+              The instinct to match wine to a moment reflects deeply ingrained social psychology. At some point, there is bound to be an &lsquo;out with the old, in with the new&rsquo; moment. The question is: why wine, and why now? Perhaps drinking alone has fallen out of fashion and newer generations simply need a different hook when they go out and engage with the world. Perhaps the emergence of newer, more accessible styles has led a variety of demanding palates to collectively embrace wine as their casual and trustworthy companion. What we do know for certain is that wine is being established more significantly in its association with fun and celebration.
             </p>
 
             <DataCallout
@@ -114,15 +114,23 @@ export default function EveryWineHasItsMomentPage() {
             />
 
             <h2 className="font-cormorant text-2xl md:text-3xl font-light text-burgundy pt-4">
-              It Depends. (And That&apos;s the Point.)
+              It Depends, and That&apos;s the Whole Idea
             </h2>
+
+            <Quote text="Wine tastes better when you are having a good time." source="r/wine · ▲ 44" />
+
             <p>
-              As a by-product of this shift, wine choice has become a form of self-expression. With that, traditional norms are being quietly discarded. The seasons, the rules, the received wisdom about what to drink and when; consumers are rewriting all of it on their own terms. In our desire to express individuality in taste, setting becomes an identity. Enjoying and expressing interest in different wines based on the setting — a fine-dining meal versus a casual bar, a holiday versus home, a special occasion versus a regular evening out — becomes an extension of every wine drinker&apos;s personality.
+              As a by-product of this shift, wine choice has become a form of self-expression. With that, traditional norms are being quietly discarded. The seasons, the rules, the received wisdom about what to drink and when; consumers are rewriting all of it on their own terms. In our desire to express individuality in taste, setting becomes an identity. Enjoying and expressing interest in different wines based on the setting (a fine-dining meal versus a casual bar, a holiday versus home, a special occasion versus a regular evening out) becomes an extension of every wine drinker&apos;s personality.
             </p>
 
-            <p className="text-xs text-mid">
-              A brief Instagram study captures this empirically: 67% of 132 posts reference a specific setting in their caption. #redwineweather has the highest comment engagement of any seasonal hashtag at an average of 51 comments per post. People are actively discussing when red wine belongs.
-            </p>
+            <p>A brief Instagram study captures this empirically:</p>
+            <ul className="list-disc list-outside ml-4 space-y-2 font-montserrat text-xs text-mid leading-relaxed">
+              <li>67% of 132 Instagram posts reference a specific setting in their caption: beach, holiday, terrace, fireplace, restaurant.</li>
+              <li>#redwineweather has the highest comment engagement of any seasonal hashtag at an average of 51 comments per post. People are actively discussing when red wine belongs.</li>
+              <li>The most-liked caption in the dataset: &lsquo;POV: it&apos;s 5pm, raining, you open a Shiraz and everything is suddenly okay&rsquo; (2,109 likes).</li>
+              <li>&lsquo;When the temperature hits 25°C it&apos;s automatically rosé season. Science.&rsquo;</li>
+              <li>Each one reads as an identity statement. People are broadcasting a moment as much as choosing a wine.</li>
+            </ul>
 
             <VisualEmbed
               src={`${VISUALS_BASE}/visual_instagram.html`}
@@ -130,7 +138,7 @@ export default function EveryWineHasItsMomentPage() {
             />
 
             <h2 className="font-cormorant text-2xl md:text-3xl font-light text-burgundy pt-4">
-              The Seasonal Instinct
+              The Seasonal Instinct: Summer Wine or Winter Wine
             </h2>
             <p>
               With wine now woven into the fabric of self-expression, the predictable seasonal binary of reds in winter and whites in summer is collapsing in real time. The fastest-growing restaurant wine segment is now chillable reds: lighter in body, higher in acidity, and more refreshing when served slightly cool, bridging the seasonal divide entirely. Similarly, rosé is no longer a seasonal summer drink, but a year-round category.³
@@ -149,14 +157,15 @@ export default function EveryWineHasItsMomentPage() {
               In general, many voices establish clear seasonal preferences. Most align with what would traditionally be expected, but with less rigidity and more personalisation. Each wine drinker has their own say in the matter.
             </p>
 
-            <Quote text="For the most part it will be based on my seasonal cooking habits. In summer I eat more salad and grill more. In winter I do more roasting and braising. Therefore I find myself drinking crisp whites in summer, whereas in winter I lean towards richer whites and more complex reds. Of course, when it all comes down to it, I drink whatever the hell I want, whenever the hell I want!" source="r/wine" />
-            <Quote text="Winter is Barolo and traditionalist southern Rhône. Spring is Cru Beaujolais. Summer is Tavel/Bandol Rosés and German whites. Fall is Bordeaux for days." source="r/wine" />
+            <Quote text="For the most part it will be based on my seasonal cooking habits. In summer I eat more salad and grill more. In winter I do more roasting and braising. Therefore I find myself drinking crisp whites in summer, whereas in winter I lean towards richer whites and more complex reds. Of course, when it all comes down to it, I drink whatever the hell I want, whenever the hell I want!" source="r/wine · ▲ 8" />
+            <Quote text="Winter is Barolo and traditionalist southern Rhône. Spring is Cru Beaujolais. Summer is Tavel/Bandol Rosés and German whites. Fall is Bordeaux for days." source="r/wine · ▲ 1" />
+            <Quote text="Pinot has always felt like a great fall wine to me. Chardonnay feels like spring. Summer is built for Rosé, and Winter is where the biggest red isn't big enough. But mostly I just drink all the good wines all the time." source="r/wine · ▲ 1" />
 
             <p>
-              Through the many voices that express their opinions on social channels, a subtle macro-level signature is established: there is no desire to play by the rules. And here lies the critical nuance. The seasonal instinct is real and the data shows it, but it describes tendency, not prescription. Every single top-voted seasonal comment ends with a version of: &lsquo;but I drink whatever I want, whenever I want.&rsquo;
+              Through the many voices that express their opinions on social channels, a subtle macro-level signature is established: there is no desire to play by the rules. And here lies the critical nuance. The seasonal instinct is real and the data shows it, but it describes a tendency rather than a rule. Every single top-voted seasonal comment ends with a version of: &lsquo;but I drink whatever I want, whenever I want.&rsquo;
             </p>
             <p>
-              We thereby reconfirm that a pattern exists, but so does the freedom to ignore it. That qualifier is not a caveat. It is the argument.
+              We thereby reconfirm that a pattern exists, but so does the freedom to ignore it. That qualifier is the argument itself.
             </p>
 
             <VisualEmbed
@@ -175,7 +184,7 @@ export default function EveryWineHasItsMomentPage() {
             <p className="font-semibold text-charcoal">Four mechanisms at play:</p>
 
             <p>
-              <span className="font-semibold">1. Your senses literally change.</span> Prof. Charles Spence&apos;s crossmodal research at Oxford&apos;s Department of Experimental Psychology demonstrates that environmental cues, such as colour, music, and light, measurably alter flavour perception. In controlled experiments, congruent music and ambient conditions were shown to shift wine taste ratings in consistent and predictable directions.⁵ The colours around you on holiday are not merely aesthetic backdrop. They are changing what you taste.
+              <span className="font-semibold">1. Your senses literally change.</span> Prof. Charles Spence&apos;s crossmodal research at Oxford&apos;s Department of Experimental Psychology demonstrates that environmental cues, such as colour, music, and light, measurably alter flavour perception. His work on wine and music showed that congruent music and ambient conditions shift wine taste ratings in consistent and predictable directions.⁵ The colours around you on holiday are not merely aesthetic backdrop. They are changing what you taste.
             </p>
 
             <DataCallout
@@ -188,7 +197,7 @@ export default function EveryWineHasItsMomentPage() {
             </p>
 
             <p>
-              <span className="font-semibold">3. Company changes everything.</span>
+              <span className="font-semibold">3. Company changes everything.</span> The people sitting around you shape your experience as much as the glass, and a great bottle isn&apos;t likely to rescue poor company.
             </p>
             <Quote text="A lot of the enjoyment of wine is in the context. La Tâche doesn't hit the same when you're drinking it with assholes." source="r/wine · ▲ 119" />
 
@@ -197,9 +206,10 @@ export default function EveryWineHasItsMomentPage() {
             </p>
 
             <Quote text="You might be tasting a wine that was opened early in the day and has had time to slow oxidise and really open up before it's poured for you." source="r/wine · ▲ 114" />
+            <Quote text="Wineries invest a lot of time and money into immersive tasting experiences. There are so many itty bitty factors contributing to you drinking that first glass." source="r/wine · ▲ 22" />
 
             <p>
-              Beyond context, there is a fifth mechanism worth noting: expectation. Research published in the Proceedings of the National Academy of Sciences demonstrated that higher price expectations measurably increase neural activity in the brain&apos;s pleasure centre, even when the wine itself is identical. On holiday, with a beautiful setting, pricier wine lists, and high expectations, the brain is already primed to enjoy it more.⁷
+              Beyond physical context, there is a fifth attribute worth noting: expectations. Research published in the Proceedings of the National Academy of Sciences demonstrated that higher price expectations measurably increase neural activity in the brain&apos;s pleasure centre, even when the wine itself is identical. On holiday, with a beautiful setting, pricier wine lists, and high expectations, the brain is already primed to enjoy it more.⁷ Price expectation shapes perception strongly enough to carry a story of its own, something I&apos;ve dwelled on in a later piece.
             </p>
             <p>
               We can therefore conclude that wine preference is always a composite signal: wine + person + place + moment. The combination of these factors makes it very hard to isolate the liquid and analyse it under pure objectivity, no matter how experienced the taster. The holiday bottle that tasted extraordinary was not a false positive. That experience was real. The wine was just one ingredient.
@@ -214,9 +224,10 @@ export default function EveryWineHasItsMomentPage() {
 
             <Quote text="I used to drink almost entirely reds. At the moment, I likely drink way more whites. I used to seek out the most intense fruit bombs I could find. Now I like funky flavours and subtlety as well." source="r/wine · ▲ 15" />
             <Quote text="I can't be bothered with anything with too much oak. I feel like I can tell when it's being amped up to disguise shortcomings now." source="r/wine · ▲ 80" />
+            <Quote text="Wine for me has become a means of understanding agricultural practice and the relationships between farmers and the earth they tend to." source="r/wine · ▲ 66" />
 
             <p>
-              This shift is not confined to established markets. In India, the rise in white wine consumption, particularly those of Sauvignon Blanc and Chenin Blanc grape varieties, reflects a changing palate, especially among younger urban consumers and women. A generation with a fresh approach to wine, without the preconceived association with red as the solitary symbol of prestige, is arriving at the same conclusions the voices above describe: lighter, brighter, more about the moment than about formality.
+              This shift is not confined to established markets. In India, the rise in white wine consumption, particularly those of Sauvignon Blanc and Chenin Blanc grape varieties, reflects a changing palate, especially among younger urban consumers and women.⁸ A generation with a fresh approach to wine, without the preconceived association with red as the solitary symbol of prestige, is arriving at the same conclusions the voices above describe: lighter, brighter, more about the moment than about formality.
             </p>
             <p>
               This is not just a cultural shift, it is also a climatic one. Research into Indian wine consumption behaviour shows a marked and conscious preference for lighter, fruit-forward styles in warmer weather, with Prosecco, rosé and crisp whites increasingly the deliberate choice in the summer months. In a country where peak summer regularly exceeds 40°C, reaching for something chilled and low-tannin is less a cultural trend and more a considered response to the environment. The seasonal instinct, here, is proven data.
@@ -228,7 +239,7 @@ export default function EveryWineHasItsMomentPage() {
             />
 
             <h2 className="font-cormorant text-2xl md:text-3xl font-light text-burgundy pt-4">
-              Conclusion: Is There Really a &lsquo;Perfect&rsquo; Glass?
+              Is There Really a &lsquo;Perfect&rsquo; Glass?
             </h2>
             <p>
               The largest characteristic evolution we observe today is that wine has begun entering the social calendar more and more, to create occasions, be it a corporate gathering, dining out with family, or hosting friends at home.
@@ -260,16 +271,16 @@ export default function EveryWineHasItsMomentPage() {
             <div className="mt-12 pt-8 border-t border-gold/20">
               <p className="font-montserrat text-[10px] tracking-widest uppercase text-mid mb-4">References</p>
               <ol className="space-y-2 font-montserrat text-xs text-mid leading-relaxed list-decimal list-inside">
-                <li>Wine Market Council (2025). U.S. Wine Consumer Benchmark Survey. Reported by Erica Duecy, Forbes, January 2026.</li>
-                <li>Deutsch Family Wine & Spirits (2025). Internal consumer occasion tracking, 56,000 responses, mid-2023 to July 2025.</li>
-                <li>Tastewise (2025). Rosé Wine Trends 2026.</li>
-                <li>OIV (2023). Global wine consumption by colour, 2000–2021. Reported in Decanter, December 2023.</li>
-                <li>Spence, C. & Wang, Q.J. (2015). Wine and music (I): on the crossmodal matching of wine and music. <em>Flavour</em>, 4, 34.</li>
-                <li>Danner, L. et al. (2016). Context and wine quality effects on consumers' mood, emotions, liking and willingness to pay for Australian Shiraz wines. <em>Food Research International</em>, 89, 254–265.</li>
+                <li>Wine Market Council (2025). U.S. Wine Consumer Benchmark Survey. Reported by Erica Duecy, Forbes, 29 January 2026. n=4,900+ U.S. adults.</li>
+                <li>Deutsch Family Wine & Spirits (2025). Internal consumer occasion tracking, 56,000 responses across 7 survey waves, mid-2023 to July 2025. Reported at Wine Market Council Conference, January 2026.</li>
+                <li>Tastewise (2025). Rosé Wine Trends 2026. December 2025.</li>
+                <li>OIV: International Organisation of Vine and Wine (2023). Global wine consumption by colour, 2000–2021. Reported in Decanter, December 2023.</li>
+                <li>Spence, C. & Wang, Q.J. (2015). Wine and music (I): on the crossmodal matching of wine and music. <em>Flavour</em>, 4, 34. See also: Spence, C. et al. (2014). A large sample study on the influence of the multisensory environment on the wine drinking experience. <em>Flavour</em>, 3, 8.</li>
+                <li>Danner, L. et al. (2016). Context and wine quality effects on consumers&apos; mood, emotions, liking and willingness to pay for Australian Shiraz wines. <em>Food Research International</em>, 89, 254–265.</li>
                 <li>Plassmann, H. et al. (2008). Marketing actions can modulate neural representations of experienced pleasantness. <em>Proceedings of the National Academy of Sciences</em>, 105(3), 1050–1054.</li>
                 <li>BestWineImporters (2025). Indian Wine Importers and Import Guide 2025 Update.</li>
                 <li>Pragma Market Research (2025). India Wine Market Report, June 2025.</li>
-                <li>Wine Market Council (2025). U.S. Wine Consumer Benchmark Survey.</li>
+                <li>Wine Market Council (2025). U.S. Wine Consumer Benchmark Survey. As per reference 1.</li>
               </ol>
               <p className="font-montserrat text-[10px] text-mid/60 mt-4">
                 All Reddit quotes attributed generically as &lsquo;r/wine&rsquo;. Upvote counts recorded April 2026. Original analysis based on 132 Instagram posts across 8 seasonal wine hashtags and 452 Reddit comments across 17 r/wine threads.

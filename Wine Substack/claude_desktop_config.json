@@ -1,0 +1,34 @@
+{
+  "mcpServers": {
+    "datawrapper": {
+      "command": "datawrapper-mcp",
+      "env": {
+        "DATAWRAPPER_ACCESS_TOKEN": "TeJQ6Orq6wT6FimF9kc84Bg4fDX8NxiNQG0t1ulatDxktk1Ic6CW4grvTxJwqhG4"
+      }
+    }
+  },
+  "preferences": {
+    "remoteToolsDeviceName": "rohans-macbook-pro-local",
+    "coworkHipaaRestricted": false,
+    "coworkWebSearchEnabled": true,
+    "coworkModelAutoFallbackByAccount": {
+      "e10fd5b2-c0da-4493-b3ba-5e5f5fcce6a0": true
+    },
+    "coworkScheduledTasksEnabled": true,
+    "ccdScheduledTasksEnabled": true,
+    "epitaxyPrefs": {
+      "starred-local-code-sessions": [],
+      "starred-cowork-spaces": [],
+      "starred-session-groups": [],
+      "dframe-local-slice": {
+        "pinnedOrder": [],
+        "customGroupAssignments": {},
+        "customGroupOrder": {}
+      }
+    },
+    "bypassPermissionsGateByAccount": {
+      "e10fd5b2-c0da-4493-b3ba-5e5f5fcce6a0": false
+    }
+  },
+  "coworkUserFilesPath": "/Users/rohanmodwel/Documents/Claude"
+}

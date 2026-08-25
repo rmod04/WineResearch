@@ -16,11 +16,15 @@ This one repo holds two separate deliverables, each with its own branch, host, a
 
 **2. Substack visuals pipeline → GitHub Pages**
 
-- The five self-contained interactive HTML visuals (`visual_*.html`) for the Substack. Worked in the **Substack Cowork project**; see `substackhandoff.md` and the two Drive briefs for detail.
+- The self-contained interactive HTML visuals (`visual_*.html`) for the Substack. Worked in the **Substack Cowork project**; see `substackhandoff.md` (Piece 1) and `Wine Substack/HANDOFF_2026-08-18.md` (current) for detail.
+- **Status, 18 Aug 2026:** the five Piece 2 visuals are live at `https://rmod04.github.io/WineResearch/` (`visual_palate_arc`, `visual_price_quality`, `visual_curiosity_ladder`, `visual_story_over_status`, `visual_where_value_lives`), committed at `0a0155c`. The five Piece 1 visuals remain live alongside them. Keep all these URLs stable; they are the link-out targets from Substack posts.
+- **Authored source lives in `Wine Substack/Piece 2/`**, inside the `main` worktree where the folder is untracked. Git tracks the copies at the substack worktree root.
 - Branch: `claude/wine-substack-data-setup-H9HVg` (canonical substack branch).
 - Deploy: Pages source is **GitHub Actions** (`.github/workflows/deploy-substack-visuals.yml`). Pushing a `visual_*.html` change to the substack branch publishes only the visuals to `https://rmod04.github.io/WineResearch/` in ~60s. No merge to `main` needed; website code never reaches Pages.
 
 **Keeping them apart:** two worktrees, one per branch — `~/WineResearch` on `main` (website + Cowork preview) and `~/WineResearch-substack` on the substack branch. (The old `~/WineResearch-website` worktree was removed when the dev branch was retired.) Keep commits small and scoped; never edit the same file region two ways at once.
+
+**Auto-sync watcher:** a watcher runs on `~/WineResearch-substack` and copies, commits and pushes visual changes on its own. It deployed the Piece 2 visuals before the explicit deploy script ran on 18 Aug, making those commands no-ops. Check `git log origin/claude/wine-substack-data-setup-H9HVg` before assuming a push is needed.
 
 **Pushing:** the Cowork sandbox has no git credentials and can't reach GitHub for authenticated pushes. All commits/pushes/branch ops run from **Claude Code** or your local terminal (your machine holds the SSH key). Cowork handles content, copy, research, and file edits; the code tab handles git and deploys.
 
@@ -99,13 +103,18 @@ Wordmark "Cork To Table" → `/`, then: **Wine Tourism | Tasting Experiences | S
 ## Pre-launch checklist
 
 🔴 Blocking:
-- Replace `REPLACE_WITH_FORMSPREE_ID` in `components/ContactForm.tsx` (~line 16) with the real Formspree endpoint.
+- ✅ **Formspree endpoints — DONE (Aug 2026).** Contact form → `myeglglk` (`components/ContactForm.tsx`). Questionnaire → `xgawrwpz` (`components/Questionnaire.tsx`, constant `QUESTIONNAIRE_ENDPOINT` at the top).
+- ✅ **Privacy policy — DONE (Aug 2026).** Live at `/privacy`; copy lives in `content/privacy.ts`, linked from the footer bottom bar.
 - Register `corktotable.com`.
 - ✅ **Reconcile main↔dev — DONE (Jun 2026).** Dev branch audited, confirmed `main` is a strict superset, `.claude/launch.json` copied in, dev branch retired (local + remote). `main` is canonical.
 - **Connect the repo to Vercel** (not yet connected); production branch = `main`, then point the custom domain.
-- **Delete the redundant `Website` branch** — still on GitHub, confirmed 0 unique commits (fully contained in `main`). Housekeeping; run from the code tab.
+- ✅ **Delete the redundant `Website` branch — DONE (Aug 2026).** Confirmed gone from GitHub; only `main` and `claude/wine-substack-data-setup-H9HVg` remain.
+
+🗓️ **October 2026 — restore the Spain article.** Pulled from the site Aug 2026 because *Liquid Magazine* (India) is running it in their October issue and asked for it to come down until then. Rohan confirmed it can go back up afterwards with a "first published" credit. To restore: remove `hidden: true` from the `spain-wine-travel-diaries` entry in `content/articles.ts`, rename `app/stories-and-trends/_spain-wine-travel-diaries` back to `spain-wine-travel-diaries`, and add the credit line, following the pattern already used on `app/stories-and-trends/wine-paris-2026/page.tsx` (italic line under the date in the burgundy header, publication name as a gold external link). Nothing was deleted.
 
 🟡 Soon after launch:
+- **Set the Authorized Domain on both Formspree forms** to `corktotable.com`. Until then submissions carry no trusted referrer and Formshield tends to file them as spam. Fixes the spam-folder problem seen during local testing.
+- **Never rename a Formspree field label.** The dashboard builds its columns from the union of every field name ever received, so a rename spawns a duplicate column that only a full deletion of submission history clears. Labels were frozen Aug 2026 (`buildFields()` in `components/Questionnaire.tsx`).
 - Add `substackUrl` in `content/site.ts` (auto-activates Substack links in footer, Stories & Trends, About).
 - Set `comingSoon: false` per partner in `content/partners.ts` when bookable.
 - Replace the Unsplash About-hero background (`app/about/page.tsx` ~line 17) with a real photo.

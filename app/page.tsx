@@ -61,7 +61,7 @@ export default function HomePage() {
                 label: 'Tasting Experiences',
                 headline: 'The Table Where Wine Makes Sense',
                 description:
-                  'An evening where the glass is a starting point, not the main event. Themed food pairings, shared conversations, wine that is made to enjoy. Available for private dinners too.',
+                  'An evening where the glass is a starting point, not the main event. Themed food pairings, shared conversations, wine made to be enjoyed. Available for private dinners too.',
                 image: '/images/photo-tasting-tile.jpg',
                 cta: 'Discover',
               },
@@ -95,7 +95,9 @@ export default function HomePage() {
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-40"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/30 to-transparent" />
+                {/* Stronger scrim on mobile, where the text block is taller
+                    and would otherwise run into the brighter part of the photo. */}
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/95 via-charcoal/60 to-charcoal/20 md:from-charcoal/90 md:via-charcoal/30 md:to-transparent" />
                 <div className="relative z-10 p-8">
                   <p className="font-montserrat text-[9px] tracking-[0.35em] uppercase text-cream mb-3">
                     {tile.label}
@@ -103,7 +105,7 @@ export default function HomePage() {
                   <h3 className="font-cormorant text-2xl md:text-3xl text-cream font-light mb-3">
                     {tile.headline}
                   </h3>
-                  <p className="font-montserrat text-xs text-cream/80 leading-relaxed mb-5 hidden md:block">
+                  <p className="font-montserrat text-xs text-cream/80 leading-relaxed mb-5">
                     {tile.description}
                   </p>
                   <span className="font-montserrat text-[10px] tracking-widest uppercase text-gold border-b border-gold/50 pb-0.5 group-hover:border-gold transition-colors">

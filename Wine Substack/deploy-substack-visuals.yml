@@ -1,0 +1,61 @@
+name: Deploy Substack visuals to GitHub Pages
+
+# Publishes ONLY the interactive visual files to GitHub Pages.
+# Triggered by pushes to the substack branch, so you never have to merge
+# visuals into `main`, and website/Next.js code can never leak into Pages.
+
+on:
+  push:
+    branches: ["claude/wine-substack-data-setup-H9HVg"]
+    paths:
+      - "visual_*.html"
+      - "findings.html"
+  workflow_dispatch: {}   # lets you trigger a manual deploy from the Actions tab
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Assemble site (visuals only)
+        run: |
+          mkdir -p _site
+          cp visual_*.html _site/
+          cp findings.html _site/ 2>/dev/null || true
+          # Simple index linking the five visuals
+          {
+            echo '<!doctype html><meta charset="utf-8">'
+            echo '<title>Cork to Table — Interactive Visuals</title>'
+            echo '<h1>Cork to Table — Interactive Visuals</h1><ul>'
+            for f in _site/visual_*.html; do
+              n=$(basename "$f")
+              echo "<li><a href=\"$n\">$n</a></li>"
+            done
+            echo '</ul>'
+          } > _site/index.html
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

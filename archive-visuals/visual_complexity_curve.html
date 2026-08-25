@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Complexity Curve — Cork To Table</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;500;600&display=swap');
+
+    :root {
+      --burgundy:   #5C1A2E;
+      --cream:      #F5ECD7;
+      --cream-dark: #EAD9BE;
+      --gold:       #B8973A;
+      --rose:       #C27A8A;
+      --charcoal:   #2C2C2C;
+      --mid:        #7A5A64;
+      --light:      #B09090;
+      --bg:         #FAF6EF;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--bg);
+      display: flex;
+      justify-content: center;
+      padding: 32px 16px;
+    }
+
+    .container {
+      width: 760px;
+      background: var(--bg);
+    }
+
+    /* ── Header ── */
+    .header {
+      background: var(--burgundy);
+      padding: 28px 36px 24px;
+    }
+
+    .title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--cream);
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-size: 11px;
+      font-weight: 400;
+      color: rgba(245,236,215,0.6);
+      line-height: 1.6;
+      margin-top: 6px;
+    }
+
+    /* ── Stats strip ── */
+    .stats-strip {
+      background: var(--charcoal);
+      display: flex;
+      padding: 14px 36px;
+    }
+
+    .strip-stat {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      border-right: 1px solid rgba(255,255,255,0.08);
+      padding-right: 24px;
+      margin-right: 24px;
+    }
+
+    .strip-stat:last-child {
+      border-right: none;
+      padding-right: 0;
+      margin-right: 0;
+    }
+
+    .strip-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .strip-label {
+      font-size: 9px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.3px;
+    }
+
+    /* ── Main body ── */
+    .main {
+      padding: 32px 36px 24px;
+    }
+
+    /* ── Chart ── */
+    .chart-wrap {
+      position: relative;
+      height: 260px;
+      margin-bottom: 4px;
+    }
+
+    .chart-note {
+      font-size: 8.5px;
+      color: var(--light);
+      text-align: right;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    /* ── Phase selectors ── */
+    .phase-row {
+      display: flex;
+      border-top: 1px solid var(--cream-dark);
+      margin-bottom: 20px;
+    }
+
+    .phase-btn {
+      flex: 1;
+      border: none;
+      background: none;
+      cursor: pointer;
+      padding: 14px 8px 12px;
+      text-align: center;
+      border-right: 1px solid var(--cream-dark);
+      border-bottom: 3px solid transparent;
+      transition: all 0.18s;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .phase-btn:last-child {
+      border-right: none;
+    }
+
+    .phase-btn .p-num {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--mid);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .phase-btn .p-name {
+      display: block;
+      font-size: 9px;
+      font-weight: 500;
+      color: var(--light);
+    }
+
+    .phase-btn:hover .p-num { color: var(--gold); }
+    .phase-btn:hover .p-name { color: var(--gold); }
+
+    .phase-btn.active {
+      border-bottom: 3px solid var(--burgundy);
+    }
+
+    .phase-btn.active .p-num { color: var(--burgundy); }
+    .phase-btn.active .p-name { color: var(--burgundy); }
+
+    /* ── Detail box ── */
+    .detail-box {
+      background: var(--cream);
+      padding: 22px 26px;
+      border-left: 3px solid var(--burgundy);
+      min-height: 120px;
+    }
+
+    .detail-tag {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .detail-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--charcoal);
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+
+    .detail-attribution {
+      font-size: 10px;
+      color: var(--mid);
+      margin-bottom: 10px;
+    }
+
+    .detail-insight {
+      font-size: 11px;
+      color: var(--mid);
+      line-height: 1.65;
+      border-top: 1px solid var(--cream-dark);
+      padding-top: 10px;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      border-top: 1px solid var(--cream-dark);
+      margin-top: 24px;
+      padding-top: 12px;
+      font-size: 9.5px;
+      color: var(--light);
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="title">The complexity curve</div>
+    <div class="subtitle">How wine expertise rewires your relationship with complexity</div>
+  </div>
+
+  <div class="stats-strip">
+    <div class="strip-stat">
+      <span class="strip-num">4 stages</span>
+      <span class="strip-label">in the documented palate journey</span>
+    </div>
+    <div class="strip-stat">
+      <span class="strip-num">3–7 yrs</span>
+      <span class="strip-label">into a wine journey when complexity seeking typically peaks</span>
+    </div>
+    <div class="strip-stat">
+      <span class="strip-num">25 yrs</span>
+      <span class="strip-label">of experience with wine gradually leads someone to a level of expertise that demands simplicity</span>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <div class="chart-wrap">
+      <canvas id="curveChart"></canvas>
+    </div>
+    <div class="chart-note">Complexity preference index — illustrative, based on documented palate-evolution research and r/wine community data</div>
+
+    <div class="phase-row" id="phaseRow">
+      <button class="phase-btn" onclick="selectPhase(0)">
+        <span class="p-num">01</span>
+        <span class="p-name">New Drinker</span>
+      </button>
+      <button class="phase-btn" onclick="selectPhase(1)">
+        <span class="p-num">02</span>
+        <span class="p-name">Enthusiast</span>
+      </button>
+      <button class="phase-btn" onclick="selectPhase(2)">
+        <span class="p-num">03</span>
+        <span class="p-name">Knowledgeable</span>
+      </button>
+      <button class="phase-btn" onclick="selectPhase(3)">
+        <span class="p-num">04</span>
+        <span class="p-name">Expert</span>
+      </button>
+    </div>
+
+    <div class="detail-box" id="detailBox"></div>
+
+    <div class="footer">
+      Source: Palate data from Liz Thach, MW, Wine Business Monthly, 2018; wine community discussion, 2022–2026.
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+  const phases = [
+    {
+      label: 'New Drinker',
+      complexity: 40,
+      tag: 'Phase 01 — New Drinker',
+      quote: 'My tastes gradually changed over the years. I started with weird whites, petite sirah, and cab. Now it\'s more about balance and finesse rather than power.',
+      author: 'TheBobInSonoma',
+      thread: 'Palate changing with age · r/wine',
+      insight: 'Early wine drinkers gravitate toward accessible, familiar styles — sweet whites, juicy reds. Complexity isn\'t the goal yet; pleasure is. This is also the stage where most people assume complexity must equal quality.',
+    },
+    {
+      label: 'Enthusiast',
+      complexity: 88,
+      tag: 'Phase 02 — Enthusiast (peak complexity)',
+      quote: 'I used to seek out the most intense fruit bombs I could find.',
+      author: 'Jealous-Breakfast-86',
+      thread: 'How have your opinions on wine changed · r/wine',
+      insight: 'The enthusiast phase is defined by a hunger for signals: high Parker scores, extracted tannins, heavy oak, big price tags. More complexity = better wine. This is also the stage most wine marketing is aimed at — and it\'s when drinkers are most susceptible to it.',
+    },
+    {
+      label: 'Knowledgeable',
+      complexity: 52,
+      tag: 'Phase 03 — Knowledgeable',
+      quote: 'I can\'t be bothered with anything with too much oak. I feel like I can tell when it\'s being amped up to disguise shortcomings now.',
+      author: 'pretzelllogician',
+      thread: 'How have your opinions on wine changed · r/wine',
+      insight: 'Knowledge starts to break the spell. The knowledgeable drinker begins to see complexity as a tactic — something used to impress or conceal — rather than an inherent virtue. The filter sharpens: what was once impressive is now suspicious.',
+    },
+    {
+      label: 'Expert',
+      complexity: 16,
+      tag: 'Phase 04 — Expert',
+      quote: 'These days I like a fresher, lighter-bodied, underoaked style. I believe that is the natural progression for most wine lovers.',
+      author: 'PieThat7304',
+      thread: 'How have your opinions on wine changed · r/wine',
+      insight: '25 years in the fine wine industry. Expertise doesn\'t lead to more complexity — it leads to knowing what you don\'t need. The expert palate has nothing left to prove, and so it stops performing.',
+    },
+  ];
+
+  let activeIdx = 0;
+  let chart;
+
+  function getPointStyles(activeI) {
+    return {
+      bgColors: phases.map((_, i) => i === activeI ? '#B8973A' : '#5C1A2E'),
+      borderColors: phases.map((_, i) => i === activeI ? '#B8973A' : '#5C1A2E'),
+      radii: phases.map((_, i) => i === activeI ? 9 : 5),
+      hoverRadii: phases.map((_, i) => i === activeI ? 9 : 7),
+    };
+  }
+
+  function selectPhase(idx) {
+    activeIdx = idx;
+
+    // Phase buttons
+    document.querySelectorAll('.phase-btn').forEach((btn, i) => {
+      btn.classList.toggle('active', i === idx);
+    });
+
+    // Detail box
+    const p = phases[idx];
+    document.getElementById('detailBox').innerHTML = `
+      <div class="detail-tag">${p.tag}</div>
+      <div class="detail-quote">"${p.quote}"</div>
+      <div class="detail-attribution">— ${p.author} · ${p.thread}</div>
+      <div class="detail-insight">${p.insight}</div>
+    `;
+
+    // Chart markers
+    if (chart) {
+      const s = getPointStyles(idx);
+      chart.data.datasets[0].pointBackgroundColor = s.bgColors;
+      chart.data.datasets[0].pointBorderColor = s.borderColors;
+      chart.data.datasets[0].pointRadius = s.radii;
+      chart.data.datasets[0].pointHoverRadius = s.hoverRadii;
+      chart.update('none');
+    }
+  }
+
+  function initChart() {
+    const ctx = document.getElementById('curveChart').getContext('2d');
+    const s = getPointStyles(0);
+
+    chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: phases.map(p => p.label),
+        datasets: [{
+          data: phases.map(p => p.complexity),
+          borderColor: '#5C1A2E',
+          borderWidth: 2.5,
+          backgroundColor: (context) => {
+            const gradient = context.chart.ctx.createLinearGradient(0, 0, 0, context.chart.height);
+            gradient.addColorStop(0, 'rgba(92,26,46,0.15)');
+            gradient.addColorStop(1, 'rgba(92,26,46,0.01)');
+            return gradient;
+          },
+          fill: true,
+          tension: 0.45,
+          pointBackgroundColor: s.bgColors,
+          pointBorderColor: s.borderColors,
+          pointBorderWidth: 2,
+          pointRadius: s.radii,
+          pointHoverRadius: s.hoverRadii,
+        }],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: { duration: 500 },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            enabled: true,
+            callbacks: {
+              title: (items) => phases[items[0].dataIndex].label,
+              label: (item) => `  Complexity index: ${item.parsed.y}`,
+            },
+            backgroundColor: '#2C2C2C',
+            titleFont: { family: 'Montserrat', size: 11, weight: '600' },
+            bodyFont: { family: 'Montserrat', size: 10 },
+            padding: 10,
+            cornerRadius: 1,
+          },
+        },
+        scales: {
+          x: {
+            display: false,
+          },
+          y: {
+            min: 0,
+            max: 100,
+            border: { display: false },
+            grid: {
+              color: 'rgba(0,0,0,0.04)',
+              drawTicks: false,
+            },
+            ticks: {
+              font: { family: 'Montserrat', size: 9 },
+              color: '#B09090',
+              padding: 8,
+              callback: (v) => {
+                if (v === 0) return 'low';
+                if (v === 50) return 'mid';
+                if (v === 100) return 'high';
+                return null;
+              },
+            },
+            title: {
+              display: true,
+              text: 'Complexity preference →',
+              font: { family: 'Montserrat', size: 9 },
+              color: '#B09090',
+              padding: { bottom: 4 },
+            },
+          },
+        },
+        onClick(e, elements) {
+          if (elements.length > 0) {
+            selectPhase(elements[0].index);
+          }
+        },
+        onHover(e, elements) {
+          e.native.target.style.cursor = elements.length > 0 ? 'pointer' : 'default';
+        },
+      },
+    });
+  }
+
+  setTimeout(initChart, 60);
+  selectPhase(0);
+</script>
+</body>
+</html>

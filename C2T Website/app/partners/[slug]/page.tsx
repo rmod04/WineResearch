@@ -1,14 +1,24 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { partners } from '@/content/partners'
+import { notFound } from 'next/navigation'
 
-export const metadata = {
-  title: 'Bhutan Wine Company — Cork To Table',
-  description: 'Wine at the edge of the world. Bespoke wine tourism experiences with the Bhutan Wine Company in the Paro Valley.',
+export function generateStaticParams() {
+  return partners.map((p) => ({ slug: p.slug }))
 }
 
-export default function BhutanPage() {
-  const partner = partners.find((p) => p.slug === 'bhutan-wine-company')!
+export function generateMetadata({ params }: { params: { slug: string } }) {
+  const partner = partners.find((p) => p.slug === params.slug)
+  if (!partner) return {}
+  return {
+    title: `${partner.name} — Cork To Table`,
+    description: partner.shortDescription,
+  }
+}
+
+export default function PartnerPage({ params }: { params: { slug: string } }) {
+  const partner = partners.find((p) => p.slug === params.slug)
+  if (!partner) notFound()
 
   return (
     <>
@@ -19,7 +29,7 @@ export default function BhutanPage() {
           alt={partner.name}
           fill
           priority
-          className="object-cover"
+          className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-burgundy/90 via-burgundy/40 to-transparent" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-16 w-full">
@@ -71,7 +81,9 @@ export default function BhutanPage() {
                 Experience packages coming soon.
               </p>
               <p className="font-montserrat text-xs text-cream/40 leading-relaxed mb-8">
-                We are currently finalising the details of our partnership with {partner.name}. To register your interest or ask a question, get in touch directly.
+                We are currently finalising the details of our partnership with{' '}
+                {partner.name}. To register your interest or ask a question, get
+                in touch directly.
               </p>
               <Link href="/contact" className="btn-outline">
                 Register Your Interest
@@ -98,24 +110,45 @@ export default function BhutanPage() {
         </div>
       </section>
 
+      {/* ── Location map ─────────────────────────────────────────── */}
+      {partner.mapEmbed && (
+        <section className="bg-cream py-20 px-6">
+          <div className="max-w-5xl mx-auto">
+            <p className="section-label mb-6">Find Us</p>
+            <h2 className="font-cormorant text-3xl font-light text-burgundy mb-8">
+              {partner.region}, {partner.country}
+            </h2>
+            <div className="relative w-full overflow-hidden border border-gold/20" style={{ aspectRatio: '16/7' }}>
+              <iframe
+                src={partner.mapEmbed}
+                width="100%"
+                height="100%"
+                style={{ border: 0, position: 'absolute', inset: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title={`Map showing the location of ${partner.name}`}
+              />
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* ── Enquire ──────────────────────────────────────────────── */}
       <section className="bg-burgundy py-20 px-6">
         <div className="max-w-2xl mx-auto text-center">
           <p className="section-label text-gold mb-4">Interested?</p>
           <h2 className="font-cormorant text-4xl font-light text-cream mb-6">
-            Start with the questionnaire.
+            Let&apos;s build your journey.
           </h2>
           <p className="font-montserrat text-xs text-cream/70 leading-loose mb-8">
-            Fill in your travel and wine preferences and we will build a journey around {partner.name} that fits you perfectly.
+            Every itinerary built around {partner.name} is tailored to you:
+            your palate, your travel style, your dates. Reach out and we will
+            take it from there.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/travel-planning#questionnaire" className="btn-outline">
-              Plan My Journey
-            </Link>
-            <Link href="/contact" className="btn-outline">
-              Enquire Directly
-            </Link>
-          </div>
+          <Link href="/contact" className="btn-outline">
+            Get in Touch
+          </Link>
         </div>
       </section>
     </>

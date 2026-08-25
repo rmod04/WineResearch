@@ -3,7 +3,7 @@
 import { useState, FormEvent } from 'react'
 
 export default function ContactForm() {
-  const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const [form, setForm] = useState({ name: '', email: '', message: '', gotcha: '' })
   const [submitted, setSubmitted] = useState(false)
   const [sending, setSending] = useState(false)
   const [error, setError] = useState('')
@@ -13,12 +13,13 @@ export default function ContactForm() {
     setSending(true)
     setError('')
     try {
-      const res = await fetch('https://formspree.io/f/REPLACE_WITH_CONTACT_FORM_ID', {
+      const res = await fetch('https://formspree.io/f/myeglglk', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
           _subject: `New enquiry from ${form.name}`,
           _replyto: form.email,
+          ...(form.gotcha.trim() ? { _gotcha: form.gotcha } : {}),
           name: form.name,
           email: form.email,
           message: form.message,
@@ -42,7 +43,7 @@ export default function ContactForm() {
         <div className="w-10 h-px bg-gold mx-auto mb-6" />
         <p className="font-cormorant text-2xl text-burgundy font-light mb-3">Message received.</p>
         <p className="font-montserrat text-xs text-mid leading-relaxed">
-          Thank you for getting in touch. We&apos;ll be back with you shortly — in the meantime, pour yourself something nice.
+          Thank you for getting in touch. We&apos;ll be back with you shortly. In the meantime, pour yourself something nice.
         </p>
       </div>
     )
@@ -73,6 +74,17 @@ export default function ContactForm() {
         value={form.message}
         onChange={(e) => setForm((p) => ({ ...p, message: e.target.value }))}
         className="w-full border border-mid/30 bg-transparent p-3 font-montserrat text-sm text-charcoal placeholder-mid/50 focus:outline-none focus:border-burgundy transition-colors resize-none"
+      />
+      {/* Honeypot: invisible to humans, filled in by spam bots. */}
+      <input
+        type="text"
+        name="_gotcha"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        value={form.gotcha}
+        onChange={(e) => setForm((p) => ({ ...p, gotcha: e.target.value }))}
+        style={{ position: 'absolute', left: '-9999px', width: 0, height: 0, opacity: 0 }}
       />
       {error && <p className="font-montserrat text-xs text-rose">{error}</p>}
       <button

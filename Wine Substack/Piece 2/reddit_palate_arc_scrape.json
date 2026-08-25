@@ -1,0 +1,123 @@
+{
+  "piece": 2,
+  "section": "S1",
+  "sectionLabel": "The Palate Arc",
+  "purpose": "Reddit quotes on palate change and evolution for The Palate Arc visual and article",
+  "scrapedAt": "2026-06-21",
+  "scrapeStatus": "success",
+  "scrapeMethod": "apify/website-content-crawler with playwright:firefox + RESIDENTIAL proxy",
+  "scrapeNotes": "labrat011/reddit-scraper and crawlerbros/reddit-comment-scraper both fail consistently in this environment. Breakthrough: apify/website-content-crawler (free actor, playwright:firefox mode) successfully renders Reddit threads. Use this going forward.",
+
+  "threads": [
+    {
+      "url": "https://www.reddit.com/r/wine/comments/1ck3mzx/palate_changing_with_age/",
+      "title": "Palate changing with age",
+      "subreddit": "r/wine",
+      "accessible": true,
+      "datasetId": "2EGtnp4ZCEMs7wec6"
+    },
+    {
+      "url": "https://www.reddit.com/r/wine/comments/1hg7wfj/how_have_your_opinions_on_wine_changed_over_your/",
+      "title": "How have your opinions on wine changed over your wine journey?",
+      "subreddit": "r/wine",
+      "accessible": true,
+      "datasetId": "LtRGQp5TrF0n43uMd"
+    }
+  ],
+
+  "topQuotes": [
+    {
+      "author": "fakeit-makeit",
+      "thread": "Palate changing with age",
+      "thread_url": "https://www.reddit.com/r/wine/comments/1ck3mzx/palate_changing_with_age/",
+      "text": "If you drink enough wine, for long enough, you'll end up in burgundy. Usual path starts with sweet and jammy reds, runs to tannin (structure), and ultimately to Burgundian nuance. I think that's one of the reasons that some burgundy gets so expensive; there is a core customer group that is older with disposable income.",
+      "insight": "The palate arc summarised in two sentences — and explains part of Burgundy's premium pricing",
+      "articleSection": "S1",
+      "usability": "high"
+    },
+    {
+      "author": "TheBobInSonoma",
+      "thread": "Palate changing with age",
+      "thread_url": "https://www.reddit.com/r/wine/comments/1ck3mzx/palate_changing_with_age/",
+      "text": "My tastes gradually changed over the years. Part due to what was available and popular at the time. I started with weird whites (anyone remember Green Hungarian?), petite sirah, and cab. Now it's more about balance and finesse rather than power though I like both. Losing my tolerance for tannins. I see it as a journey, not an age thing.",
+      "insight": "Palate change as journey, not decay — the 'I see it as a journey, not an age thing' line is a usable closer",
+      "articleSection": "S1",
+      "usability": "high"
+    },
+    {
+      "author": "PieThat7304",
+      "thread": "How have your opinions on wine changed over your wine journey?",
+      "thread_url": "https://www.reddit.com/r/wine/comments/1hg7wfj/how_have_your_opinions_on_wine_changed_over_your/",
+      "text": "Starting out, I had much more tolerance for later-picked, oaky reds. These days I like a fresher, lighter-bodied, underoaked style. I believe that is the natural progression for most wine lovers.",
+      "context": "Comment from someone with 25 years in the fine wine industry",
+      "insight": "Industry insider confirming the arc is a 'natural progression' — adds authority",
+      "articleSection": "S1",
+      "usability": "high"
+    },
+    {
+      "author": "Jealous-Breakfast-86",
+      "thread": "How have your opinions on wine changed over your wine journey?",
+      "thread_url": "https://www.reddit.com/r/wine/comments/1hg7wfj/how_have_your_opinions_on_wine_changed_over_your/",
+      "text": "I used to drink almost entirely reds. At the moment, I likely drink way more whites. In regards to reds, I used to seek out the most intense fruit bombs I could find. Now I like funky flavours and subtlety as well.",
+      "insight": "The shift from power to nuance, and reds to whites — mirrors the Phase 3/4 arc",
+      "articleSection": "S1",
+      "usability": "high"
+    },
+    {
+      "author": "Interesting-Ant-407",
+      "role": "OP",
+      "thread": "Palate changing with age",
+      "thread_url": "https://www.reddit.com/r/wine/comments/1ck3mzx/palate_changing_with_age/",
+      "text": "I'm 50 this year and I'm lucky enough to have grown up drinking good wine. Sadly, my palate is changing - my mouth and tongue now dries out with certain liquids - more advanced toothpastes, tea and worst of all - red wines that are too tannic. As you can imagine, being British, the tea thing is quite upsetting. The red wine bit is a catastrophe. I'm okay on most Pinot, Gamay and lighter reds.",
+      "insight": "The biological dimension of palate change — tannin hypersensitivity increasing with age, not decreasing; complements the genetics callout in the visual",
+      "articleSection": "S1",
+      "usability": "medium — useful as colour/anecdote, slightly niche for non-UK audience"
+    },
+    {
+      "author": "venividivitis",
+      "thread": "Palate changing with age",
+      "thread_url": "https://www.reddit.com/r/wine/comments/1ck3mzx/palate_changing_with_age/",
+      "text": "Conversely, however, people that actively develop their wine palate tend to converge to more elegant wine. So there may be opposing forces at play...",
+      "context": "Reply to ArcticRabbit_ who noted that reduced sensitivity is the usual ageing effect",
+      "insight": "Two mechanisms at work: biological (sensitivity decreases) and experiential (educated palate seeks elegance) — supports the article's nuance",
+      "articleSection": "S1",
+      "usability": "medium — best used as supporting commentary"
+    },
+    {
+      "author": "Vagimas",
+      "thread": "How have your opinions on wine changed over your wine journey?",
+      "thread_url": "https://www.reddit.com/r/wine/comments/1hg7wfj/how_have_your_opinions_on_wine_changed_over_your/",
+      "text": "Wine for me has become a means of understanding agricultural practice and the relationships between farmers and the earth they tend to. [...] Wine is just booze for a lot of folks, but those moments where one can connect with what a winemaker is doing and really tap into that energy are totally electric.",
+      "insight": "Phase 4 mindset — wine as connection to place and people, not just flavour",
+      "articleSection": "S1",
+      "usability": "medium — philosophical, less about palate evolution specifically"
+    },
+    {
+      "author": "First_Drive2386",
+      "thread": "How have your opinions on wine changed over your wine journey?",
+      "thread_url": "https://www.reddit.com/r/wine/comments/1hg7wfj/how_have_your_opinions_on_wine_changed_over_your/",
+      "text": "All roads lead to Burgundy.",
+      "insight": "Three-word encapsulation of the palate arc — strong pull quote if the article touches on Burgundy as the 'destination'",
+      "articleSection": "S1",
+      "usability": "high — standalone pull quote"
+    },
+    {
+      "author": "AssaggiWeinhandel",
+      "thread": "Palate changing with age",
+      "thread_url": "https://www.reddit.com/r/wine/comments/1ck3mzx/palate_changing_with_age/",
+      "text": "When I started specialising in grower champagne it basically altered my taste completely. I loved Riesling, but the acidity of Riesling is nothing compared to champagne, dry Riesling comes across as boring. Richer red wines just do nothing for me. I preferred high toned, acidic red wines with 12%, over 13%+.",
+      "insight": "Palate change driven by deep immersion in one category — a more unusual path through the arc",
+      "articleSection": "S1",
+      "usability": "low-medium — interesting but too niche for a general piece"
+    },
+    {
+      "author": "pretzelllogician",
+      "thread": "How have your opinions on wine changed over your wine journey?",
+      "thread_url": "https://www.reddit.com/r/wine/comments/1hg7wfj/how_have_your_opinions_on_wine_changed_over_your/",
+      "text": "I can't be bothered with anything with too much oak. I feel like I can tell when it's being amped up to disguise shortcomings now.",
+      "insight": "Developing discernment — the palate learns to see through manipulation, not just enjoy flavour",
+      "articleSection": "S1 or S2",
+      "usability": "medium"
+    }
+  ]
+}

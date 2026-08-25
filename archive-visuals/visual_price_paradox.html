@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>When Price Loses Its Story — Cork To Table</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;500;600&display=swap');
+
+    :root {
+      --burgundy:   #5C1A2E;
+      --cream:      #F5ECD7;
+      --cream-dark: #EAD9BE;
+      --gold:       #B8973A;
+      --rose:       #C27A8A;
+      --charcoal:   #2C2C2C;
+      --mid:        #7A5A64;
+      --light:      #B09090;
+      --bg:         #FAF6EF;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--bg);
+      display: flex;
+      justify-content: center;
+      padding: 32px 16px;
+    }
+
+    .container {
+      width: 760px;
+      background: var(--bg);
+    }
+
+    /* ── Header ── */
+    .header {
+      background: var(--burgundy);
+      padding: 28px 36px 24px;
+    }
+
+    .title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--cream);
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-size: 11px;
+      font-weight: 400;
+      color: rgba(245,236,215,0.6);
+      line-height: 1.6;
+      margin-top: 6px;
+    }
+
+    /* ── Stats strip ── */
+    .stats-strip {
+      background: var(--charcoal);
+      display: flex;
+      padding: 14px 36px;
+    }
+
+    .strip-stat {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      border-right: 1px solid rgba(255,255,255,0.08);
+      padding-right: 24px;
+      margin-right: 24px;
+    }
+
+    .strip-stat:last-child {
+      border-right: none;
+      padding-right: 0;
+      margin-right: 0;
+    }
+
+    .strip-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .strip-label {
+      font-size: 9px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.3px;
+    }
+
+    /* ── Main ── */
+    .main {
+      padding: 32px 36px 24px;
+    }
+
+    .chart-wrap {
+      position: relative;
+      height: 230px;
+      margin-bottom: 20px;
+    }
+
+    /* ── Detail box ── */
+    .detail-box {
+      background: var(--cream);
+      padding: 22px 26px;
+      border-left: 3px solid var(--burgundy);
+      min-height: 130px;
+    }
+
+    .detail-tag {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .detail-score {
+      display: inline-block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--burgundy);
+      background: var(--cream-dark);
+      padding: 2px 8px;
+      margin-bottom: 12px;
+    }
+
+    .detail-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--charcoal);
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+
+    .detail-attribution {
+      font-size: 10px;
+      color: var(--mid);
+      margin-bottom: 10px;
+    }
+
+    .detail-insight {
+      font-size: 11px;
+      color: var(--mid);
+      line-height: 1.65;
+      border-top: 1px solid var(--cream-dark);
+      padding-top: 10px;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      border-top: 1px solid var(--cream-dark);
+      margin-top: 24px;
+      padding-top: 12px;
+      font-size: 9.5px;
+      color: var(--light);
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="title">When price loses its story</div>
+    <div class="subtitle">How the price-quality signal erodes as wine knowledge grows</div>
+  </div>
+
+  <div class="stats-strip">
+    <div class="strip-stat">
+      <span class="strip-num">414</span>
+      <span class="strip-label">upvotes on the highest-ranked price paradox observation</span>
+    </div>
+    <div class="strip-stat">
+      <span class="strip-num">4 ways</span>
+      <span class="strip-label">the price-quality link breaks down for the educated drinker</span>
+    </div>
+    <div class="strip-stat">
+      <span class="strip-num">171</span>
+      <span class="strip-label">upvotes for "Suckling is literally charging people for points"</span>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <div class="chart-wrap">
+      <canvas id="barChart"></canvas>
+    </div>
+
+    <div class="detail-box" id="detailBox"></div>
+
+    <div class="footer">
+      Source: Wine community discussion, 2022–2026. Upvote counts reflect community consensus at time of collection.
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+  const voices = [
+    {
+      label: 'The tasting experience is now the transaction',
+      score: 414,
+      author: 'the_deadcactus',
+      thread: 'poor people going wine tasting · r/wine, 2026',
+      quote: 'Wine tasting shifted from something people did while planning to buy a few bottles from the winery to something tourists do for scenic on-premise drinking. But if you\'re paying for the tasting and tipping the associate, that\'s now the transaction and I would feel zero pressure to buy a bottle.',
+      insight: 'The transactional model has quietly flipped. When you pay for the experience upfront, the bottle loses its role as the purpose of the visit — and with it, the premium attached to it.',
+    },
+    {
+      label: 'Old world wine beats California on value at every tier',
+      score: 214,
+      author: 'Borgweare',
+      thread: 'California wine is in crisis but for consumers it... · r/wine, 2025',
+      quote: 'Here in the UK, if you\'ve money to spend, you\'re going to be buying old-world wine, not US stuff. I doubt Cali producers are going to be able to offload to the global export market.',
+      insight: 'Educated global buyers have re-calibrated the quality-price equation. California\'s complexity premium no longer holds when old-world alternatives offer more nuance at lower cost.',
+    },
+    {
+      label: 'Wine scores have become a monetised product',
+      score: 171,
+      author: 'givemegoodtimes',
+      thread: 'who are some of the wine critics worth a follow · r/wine, 2025',
+      quote: 'Suckling is the worst. He is literally charging people for points. In any other industry this would be a scam.',
+      insight: 'The 100-point scale was meant to cut through complexity. Instead, it became a product — one that inflates the very signals new drinkers rely on and experts ultimately discard.',
+    },
+    {
+      label: 'Drinkers now know what their bottle actually costs',
+      score: 130,
+      author: 'SixPack1776',
+      thread: 'how do we save the wine culture · r/wine, 2026',
+      quote: 'I can\'t justify paying $13-14 for a single pour and $100+ for a bottle that I know costs $20. I\'d rather just drink at home at those prices.',
+      insight: 'Price transparency — driven by apps, forums, and accessible wine education — has eroded the mystique markup. The gap between production cost and retail price is now visible to anyone who looks.',
+    },
+  ];
+
+  let activeIdx = 0;
+  let chart;
+
+  function getBarColors(activeI) {
+    return voices.map((_, i) => i === activeI ? '#B8973A' : '#5C1A2E');
+  }
+
+  function selectBar(idx) {
+    activeIdx = idx;
+
+    const v = voices[idx];
+    document.getElementById('detailBox').innerHTML = `
+      <div class="detail-tag">${v.label}</div>
+      <div class="detail-score">↑ ${v.score} upvotes</div>
+      <div class="detail-quote">"${v.quote}"</div>
+      <div class="detail-attribution">— ${v.author} · ${v.thread}</div>
+      <div class="detail-insight">${v.insight}</div>
+    `;
+
+    if (chart) {
+      chart.data.datasets[0].backgroundColor = getBarColors(idx);
+      chart.update('none');
+    }
+  }
+
+  function wrapLabel(str, maxLen) {
+    const words = str.split(' ');
+    const lines = [];
+    let current = '';
+    for (const word of words) {
+      if ((current + ' ' + word).trim().length > maxLen) {
+        lines.push(current.trim());
+        current = word;
+      } else {
+        current = (current + ' ' + word).trim();
+      }
+    }
+    if (current) lines.push(current.trim());
+    return lines;
+  }
+
+  function initChart() {
+    const ctx = document.getElementById('barChart').getContext('2d');
+
+    chart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: voices.map(v => wrapLabel(v.label, 36)),
+        datasets: [{
+          data: voices.map(v => v.score),
+          backgroundColor: getBarColors(0),
+          borderRadius: 1,
+          borderSkipped: false,
+        }],
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: { duration: 400 },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              title: (items) => voices[items[0].dataIndex].label,
+              label: (item) => `  ↑ ${item.parsed.x} upvotes`,
+            },
+            backgroundColor: '#2C2C2C',
+            titleFont: { family: 'Montserrat', size: 10, weight: '600' },
+            bodyFont: { family: 'Montserrat', size: 10 },
+            padding: 10,
+            cornerRadius: 1,
+          },
+        },
+        scales: {
+          x: {
+            border: { display: false },
+            grid: {
+              color: 'rgba(0,0,0,0.04)',
+              drawTicks: false,
+            },
+            ticks: {
+              font: { family: 'Montserrat', size: 9 },
+              color: '#B09090',
+              padding: 4,
+            },
+            title: {
+              display: true,
+              text: 'Community upvotes →',
+              font: { family: 'Montserrat', size: 9 },
+              color: '#B09090',
+            },
+          },
+          y: {
+            border: { display: false },
+            grid: { display: false },
+            ticks: {
+              font: { family: 'Montserrat', size: 9.5, weight: '500' },
+              color: '#7A5A64',
+              padding: 8,
+            },
+          },
+        },
+        onClick(e, elements) {
+          if (elements.length > 0) {
+            selectBar(elements[0].index);
+          }
+        },
+        onHover(e, elements) {
+          e.native.target.style.cursor = elements.length > 0 ? 'pointer' : 'default';
+        },
+      },
+    });
+  }
+
+  setTimeout(initChart, 60);
+  selectBar(0);
+</script>
+</body>
+</html>

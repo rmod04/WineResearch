@@ -1,0 +1,73 @@
+{
+  "piece": 2,
+  "visual": "The curiosity ladder (Section 2, the barrier)",
+  "collectedAt": "2026-07-24",
+  "method": "Google autocomplete scrape (automation-lab/google-trends... no: automation-lab/google-autocomplete-scraper) plus Google Keyword Planner search volume (aitorsm/keyword-volume). Google Trends was attempted first but the browser scraper was IP-blocked and timed out twice; the browserless Trends actor returned unusable 1-day, independently-scaled data. Autocomplete + Keyword Planner used instead.",
+  "geo": "US",
+  "language": "en",
+
+  "autocomplete": {
+    "actor": "automation-lab/google-autocomplete-scraper",
+    "runId": "qnjMSbeupFQ9fAoX1",
+    "datasetId": "eonTHIA8fxrrXrwAm",
+    "totalSuggestions": 1626,
+    "seeds": {
+      "wine for beginners": 202,
+      "how to choose wine": 129,
+      "how to drink wine": 196,
+      "how to taste wine": 160,
+      "what does dry wine mean": 81,
+      "where is wine from": 237,
+      "what grape is": 243,
+      "wine region": 267,
+      "wine terroir": 111
+    },
+    "rungBreakdown": {
+      "rung1_barrier": {"seeds": ["wine for beginners", "how to choose wine", "how to drink wine"], "count": 527},
+      "rung2_orientation": {"seeds": ["how to taste wine", "what does dry wine mean"], "count": 241},
+      "rung3_origin": {"seeds": ["where is wine from", "what grape is", "wine region", "wine terroir"], "count": 858}
+    },
+    "note": "Rung counts sum to 1,626. They reflect the variety of distinct autocomplete questions per stage, not search frequency, and are influenced by the number of seeds per rung (3 / 2 / 4). Origin curiosity is the largest cluster.",
+    "originSpecificity": "43% of origin-rung suggestions (368 of 858 unique) name a specific region or grape (Barolo, Bordeaux, Burgundy, Rioja, etc.)."
+  },
+
+  "keywordPlanner": {
+    "actor": "aitorsm/keyword-volume",
+    "runId_US": "xPUzOU0q3TeEqfIE2",
+    "runId_global": "UMycbtFD172TN2Ylk",
+    "datasetId_global": "3enmfwWFpxGZk1Azw",
+    "source": "Google Keyword Planner real monthly search volume. Global (worldwide) figures are used in the visual; US figures kept for reference.",
+    "volumes_global": {
+      "wine for beginners": 1600,
+      "how to drink wine correctly": 1000,
+      "how to drink wine for the first time": 110,
+      "how to drink wine etiquette": 10,
+      "how to choose the right wine": 110,
+      "what does dry wine mean": 2400,
+      "what does off dry wine mean": 210,
+      "does dry wine mean bitter": 10,
+      "how to taste and describe wine": null,
+      "how to taste wine like a sommelier": 1600,
+      "where is wine from originally": 50,
+      "what grape is barolo": 260,
+      "what grape is grown in burgundy": 20,
+      "wine regions of france": 22200,
+      "where is rioja wine from": 260
+    },
+    "volumes_US_reference": {
+      "wine for beginners": 880, "what does dry wine mean": 1600, "wine regions of france": 12100
+    },
+    "perRungGlobalVolume": {
+      "rung1_barrier": {"queries": ["wine for beginners", "how to drink wine correctly", "how to drink wine for the first time", "how to drink wine etiquette", "how to choose the right wine"], "sum": 2830, "displayed": "2,800"},
+      "rung2_orientation": {"queries": ["what does dry wine mean", "what does off dry wine mean", "does dry wine mean bitter", "how to taste and describe wine", "how to taste wine like a sommelier"], "sum": 4220, "displayed": "4,200"},
+      "rung3_origin": {"queries": ["where is wine from originally", "what grape is barolo", "what grape is grown in burgundy", "wine regions of france", "where is rioja wine from"], "sum": 22790, "displayed": "22,800"}
+    },
+    "note": "Rung numbers in the visual are the combined monthly GLOBAL search volume of the five example questions shown in each rung. Trend is monotonic: rung1 ~2,830, rung2 ~4,220, rung3 ~22,790, summing to ~30,000 (the headline). Rung 3 is heavily lifted by the broad query 'wine regions of france' (~22,200 global), which is itself the finding: origin curiosity commands the most search interest. Keyword Planner volumes are bucketed estimates; displayed values rounded to the nearest hundred."
+  },
+
+  "usedInVisual": {
+    "headlineStats": ["75% find the rules of wine intimidating (OnePoll 2022)", "43% of origin searches name a specific region or grape (autocomplete)", "~30,000 combined monthly global searches across these questions"],
+    "perRungGlobalVolume": {"rung1": "2,800/mo", "rung2": "4,200/mo", "rung3": "22,800/mo"},
+    "calloutInsight": "Once the basics click, the desire to learn a wine's origin is close to universal, drawing by far the most searches. This reinforces the overall message that curiosity about the story, not price or rules, is what drives progression."
+  }
+}

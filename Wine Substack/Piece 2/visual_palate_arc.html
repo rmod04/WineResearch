@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The palate tends to travel · Cork To Table</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap');
+
+    :root {
+      --burgundy:   #5C1A2E;
+      --cream:      #F5ECD7;
+      --cream-dark: #EAD9BE;
+      --gold:       #B8973A;
+      --rose:       #C27A8A;
+      --charcoal:   #2C2C2C;
+      --mid:        #7A5A64;
+      --light:      #B09090;
+      --bg:         #FAF6EF;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--bg);
+      color: var(--charcoal);
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 24px 16px 60px;
+    }
+
+    /* Header */
+    .header {
+      background: var(--burgundy);
+      padding: 28px 36px 24px;
+      margin-bottom: 0;
+    }
+
+    .title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--cream);
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 11px;
+      color: rgba(245,236,215,0.6);
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    /* Stats strip */
+    .stats-strip {
+      background: var(--charcoal);
+      display: flex;
+      padding: 14px 36px;
+      margin-bottom: 24px;
+    }
+
+    .strip-stat {
+      flex: 1;
+      text-align: center;
+      padding: 0 12px;
+      border-right: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .strip-stat:last-child { border-right: none; }
+
+    .strip-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--gold);
+      display: block;
+      line-height: 1;
+      margin-bottom: 3px;
+    }
+
+    .strip-label {
+      font-size: 9px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.3px;
+    }
+
+    /* Tabs */
+    .tab-nav {
+      display: flex;
+      border-bottom: 2px solid var(--cream-dark);
+      margin-bottom: 32px;
+    }
+
+    .tab-btn {
+      padding: 10px 28px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      color: var(--light);
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .tab-btn.active {
+      color: var(--burgundy);
+      border-bottom-color: var(--burgundy);
+    }
+
+    .tab-btn:hover:not(.active) { color: var(--mid); }
+
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* ── Journey Tab ── */
+    .wheel-container {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .wheel-container svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .sector {
+      cursor: pointer;
+      stroke: white;
+      stroke-width: 4;
+      stroke-linejoin: round;
+      transition: filter 0.15s ease;
+    }
+
+    .sector:hover { filter: brightness(1.12); }
+
+    .wheel-hint {
+      text-align: center;
+      font-size: 0.68rem;
+      color: var(--light);
+      letter-spacing: 0.05em;
+      margin-top: 6px;
+      text-transform: uppercase;
+    }
+
+    /* Detail box */
+    .phase-detail-box {
+      margin-top: 20px;
+      padding: 20px 24px;
+      background: white;
+      border: 1px solid var(--cream-dark);
+      border-left: 5px solid var(--cream-dark);
+      min-height: 110px;
+      transition: border-left-color 0.3s;
+    }
+
+    .detail-inner {
+      transition: opacity 0.2s;
+    }
+
+    .detail-phase-line {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 4px;
+    }
+
+    .detail-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 1;
+      min-width: 24px;
+    }
+
+    .detail-label-badge {
+      font-size: 0.63rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 2px 9px;
+      border-radius: 1px;
+    }
+
+    .detail-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--charcoal);
+      margin-bottom: 10px;
+    }
+
+    .detail-desc {
+      font-size: 0.8rem;
+      line-height: 1.65;
+      color: var(--mid);
+      margin-bottom: 12px;
+    }
+
+    .detail-wines-label {
+      font-size: 0.63rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--light);
+      margin-bottom: 7px;
+    }
+
+    .wine-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .wine-tag {
+      font-size: 0.72rem;
+      font-weight: 500;
+      padding: 4px 12px;
+      border-radius: 1px;
+      border: 1px solid;
+    }
+
+    /* Genetics callout */
+    .genetics-callout {
+      margin-top: 20px;
+      padding: 14px 18px;
+      background: var(--charcoal);
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .genetics-icon {
+      font-size: 1rem;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .genetics-text {
+      font-size: 0.78rem;
+      line-height: 1.6;
+      color: var(--cream);
+    }
+
+    .genetics-text strong {
+      color: #d4a86a;
+      font-weight: 600;
+    }
+
+    /* ── Data Tab ── */
+    .chart-wrap {
+      background: white;
+      border: 1px solid var(--cream-dark);
+      padding: 24px 20px 16px;
+    }
+
+    .chart-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--burgundy);
+      text-align: center;
+      margin-bottom: 4px;
+    }
+
+    .chart-subtitle {
+      font-size: 0.7rem;
+      color: var(--light);
+      text-align: center;
+      letter-spacing: 0.03em;
+      margin-bottom: 20px;
+    }
+
+    .chart-canvas-wrap {
+      position: relative;
+      height: 320px;
+    }
+
+    .chart-legend {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.72rem;
+      color: var(--mid);
+      font-weight: 500;
+    }
+
+    .legend-swatch {
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+
+    .chart-note {
+      margin-top: 10px;
+      font-size: 0.68rem;
+      color: var(--light);
+      text-align: center;
+      font-style: italic;
+    }
+
+    @media (max-width: 480px) {
+      .header { padding: 22px; }
+      .stats-strip { padding: 14px 22px; flex-wrap: wrap; }
+      .strip-stat { min-width: 45%; margin-bottom: 8px; border-right: none; }
+      .wheel-container { max-width: 100%; }
+    }
+
+    .footer {
+      border-top: 1px solid var(--cream-dark);
+      padding-top: 14px;
+      margin-top: 28px;
+      font-size: 9.5px;
+      color: var(--light);
+      font-style: italic;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="title">The palate tends to travel</div>
+    <div class="subtitle">How wine preferences shift over a drinking lifetime</div>
+  </div>
+
+  <div class="stats-strip">
+    <div class="strip-stat">
+      <span class="strip-num">69%</span>
+      <span class="strip-label">Changed preferences over time</span>
+    </div>
+    <div class="strip-stat">
+      <span class="strip-num">15 → 37%</span>
+      <span class="strip-label">Dry red became top choice</span>
+    </div>
+    <div class="strip-stat">
+      <span class="strip-num">32 → 11%</span>
+      <span class="strip-label">Sweet white preference declined</span>
+    </div>
+  </div>
+
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('journey', this)">The Journey</button>
+    <button class="tab-btn" onclick="switchTab('data', this)">The Data</button>
+  </div>
+
+  <!-- Tab 1: The Journey -->
+  <div id="tab-journey" class="tab-panel active">
+
+    <div class="wheel-container">
+      <svg id="palate-wheel" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+
+        <!--
+          Outer radius: 240   Inner radius: 100   Center: 300,300
+          Phase 1 (0–90°):    top-right    warm cream    #d9c4a4
+          Phase 2 (90–180°):  bottom-right terracotta    #C0887A
+          Phase 3 (180–270°): bottom-left  mauve         #7A5A64
+          Phase 4 (270–360°): top-left     burgundy      #5C1A2E
+          Outer arc points: 0°(300,60)  90°(540,300)  180°(300,540)  270°(60,300)
+          Inner arc points: 0°(300,200) 90°(400,300)  180°(300,400)  270°(200,300)
+        -->
+
+        <!-- Phase 1: 0° to 90° (top-right) -->
+        <path class="sector" id="s1" data-phase="1" fill="#d9c4a4"
+          d="M 300 60 A 240 240 0 0 1 540 300 L 400 300 A 100 100 0 0 0 300 200 Z"/>
+
+        <!-- Phase 2: 90° to 180° (bottom-right) -->
+        <path class="sector" id="s2" data-phase="2" fill="#C0887A"
+          d="M 540 300 A 240 240 0 0 1 300 540 L 300 400 A 100 100 0 0 0 400 300 Z"/>
+
+        <!-- Phase 3: 180° to 270° (bottom-left) -->
+        <path class="sector" id="s3" data-phase="3" fill="#7A5A64"
+          d="M 300 540 A 240 240 0 0 1 60 300 L 200 300 A 100 100 0 0 0 300 400 Z"/>
+
+        <!-- Phase 4: 270° to 360° (top-left) -->
+        <path class="sector" id="s4" data-phase="4" fill="#5C1A2E"
+          d="M 60 300 A 240 240 0 0 1 300 60 L 300 200 A 100 100 0 0 0 200 300 Z"/>
+
+        <!-- Center circle -->
+        <circle cx="300" cy="300" r="98" fill="white" stroke="#EAD9BE" stroke-width="2"/>
+
+        <!-- Center stat -->
+        <text x="300" y="295" text-anchor="middle"
+              font-family="Cormorant Garamond, serif" font-size="40" font-weight="600" fill="#5C1A2E">69%</text>
+        <text x="300" y="314" text-anchor="middle"
+              font-family="Montserrat, sans-serif" font-size="9" fill="#7A5A64">changed their</text>
+        <text x="300" y="328" text-anchor="middle"
+              font-family="Montserrat, sans-serif" font-size="9" fill="#7A5A64">preferences</text>
+
+        <!-- ── Phase 1 content (top-right, center ~420,180) ── -->
+        <!-- dark text on warm cream -->
+        <text x="421" y="143" text-anchor="middle"
+              font-family="Cormorant Garamond, serif" font-size="46" font-weight="600" fill="#5a3820">1</text>
+        <text x="421" y="163" text-anchor="middle"
+              font-family="Montserrat, sans-serif" font-size="8.5" font-weight="600" letter-spacing="0.1em" fill="#7A5A64">ENTRY</text>
+        <!-- divider -->
+        <line x1="381" y1="171" x2="461" y2="171" stroke="#c8a882" stroke-width="0.8" opacity="0.7"/>
+        <!-- wine labels -->
+        <text x="421" y="185" text-anchor="middle"
+              font-family="Montserrat, sans-serif" font-size="9" fill="#6a4828">Semi-sweet white</text>
+        <text x="421" y="199" text-anchor="middle"
+              font-family="Montserrat, sans-serif" font-size="9" fill="#6a4828">Prosecco · Moscato</text>
+        <text x="421" y="213" text-anchor="middle"
+              font-family="Montserrat, sans-serif" font-size="9" fill="#6a4828">Pinot Grigio</text>
+
+        <!-- ── Phase 2 content (bottom-right, center ~420,420) ── -->
+        <!-- dark text on terracotta -->
+        <text x="421" y="383" text-anchor="middle"
+              font-family="Cormorant Garamond, serif" font-size="46" font-weight="600" fill="#2a0c08">2</text>
+        <text x="421" y="403" text-anchor="middle"
+              font-family="Montserrat, sans-serif" font-size="8.5" font-weight="600" letter-spacing="0.1em" fill="#2a0c08">EXPLORE</text>
+        <line x1="381" y1="411" x2="461" y2="411" stroke="#8a4030" stroke-width="0.8" opacity="0.5"/>
+        <text x="421" y="425" text-anchor="middle"
+              font-family="Montserrat, sans-serif" font-size="9" fill="#2a0c08">Dry white · Dry rosé</text>
+        <text x="421" y="439" text-anchor="middle"
+              font-family="Montserrat, sans-serif" font-size="9" fill="#2a0c08">Softer reds</text>
+        <text x="421" y="453" text-anchor="middle"
+              font-family="Montserrat, sans-serif" font-size="9" fill="#2a0c08">Pinot Noir</text>
+
+        <!-- ── Phase 3 content (bottom-left, center ~180,420) ── -->
+        <!-- cream text on mauve -->
+        <text x="179" y="383" text-anchor="middle"
+              font-family="Cormorant Garamond, serif" font-size="46" font-weight="600" fill="#F5ECD7">3</text>
+        <text x="179" y="403" text-anchor="middle"
+              font-family="Montserrat, sans-serif" font-size="8.5" font-weight="600" letter-spacing="0.1em" fill="#EAD9BE">DEPTH</text>
+        <line x1="139" y1="411" x2="219" y2="411" stroke="#F5ECD7" stroke-width="0.8" opacity="0.4"/>
+        <text x="179" y="425" text-anchor="middle"
+              font-family="Montserrat, sans-serif" font-size="9" fill="#EAD9BE">Bolder reds</text>
+        <text x="179" y="439" text-anchor="middle"
+              font-family="Montserrat, sans-serif" font-size="9" fill="#EAD9BE">Cabernet Sauvignon</text>
+        <text x="179" y="453" text-anchor="middle"
+              font-family="Montserrat, sans-serif" font-size="9" fill="#EAD9BE">Complex Sauv. Blanc</text>
+
+        <!-- ── Phase 4 content (top-left, center ~180,180) ── -->
+        <!-- cream text on burgundy -->
+        <text x="179" y="143" text-anchor="middle"
+              font-family="Cormorant Garamond, serif" font-size="46" font-weight="600" fill="#F5ECD7">4</text>
+        <text x="179" y="163" text-anchor="middle"
+              font-family="Montserrat, sans-serif" font-size="8.5" font-weight="600" letter-spacing="0.1em" fill="#EAD9BE">NUANCE</text>
+        <line x1="139" y1="171" x2="219" y2="171" stroke="#F5ECD7" stroke-width="0.8" opacity="0.4"/>
+        <text x="179" y="185" text-anchor="middle"
+              font-family="Montserrat, sans-serif" font-size="9" fill="#EAD9BE">Barolo · Burgundy</text>
+        <text x="179" y="199" text-anchor="middle"
+              font-family="Montserrat, sans-serif" font-size="9" fill="#EAD9BE">Dry Riesling · Sherry</text>
+        <text x="179" y="213" text-anchor="middle"
+              font-family="Montserrat, sans-serif" font-size="9" fill="#EAD9BE">Aged Rioja</text>
+
+        <!-- Clockwise direction arrow (subtle, at top) -->
+        <path d="M 288 46 Q 310 38 326 50" fill="none" stroke="#B09090" stroke-width="1.5"
+              marker-end="url(#arrowhead)"/>
+        <defs>
+          <marker id="arrowhead" markerWidth="5" markerHeight="5" refX="3" refY="2.5" orient="auto">
+            <polygon points="0 0, 5 2.5, 0 5" fill="#B09090"/>
+          </marker>
+        </defs>
+
+      </svg>
+      <p class="wheel-hint">Hover to explore each phase</p>
+    </div>
+
+    <!-- Detail box below the wheel -->
+    <div class="phase-detail-box" id="phase-detail-box">
+      <div class="detail-inner" id="detail-inner">
+        <!-- populated by JS -->
+      </div>
+    </div>
+
+    <!-- Genetics callout -->
+    <div class="genetics-callout">
+      <span class="genetics-icon">🧬</span>
+      <div class="genetics-text">
+        <strong>The 31% who have not changed</strong> are often hyper-sensitive tasters. A variation in the TAS2R38 gene makes bitterness and tannin genuinely more intense for them.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Tab 2: The Data -->
+  <div id="tab-data" class="tab-panel">
+    <div class="chart-wrap">
+      <div class="chart-title">Preference Shift Over a Drinking Lifetime</div>
+      <div class="chart-subtitle">% preferring each style, early vs. current (hover bars for detail)</div>
+      <div class="chart-canvas-wrap">
+        <canvas id="palateChart"></canvas>
+      </div>
+      <div class="chart-legend">
+        <div class="legend-item">
+          <div class="legend-swatch" style="background: rgba(176,144,144,0.5);"></div>
+          <span>Early preference</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-swatch" style="background: #5C1A2E;"></div>
+          <span>Current preference</span>
+        </div>
+      </div>
+      <div class="chart-note">n = 422</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    Source: Palate-change data from a US-based study by Liz Thach, MW, Wine Business Monthly, Sonoma State University, 2018.
+  </div>
+
+</div>
+
+<script>
+  // ── Phase data ──
+  const phases = {
+    1: {
+      label: 'Entry',
+      name: 'The Familiar Comfort',
+      baseColor: '#d9c4a4',
+      hoverColor: '#e8d6b6',
+      accentColor: '#c8a882',
+      textColor: '#5a3820',
+      borderColor: '#c8a882',
+      labelBg: '#f0e4cc',
+      labelText: '#7a4820',
+      tagBg: '#fdf8f0', tagBorder: '#d0b896', tagText: '#7a4820',
+      desc: 'Most drinkers begin with sweetness and softness: wines that are immediately appealing, low in tannin, and easy to navigate. This is where the relationship with wine usually starts.',
+      wines: ['Semi-sweet white', 'Semi-sweet rosé', 'Prosecco', 'Moscato', 'Pinot Grigio']
+    },
+    2: {
+      label: 'Exploration',
+      name: 'Dryness and Curiosity',
+      baseColor: '#C0887A',
+      hoverColor: '#d09a8c',
+      accentColor: '#a06050',
+      textColor: '#2a0c08',
+      borderColor: '#C0887A',
+      labelBg: '#f0d8d0',
+      labelText: '#5a2010',
+      tagBg: '#fdf0ec', tagBorder: '#C0887A', tagText: '#5a2010',
+      desc: 'Sweetness starts to feel like a ceiling. There is growing curiosity about dryness, structure, and what is on the other side. Reds enter the picture, but softer ones that do not demand too much of the palate yet.',
+      wines: ['Dry white', 'Dry rosé', 'Softer reds', 'Pinot Noir']
+    },
+    3: {
+      label: 'Depth',
+      name: 'Structure and Complexity',
+      baseColor: '#7A5A64',
+      hoverColor: '#8c6a74',
+      accentColor: '#5a3a44',
+      textColor: '#F5ECD7',
+      borderColor: '#7A5A64',
+      labelBg: 'rgba(122,90,100,0.15)',
+      labelText: '#7A5A64',
+      tagBg: '#f9f5f6', tagBorder: '#7A5A64', tagText: '#7A5A64',
+      desc: 'Tannins, acidity, and length stop being obstacles and start becoming interesting. The drinker actively seeks out wines with more going on: wines that reward attention. Bolder reds and lesser-known whites become genuinely appealing.',
+      wines: ['Bolder reds', 'Cabernet Sauvignon', 'Complex Sauvignon Blancs', 'Unique whites']
+    },
+    4: {
+      label: 'Nuance',
+      name: 'The Subtle and the Distinctive',
+      baseColor: '#5C1A2E',
+      hoverColor: '#6e2440',
+      accentColor: '#3a0a1a',
+      textColor: '#F5ECD7',
+      borderColor: '#5C1A2E',
+      labelBg: 'rgba(92,26,46,0.1)',
+      labelText: '#5C1A2E',
+      tagBg: '#fdf5f7', tagBorder: '#5C1A2E', tagText: '#5C1A2E',
+      desc: 'The palate has learned to read nuance. Wines that were once confusing (austere, earthy, oxidative) become compelling. The pleasure now comes from specificity rather than sheer intensity. The story behind the glass starts to matter as much as what is in it.',
+      wines: ['Barolo', 'Burgundy', 'Dry Riesling', 'Sherry', 'Aged Rioja']
+    }
+  };
+
+  // ── Render detail box ──
+  function renderDetail(num) {
+    const d = phases[num];
+    const box = document.getElementById('phase-detail-box');
+    const inner = document.getElementById('detail-inner');
+
+    box.style.borderLeftColor = d.borderColor;
+
+    const tagsHTML = d.wines.map(w =>
+      `<span class="wine-tag" style="background:${d.tagBg}; border-color:${d.tagBorder}; color:${d.tagText};">${w}</span>`
+    ).join('');
+
+    inner.style.opacity = '0';
+    setTimeout(() => {
+      inner.innerHTML = `
+        <div class="detail-phase-line">
+          <span class="detail-num" style="color:${d.borderColor};">${num}</span>
+          <span class="detail-label-badge" style="background:${d.labelBg}; color:${d.labelText};">${d.label}</span>
+        </div>
+        <div class="detail-name">${d.name}</div>
+        <div class="detail-desc">${d.desc}</div>
+        <div class="detail-wines-label">Common wines at this stage</div>
+        <div class="wine-tags">${tagsHTML}</div>
+      `;
+      inner.style.opacity = '1';
+    }, 100);
+  }
+
+  // ── Sector hover ──
+  const sectors = document.querySelectorAll('.sector');
+
+  sectors.forEach(s => {
+    const p = s.dataset.phase;
+
+    s.addEventListener('mouseenter', () => {
+      s.setAttribute('fill', phases[p].hoverColor);
+      renderDetail(+p);
+    });
+
+    s.addEventListener('mouseleave', () => {
+      s.setAttribute('fill', phases[p].baseColor);
+    });
+  });
+
+  // Default: show Phase 1 on load
+  renderDetail(1);
+
+  // ── Tab switching ──
+  let chartBuilt = false;
+  let chartInstance = null;
+
+  function switchTab(id, btn) {
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + id).classList.add('active');
+    btn.classList.add('active');
+    if (id === 'data' && !chartBuilt) {
+      setTimeout(buildChart, 60);
+    }
+  }
+
+  // ── Chart ──
+  const chartLabels = ['Semi-sweet\nwhite', 'Semi-sweet\nrosé', 'Dry red', 'Semi-sweet\nred blend'];
+  const before = [32, 22, 15, 14];
+  const after  = [11,  8, 37, 24];
+
+  function buildChart() {
+    chartBuilt = true;
+    const canvas = document.getElementById('palateChart');
+    if (!canvas) return;
+    if (chartInstance) chartInstance.destroy();
+
+    chartInstance = new Chart(canvas.getContext('2d'), {
+      type: 'bar',
+      data: {
+        labels: chartLabels,
+        datasets: [
+          {
+            label: 'Early preference',
+            data: before,
+            backgroundColor: 'rgba(176,144,144,0.5)',
+            hoverBackgroundColor: 'rgba(176,144,144,0.75)',
+            borderRadius: 4,
+            borderSkipped: false,
+          },
+          {
+            label: 'Current preference',
+            data: after,
+            backgroundColor: '#5C1A2E',
+            hoverBackgroundColor: '#7a2240',
+            borderRadius: 4,
+            borderSkipped: false,
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              title: items => chartLabels[items[0].dataIndex].replace('\n', ' '),
+              label: item => ` ${item.dataset.label}: ${item.parsed.y}%`,
+              afterBody: items => {
+                const i = items[0].dataIndex;
+                const diff = after[i] - before[i];
+                const sign = diff > 0 ? '+' : '';
+                const dir  = diff > 0 ? 'increased' : 'declined';
+                return [`Change: ${sign}${diff}pp (${dir})`];
+              }
+            },
+            backgroundColor: '#2C2C2C',
+            titleColor: '#F5ECD7',
+            bodyColor: '#EAD9BE',
+            footerColor: '#d4a86a',
+            padding: 12,
+            cornerRadius: 6,
+            titleFont: { family: "'Cormorant Garamond', serif", size: 14 },
+            bodyFont:  { family: "'Montserrat', sans-serif", size: 11 },
+            footerFont:{ family: "'Montserrat', sans-serif", size: 11 },
+          }
+        },
+        scales: {
+          x: {
+            grid: { display: false },
+            ticks: { font: { family: "'Montserrat', sans-serif", size: 11 }, color: '#7A5A64' },
+            border: { display: false }
+          },
+          y: {
+            beginAtZero: true,
+            max: 45,
+            ticks: {
+              callback: v => v + '%',
+              font: { family: "'Montserrat', sans-serif", size: 11 },
+              color: '#B09090',
+              stepSize: 10,
+            },
+            grid: { color: 'rgba(176,144,144,0.15)' },
+            border: { display: false }
+          }
+        }
+      }
+    });
+  }
+</script>
+
+</body>
+</html>

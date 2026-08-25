@@ -26,6 +26,18 @@ export default function WineParis2026Page() {
           <p className="font-montserrat text-[11px] tracking-widest uppercase text-cream/60">
             February 2026
           </p>
+          <p className="font-montserrat text-[11px] italic text-cream/50 leading-relaxed mt-4">
+            This piece was first published in the{' '}
+            <a
+              href="https://www.indianwineacademy.com/articles/item_3_973/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold border-b border-gold/40 hover:border-gold transition-colors"
+            >
+              Indian Wine Academy
+            </a>{' '}
+            newsletter.
+          </p>
         </div>
       </section>
 
@@ -49,10 +61,10 @@ export default function WineParis2026Page() {
               A wet and blustery day kicked off the monumental three-day Wine Paris 2026 trade show at the Porte de Versailles exhibition centre on the 9th of February. A visit by the French President, Emmanuel Macron, marked the official inauguration, followed by the muffled echoes of footsteps and the rising hum of conversation; thousands of exhibitors, importers, media representatives, critics, business owners, and general enthusiasts filling the vast venue and its several halls very quickly and efficiently.
             </p>
             <p>
-              The twenty-two hectare exhibition centre consisting of seven separate pavilions were all occupied to the brim, signifying the grandeur of the event. French winemakers occupied the largest pavilion, with thousands of exhibitors setting up their stations across three floors. Italy followed up second with their own pavilion, while other regions across Europe and the rest of the world were evenly distributed amongst the other halls. The area covered while wandering through any of the stalls, the designated food areas, as well as the vast open space that exists when travelling between some pavilions, was almost guaranteed to ensure your 20K steps for the day. For most people, that wasn&apos;t a problem — the sheer volume and quality of wine made sure of that.
+              The twenty-two hectare exhibition centre consisting of seven separate pavilions were all occupied to the brim, signifying the grandeur of the event. French winemakers occupied the largest pavilion, with thousands of exhibitors setting up their stations across three floors. Italy followed up second with their own pavilion, while other regions across Europe and the rest of the world were evenly distributed amongst the other halls. The area covered while wandering through any of the stalls, the designated food areas, as well as the vast open space that exists when travelling between some pavilions, was almost guaranteed to ensure your 20K steps for the day. For most people, that wasn&apos;t a problem; the sheer volume and quality of wine made sure of that.
             </p>
             <p>
-              As a visitor, there was always a tendency to be overwhelmed. Questions such as &lsquo;Which stalls should I visit?&rsquo;, &lsquo;Whom do I meet with?&rsquo;, &lsquo;Will I get to taste wines from all the different regions being showcased?&rsquo;, flooded the mind. Thankfully, the organisers created an efficient meeting scheduling system which allowed each exhibitor and visitor to conduct their homework in advance and fix up visits to their preferred stalls on a calendarised portal. And suddenly, a potentially overwhelming prospect was turned into a more structured and purposeful one. At no point was any area too crowded or too empty and interactions were more or less seamless — a very impressive feat.
+              As a visitor, there was always a tendency to be overwhelmed. Questions such as &lsquo;Which stalls should I visit?&rsquo;, &lsquo;Whom do I meet with?&rsquo;, &lsquo;Will I get to taste wines from all the different regions being showcased?&rsquo;, flooded the mind. Thankfully, the organisers created an efficient meeting scheduling system which allowed each exhibitor and visitor to conduct their homework in advance and fix up visits to their preferred stalls on a calendarised portal. And suddenly, a potentially overwhelming prospect was turned into a more structured and purposeful one. At no point was any area too crowded or too empty and interactions were more or less seamless, a very impressive feat.
             </p>
 
             <h2 className="font-cormorant text-2xl font-light text-burgundy pt-4">
@@ -65,7 +77,7 @@ export default function WineParis2026Page() {
               The addition of free-for-all regional tasting sessions and masterclasses made the overall experience more holistic. A journey through Germany&apos;s different wine regions and the different expressions of Riesling emerging from them was one tasting series any wine enthusiast would wax lyrical about, and that&apos;s before we even arrived at the rare nectar-like Beerenauslese and Trockenbeerenauslese wines. Riesling&apos;s aromatic profile and optional touch of residual sweetness also makes it a compelling pairing candidate for spiced Indian food, which was a popular talking point amongst many German and Austrian producers. Another tasting series which could not go unnoticed was the Napa Valley Cabernet Sauvignon Masterclass held by the USA booth. This wine already has strong aspirational appeal in luxury and hospitality contexts, and with its rich, robust, and yet elegantly structured characteristics, it takes just one tasting to understand why.
             </p>
             <p>
-              The odd quirky moment also found its way into proceedings. One of these was a blind tasting challenge organized by the Association de la Sommellerie Internationale (ASI), hosted by sommelier Raimonds Tomsons. When the wines were poured, the look of absolute incredulity on the participants&apos; faces (mine included) said it all — it immediately became clear that these were fortified wines. Tasting these blind was tricky for the palate, to say the least, but a remarkable learning opportunity for those venturing into the world of Sherries, Ports, and Muscats. As Mr. Tomsons rightfully reminded us, while we get lost in an array of reds and whites, we must not forget the significance of fortified wines in shaping wine culture as we know it.
+              The odd quirky moment also found its way into proceedings. One of these was a blind tasting challenge organized by the Association de la Sommellerie Internationale (ASI), hosted by sommelier Raimonds Tomsons. When the wines were poured, the look of absolute incredulity on the participants&apos; faces (mine included) said it all: it immediately became clear that these were fortified wines. Tasting these blind was tricky for the palate, to say the least, but a remarkable learning opportunity for those venturing into the world of Sherries, Ports, and Muscats. As Mr. Tomsons rightfully reminded us, while we get lost in an array of reds and whites, we must not forget the significance of fortified wines in shaping wine culture as we know it.
             </p>
 
             <h2 className="font-cormorant text-2xl font-light text-burgundy pt-4">
