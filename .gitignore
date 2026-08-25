@@ -5,6 +5,10 @@ node_modules/
 .next/
 out/
 
+# TypeScript incremental build cache
+tsconfig.tsbuildinfo
+*.tsbuildinfo
+
 # Environment files
 .env
 .env.local
@@ -17,6 +21,9 @@ Thumbs.db
 # Editor
 .vscode/
 *.swp
+
+# Machine-specific Claude settings (keep .claude/launch.json tracked)
+.claude/settings.local.json
 
 # Logs
 npm-debug.log*
