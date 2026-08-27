@@ -106,6 +106,7 @@ export default function VisualEmbed({
           ref={frameRef}
           src={src}
           title={title}
+          loading="lazy"
           className="w-full block"
           style={{
             height: `${renderedHeight}px`,

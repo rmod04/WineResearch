@@ -8,11 +8,11 @@ Personal brand website for **Rohan Modwel** — wine educator (WSET Level 3, Dis
 
 This one repo holds two separate deliverables, each with its own branch, host, and Cowork project. Do not mix them.
 
-**1. Website pipeline → Vercel**
+**1. Website pipeline → Netlify**
 
 - The Next.js personal-brand site. Worked in the **'C2T Website' Cowork project** and in **Claude Code** (live preview pane, `npm run dev`, port 3000).
-- Branch: **`main` is canonical** — the single source of truth for the website and the Vercel production source. The old dev branch `claude/personal-brand-website-E5EOF` was reconciled into `main` and **retired** (Jun 2026): an audit confirmed `main` was a strict superset (every shared file newer, nothing lost), so dev's only unique file — `.claude/launch.json` — was copied in and the branch deleted local + remote. Work the website directly on `main` now; no separate website dev branch.
-- Deploy: connect the repo to Vercel, production branch = `main` (preview deploys per push). Not on GitHub Pages.
+- Branch: **`main` is canonical** — the single source of truth for the website and the Netlify production source. The old dev branch `claude/personal-brand-website-E5EOF` was reconciled into `main` and **retired** (Jun 2026): an audit confirmed `main` was a strict superset (every shared file newer, nothing lost), so dev's only unique file — `.claude/launch.json` — was copied in and the branch deleted local + remote. Work the website directly on `main` now; no separate website dev branch.
+- Deploy: **Netlify, connected to `main`** (Aug 2026). Every push to `main` triggers an automatic rebuild; ~2-4 min. Not on GitHub Pages, and not on Vercel — Vercel's free Hobby tier forbids commercial use, and this site generates leads for a paid consultancy.
 
 **2. Substack visuals pipeline → GitHub Pages**
 
@@ -43,7 +43,7 @@ This one repo holds two separate deliverables, each with its own branch, host, a
 
 ## Tech stack
 
-Next.js 14 (App Router) · TypeScript · Tailwind CSS · 100% static (SSG, no API routes / DB / auth) · `next/image` (`fill` + `object-cover`) · Formspree for the contact form · deploy target Vercel · domain `corktotable.com` (not yet registered). All images are local in `public/images/` — no CDN dependency except partner-card fallbacks.
+Next.js 14 (App Router) · TypeScript · Tailwind CSS · 100% static (SSG, no API routes / DB / auth) · `next/image` (`fill` + `object-cover`) · Formspree for the contact form · **deployed on Netlify** (free tier; commercial use permitted, unlike Vercel's Hobby tier) · domain **`corktotable.co`**, registered Aug 2026 at Cloudflare Registrar. DNS is managed at Cloudflare, not Netlify — Cloudflare Registrar locks domains to its own nameservers. Both records are CNAMEs to Netlify (`@` → `apex-loadbalancer.netlify.com`, `www` → the site's `.netlify.app` name) and **must stay set to DNS-only (grey cloud)**; proxying them breaks Netlify's certificate issuance and causes redirect loops. All images are local in `public/images/` — no CDN dependency except partner-card fallbacks.
 
 ### ⚠️ Gotcha: never import a plain constant from a `'use client'` module into a server component
 
@@ -119,15 +119,15 @@ Wordmark "Cork To Table" → `/`, then: **Wine Tourism | Tasting Experiences | S
 🔴 Blocking:
 - ✅ **Formspree endpoints — DONE (Aug 2026).** Contact form → `myeglglk` (`components/ContactForm.tsx`). Questionnaire → `xgawrwpz` (`components/Questionnaire.tsx`, constant `QUESTIONNAIRE_ENDPOINT` at the top).
 - ✅ **Privacy policy — DONE (Aug 2026).** Live at `/privacy`; copy lives in `content/privacy.ts`, linked from the footer bottom bar.
-- Register `corktotable.com`.
+- ✅ **Register the domain — DONE (Aug 2026).** `corktotable.com` was taken; registered **`corktotable.co`** at Cloudflare Registrar instead. Brand string kept intact deliberately, to stay consistent with `@corktotable` on Instagram and the Substack identity.
 - ✅ **Reconcile main↔dev — DONE (Jun 2026).** Dev branch audited, confirmed `main` is a strict superset, `.claude/launch.json` copied in, dev branch retired (local + remote). `main` is canonical.
-- **Connect the repo to Vercel** (not yet connected); production branch = `main`, then point the custom domain.
+- ✅ **Connect the repo to a host — DONE (Aug 2026).** Netlify, production branch = `main`, custom domain attached and DNS verified.
 - ✅ **Delete the redundant `Website` branch — DONE (Aug 2026).** Confirmed gone from GitHub; only `main` and `claude/wine-substack-data-setup-H9HVg` remain.
 
 🗓️ **October 2026 — restore the Spain article.** Pulled from the site Aug 2026 because *Liquid Magazine* (India) is running it in their October issue and asked for it to come down until then. Rohan confirmed it can go back up afterwards with a "first published" credit. To restore: remove `hidden: true` from the `spain-wine-travel-diaries` entry in `content/articles.ts`, rename `app/stories-and-trends/_spain-wine-travel-diaries` back to `spain-wine-travel-diaries`, and add the credit line, following the pattern already used on `app/stories-and-trends/wine-paris-2026/page.tsx` (italic line under the date in the burgundy header, publication name as a gold external link). Nothing was deleted.
 
 🟡 Soon after launch:
-- **Set the Authorized Domain on both Formspree forms** to `corktotable.com`. Until then submissions carry no trusted referrer and Formshield tends to file them as spam. Fixes the spam-folder problem seen during local testing.
+- **Set the Authorized Domain on both Formspree forms** to `corktotable.co`. Until then submissions carry no trusted referrer and Formshield tends to file them as spam. Fixes the spam-folder problem seen during local testing.
 - **Never rename a Formspree field label.** The dashboard builds its columns from the union of every field name ever received, so a rename spawns a duplicate column that only a full deletion of submission history clears. Labels were frozen Aug 2026 (`buildFields()` in `components/Questionnaire.tsx`).
 - Add `substackUrl` in `content/site.ts` (auto-activates Substack links in footer, Stories & Trends, About).
 - Set `comingSoon: false` per partner in `content/partners.ts` when bookable.
