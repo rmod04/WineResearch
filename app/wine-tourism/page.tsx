@@ -61,7 +61,7 @@ export default function WineTourismPage() {
               Every partner on this page was chosen for their taste, experience, and value. Each estate sits at the heart of a curated itinerary designed around your travel style.
             </p>
             <p className="font-montserrat text-xs text-cream/60 mt-4 max-w-2xl leading-relaxed">
-              If you have a specific wine region or estate that you'd like to visit, no problem! Let us know and we'll do all the work behind the scenes.
+              If you have already picked a specific wine region or estate that you'd like to visit, no problem! Let us know and we'll do all the work behind the scenes.
             </p>
           </div>
 
