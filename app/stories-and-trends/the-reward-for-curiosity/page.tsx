@@ -180,7 +180,7 @@ export default function TheRewardForCuriosityPage() {
             <Quote text="Pick one and start drinking bruh. You plant a forest one tree at a time, enjoy the journey." source="r/wine · ▲ 155" />
 
             <p>
-              However, there is hope. It comes with a rise in desire to learn and experiment. Human search behaviour demonstrates a journey, and it maps as a ladder with three rungs. The first is about permission: how to drink wine correctly, wine for beginners. The second is about vocabulary: what does dry wine mean, how to taste wine like a sommelier. The third is about origin: what grape is Barolo, where is Rioja wine from, the wine regions of France.
+              However, there is hope. It comes with a rise in desire to learn and experiment. The digital age, where knowledge is far more easily accessible, has played a role. Human search behaviour demonstrates a journey, and it maps as a ladder with three rungs. The first is about permission: how to drink wine correctly, wine for beginners. The second is about vocabulary: what does dry wine mean, how to taste wine like a sommelier. The third is about origin: what grape is Barolo, where is Rioja wine from, the wine regions of France.
             </p>
 
             <DataCallout
@@ -208,13 +208,17 @@ export default function TheRewardForCuriosityPage() {
               Nowadays, even experienced drinkers are shown to value story as much as, or even more than, other factors such as price, label, or reviews. At the top of the market, provenance and storytelling by a producer are creating a pull, a signal of sophistication that can match other parameters. Labels are being recognised for their individual practices and backstories, not just for the prestige associated with a certain region.
             </p>
             <p>
-              Community discussion shows drinkers endorsing story-led signals, meaning the history of the producer, the terroir, or the way a wine was farmed, over transactional ones like price, score and label prestige, by roughly two to one. The trade press reads it the same way. The market is tilting toward lighter, terroir-driven wines, and younger drinkers are choosing value over prestige.
+              Community discussion shows drinkers endorsing story-led signals, meaning the history of the producer, the terroir, or the way a wine was farmed, over transactional ones like price, score and label prestige, by roughly two to one.
             </p>
 
             <DataCallout
               stat="Two-thirds"
               context="Quality-signal language in community discussion is story-led. Only a small share of mentions defend price, label, or score as a quality guide.⁸"
             />
+
+            <p>
+              The trade press reads it the same way. The market is tilting toward lighter, terroir-driven wines, and younger drinkers are choosing value over prestige.⁹
+            </p>
 
             <p>
               In recent times, I&apos;ve noticed that the bottles that capture the attention of a table are rarely the most expensive ones on it. The clearest evidence sits in the regions gaining ground on story alone. English wine has built a reputation on warming vintages, careful viticulture and familiar grape varieties, with sparkling wine as a Champagne alternative leading the way. Georgian wine is being positioned as the 8,000-year-old cradle of winemaking, where indigenous grapes have grown for millennia and traditional methods are still in use. Neither had prestige to trade on. Both had a story. And in long-established regions like Bordeaux and Rioja, it is the new generation of producers with unusual backgrounds who are drawing attention now.

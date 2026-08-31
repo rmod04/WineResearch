@@ -38,9 +38,12 @@ export default function EveryWineHasItsMomentPage() {
           <p className="font-montserrat text-[10px] tracking-[0.3em] uppercase text-gold mb-4">
             Research · Substack
           </p>
-          <h1 className="font-cormorant text-4xl md:text-6xl font-light text-cream leading-tight mb-6">
+          <h1 className="font-cormorant text-4xl md:text-6xl font-light text-cream leading-tight mb-3">
             Every Wine Has Its Moment
           </h1>
+          <p className="font-cormorant text-2xl italic text-cream/70 mb-6">
+            How season, setting, company and even music change the wine in your glass
+          </p>
           <div className="w-12 h-px bg-gold mb-6" />
           <div className="flex flex-col sm:flex-row sm:items-center gap-3">
             <p className="font-montserrat text-[11px] tracking-widest uppercase text-cream/60">
@@ -112,7 +115,7 @@ export default function EveryWineHasItsMomentPage() {
             <p>A brief Instagram study captures this empirically:</p>
             <ul className="list-disc list-outside ml-4 space-y-2 font-montserrat text-xs text-mid leading-relaxed">
               <li>67% of 132 Instagram posts reference a specific setting in their caption: beach, holiday, terrace, fireplace, restaurant.</li>
-              <li>#redwineweather has the highest comment engagement of any seasonal hashtag at an average of 51 comments per post. People are actively discussing when red wine belongs.</li>
+              <li>#redwineweather has the second highest comment-to-like ratio of all hashtags at 6.45. People are actively discussing when red wine belongs.</li>
               <li>The most-liked caption in the dataset: &lsquo;POV: it&apos;s 5pm, raining, you open a Shiraz and everything is suddenly okay&rsquo; (2,109 likes).</li>
               <li>&lsquo;When the temperature hits 25°C it&apos;s automatically rosé season. Science.&rsquo;</li>
               <li>Each one reads as an identity statement. People are broadcasting a moment as much as choosing a wine.</li>
@@ -216,7 +219,7 @@ export default function EveryWineHasItsMomentPage() {
               This shift is not confined to established markets. In India, the rise in white wine consumption, particularly those of Sauvignon Blanc and Chenin Blanc grape varieties, reflects a changing palate, especially among younger urban consumers and women.⁸ A generation with a fresh approach to wine, without the preconceived association with red as the solitary symbol of prestige, is arriving at the same conclusions the voices above describe: lighter, brighter, more about the moment than about formality.
             </p>
             <p>
-              This is not just a cultural shift, it is also a climatic one. Research into Indian wine consumption behaviour shows a marked and conscious preference for lighter, fruit-forward styles in warmer weather, with Prosecco, rosé and crisp whites increasingly the deliberate choice in the summer months. In a country where peak summer regularly exceeds 40°C, reaching for something chilled and low-tannin is less a cultural trend and more a considered response to the environment. The seasonal instinct, here, is proven data.
+              This is not just a cultural shift, it is also a climatic one. Research into Indian wine consumption behaviour shows a marked and conscious preference for lighter, fruit-forward styles in warmer weather, with Prosecco, rosé and crisp whites increasingly the deliberate choice in the summer months.⁹ In a country where peak summer regularly exceeds 40°C, reaching for something chilled and low-tannin is less a cultural trend and more a considered response to the environment. The seasonal instinct, here, is proven data.
             </p>
 
             <VisualEmbed
