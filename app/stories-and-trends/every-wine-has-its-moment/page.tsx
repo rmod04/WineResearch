@@ -91,7 +91,7 @@ export default function EveryWineHasItsMomentPage() {
 
             <DataCallout
               stat="−50%"
-              context='"Treat me / relax alone" wine occasions fell from 14% to 7% in just two years, while couples moments and celebrations gained share. (Deutsch Family Wine & Spirits, 56,000 responses, 2023–2025)'
+              context='"Treat me / relax alone" wine occasions fell from 14% to 7% in just two years, while couples moments and celebrations gained share. (Deutsch Family Wine & Spirits, 56,000 responses, 2023–2025)²'
             />
 
             <VisualEmbed
@@ -132,11 +132,11 @@ export default function EveryWineHasItsMomentPage() {
 
             <DataCallout
               stat="+17%"
-              context="Global rosé consumption since 2000. Fastest-growing wine colour by share. (OIV, via Decanter 2023)"
+              context="Global rosé consumption since 2000. Fastest-growing wine colour by share. (OIV, via Decanter 2023)⁴"
             />
             <DataCallout
               stat="−15%"
-              context="Red wine consumption from its 2007 peak. White wine up 10% over the same period. (OIV)"
+              context="Red wine consumption from its 2007 peak. White wine up 10% over the same period. (OIV)⁴"
             />
 
             <p>
@@ -175,7 +175,7 @@ export default function EveryWineHasItsMomentPage() {
 
             <DataCallout
               stat="+9%"
-              context="Wine enjoyment uplift from environmental cues alone. (Prof. Charles Spence, Oxford University)"
+              context="Wine enjoyment uplift from environmental cues alone. (Prof. Charles Spence, Oxford University)⁵"
             />
 
             <p>
@@ -185,7 +185,7 @@ export default function EveryWineHasItsMomentPage() {
             <p>
               <span className="font-semibold">3. Company changes everything.</span> The people sitting around you shape your experience as much as the glass, and a great bottle isn&apos;t likely to rescue poor company.
             </p>
-            <Quote text="A lot of the enjoyment of wine is in the context. La Tâche doesn't hit the same when you're drinking it with assholes." source="r/wine · ▲ 119" />
+            <Quote text="A lot of the enjoyment of wine is in the context. La Tâche doesn't hit the same when you're drinking it with a**holes." source="r/wine · ▲ 119" />
 
             <p>
               <span className="font-semibold">4. The wine itself is often better prepared.</span> Wineries and well-researched bars and restaurants typically open bottles early, let them breathe properly, serve at the correct temperature, and pour into the right glassware. At home, many of these steps get skipped for convenience.
@@ -210,7 +210,7 @@ export default function EveryWineHasItsMomentPage() {
 
             <Quote text="I used to drink almost entirely reds. At the moment, I likely drink way more whites. I used to seek out the most intense fruit bombs I could find. Now I like funky flavours and subtlety as well." source="r/wine · ▲ 15" />
             <Quote text="I can't be bothered with anything with too much oak. I feel like I can tell when it's being amped up to disguise shortcomings now." source="r/wine · ▲ 80" />
-            <Quote text="Wine for me has become a means of understanding agricultural practice and the relationships between farmers and the earth they tend to." source="r/wine · ▲ 66" />
+            <Quote text="Wine for me has become a means of understanding agricultural practice and the relationships between farmers and the earth they tend to. Those moments where you really tap into that energy are totally electric." source="r/wine · ▲ 66" />
 
             <p>
               This shift is not confined to established markets. In India, the rise in white wine consumption, particularly those of Sauvignon Blanc and Chenin Blanc grape varieties, reflects a changing palate, especially among younger urban consumers and women.⁸ A generation with a fresh approach to wine, without the preconceived association with red as the solitary symbol of prestige, is arriving at the same conclusions the voices above describe: lighter, brighter, more about the moment than about formality.

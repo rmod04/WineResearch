@@ -127,14 +127,26 @@ RULES
    pass, not at publish time.
 
 --------------------------------------------------------------------------
-GITHUB PAGES (interactive visuals, separate from the above)
+VISUAL LINKS (standing rule from Piece 3 onwards)
 --------------------------------------------------------------------------
-Base: https://rmod04.github.io/WineResearch/
-These URLs must stay stable. Do not rename visual_*.html files.
+Link visuals by their Cork To Table address, never the github.io one:
 
-Piece 2 visuals:
-  visual_palate_arc.html
-  visual_price_quality.html
-  visual_curiosity_ladder.html
-  visual_story_over_status.html
-  visual_where_value_lives.html
+  https://corktotable.co/visuals/<slug>
+
+Netlify proxies these to GitHub Pages, so the reader's address bar keeps
+saying corktotable.co and the branded domain collects the traffic. The
+github.io URLs stay alive as the origin and must not be renamed, but they
+do not appear in published work.
+
+Piece 1                          Piece 2
+  /visuals/occasion-shift          /visuals/palate-arc
+  /visuals/instagram               /visuals/price-quality
+  /visuals/seasonal-instinct       /visuals/curiosity-ladder
+  /visuals/colour-shift            /visuals/story-over-status
+  /visuals/reddit-voices           /visuals/where-value-lives
+
+New pieces: add the slug to the proxy config when the visual is built, not
+at publish time, and confirm the URL returns 200 before it goes into a post.
+
+Origin, for reference only: https://rmod04.github.io/WineResearch/
+File names must stay stable, since the proxy maps slug to file name.

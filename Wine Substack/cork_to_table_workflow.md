@@ -36,6 +36,8 @@ Each was added after a real failure rather than in the abstract.
 
 ## Publishing rule: the website is canonical
 
+**Visual links.** Every link to an interactive visual uses `corktotable.co/visuals/<slug>`, never the github.io origin. Netlify proxies the branded path to GitHub Pages. Add the slug to the proxy config when the visual is built, and confirm it returns 200 before it goes into a post.
+
 The full text is published on both the website and Substack, neither condensed. At publish time, set the canonical URL in Substack's post settings to the matching `corktotable.co/stories-and-trends/<slug>` page. Search credit then accrues to the owned domain while Substack handles distribution.
 
 Two sequencing points. The website must be live at its final domain before the Substack post goes up, so the canonical points somewhere real. And Substack does not render iframes, so the interactive visuals cannot run inside a Substack post; use static images there and link out.
