@@ -30,7 +30,7 @@ export const articles: Article[] = [
     thumbnail: '/images/photo-palate-arc.jpg',
     thumbnailAlt: 'The palate arc — a four-phase wheel of wine preference',
     isSubstack: true,
-    substackUrl: '',
+    substackUrl: '', // leave empty until the post is live; the page then shows "Coming Soon"
   },
   {
     slug: 'every-wine-has-its-moment',
@@ -43,7 +43,7 @@ export const articles: Article[] = [
     thumbnail: '/images/photo-substack-chart.jpg',
     thumbnailAlt: 'Wine consumption data and research visualisations',
     isSubstack: true,
-    substackUrl: '', // TODO: add Substack URL when live
+    substackUrl: 'https://corktotable.substack.com/p/every-wine-has-its-moment',
   },
   {
     slug: 'spain-wine-travel-diaries',
@@ -86,3 +86,13 @@ export const articles: Article[] = [
     thumbnailAlt: 'Greek vineyard landscape',
   },
 ]
+
+/**
+ * Find one article by its slug. Article pages use this to read their own
+ * Substack post URL, so each piece links to its own post rather than to the
+ * publication homepage. An empty substackUrl makes the page fall back to
+ * "Substack · Coming Soon".
+ */
+export function getArticle(slug: string): Article | undefined {
+  return articles.find((a) => a.slug === slug)
+}

@@ -1,5 +1,5 @@
 CORK TO TABLE — SUBSTACK URL SLUGS
-Last updated: 24 August 2026
+Last updated: 31 August 2026
 Maintained by: Substack Cowork project. Read by: C2T Website project.
 
 --------------------------------------------------------------------------
@@ -46,7 +46,7 @@ Website slug   : every-wine-has-its-moment
 Substack slug  : why-wine-tastes-different-in-summer
 Full URL       : <BASE>/p/why-wine-tastes-different-in-summer
 Subtitle       : How season, setting, company and even music change the wine in your glass
-Status         : Live on the C2T website. NOT yet published on Substack.
+Status         : PUBLISHED. Live on the C2T website and on Substack.
 
 --------------------------------------------------------------------------
 PIECE 2 — The Reward for Curiosity (August 2026)
@@ -55,7 +55,8 @@ Website slug   : the-reward-for-curiosity
 Substack slug  : does-expensive-wine-taste-better
 Full URL       : <BASE>/p/does-expensive-wine-taste-better
 Subtitle       : The wine palate grows over time, and better wine doesn't have to cost more
-Status         : Final draft complete. NOT yet published on Substack.
+Status         : Live on the C2T website. NOT yet published on Substack.
+                 Blocked on static images of the five Piece 2 visuals.
 
 --------------------------------------------------------------------------
 PIECE 3 — not yet written

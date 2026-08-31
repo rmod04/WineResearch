@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import VisualEmbed from '@/components/VisualEmbed'
 import { VISUALS_BASE } from '@/content/visuals'
-import { site } from '@/content/site'
+import { getArticle } from '@/content/articles'
 
 export const metadata = {
   title: 'Every Wine Has Its Moment — Cork To Table',
@@ -30,6 +30,8 @@ function Quote({ text, source }: { text: string; source: string }) {
 }
 
 export default function EveryWineHasItsMomentPage() {
+  const substackUrl = getArticle('every-wine-has-its-moment')?.substackUrl
+
   return (
     <>
       {/* ── Article header ───────────────────────────────────────── */}
@@ -49,9 +51,9 @@ export default function EveryWineHasItsMomentPage() {
             <p className="font-montserrat text-[11px] tracking-widest uppercase text-cream/60">
               April 2026
             </p>
-            {site.substackUrl ? (
+            {substackUrl ? (
               <a
-                href={site.substackUrl}
+                href={substackUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-montserrat text-[10px] tracking-widest uppercase text-gold border-b border-gold/50 pb-0.5 hover:border-gold transition-colors w-fit"
