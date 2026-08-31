@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The palate tends to travel · Cork To Table</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <script src="chart.umd.min.js"></script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap');
+    @import url('fonts.css');
 
     :root {
       --burgundy:   #5C1A2E;
@@ -20,13 +20,10 @@
       --bg:         #FAF6EF;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
+    * { box-sizing: border-box; margin: 0; padding: 0; } body {
       font-family: 'Montserrat', sans-serif;
       background: var(--bg);
       color: var(--charcoal);
-      min-height: 100vh;
     }
 
     .container {
@@ -478,7 +475,7 @@
         </defs>
 
       </svg>
-      <p class="wheel-hint">Hover to explore each phase</p>
+      <p class="wheel-hint">Hover/tap to explore each phase</p>
     </div>
 
     <!-- Detail box below the wheel -->
@@ -502,7 +499,7 @@
   <div id="tab-data" class="tab-panel">
     <div class="chart-wrap">
       <div class="chart-title">Preference Shift Over a Drinking Lifetime</div>
-      <div class="chart-subtitle">% preferring each style, early vs. current (hover bars for detail)</div>
+      <div class="chart-subtitle">% preferring each style, early vs. current (hover/tap bars for detail)</div>
       <div class="chart-canvas-wrap">
         <canvas id="palateChart"></canvas>
       </div>
@@ -615,19 +612,47 @@
     }, 100);
   }
 
-  // ── Sector hover ──
+  // ── Sector hover / touch ──
+  // Mouse users get hover. Touch devices never fire mouseenter reliably,
+  // so tapping a sector selects it and it stays selected until another
+  // sector is tapped (there is no "un-tap" the way there is a mouseleave).
   const sectors = document.querySelectorAll('.sector');
+  let activePhase = null;
+
+  function selectPhase(sector, phase, sticky) {
+    // Reset every sector to its base colour first, so only one is lit.
+    sectors.forEach(other => {
+      other.setAttribute('fill', phases[other.dataset.phase].baseColor);
+    });
+    sector.setAttribute('fill', phases[phase].hoverColor);
+    renderDetail(+phase);
+    if (sticky) activePhase = phase;
+  }
 
   sectors.forEach(s => {
     const p = s.dataset.phase;
 
     s.addEventListener('mouseenter', () => {
-      s.setAttribute('fill', phases[p].hoverColor);
-      renderDetail(+p);
+      if (activePhase !== null) return; // a tap takes priority over hover
+      selectPhase(s, p, false);
     });
 
     s.addEventListener('mouseleave', () => {
+      if (activePhase !== null) return;
       s.setAttribute('fill', phases[p].baseColor);
+    });
+
+    // Touch: select on tap. preventDefault stops the browser also firing
+    // a synthetic mouse event straight afterwards, which would double-fire.
+    s.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      selectPhase(s, p, true);
+    }, { passive: false });
+
+    // Keeps things working for stylus, pen and any device that reports
+    // itself as neither cleanly mouse nor touch.
+    s.addEventListener('click', () => {
+      selectPhase(s, p, true);
     });
   });
 
@@ -732,6 +757,55 @@
       }
     });
   }
+</script>
+
+
+<!-- ── Auto-height reporter ──────────────────────────────────────────
+     Tells the parent page how tall this visual actually is, so the
+     embedding iframe can size itself exactly to the content.
+
+     Two directions on purpose. We push the height whenever it changes,
+     AND we answer on demand when the parent asks. The pull matters: on a
+     cached reload this frame can finish loading before the parent has
+     attached its listener, so a push-only design loses the message and
+     the frame is left stuck at its fallback height. -->
+<script>
+(function () {
+  if (window.parent === window) return;
+  var last = 0;
+
+  function measure() {
+    return Math.ceil(Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight,
+      document.body.offsetHeight,
+      document.documentElement.offsetHeight
+    ));
+  }
+
+  function report(force) {
+    var h = measure();
+    if (!h) return;
+    if (!force && Math.abs(h - last) <= 2) return;
+    last = h;
+    window.parent.postMessage({ type: 'c2t-visual-height', height: h }, '*');
+  }
+
+  // Answer the parent's request, ignoring the de-duplication guard so a
+  // repeat of the same height still gets through.
+  window.addEventListener('message', function (e) {
+    if (e.data && e.data.type === 'c2t-request-height') report(true);
+  });
+
+  window.addEventListener('load', function () { report(true); });
+  window.addEventListener('pageshow', function () { report(true); });
+  window.addEventListener('resize', function () { report(false); });
+  document.addEventListener('DOMContentLoaded', function () { report(true); });
+  if (window.ResizeObserver) new ResizeObserver(function () { report(false); }).observe(document.body);
+  // Charts and webfonts settle after first paint; re-measure a few times.
+  [100, 400, 900, 1600, 2600].forEach(function (t) { setTimeout(function () { report(true); }, t); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { report(true); });
+})();
 </script>
 
 </body>

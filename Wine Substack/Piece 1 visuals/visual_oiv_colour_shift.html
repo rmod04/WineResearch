@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OIV Colour Shift · Every Wine Has Its Moment</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="chart.umd.min.js"></script>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap');
+  @import url('fonts.css');
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
     --burgundy: #5C1A2E; --cream: #F5ECD7; --cream-dark: #EAD9BE;
@@ -60,7 +60,7 @@
 <body>
 <div class="card">
   <div class="header">
-    <div class="title">The World is Moving Towards Lighter</div>
+    <div class="title">The world is moving towards lighter</div>
     <div class="subtitle">Global wine consumption by colour · 2000 vs 2021 · OIV via Decanter 2023 · hover/tap to view graph labels</div>
   </div>
 
@@ -104,13 +104,13 @@
     </div>
 
     <div class="insight" id="insight">
-      <strong>The story in one sentence:</strong> Red wine's decade-long dominance is unwinding. A generation of consumers is quietly choosing lighter, brighter styles — and the numbers show it at global scale. Click each colour pill to isolate the trend.
+      <strong>The story in one sentence:</strong> Red wine's decade-long dominance is unwinding. A generation of consumers is quietly choosing lighter, brighter styles, and the numbers show it at global scale. Click each colour pill to isolate the trend.
     </div>
 
   </div>
 
   <div class="footer">
-    Source: OIV — International Organisation of Vine and Wine. Global wine consumption by colour, 2000–2021. Reported in Decanter, December 2023.
+    Source: OIV, the International Organisation of Vine and Wine. Global wine consumption by colour, 2000–2021. Reported in Decanter, December 2023.
   </div>
 </div>
 
@@ -128,8 +128,8 @@ const COLORS = {
 };
 
 const INSIGHTS = {
-  stacked: '<strong>Stacked share view:</strong> In 2000, red wine held more than half of all global consumption. By 2021, that has shrunk to just below half. White and rosé have filled the gap — together now accounting for over half of global consumption for the first time. This may seem minor, but in absolute consumption it represents a significant change.',
-  change: '<strong>Change since 2000 (in percentage points):</strong> Rosé is the standout mover — a +3pp absolute gain, representing a 43% relative increase in global share. White wine grew steadily (+5pp). Red wine gave back ground accumulated since the 1990s (−8pp). <em>Note: pp = percentage points of global consumption share. Relative % change shown in the colour pills above.</em>',
+  stacked: '<strong>Stacked share view:</strong> In 2000, red wine held more than half of all global consumption. By 2021, that has shrunk to just below half. White and rosé have filled the gap, together now accounting for over half of global consumption for the first time. This may seem minor, but in absolute consumption it represents a significant change.',
+  change: '<strong>Change since 2000 (in percentage points):</strong> Rosé is the standout mover, with a +3pp absolute gain, representing a 43% relative increase in global share. White wine grew steadily (+5pp). Red wine gave back ground accumulated since the 1990s (−8pp). <em>Note: pp = percentage points of global consumption share. Relative % change shown in the colour pills above.</em>',
 };
 
 let currentView = 'stacked';

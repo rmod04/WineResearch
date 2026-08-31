@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Price doesn't always determine quality · Cork To Table</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;500;600&display=swap');
+    @import url('fonts.css');
 
     :root {
       --burgundy:   #5C1A2E;
@@ -19,9 +19,7 @@
       --bg:         #FAF6EF;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
+    * { box-sizing: border-box; margin: 0; padding: 0; } body {
       font-family: 'Montserrat', sans-serif;
       background: var(--bg);
       display: flex;
@@ -157,7 +155,7 @@
 
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="chart.umd.min.js"></script>
 <script>
   const labels = ['$10–15', '$15–30', '$30–60', '$60–150', '$150+'];
   const sighted = [3.72, 3.84, 4.04, 4.18, 4.36];   // combined red + white, real Vivino averages
@@ -275,5 +273,54 @@
   setTimeout(initChart, 60);
   setView(2);
 </script>
+
+<!-- ── Auto-height reporter ──────────────────────────────────────────
+     Tells the parent page how tall this visual actually is, so the
+     embedding iframe can size itself exactly to the content.
+
+     Two directions on purpose. We push the height whenever it changes,
+     AND we answer on demand when the parent asks. The pull matters: on a
+     cached reload this frame can finish loading before the parent has
+     attached its listener, so a push-only design loses the message and
+     the frame is left stuck at its fallback height. -->
+<script>
+(function () {
+  if (window.parent === window) return;
+  var last = 0;
+
+  function measure() {
+    return Math.ceil(Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight,
+      document.body.offsetHeight,
+      document.documentElement.offsetHeight
+    ));
+  }
+
+  function report(force) {
+    var h = measure();
+    if (!h) return;
+    if (!force && Math.abs(h - last) <= 2) return;
+    last = h;
+    window.parent.postMessage({ type: 'c2t-visual-height', height: h }, '*');
+  }
+
+  // Answer the parent's request, ignoring the de-duplication guard so a
+  // repeat of the same height still gets through.
+  window.addEventListener('message', function (e) {
+    if (e.data && e.data.type === 'c2t-request-height') report(true);
+  });
+
+  window.addEventListener('load', function () { report(true); });
+  window.addEventListener('pageshow', function () { report(true); });
+  window.addEventListener('resize', function () { report(false); });
+  document.addEventListener('DOMContentLoaded', function () { report(true); });
+  if (window.ResizeObserver) new ResizeObserver(function () { report(false); }).observe(document.body);
+  // Charts and webfonts settle after first paint; re-measure a few times.
+  [100, 400, 900, 1600, 2600].forEach(function (t) { setTimeout(function () { report(true); }, t); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { report(true); });
+})();
+</script>
+
 </body>
 </html>

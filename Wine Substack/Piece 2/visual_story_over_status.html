@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Story is the new status · Cork To Table</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;500;600&display=swap');
+    @import url('fonts.css');
 
     :root {
       --burgundy:   #5C1A2E;
@@ -19,9 +19,7 @@
       --bg:         #FAF6EF;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
+    * { box-sizing: border-box; margin: 0; padding: 0; } body {
       font-family: 'Montserrat', sans-serif;
       background: var(--bg);
       display: flex;
@@ -500,6 +498,39 @@
       .strip-stat { border-right: none; padding-right: 0; margin-right: 0;
         border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 10px; }
       .strip-stat:last-child { border-bottom: none; padding-bottom: 0; }
+
+      /* ── Mobile legend fix ──
+         On desktop each legend row is one flex line: a 128px fixed label,
+         then the bar, then the count. On a narrow phone those fixed widths
+         leave the bar almost no room (so it looked like the bars had gone)
+         and pushed the count off the right edge. On mobile the label gets
+         its own line and the bar takes the full width beneath it. */
+      .legend-item {
+        flex-wrap: wrap;
+        padding-left: 0;
+        gap: 4px 8px;
+        margin-bottom: 11px;
+      }
+      .legend-item-name {
+        width: auto;
+        flex: 1 1 100%;
+        font-size: 10px;
+      }
+      .legend-bar-track {
+        flex: 1 1 auto;
+        min-width: 0;      /* lets the bar shrink instead of overflowing */
+        height: 10px;
+      }
+      .legend-item-count {
+        width: auto;
+        min-width: 20px;
+        text-align: right;
+      }
+
+      /* Stop long labels and sentiment captions running off the edge. */
+      .legend-group-head { flex-wrap: wrap; gap: 4px; }
+      .legend-group-title { overflow-wrap: anywhere; }
+      .sentiment-label { font-size: 9px; overflow-wrap: anywhere; }
     }
   </style>
 </head>
@@ -531,7 +562,7 @@
     <!-- Chart -->
     <div class="chart-section">
       <div class="chart-label">How wine drinkers talk about quality</div>
-      <div class="chart-sublabel">Two-thirds of all keywords are story-led. The sentiment split below shows the rest of the story. Hover a cluster to isolate it.</div>
+      <div class="chart-sublabel">Two-thirds of all keywords are story-led. The sentiment split below shows the rest of the story.</div>
 
       <div class="donut-layout">
 
@@ -552,8 +583,7 @@
 
         <div class="legend">
 
-          <div class="legend-group" data-cluster="holistic"
-               onmouseenter="isolate('holistic')" onmouseleave="resetDonut()">
+          <div class="legend-group" data-cluster="holistic">
             <div class="legend-group-head">
               <span class="legend-group-title holistic">
                 <span class="legend-swatch holistic"></span>Holistic · story-led
@@ -589,8 +619,7 @@
             </div>
           </div>
 
-          <div class="legend-group" data-cluster="trivial"
-               onmouseenter="isolate('trivial')" onmouseleave="resetDonut()">
+          <div class="legend-group" data-cluster="trivial">
             <div class="legend-group-head">
               <span class="legend-group-title trivial">
                 <span class="legend-swatch trivial"></span>Transactional · shortcuts
@@ -713,7 +742,7 @@
     },
   ];
 
-  // ── Donut hover isolate ──
+  // ── Donut auto-cycle ──
   const arcH = document.getElementById('arcHolistic');
   const arcT = document.getElementById('arcTrivial');
   const pct = document.getElementById('donutPct');
@@ -735,13 +764,53 @@
     }
   }
 
-  function resetDonut() {
+  function clearDonut() {
     arcH.classList.remove('dimmed', 'raised');
     arcT.classList.remove('dimmed', 'raised');
-    pct.textContent = '68%';
-    pct.style.color = 'var(--burgundy)';
-    pctLabel.textContent = 'story-led keywords';
   }
+
+  // The donut alternates between the two clusters on its own every 3s.
+  // There is no hover or tap handling: the reader just scrolls to it and
+  // watches, which behaves identically on desktop and on a phone.
+  const CYCLE_MS = 3000;
+  let showingHolistic = true;
+  let cycleTimer = null;
+
+  function stepDonut() {
+    clearDonut();
+    isolate(showingHolistic ? 'holistic' : 'trivial');
+    showingHolistic = !showingHolistic;
+  }
+
+  function startCycle() {
+    if (cycleTimer !== null) return;
+    stepDonut();
+    cycleTimer = setInterval(stepDonut, CYCLE_MS);
+  }
+
+  function stopCycle() {
+    if (cycleTimer === null) return;
+    clearInterval(cycleTimer);
+    cycleTimer = null;
+  }
+
+  // Only run while the chart is actually on screen. Starts when the reader
+  // scrolls it into view and stops when it leaves, so it is never animating
+  // invisibly in the background.
+  const donutEl = document.getElementById('arcHolistic').closest('svg') || document.body;
+
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver((entries) => {
+      entries.forEach(entry => entry.isIntersecting ? startCycle() : stopCycle());
+    }, { threshold: 0.25 }).observe(donutEl);
+  } else {
+    startCycle();
+  }
+
+  // Pause when the browser tab is hidden.
+  document.addEventListener('visibilitychange', () => {
+    document.visibilityState === 'hidden' ? stopCycle() : startCycle();
+  });
 
   let activeIdx = null;
 
@@ -768,5 +837,54 @@
     document.getElementById('detailBox').classList.add('visible');
   }
 </script>
+
+<!-- ── Auto-height reporter ──────────────────────────────────────────
+     Tells the parent page how tall this visual actually is, so the
+     embedding iframe can size itself exactly to the content.
+
+     Two directions on purpose. We push the height whenever it changes,
+     AND we answer on demand when the parent asks. The pull matters: on a
+     cached reload this frame can finish loading before the parent has
+     attached its listener, so a push-only design loses the message and
+     the frame is left stuck at its fallback height. -->
+<script>
+(function () {
+  if (window.parent === window) return;
+  var last = 0;
+
+  function measure() {
+    return Math.ceil(Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight,
+      document.body.offsetHeight,
+      document.documentElement.offsetHeight
+    ));
+  }
+
+  function report(force) {
+    var h = measure();
+    if (!h) return;
+    if (!force && Math.abs(h - last) <= 2) return;
+    last = h;
+    window.parent.postMessage({ type: 'c2t-visual-height', height: h }, '*');
+  }
+
+  // Answer the parent's request, ignoring the de-duplication guard so a
+  // repeat of the same height still gets through.
+  window.addEventListener('message', function (e) {
+    if (e.data && e.data.type === 'c2t-request-height') report(true);
+  });
+
+  window.addEventListener('load', function () { report(true); });
+  window.addEventListener('pageshow', function () { report(true); });
+  window.addEventListener('resize', function () { report(false); });
+  document.addEventListener('DOMContentLoaded', function () { report(true); });
+  if (window.ResizeObserver) new ResizeObserver(function () { report(false); }).observe(document.body);
+  // Charts and webfonts settle after first paint; re-measure a few times.
+  [100, 400, 900, 1600, 2600].forEach(function (t) { setTimeout(function () { report(true); }, t); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { report(true); });
+})();
+</script>
+
 </body>
 </html>
