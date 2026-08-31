@@ -19,8 +19,8 @@ export const site = {
   // ── Social & Contact ─────────────────────────────────────────
   instagramHandle: '@corktotable',
   instagramUrl: 'https://www.instagram.com/corktotable/',
-  substackUrl: '', // leave empty until live
-  substackLabel: 'Cork To Data Table',
+  substackUrl: 'https://corktotable.substack.com',
+  substackLabel: 'The Deeper Pour',
   contactEmail: 'corktotable@gmail.com',
   whatsappUrl: 'https://wa.me/919871576702',
 }

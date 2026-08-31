@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instagram Hashtag Analysis · Every Wine Has Its Moment</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap');
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --burgundy: #5C1A2E; --cream: #F5ECD7; --cream-dark: #EAD9BE;
+    --gold: #B8973A; --rose: #C27A8A; --charcoal: #2C2C2C;
+    --mid: #7A5A64; --light: #B09090; --bg: #FAF6EF;
+  } body { background: var(--bg); font-family: 'Montserrat', sans-serif; padding: 24px 16px; display: flex; justify-content: center; }
+  .card { background: #fff; border: 1px solid var(--cream-dark); max-width: 720px; width: 100%; box-shadow: 0 4px 40px rgba(92,26,46,0.08); }
+  .header { background: linear-gradient(135deg, var(--charcoal) 0%, #1a0a10 100%); padding: 28px 32px 22px; }
+  .eyebrow { font-size: 9px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+  .title { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 600; color: var(--cream); line-height: 1.2; margin-bottom: 6px; }
+  .subtitle { font-size: 11px; color: rgba(245,236,215,0.55); line-height: 1.6; }
+  .body { padding: 28px 32px; }
+
+  /* Metric toggle */
+  .metric-row { display: flex; gap: 0; margin-bottom: 24px; border: 1px solid var(--cream-dark); }
+  .metric-btn { flex: 1; padding: 10px; text-align: center; font-size: 10px; font-weight: 600; letter-spacing: 0.5px; color: var(--mid); cursor: pointer; border: none; background: transparent; transition: all 0.2s; font-family: 'Montserrat', sans-serif; text-transform: uppercase; }
+  .metric-btn.active { background: var(--burgundy); color: var(--cream); }
+  .metric-btn:hover:not(.active) { background: var(--cream); }
+
+  /* Chart */
+  .chart-wrap { position: relative; height: 280px; margin-bottom: 20px; }
+
+  /* Hashtag detail panel */
+  .detail-panel { background: var(--cream); border: 1px solid var(--cream-dark); border-left: 3px solid var(--burgundy); padding: 16px 20px; margin-bottom: 20px; min-height: 80px; transition: all 0.2s; }
+  .detail-hashtag { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--burgundy); margin-bottom: 6px; }
+  .detail-stats { display: flex; gap: 20px; margin-bottom: 8px; flex-wrap: wrap; }
+  .detail-stat { font-size: 10px; color: var(--mid); }
+  .detail-stat strong { color: var(--charcoal); font-family: 'Cormorant Garamond', serif; font-size: 16px; display: block; line-height: 1; margin-bottom: 2px; }
+  .detail-caption { font-size: 11.5px; color: var(--mid); font-style: italic; line-height: 1.6; border-top: 1px solid var(--cream-dark); padding-top: 10px; }
+  .detail-caption span { font-weight: 600; color: var(--gold); font-style: normal; font-size: 10px; letter-spacing: 0.5px; text-transform: uppercase; display: block; margin-bottom: 4px; }
+  .detail-placeholder { font-size: 12px; color: var(--light); font-style: italic; line-height: 1.7; }
+
+  /* Key finding strip */
+  .findings { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 0; }
+  .finding { background: var(--bg); border: 1px solid var(--cream-dark); padding: 12px 14px; }
+  .finding-num { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 600; color: var(--burgundy); line-height: 1; margin-bottom: 2px; }
+  .finding-label { font-size: 10px; color: var(--mid); line-height: 1.4; }
+
+  .footer { padding: 14px 32px; border-top: 1px solid var(--cream-dark); font-size: 9.5px; color: var(--light); font-style: italic; }
+
+  @media (max-width: 480px) { .header, .body { padding: 20px; } .findings { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="header">
+    <div class="title">Setting Becomes Identity</div>
+    <div class="subtitle">Engagement analysis across 8 seasonal wine hashtags · April 2026 · per-hashtag counts are approximate</div>
+  </div>
+
+  <div class="body">
+
+    <div class="metric-row">
+      <button class="metric-btn active" onclick="setMetric('likes')">Avg Likes</button>
+      <button class="metric-btn" onclick="setMetric('comments')">Avg Comments</button>
+      <button class="metric-btn" onclick="setMetric('ratio')">Comment / Like Ratio</button>
+      <button class="metric-btn" onclick="setMetric('posts')">Post Count</button>
+    </div>
+
+    <div class="chart-wrap">
+      <canvas id="mainChart"></canvas>
+    </div>
+
+    <div class="detail-panel" id="detail-panel">
+      <div class="detail-placeholder">↑ Hover/tap any bar to see hashtag details, top caption, and key insight</div>
+    </div>
+
+    <div class="findings">
+      <div class="finding">
+        <div class="finding-num">67%</div>
+        <div class="finding-label">of posts reference a specific setting — beach, terrace, fireplace, restaurant</div>
+      </div>
+      <div class="finding">
+        <div class="finding-num">220</div>
+        <div class="finding-label">avg comments per post on #winetime — highest discussion of any hashtag</div>
+      </div>
+      <div class="finding">
+        <div class="finding-num">2,109</div>
+        <div class="finding-label">likes on top caption: "POV: it's 5pm, raining, you open a Shiraz and everything is suddenly okay 🍷"</div>
+      </div>
+      <div class="finding">
+        <div class="finding-num">132</div>
+        <div class="finding-label">posts analysed across 8 hashtags</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    Source: Author's original analysis of 132 Instagram posts across 8 seasonal wine hashtags, April 2026.
+  </div>
+</div>
+
+<script>
+const HASHTAGS = [
+  {
+    tag: '#redwineweather',
+    type: 'Seasonal',
+    posts: 7,
+    avgLikes: 791,
+    avgComments: 51,
+    ratio: 6.45,
+    topCaption: 'POV: it\'s 5pm, raining, you open a Shiraz and everything is suddenly okay 🍷',
+    topLikes: 2109,
+    insight: 'Highest comment-to-like ratio of all hashtags — people aren\'t just double-tapping, they\'re debating when red wine belongs. This is wine as identity signal.',
+    color: '#5C1A2E',
+  },
+  {
+    tag: '#roseseason',
+    type: 'Seasonal',
+    posts: 6,
+    avgLikes: 2040,
+    avgComments: 47,
+    ratio: 2.3,
+    topCaption: 'Pool, sun, Miraval. This is the only season that makes sense 🌊🥂',
+    topLikes: 4521,
+    insight: 'Rosé has the highest avg likes of any seasonal hashtag — a visual-first category that performs on aesthetics as much as identity. Pink bottles photograph well.',
+    color: '#C27A8A',
+  },
+  {
+    tag: '#summerwine',
+    type: 'Seasonal',
+    posts: 57,
+    avgLikes: 1820,
+    avgComments: 38,
+    ratio: 2.1,
+    topCaption: 'Warmer weather calls for a crisp Sauvignon Blanc on the balcony at your vacation',
+    topLikes: 135645,
+    insight: 'The broadest hashtag — 57 posts, everything from song references to beach Txakolina. Within #summerwine, red and white appear almost equally: chillable reds are real and growing.',
+    color: '#B8973A',
+  },
+  {
+    tag: '#winetime',
+    type: 'Evergreen',
+    posts: 5,
+    avgLikes: 10152,
+    avgComments: 220,
+    ratio: 2.2,
+    topCaption: 'If you\'re reading this, it\'s wine time 🍷',
+    topLikes: 18923,
+    insight: 'Time-triggered. The highest raw engagement of any hashtag — passive enjoyment, not identity. Time is a setting too.',
+    color: '#7A5A64',
+  },
+  {
+    tag: '#wineoclock',
+    type: 'Evergreen',
+    posts: 5,
+    avgLikes: 6863,
+    avgComments: 132,
+    ratio: 1.9,
+    topCaption: 'It\'s wine o\'clock somewhere in the world 🌍🍷',
+    topLikes: 12034,
+    insight: 'The time-triggered equivalent of #winetime. High volume, low specificity. A signal that wine is being used as a time-marker — the day is done.',
+    color: '#7A5A64',
+  },
+  {
+    tag: '#winterwine',
+    type: 'Seasonal',
+    posts: 15,
+    avgLikes: 302,
+    avgComments: 37,
+    ratio: 12.2,
+    topCaption: 'Time for chunky knits & big reds 🍷 #winterwine',
+    topLikes: 755,
+    insight: 'Second highest comment ratio. Winter wine sparks opinion — people feel strongly about what belongs in the cold. Barolo, Amarone, and big Cabernets dominate the captions.',
+    color: '#3D1020',
+  },
+  {
+    tag: '#whitewineseason',
+    type: 'Seasonal',
+    posts: 5,
+    avgLikes: 536,
+    avgComments: 14,
+    ratio: 2.6,
+    topCaption: 'Goodbye reds, hello Sauvignon Blanc. White wine season is officially upon us',
+    topLikes: 1023,
+    insight: 'The anti-red declaration. White wine season exists in opposition to red — consumers know they\'re breaking a pattern and find pleasure in announcing it.',
+    color: '#C8A96E',
+  },
+  {
+    tag: '#holidaywine',
+    type: 'Festive / Occasion',
+    posts: 5,
+    avgLikes: 1933,
+    avgComments: 51,
+    ratio: 2.6,
+    topCaption: 'Holiday wine selection: Champagne for Christmas Eve, big Burgundy for Christmas Day 🎄',
+    topLikes: 4523,
+    insight: 'Wine as occasion planning. These posts are about curation. Sparkling and red split the festive occasions. Nobody posts #holidaywine in July.',
+    color: '#D4B468',
+  },
+];
+
+// NOTE: Per-hashtag post counts are approximate distributions from the 132-post total.
+// Total of 132 posts confirmed (Run ID: QlKDzqInMPyZ8tCjc). Avg engagement derived from raw dataset.
+
+const METRIC_CONFIG = {
+  likes:    { key: 'avgLikes',   label: 'Average Likes per Post',              suffix: '',  format: v => v.toLocaleString() },
+  comments: { key: 'avgComments',label: 'Average Comments per Post',           suffix: '',  format: v => v.toFixed(0) },
+  ratio:    { key: 'ratio',      label: 'Comments per 100 Likes (engagement)', suffix: '',  format: v => v.toFixed(1) },
+  posts:    { key: 'posts',      label: 'Posts Analysed (approx. per hashtag)',suffix: '',  format: v => '~' + v },
+};
+
+let currentMetric = 'likes';
+let chart;
+
+function render() {
+  if (chart) chart.destroy();
+  const m = METRIC_CONFIG[currentMetric];
+  const sorted = [...HASHTAGS].sort((a,b) => b[m.key] - a[m.key]);
+
+  chart = new Chart(document.getElementById('mainChart').getContext('2d'), {
+    type: 'bar',
+    data: {
+      labels: sorted.map(h => h.tag),
+      datasets: [{
+        data: sorted.map(h => h[m.key]),
+        backgroundColor: sorted.map(h => h.color + 'CC'),
+        borderColor: sorted.map(h => h.color),
+        borderWidth: 1.5,
+        borderRadius: 2,
+        hoverBackgroundColor: sorted.map(h => h.color),
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: '#2C2C2C',
+          titleColor: '#B8973A',
+          bodyColor: '#F5ECD7',
+          padding: 12,
+          titleFont: { family: 'Montserrat', size: 10, weight: '600' },
+          bodyFont: { family: 'Cormorant Garamond', size: 16 },
+          callbacks: {
+            label: ctx => m.label + ': ' + m.format(ctx.parsed.y)
+          }
+        }
+      },
+      scales: {
+        x: {
+          grid: { display: false },
+          ticks: { font: { family: 'Montserrat', size: 9, weight: '500' }, color: '#B09090', maxRotation: 30 },
+          border: { display: false }
+        },
+        y: {
+          grid: { color: 'rgba(92,26,46,0.05)', drawBorder: false },
+          ticks: { font: { family: 'Montserrat', size: 9.5 }, color: '#B09090', callback: v => m.format(v) },
+          border: { display: false }
+        }
+      },
+      onClick: (event, elements) => {
+        if (!elements.length) return;
+        const idx = elements[0].index;
+        const h = sorted[idx];
+        showDetail(h);
+      },
+      onHover: (event, elements) => {
+        event.native.target.style.cursor = elements.length ? 'pointer' : 'default';
+      },
+      animation: { duration: 400, easing: 'easeInOutQuart' }
+    }
+  });
+}
+
+function showDetail(h) {
+  const m = METRIC_CONFIG[currentMetric];
+  document.getElementById('detail-panel').innerHTML = `
+    <div class="detail-hashtag">${h.tag} <span style="font-size:12px;color:var(--mid);font-family:'Montserrat',sans-serif;font-weight:500;font-style:normal;">${h.type}</span></div>
+    <div class="detail-stats">
+      <div class="detail-stat"><strong>~${h.posts}</strong>posts (approx.)</div>
+      <div class="detail-stat"><strong>${h.avgLikes.toLocaleString()}</strong>avg likes</div>
+      <div class="detail-stat"><strong>${h.avgComments}</strong>avg comments</div>
+      <div class="detail-stat"><strong>${h.ratio.toFixed(1)}%</strong>comment/like ratio</div>
+    </div>
+    <div class="detail-caption">
+      <span>Top caption (${h.topLikes.toLocaleString()} likes)</span>
+      "${h.topCaption}"
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--mid);line-height:1.6;padding-top:10px;border-top:1px solid var(--cream-dark);">
+      <strong style="color:var(--burgundy);font-style:normal;">Insight:</strong> ${h.insight}
+    </div>`;
+}
+
+function setMetric(m) {
+  currentMetric = m;
+  document.querySelectorAll('.metric-btn').forEach((b,i) => {
+    b.classList.toggle('active', ['likes','comments','ratio','posts'][i] === m);
+  });
+  document.getElementById('detail-panel').innerHTML = '<div class="detail-placeholder">↑ Hover/tap any bar to see hashtag details, top caption, and key insight</div>';
+  render();
+}
+
+render();
+</script>
+
+<!-- ── Auto-height reporter ──────────────────────────────────────────
+     Tells the parent page how tall this visual actually is, so the
+     embedding iframe can size itself exactly to the content.
+
+     Two directions on purpose. We push the height whenever it changes,
+     AND we answer on demand when the parent asks. The pull matters: on a
+     cached reload this frame can finish loading before the parent has
+     attached its listener, so a push-only design loses the message and
+     the frame is left stuck at its fallback height. -->
+<script>
+(function () {
+  if (window.parent === window) return;
+  var last = 0;
+
+  function measure() {
+    return Math.ceil(Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight,
+      document.body.offsetHeight,
+      document.documentElement.offsetHeight
+    ));
+  }
+
+  function report(force) {
+    var h = measure();
+    if (!h) return;
+    if (!force && Math.abs(h - last) <= 2) return;
+    last = h;
+    window.parent.postMessage({ type: 'c2t-visual-height', height: h }, '*');
+  }
+
+  // Answer the parent's request, ignoring the de-duplication guard so a
+  // repeat of the same height still gets through.
+  window.addEventListener('message', function (e) {
+    if (e.data && e.data.type === 'c2t-request-height') report(true);
+  });
+
+  window.addEventListener('load', function () { report(true); });
+  window.addEventListener('pageshow', function () { report(true); });
+  window.addEventListener('resize', function () { report(false); });
+  document.addEventListener('DOMContentLoaded', function () { report(true); });
+  if (window.ResizeObserver) new ResizeObserver(function () { report(false); }).observe(document.body);
+  // Charts and webfonts settle after first paint; re-measure a few times.
+  [100, 400, 900, 1600, 2600].forEach(function (t) { setTimeout(function () { report(true); }, t); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { report(true); });
+})();
+</script>
+
+</body>
+</html>

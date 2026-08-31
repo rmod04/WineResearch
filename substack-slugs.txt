@@ -33,7 +33,7 @@ Reasons on record:
    news newsletter in a different category.
 
 Tagline (working)  : Data-led wine stories from Cork to Table
-About page must state that every article links to its page on corktotable.com
+About page must state that every article links to its page on corktotable.co
 for the interactive visuals. That line is what connects the two names for a
 reader who arrives at only one of them.
 
@@ -97,18 +97,19 @@ website is declared canonical and Substack points back to it.
 At publish time, in Substack's post settings, set the canonical URL to the
 matching website page:
 
-  Piece 1 -> https://corktotable.com/stories-and-trends/every-wine-has-its-moment
-  Piece 2 -> https://corktotable.com/stories-and-trends/the-reward-for-curiosity
+  Piece 1 -> https://corktotable.co/stories-and-trends/every-wine-has-its-moment
+  Piece 2 -> https://corktotable.co/stories-and-trends/the-reward-for-curiosity
 
-Why: search credit accrues to corktotable.com, which is the owned asset and
+Why: search credit accrues to corktotable.co, which is the owned asset and
 carries the contact form, wine tourism and tasting pages. Substack still does
 the distribution. Without this, Google picks one version itself and will
 usually favour Substack early on, since a new domain has no authority yet.
 
-SEQUENCING WARNING: do not publish on Substack before the website is live at
-its final domain. The canonical must point at a working URL. corktotable.com
-was not registered as of this note, so register the domain and deploy the
-site first, Substack second.
+SEQUENCING: CLEARED on 31 August 2026. The domain is corktotable.co. The .com
+was already taken, so .co was registered at Cloudflare Registrar. The site is
+live and both article pages were verified as resolving:
+  https://corktotable.co/stories-and-trends/every-wine-has-its-moment
+  https://corktotable.co/stories-and-trends/the-reward-for-curiosity
 
 Also note: Substack does not render iframes, so the five interactive visuals
 cannot run inside a Substack post. Use static images there and link out to

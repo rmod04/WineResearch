@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Seasonal Instinct · Every Wine Has Its Moment</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap');
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --burgundy: #5C1A2E; --cream: #F5ECD7; --cream-dark: #EAD9BE;
+    --gold: #B8973A; --rose: #C27A8A; --charcoal: #2C2C2C;
+    --mid: #7A5A64; --light: #B09090; --bg: #FAF6EF;
+  } body { background: var(--bg); font-family: 'Montserrat', sans-serif; padding: 24px 16px; display: flex; justify-content: center; }
+  .card { background: #fff; border: 1px solid var(--cream-dark); max-width: 720px; width: 100%; box-shadow: 0 4px 40px rgba(92,26,46,0.08); }
+
+  .header { background: var(--cream); border-bottom: 3px solid var(--burgundy); padding: 28px 32px 22px; }
+  .eyebrow { font-size: 9px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--rose); margin-bottom: 10px; }
+  .title { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; color: var(--burgundy); line-height: 1.2; margin-bottom: 6px; }
+  .subtitle { font-size: 11px; color: var(--mid); line-height: 1.6; }
+
+  .body { padding: 28px 32px; }
+
+  /* Season tabs */
+  .season-tabs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 24px; }
+  .season-tab { padding: 12px 8px; text-align: center; cursor: pointer; border: 1px solid var(--cream-dark); transition: all 0.2s; background: #fff; position: relative; overflow: hidden; }
+  .season-tab::before { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; transform: scaleX(0); transition: transform 0.3s; }
+  .season-tab:hover { background: var(--bg); }
+  .season-tab.active::before { transform: scaleX(1); }
+  .season-icon { font-size: 22px; display: block; margin-bottom: 4px; }
+  .season-name { font-size: 10px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; color: var(--mid); }
+  .season-tab.active .season-name { color: var(--charcoal); }
+
+  /* Spring: gold */
+  .season-tab[data-season="spring"]::before { background: #C8A96E; }
+  .season-tab[data-season="spring"].active { border-color: #C8A96E; }
+  /* Summer: rose */
+  .season-tab[data-season="summer"]::before { background: var(--rose); }
+  .season-tab[data-season="summer"].active { border-color: var(--rose); }
+  /* Autumn: gold-dark */
+  .season-tab[data-season="autumn"]::before { background: var(--gold); }
+  .season-tab[data-season="autumn"].active { border-color: var(--gold); }
+  /* Winter: burgundy */
+  .season-tab[data-season="winter"]::before { background: var(--burgundy); }
+  .season-tab[data-season="winter"].active { border-color: var(--burgundy); }
+
+  /* Wines grid */
+  .wines-section { margin-bottom: 22px; }
+  .wines-label { font-size: 9px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+  .wines-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+  .wine-chip { padding: 8px 14px; border: 1px solid var(--cream-dark); font-size: 11px; font-weight: 500; color: var(--charcoal); background: var(--bg); cursor: pointer; transition: all 0.2s; border-radius: 1px; }
+  .wine-chip:hover { border-color: var(--burgundy); color: var(--burgundy); }
+  .wine-chip.primary { background: var(--burgundy); color: var(--cream); border-color: var(--burgundy); }
+  .wine-chip.secondary { background: var(--cream); border-color: var(--cream-dark); }
+
+  /* Voice panel */
+  .voice-panel { background: var(--cream); border-left: 3px solid var(--burgundy); padding: 16px 20px; margin-bottom: 22px; }
+  .voice-label { font-size: 9px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mid); margin-bottom: 8px; }
+  .voice-text { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-style: italic; color: var(--charcoal); line-height: 1.7; margin-bottom: 8px; }
+  .voice-score { font-size: 10px; color: var(--light); }
+  .voice-score strong { color: var(--gold); }
+  .voice-nav { display: flex; gap: 8px; margin-top: 10px; }
+  .voice-nav-btn { font-size: 9px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--cream-dark); background: transparent; color: var(--mid); cursor: pointer; font-family: 'Montserrat', sans-serif; transition: all 0.2s; }
+  .voice-nav-btn:hover { border-color: var(--burgundy); color: var(--burgundy); }
+
+  /* Insight */
+  .insight { background: var(--bg); border: 1px solid var(--cream-dark); padding: 14px 18px; font-size: 11px; color: var(--mid); line-height: 1.7; }
+  .insight strong { color: var(--burgundy); font-weight: 600; }
+
+  /* Pattern note */
+  .pattern-note { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--cream-dark); display: flex; align-items: flex-start; gap: 12px; }
+  .pattern-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+  .pattern-text { font-size: 11px; color: var(--mid); line-height: 1.6; }
+  .pattern-text strong { color: var(--charcoal); }
+
+  .footer { padding: 14px 32px; border-top: 1px solid var(--cream-dark); font-size: 9.5px; color: var(--light); font-style: italic; }
+
+  @media (max-width: 480px) { .header, .body { padding: 20px; } .season-tabs { grid-template-columns: repeat(2, 1fr); } }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="header">
+    <div class="title">Seasonal Variations</div>
+    <div class="subtitle">What the data shows consumers reach for, each season. Is there a pattern here, and how strong is it?</div>
+  </div>
+
+  <div class="body">
+
+    <div class="season-tabs">
+      <div class="season-tab active" data-season="spring" onclick="setSeason('spring')">
+        <span class="season-icon">🌸</span>
+        <span class="season-name">Spring</span>
+      </div>
+      <div class="season-tab" data-season="summer" onclick="setSeason('summer')">
+        <span class="season-icon">☀️</span>
+        <span class="season-name">Summer</span>
+      </div>
+      <div class="season-tab" data-season="autumn" onclick="setSeason('autumn')">
+        <span class="season-icon">🍂</span>
+        <span class="season-name">Autumn</span>
+      </div>
+      <div class="season-tab" data-season="winter" onclick="setSeason('winter')">
+        <span class="season-icon">❄️</span>
+        <span class="season-name">Winter</span>
+      </div>
+    </div>
+
+    <div class="wines-section">
+      <div class="wines-label" id="wines-label">What consumers reach for</div>
+      <div class="wines-grid" id="wines-grid"></div>
+    </div>
+
+    <div class="voice-panel">
+      <div class="voice-label">r/wine · Community voices</div>
+      <div class="voice-text" id="voice-text"></div>
+      <div class="voice-score" id="voice-score"></div>
+      <div class="voice-nav">
+        <button class="voice-nav-btn" onclick="prevVoice()">← Previous</button>
+        <span style="font-size:10px;color:var(--light);align-self:center;" id="voice-counter"></span>
+        <button class="voice-nav-btn" onclick="nextVoice()">Next →</button>
+      </div>
+    </div>
+
+    <div class="insight" id="insight"></div>
+
+    <div class="pattern-note">
+      <div class="pattern-icon">💡</div>
+      <div class="pattern-text">
+        <strong>The qualifier that is the argument:</strong> Every single top-voted seasonal comment ends with a version of "but I drink whatever I want, whenever I want." The pattern is real — and so is the freedom to ignore it. That tension is what the data actually shows.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    Source: Author's original analysis of 452 Reddit comments across 17 r/wine threads, April 2026.
+  </div>
+</div>
+
+<script>
+const SEASONS = {
+  spring: {
+    color: '#C8A96E',
+    wines: [
+      { name: 'Cru Beaujolais', type: 'primary' },
+      { name: 'Chardonnay', type: 'primary' },
+      { name: 'Sauvignon Blanc', type: 'primary' },
+      { name: 'Grüner Veltliner', type: 'secondary' },
+      { name: 'Vinho Verde', type: 'secondary' },
+      { name: 'Pinot Gris', type: 'secondary' },
+    ],
+    voices: [
+      { text: 'Chardonnay feels like spring.', score: null, thread: 'Seasons thread' },
+      { text: 'Spring is Cru Beaujolais.', score: null, thread: 'Seasons thread' },
+      { text: 'Summer: Rosé or Gruner. Fall: Zweigelt. Winter: Zin, Cab or Barolo. Spring: Sauv Blanc or Gruner again lol.', score: 5, thread: 'Seasons thread' },
+    ],
+    insight: '<strong>Spring instinct:</strong> Consumers reach for freshness and lift — Beaujolais, Chardonnay, Sauvignon Blanc. The connection to the season is felt, not reasoned. Spring wine mirrors spring cooking: lighter, more acidic, less heavy.',
+    oiv: 'White wine is up 10% globally since 2000 — the direction consumers are heading across all seasons.'
+  },
+  summer: {
+    color: '#C27A8A',
+    wines: [
+      { name: 'Rosé', type: 'primary' },
+      { name: 'Txakolina', type: 'primary' },
+      { name: 'Riesling', type: 'primary' },
+      { name: 'Vinho Verde', type: 'primary' },
+      { name: 'Chillable Reds', type: 'secondary' },
+      { name: 'Albariño', type: 'secondary' },
+      { name: 'Sauvignon Blanc', type: 'secondary' },
+      { name: 'Provençal Rosé', type: 'secondary' },
+      { name: 'Grüner Veltliner', type: 'secondary' },
+    ],
+    voices: [
+      { text: 'Summer is built for Rosé.', score: null, thread: 'Seasons thread' },
+      { text: 'Ameztoi Txakolina or the Ameztoi Rubentis Rosé. Both with a good chill kept me alive in the hot and humid summers of Boston.', score: 11, thread: 'Best wine for summer?' },
+      { text: 'Riesling. Higher acidity, which is good on a hot day in the sun and it also tends to be lower in alcohol.', score: 8, thread: 'Best wine for summer?' },
+      { text: 'Rose or Vinho Verde.', score: 24, thread: 'Best wine for summer?' },
+    ],
+    insight: '<strong>Summer instinct:</strong> The most diverse season. Rosé leads, but chillable reds (Gamay, Frappato, light Grenache) are the fastest-growing segment in restaurants in 2026. The old binary — "reds in winter, whites in summer" — is already dissolving here.',
+    oiv: 'Rosé is up +17% globally since 2000 — but summer is also where chillable reds are breaking the old rules.'
+  },
+  autumn: {
+    color: '#B8973A',
+    wines: [
+      { name: 'Bordeaux', type: 'primary' },
+      { name: 'Pinot Noir', type: 'primary' },
+      { name: 'Zweigelt', type: 'primary' },
+      { name: 'Burgundy', type: 'secondary' },
+      { name: 'Tempranillo', type: 'secondary' },
+      { name: 'Barbera', type: 'secondary' },
+    ],
+    voices: [
+      { text: 'Pinot has always felt like a great fall wine to me.', score: null, thread: 'Seasons thread' },
+      { text: 'Fall is Bordeaux for days.', score: null, thread: 'Seasons thread' },
+      { text: 'Summer: Rosé or Gruner. Fall: Zweigelt. Winter: Zin, Cab or Barolo. Spring: Sauv Blanc or Gruner again lol.', score: 5, thread: 'Seasons thread' },
+    ],
+    insight: '<strong>Autumn instinct:</strong> The transitional season — consumers feel their way toward structure and depth, but not yet the full weight of winter. Pinot Noir is the consensus choice: enough body for autumn cooking, enough elegance to avoid heaviness.',
+    oiv: 'Red wine\'s overall decline masks strong enthusiasm for lighter, more elegant reds — exactly the styles that dominate autumn voices.'
+  },
+  winter: {
+    color: '#5C1A2E',
+    wines: [
+      { name: 'Barolo', type: 'primary' },
+      { name: 'Amarone', type: 'primary' },
+      { name: 'Zinfandel', type: 'primary' },
+      { name: 'Southern Rhône', type: 'primary' },
+      { name: 'Cabernet Sauvignon', type: 'secondary' },
+      { name: 'Primitivo', type: 'secondary' },
+      { name: 'Sparkling', type: 'secondary' },
+    ],
+    voices: [
+      { text: 'Winter is where the biggest red isn\'t big enough.', score: null, thread: 'Seasons thread' },
+      { text: 'Winter is Barolo and traditionalist southern Rhône.', score: null, thread: 'Seasons thread' },
+      { text: 'Giuseppe Attanasio Primitivo di Manduria. Clocking in at 16.5%. Pairs great with a fireplace or bonfire, blankets, and good company.', score: 4, thread: 'Best wine for a cold winter night?' },
+      { text: 'For the most part it will be based on my seasonal cooking habits. In winter I do more roasting and braising. Therefore I find myself drinking richer whites and more complex reds. Of course, when it all comes down to it, I drink whatever the hell I want, whenever the hell I want!', score: 8, thread: 'Which wines do you associate with the seasons?' },
+    ],
+    insight: '<strong>Winter instinct:</strong> The most unanimous of all seasons. Big reds dominate — Barolo, Amarone, Zinfandel, Primitivo. But notice: sparkling also appears. Christmas and New Year pull sparkling into winter, complicating the "reds only" picture. The festive season is a category of its own.',
+    oiv: 'Even in winter\'s red-dominant season, rosé and sparkling are gaining share globally — the instinct is real, but the edges are blurring.'
+  }
+};
+
+let currentSeason = 'spring';
+let currentVoiceIdx = 0;
+
+function setSeason(season) {
+  currentSeason = season;
+  currentVoiceIdx = 0;
+
+  document.querySelectorAll('.season-tab').forEach(t => {
+    t.classList.toggle('active', t.dataset.season === season);
+  });
+
+  const s = SEASONS[season];
+
+  // Wines
+  document.getElementById('wines-grid').innerHTML = s.wines.map(w =>
+    `<div class="wine-chip ${w.type}">${w.name}</div>`
+  ).join('');
+
+  renderVoice();
+
+  // Insight
+  document.getElementById('insight').innerHTML = s.insight + `<br><br><span style="font-size:10px;color:var(--light);font-style:italic;">OIV context: ${s.oiv}</span>`;
+}
+
+function renderVoice() {
+  const voices = SEASONS[currentSeason].voices;
+  const v = voices[currentVoiceIdx];
+  document.getElementById('voice-text').textContent = '"' + v.text + '"';
+  document.getElementById('voice-score').innerHTML = v.score
+    ? `<strong>▲ ${v.score} upvotes</strong> · r/wine · ${v.thread}`
+    : `r/wine · ${v.thread}`;
+  document.getElementById('voice-counter').textContent = `${currentVoiceIdx + 1} of ${voices.length}`;
+}
+
+function nextVoice() {
+  const voices = SEASONS[currentSeason].voices;
+  currentVoiceIdx = (currentVoiceIdx + 1) % voices.length;
+  renderVoice();
+}
+
+function prevVoice() {
+  const voices = SEASONS[currentSeason].voices;
+  currentVoiceIdx = (currentVoiceIdx - 1 + voices.length) % voices.length;
+  renderVoice();
+}
+
+setSeason('spring');
+</script>
+
+<!-- ── Auto-height reporter ──────────────────────────────────────────
+     Tells the parent page how tall this visual actually is, so the
+     embedding iframe can size itself exactly to the content.
+
+     Two directions on purpose. We push the height whenever it changes,
+     AND we answer on demand when the parent asks. The pull matters: on a
+     cached reload this frame can finish loading before the parent has
+     attached its listener, so a push-only design loses the message and
+     the frame is left stuck at its fallback height. -->
+<script>
+(function () {
+  if (window.parent === window) return;
+  var last = 0;
+
+  function measure() {
+    return Math.ceil(Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight,
+      document.body.offsetHeight,
+      document.documentElement.offsetHeight
+    ));
+  }
+
+  function report(force) {
+    var h = measure();
+    if (!h) return;
+    if (!force && Math.abs(h - last) <= 2) return;
+    last = h;
+    window.parent.postMessage({ type: 'c2t-visual-height', height: h }, '*');
+  }
+
+  // Answer the parent's request, ignoring the de-duplication guard so a
+  // repeat of the same height still gets through.
+  window.addEventListener('message', function (e) {
+    if (e.data && e.data.type === 'c2t-request-height') report(true);
+  });
+
+  window.addEventListener('load', function () { report(true); });
+  window.addEventListener('pageshow', function () { report(true); });
+  window.addEventListener('resize', function () { report(false); });
+  document.addEventListener('DOMContentLoaded', function () { report(true); });
+  if (window.ResizeObserver) new ResizeObserver(function () { report(false); }).observe(document.body);
+  // Charts and webfonts settle after first paint; re-measure a few times.
+  [100, 400, 900, 1600, 2600].forEach(function (t) { setTimeout(function () { report(true); }, t); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { report(true); });
+})();
+</script>
+
+</body>
+</html>

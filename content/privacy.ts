@@ -16,7 +16,7 @@ export const privacy = {
     {
       heading: 'Who we are',
       body: [
-        'Cork To Table is a wine education, tasting and travel consultancy run by Rohan Modwel, based in New Delhi, India. This policy explains what personal information we collect through corktotable.com, why we collect it, and what we do with it. Questions about anything below can go to corktotable@gmail.com.',
+        'Cork To Table is a wine education, tasting and travel consultancy run by Rohan Modwel, based in New Delhi, India. This policy explains what personal information we collect through corktotable.co, why we collect it, and what we do with it. Questions about anything below can go to corktotable@gmail.com.',
       ],
     },
     {

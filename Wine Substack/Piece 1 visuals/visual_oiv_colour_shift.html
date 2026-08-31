@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OIV Colour Shift · Every Wine Has Its Moment</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap');
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --burgundy: #5C1A2E; --cream: #F5ECD7; --cream-dark: #EAD9BE;
+    --gold: #B8973A; --rose: #C27A8A; --charcoal: #2C2C2C;
+    --mid: #7A5A64; --light: #B09090; --bg: #FAF6EF;
+    --red-wine: #7B1D2E; --white-wine: #C8A96E; --rose-wine: #D4889A;
+  } body { background: var(--bg); font-family: 'Montserrat', sans-serif; padding: 24px 16px; display: flex; justify-content: center; }
+  .card { background: #fff; border: 1px solid var(--cream-dark); max-width: 700px; width: 100%; box-shadow: 0 4px 40px rgba(92,26,46,0.08); }
+  .header { background: var(--burgundy); padding: 28px 32px 22px; position: relative; overflow: hidden; }
+  .header::after { content: ''; position: absolute; right: -30px; top: -30px; width: 150px; height: 150px; border-radius: 50%; border: 1px solid rgba(184,151,58,0.15); }
+  .eyebrow { font-size: 9px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+  .title { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 600; color: var(--cream); line-height: 1.2; margin-bottom: 6px; }
+  .subtitle { font-size: 11px; color: rgba(245,236,215,0.6); line-height: 1.6; }
+  .body { padding: 28px 32px; }
+
+  /* Year selector */
+  .year-tabs { display: flex; gap: 0; margin-bottom: 24px; border: 1px solid var(--cream-dark); }
+  .year-tab { flex: 1; padding: 10px; text-align: center; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; color: var(--mid); cursor: pointer; border: none; background: transparent; transition: all 0.2s; font-family: 'Montserrat', sans-serif; }
+  .year-tab.active { background: var(--burgundy); color: var(--cream); }
+  .year-tab:hover:not(.active) { background: var(--cream); }
+
+  /* View toggle */
+  .toggle-row { display: flex; gap: 8px; margin-bottom: 22px; }
+  .toggle-btn { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; padding: 7px 14px; border: 1px solid var(--cream-dark); background: transparent; color: var(--mid); cursor: pointer; transition: all 0.2s; }
+  .toggle-btn.active { background: var(--charcoal); color: var(--cream); border-color: var(--charcoal); }
+  .toggle-btn:hover:not(.active) { border-color: var(--burgundy); color: var(--burgundy); }
+
+  /* Chart */
+  .chart-wrap { position: relative; height: 260px; margin-bottom: 20px; }
+
+  /* Colour legend pills */
+  .colour-pills { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+  .colour-pill { display: flex; align-items: center; gap: 8px; padding: 8px 14px; border: 1px solid var(--cream-dark); cursor: pointer; transition: all 0.2s; flex: 1; min-width: 130px; }
+  .colour-pill.dimmed { opacity: 0.35; }
+  .colour-pill:hover { border-color: var(--burgundy); }
+  .pill-swatch { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+  .pill-text { flex: 1; }
+  .pill-name { font-size: 10px; font-weight: 600; color: var(--charcoal); letter-spacing: 0.3px; display: block; }
+  .pill-stat { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 600; color: var(--burgundy); line-height: 1; }
+  .pill-change { font-size: 9px; color: var(--mid); margin-top: 1px; display: block; }
+
+  /* Insight box */
+  .insight { background: var(--cream); border-left: 3px solid var(--gold); padding: 14px 16px; margin-bottom: 0; font-size: 11.5px; color: var(--mid); line-height: 1.7; font-style: italic; }
+  .insight strong { color: var(--burgundy); font-style: normal; font-weight: 600; }
+
+  .footer { padding: 14px 32px; border-top: 1px solid var(--cream-dark); font-size: 9.5px; color: var(--light); font-style: italic; }
+
+  @media (max-width: 480px) { .header, .body { padding: 20px; } .title { font-size: 20px; } }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="header">
+    <div class="title">The World is Moving Towards Lighter</div>
+    <div class="subtitle">Global wine consumption by colour · 2000 vs 2021 · OIV via Decanter 2023 · hover/tap to view graph labels</div>
+  </div>
+
+  <div class="body">
+
+    <div class="colour-pills">
+      <div class="colour-pill" id="pill-red" onclick="toggleColour('red')">
+        <div class="pill-swatch" style="background:#7B1D2E"></div>
+        <div class="pill-text">
+          <span class="pill-name">Red Wine</span>
+          <span class="pill-stat" id="red-stat">55% → 47%</span>
+          <span class="pill-change" id="red-change">−8pp · down 15% from 2007 peak</span>
+        </div>
+      </div>
+      <div class="colour-pill" id="pill-white" onclick="toggleColour('white')">
+        <div class="pill-swatch" style="background:#C8A96E"></div>
+        <div class="pill-text">
+          <span class="pill-name">White Wine</span>
+          <span class="pill-stat" id="white-stat">38% → 43%</span>
+          <span class="pill-change" id="white-change">+5pp · up 10% over two decades</span>
+        </div>
+      </div>
+      <div class="colour-pill" id="pill-rose" onclick="toggleColour('rose')">
+        <div class="pill-swatch" style="background:#D4889A"></div>
+        <div class="pill-text">
+          <span class="pill-name">Rosé</span>
+          <span class="pill-stat" id="rose-stat">7% → 10%</span>
+          <span class="pill-change" id="rose-change">+3pp · fastest growing colour +43% relative</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="toggle-row">
+      <button class="toggle-btn active" onclick="setView('stacked')">Stacked Share</button>
+      <button class="toggle-btn" onclick="setView('change')">Change Only</button>
+    </div>
+    <div style="font-size:9.5px;color:#B09090;font-style:italic;margin-bottom:14px;margin-top:-10px;">pp = percentage points of global consumption share · relative % change shown in pills above</div>
+
+    <div class="chart-wrap">
+      <canvas id="mainChart"></canvas>
+    </div>
+
+    <div class="insight" id="insight">
+      <strong>The story in one sentence:</strong> Red wine's decade-long dominance is unwinding. A generation of consumers is quietly choosing lighter, brighter styles — and the numbers show it at global scale. Click each colour pill to isolate the trend.
+    </div>
+
+  </div>
+
+  <div class="footer">
+    Source: OIV — International Organisation of Vine and Wine. Global wine consumption by colour, 2000–2021. Reported in Decanter, December 2023.
+  </div>
+</div>
+
+<script>
+const DATA = {
+  red:   { y2000: 55, y2021: 47 },
+  white: { y2000: 38, y2021: 43 },
+  rose:  { y2000: 7,  y2021: 10 },
+};
+
+const COLORS = {
+  red:   { solid: '#7B1D2E', light: 'rgba(123,29,46,0.15)' },
+  white: { solid: '#C8A96E', light: 'rgba(200,169,110,0.15)' },
+  rose:  { solid: '#D4889A', light: 'rgba(212,136,154,0.15)' },
+};
+
+const INSIGHTS = {
+  stacked: '<strong>Stacked share view:</strong> In 2000, red wine held more than half of all global consumption. By 2021, that has shrunk to just below half. White and rosé have filled the gap — together now accounting for over half of global consumption for the first time. This may seem minor, but in absolute consumption it represents a significant change.',
+  change: '<strong>Change since 2000 (in percentage points):</strong> Rosé is the standout mover — a +3pp absolute gain, representing a 43% relative increase in global share. White wine grew steadily (+5pp). Red wine gave back ground accumulated since the 1990s (−8pp). <em>Note: pp = percentage points of global consumption share. Relative % change shown in the colour pills above.</em>',
+};
+
+let currentView = 'stacked';
+let hidden = { red: false, white: false, rose: false };
+let chart;
+
+function getVisibleDatasets() {
+  const base = [
+    { key: 'red',   label: 'Red Wine',   color: COLORS.red },
+    { key: 'white', label: 'White Wine', color: COLORS.white },
+    { key: 'rose',  label: 'Rosé',       color: COLORS.rose },
+  ];
+  return base.filter(d => !hidden[d.key]);
+}
+
+function buildStacked() {
+  const ds = getVisibleDatasets();
+  return {
+    labels: ['2000', '2021'],
+    datasets: ds.map(d => ({
+      label: d.label,
+      data: [DATA[d.key].y2000, DATA[d.key].y2021],
+      backgroundColor: d.color.solid,
+      borderColor: '#fff',
+      borderWidth: 1,
+    }))
+  };
+}
+
+function buildChange() {
+  const ds = getVisibleDatasets();
+  return {
+    labels: ds.map(d => d.label),
+    datasets: [{
+      label: 'Change in percentage points (pp)',
+      data: ds.map(d => DATA[d.key].y2021 - DATA[d.key].y2000),
+      backgroundColor: ds.map(d => (DATA[d.key].y2021 - DATA[d.key].y2000) < 0 ? 'rgba(123,29,46,0.8)' : d.color.solid),
+      borderColor: ds.map(d => d.color.solid),
+      borderWidth: 1.5,
+      borderRadius: 2,
+    }]
+  };
+}
+
+function render() {
+  if (chart) chart.destroy();
+  const isStacked = currentView === 'stacked';
+  const isChange = currentView === 'change';
+
+  const data = isStacked ? buildStacked() : buildChange();
+
+  chart = new Chart(document.getElementById('mainChart').getContext('2d'), {
+    type: 'bar',
+    data,
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: '#2C2C2C',
+          titleColor: '#B8973A',
+          bodyColor: '#F5ECD7',
+          padding: 12,
+          titleFont: { family: 'Montserrat', size: 10, weight: '600' },
+          bodyFont: { family: 'Cormorant Garamond', size: 18 },
+          callbacks: {
+            label: ctx => {
+              const v = ctx.parsed.y;
+              const prefix = (currentView === 'change' && v > 0) ? '+' : '';
+              return `${ctx.dataset.label}: ${prefix}${v}%`;
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          stacked: isStacked,
+          grid: { display: false },
+          ticks: { font: { family: 'Montserrat', size: 10, weight: '500' }, color: '#B09090' },
+          border: { display: false }
+        },
+        y: {
+          stacked: isStacked,
+          grid: { color: 'rgba(92,26,46,0.06)', drawBorder: false },
+          ticks: {
+            font: { family: 'Montserrat', size: 9.5 }, color: '#B09090',
+            callback: v => (isChange && v > 0 ? '+' : '') + v + '%'
+          },
+          border: { display: false },
+          min: isChange ? -12 : 0,
+          max: isChange ? 10 : (isStacked ? 105 : 65),
+        }
+      },
+      animation: { duration: 500, easing: 'easeInOutQuart' }
+    }
+  });
+}
+
+function setView(view) {
+  currentView = view;
+  document.querySelectorAll('.toggle-btn').forEach((b, i) => {
+    b.classList.toggle('active', ['stacked','change'][i] === view);
+  });
+  document.getElementById('insight').innerHTML = INSIGHTS[view];
+  render();
+}
+
+function toggleColour(colour) {
+  hidden[colour] = !hidden[colour];
+  document.getElementById(`pill-${colour}`).classList.toggle('dimmed', hidden[colour]);
+  render();
+}
+
+render();
+</script>
+
+<!-- ── Auto-height reporter ──────────────────────────────────────────
+     Tells the parent page how tall this visual actually is, so the
+     embedding iframe can size itself exactly to the content.
+
+     Two directions on purpose. We push the height whenever it changes,
+     AND we answer on demand when the parent asks. The pull matters: on a
+     cached reload this frame can finish loading before the parent has
+     attached its listener, so a push-only design loses the message and
+     the frame is left stuck at its fallback height. -->
+<script>
+(function () {
+  if (window.parent === window) return;
+  var last = 0;
+
+  function measure() {
+    return Math.ceil(Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight,
+      document.body.offsetHeight,
+      document.documentElement.offsetHeight
+    ));
+  }
+
+  function report(force) {
+    var h = measure();
+    if (!h) return;
+    if (!force && Math.abs(h - last) <= 2) return;
+    last = h;
+    window.parent.postMessage({ type: 'c2t-visual-height', height: h }, '*');
+  }
+
+  // Answer the parent's request, ignoring the de-duplication guard so a
+  // repeat of the same height still gets through.
+  window.addEventListener('message', function (e) {
+    if (e.data && e.data.type === 'c2t-request-height') report(true);
+  });
+
+  window.addEventListener('load', function () { report(true); });
+  window.addEventListener('pageshow', function () { report(true); });
+  window.addEventListener('resize', function () { report(false); });
+  document.addEventListener('DOMContentLoaded', function () { report(true); });
+  if (window.ResizeObserver) new ResizeObserver(function () { report(false); }).observe(document.body);
+  // Charts and webfonts settle after first paint; re-measure a few times.
+  [100, 400, 900, 1600, 2600].forEach(function (t) { setTimeout(function () { report(true); }, t); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { report(true); });
+})();
+</script>
+
+</body>
+</html>
