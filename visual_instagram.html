@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Instagram Hashtag Analysis · Every Wine Has Its Moment</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="chart.umd.min.js"></script>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap');
+  @import url('fonts.css');
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
     --burgundy: #5C1A2E; --cream: #F5ECD7; --cream-dark: #EAD9BE;
@@ -53,7 +53,7 @@
 <body>
 <div class="card">
   <div class="header">
-    <div class="title">Setting Becomes Identity</div>
+    <div class="title">Setting becomes identity</div>
     <div class="subtitle">Engagement analysis across 8 seasonal wine hashtags · April 2026 · per-hashtag counts are approximate</div>
   </div>
 
@@ -77,11 +77,11 @@
     <div class="findings">
       <div class="finding">
         <div class="finding-num">67%</div>
-        <div class="finding-label">of posts reference a specific setting — beach, terrace, fireplace, restaurant</div>
+        <div class="finding-label">of posts reference a specific setting: beach, terrace, fireplace, restaurant</div>
       </div>
       <div class="finding">
         <div class="finding-num">220</div>
-        <div class="finding-label">avg comments per post on #winetime — highest discussion of any hashtag</div>
+        <div class="finding-label">avg comments per post on #winetime, the highest discussion of any hashtag</div>
       </div>
       <div class="finding">
         <div class="finding-num">2,109</div>
@@ -111,7 +111,7 @@ const HASHTAGS = [
     ratio: 6.45,
     topCaption: 'POV: it\'s 5pm, raining, you open a Shiraz and everything is suddenly okay 🍷',
     topLikes: 2109,
-    insight: 'Highest comment-to-like ratio of all hashtags — people aren\'t just double-tapping, they\'re debating when red wine belongs. This is wine as identity signal.',
+    insight: 'Highest comment-to-like ratio of all hashtags. People are debating when red wine belongs, well beyond a double-tap. This is wine as identity signal.',
     color: '#5C1A2E',
   },
   {
@@ -123,7 +123,7 @@ const HASHTAGS = [
     ratio: 2.3,
     topCaption: 'Pool, sun, Miraval. This is the only season that makes sense 🌊🥂',
     topLikes: 4521,
-    insight: 'Rosé has the highest avg likes of any seasonal hashtag — a visual-first category that performs on aesthetics as much as identity. Pink bottles photograph well.',
+    insight: 'Rosé has the highest avg likes of any seasonal hashtag, a visual-first category that performs on aesthetics as much as identity. Pink bottles photograph well.',
     color: '#C27A8A',
   },
   {
@@ -135,7 +135,7 @@ const HASHTAGS = [
     ratio: 2.1,
     topCaption: 'Warmer weather calls for a crisp Sauvignon Blanc on the balcony at your vacation',
     topLikes: 135645,
-    insight: 'The broadest hashtag — 57 posts, everything from song references to beach Txakolina. Within #summerwine, red and white appear almost equally: chillable reds are real and growing.',
+    insight: 'The broadest hashtag, with 57 posts, everything from song references to beach Txakolina. Within #summerwine, red and white appear almost equally: chillable reds are real and growing.',
     color: '#B8973A',
   },
   {
@@ -147,7 +147,7 @@ const HASHTAGS = [
     ratio: 2.2,
     topCaption: 'If you\'re reading this, it\'s wine time 🍷',
     topLikes: 18923,
-    insight: 'Time-triggered. The highest raw engagement of any hashtag — passive enjoyment, not identity. Time is a setting too.',
+    insight: 'Time-triggered. The highest raw engagement of any hashtag, driven by passive enjoyment rather than identity. Time is a setting too.',
     color: '#7A5A64',
   },
   {
@@ -159,7 +159,7 @@ const HASHTAGS = [
     ratio: 1.9,
     topCaption: 'It\'s wine o\'clock somewhere in the world 🌍🍷',
     topLikes: 12034,
-    insight: 'The time-triggered equivalent of #winetime. High volume, low specificity. A signal that wine is being used as a time-marker — the day is done.',
+    insight: 'The time-triggered equivalent of #winetime. High volume, low specificity. A signal that wine is being used as a time-marker: the day is done.',
     color: '#7A5A64',
   },
   {
@@ -171,7 +171,7 @@ const HASHTAGS = [
     ratio: 12.2,
     topCaption: 'Time for chunky knits & big reds 🍷 #winterwine',
     topLikes: 755,
-    insight: 'Second highest comment ratio. Winter wine sparks opinion — people feel strongly about what belongs in the cold. Barolo, Amarone, and big Cabernets dominate the captions.',
+    insight: 'Second highest comment ratio. Winter wine sparks opinion, and people feel strongly about what belongs in the cold. Barolo, Amarone, and big Cabernets dominate the captions.',
     color: '#3D1020',
   },
   {
@@ -183,7 +183,7 @@ const HASHTAGS = [
     ratio: 2.6,
     topCaption: 'Goodbye reds, hello Sauvignon Blanc. White wine season is officially upon us',
     topLikes: 1023,
-    insight: 'The anti-red declaration. White wine season exists in opposition to red — consumers know they\'re breaking a pattern and find pleasure in announcing it.',
+    insight: 'The anti-red declaration. White wine season exists in opposition to red, and consumers know they\'re breaking a pattern and find pleasure in announcing it.',
     color: '#C8A96E',
   },
   {
@@ -257,6 +257,7 @@ function render() {
         y: {
           grid: { color: 'rgba(92,26,46,0.05)', drawBorder: false },
           ticks: { font: { family: 'Montserrat', size: 9.5 }, color: '#B09090', callback: v => m.format(v) },
+          afterFit: (scale) => { scale.width += 16; },
           border: { display: false }
         }
       },

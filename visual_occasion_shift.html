@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wine Occasion Shift · Every Wine Has Its Moment</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="chart.umd.min.js"></script>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap');
+  @import url('fonts.css');
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -285,7 +285,7 @@
 
 <div class="card">
   <div class="header">
-    <div class="title">From Solo Ritual to Shared Moment</div>
+    <div class="title">From solo ritual to shared moment</div>
     <div class="subtitle">How wine drinking occasions have shifted · 2023 → 2025 · hover/tap to view graph labels</div>
   </div>
 
@@ -316,7 +316,7 @@
     </div>
 
     <div class="annotation">
-      <strong>What this means:</strong> In just two years, solo occasions dropped from 14% to 7% of all wine moments — a 50% relative decline. For the first time in 30 years, shared occasion, not individual relaxation, is the primary reason to choose wine (US consumer study).
+      <strong>What this means:</strong> In just two years, solo occasions dropped from 14% to 7% of all wine moments, a 50% relative decline. For the first time in 30 years, shared occasion is the primary reason to choose wine, ahead of individual relaxation (US consumer study).
     </div>
 
     <div class="legend" id="legend">
@@ -364,8 +364,8 @@ const chartData = {
 };
 
 const tooltipDescriptions = {
-  'Mid 2023': { solo: '14% of wine moments — solo relaxation', shared: '6% shared & couples occasions' },
-  'Jul 2025': { solo: '7% — halved in two years', shared: '10.2% — occasions filling the gap' },
+  'Mid 2023': { solo: '14% of wine moments, solo relaxation', shared: '6% shared & couples occasions' },
+  'Jul 2025': { solo: '7%, halved in two years', shared: '10.2%, occasions filling the gap' },
 };
 
 const chart = new Chart(ctx, {

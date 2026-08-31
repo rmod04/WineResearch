@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Seasonal Instinct · Every Wine Has Its Moment</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap');
+  @import url('fonts.css');
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
     --burgundy: #5C1A2E; --cream: #F5ECD7; --cream-dark: #EAD9BE;
@@ -81,7 +81,7 @@
 <body>
 <div class="card">
   <div class="header">
-    <div class="title">Seasonal Variations</div>
+    <div class="title">Seasonal variations</div>
     <div class="subtitle">What the data shows consumers reach for, each season. Is there a pattern here, and how strong is it?</div>
   </div>
 
@@ -127,7 +127,7 @@
     <div class="pattern-note">
       <div class="pattern-icon">💡</div>
       <div class="pattern-text">
-        <strong>The qualifier that is the argument:</strong> Every single top-voted seasonal comment ends with a version of "but I drink whatever I want, whenever I want." The pattern is real — and so is the freedom to ignore it. That tension is what the data actually shows.
+        <strong>The qualifier that carries the argument:</strong> Every single top-voted seasonal comment ends with a version of "but I drink whatever I want, whenever I want." The pattern is real, and so is the freedom to ignore it. That tension is what the data actually shows.
       </div>
     </div>
 
@@ -155,8 +155,8 @@ const SEASONS = {
       { text: 'Spring is Cru Beaujolais.', score: null, thread: 'Seasons thread' },
       { text: 'Summer: Rosé or Gruner. Fall: Zweigelt. Winter: Zin, Cab or Barolo. Spring: Sauv Blanc or Gruner again lol.', score: 5, thread: 'Seasons thread' },
     ],
-    insight: '<strong>Spring instinct:</strong> Consumers reach for freshness and lift — Beaujolais, Chardonnay, Sauvignon Blanc. The connection to the season is felt, not reasoned. Spring wine mirrors spring cooking: lighter, more acidic, less heavy.',
-    oiv: 'White wine is up 10% globally since 2000 — the direction consumers are heading across all seasons.'
+    insight: '<strong>Spring instinct:</strong> Consumers reach for freshness and lift: Beaujolais, Chardonnay, Sauvignon Blanc. The connection to the season is felt rather than reasoned. Spring wine mirrors spring cooking: lighter, more acidic, less heavy.',
+    oiv: 'White wine is up 10% globally since 2000, the direction consumers are heading across all seasons.'
   },
   summer: {
     color: '#C27A8A',
@@ -177,8 +177,8 @@ const SEASONS = {
       { text: 'Riesling. Higher acidity, which is good on a hot day in the sun and it also tends to be lower in alcohol.', score: 8, thread: 'Best wine for summer?' },
       { text: 'Rose or Vinho Verde.', score: 24, thread: 'Best wine for summer?' },
     ],
-    insight: '<strong>Summer instinct:</strong> The most diverse season. Rosé leads, but chillable reds (Gamay, Frappato, light Grenache) are the fastest-growing segment in restaurants in 2026. The old binary — "reds in winter, whites in summer" — is already dissolving here.',
-    oiv: 'Rosé is up +17% globally since 2000 — but summer is also where chillable reds are breaking the old rules.'
+    insight: '<strong>Summer instinct:</strong> The most diverse season. Rosé leads, but chillable reds (Gamay, Frappato, light Grenache) are the fastest-growing segment in restaurants in 2026. The old binary of "reds in winter, whites in summer" is already dissolving here.',
+    oiv: 'Rosé is up +17% globally since 2000, and summer is also where chillable reds are breaking the old rules.'
   },
   autumn: {
     color: '#B8973A',
@@ -195,8 +195,8 @@ const SEASONS = {
       { text: 'Fall is Bordeaux for days.', score: null, thread: 'Seasons thread' },
       { text: 'Summer: Rosé or Gruner. Fall: Zweigelt. Winter: Zin, Cab or Barolo. Spring: Sauv Blanc or Gruner again lol.', score: 5, thread: 'Seasons thread' },
     ],
-    insight: '<strong>Autumn instinct:</strong> The transitional season — consumers feel their way toward structure and depth, but not yet the full weight of winter. Pinot Noir is the consensus choice: enough body for autumn cooking, enough elegance to avoid heaviness.',
-    oiv: 'Red wine\'s overall decline masks strong enthusiasm for lighter, more elegant reds — exactly the styles that dominate autumn voices.'
+    insight: '<strong>Autumn instinct:</strong> The transitional season, where consumers feel their way toward structure and depth without the full weight of winter. Pinot Noir is the consensus choice: enough body for autumn cooking, enough elegance to avoid heaviness.',
+    oiv: 'Red wine\'s overall decline masks strong enthusiasm for lighter, more elegant reds, exactly the styles that dominate autumn voices.'
   },
   winter: {
     color: '#5C1A2E',
@@ -215,8 +215,8 @@ const SEASONS = {
       { text: 'Giuseppe Attanasio Primitivo di Manduria. Clocking in at 16.5%. Pairs great with a fireplace or bonfire, blankets, and good company.', score: 4, thread: 'Best wine for a cold winter night?' },
       { text: 'For the most part it will be based on my seasonal cooking habits. In winter I do more roasting and braising. Therefore I find myself drinking richer whites and more complex reds. Of course, when it all comes down to it, I drink whatever the hell I want, whenever the hell I want!', score: 8, thread: 'Which wines do you associate with the seasons?' },
     ],
-    insight: '<strong>Winter instinct:</strong> The most unanimous of all seasons. Big reds dominate — Barolo, Amarone, Zinfandel, Primitivo. But notice: sparkling also appears. Christmas and New Year pull sparkling into winter, complicating the "reds only" picture. The festive season is a category of its own.',
-    oiv: 'Even in winter\'s red-dominant season, rosé and sparkling are gaining share globally — the instinct is real, but the edges are blurring.'
+    insight: '<strong>Winter instinct:</strong> The most unanimous of all seasons. Big reds dominate: Barolo, Amarone, Zinfandel, Primitivo. But notice: sparkling also appears. Christmas and New Year pull sparkling into winter, complicating the "reds only" picture. The festive season is a category of its own.',
+    oiv: 'Even in winter\'s red-dominant season, rosé and sparkling are gaining share globally. The instinct is real, and the edges are blurring.'
   }
 };
 
