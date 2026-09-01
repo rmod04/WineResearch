@@ -109,7 +109,7 @@ export default function StoriesAndTrendsPage() {
       {/* ── Subscribe ─────────────────────────────────────────────── */}
       <section className="bg-cream pb-20 px-6">
         <div className="max-w-2xl mx-auto">
-          <SubscribeBlock />
+          <SubscribeBlock showNote />
         </div>
       </section>
     </>
