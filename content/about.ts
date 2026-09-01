@@ -5,8 +5,10 @@
 export const about = {
   headline: 'About Us',
 
-  intro:
-    'Cork To Table sits at the intersection of wine, travel, and human connection.\nThrough immersive travel experiences centred around wine, curated food & wine pairings, and research material tracking where wine culture is headed, our aim is to bring people closer to the story behind every glass.',
+  intro: [
+    'Cork To Table sits at the intersection of wine, travel, and human connection.',
+    'Through immersive travel experiences centred around wine, curated food & wine pairings, and research material tracking where wine culture is headed, our aim is to bring people closer to the story behind every glass.',
+  ],
 
   bio: [
     'Rohan Modwel is a wine professional, writer, and travel consultant holding a WSET Level 3 Award in Wines (Distinction), with a background in economics, research, and consulting.',

@@ -35,10 +35,17 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto">
 
           {/* Brand intro */}
-          <div className="max-w-3xl mb-16">
-            <p className="font-montserrat text-sm text-charcoal leading-loose whitespace-pre-line">
-              {about.intro}
-            </p>
+          <div className="max-w-4xl mb-16">
+            {about.intro.map((para, i) => (
+              <p
+                key={i}
+                className={`font-montserrat text-sm text-charcoal leading-loose ${
+                  i > 0 ? 'mt-5' : ''
+                }`}
+              >
+                {para}
+              </p>
+            ))}
             <div className="divider-gold-left" />
           </div>
 
