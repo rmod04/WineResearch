@@ -44,7 +44,7 @@ export default function EveryWineHasItsMomentPage() {
             Every Wine Has Its Moment
           </h1>
           <p className="font-cormorant text-2xl italic text-cream/70 mb-6">
-            How season, setting, company and even music change the wine in your glass
+            How season, setting, company, or even music changes the wine in your glass
           </p>
           <div className="w-12 h-px bg-gold mb-6" />
           <div className="flex flex-col sm:flex-row sm:items-center gap-3">

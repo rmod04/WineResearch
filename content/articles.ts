@@ -35,7 +35,7 @@ export const articles: Article[] = [
   {
     slug: 'every-wine-has-its-moment',
     title: 'Every Wine Has Its Moment',
-    subtitle: 'How season, setting, company and even music change the wine in your glass',
+    subtitle: 'How season, setting, company, or even music changes the wine in your glass',
     dateLabel: 'April 2026',
     category: 'Research · Substack',
     excerpt:
