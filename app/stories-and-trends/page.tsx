@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import SubscribeBlock from '@/components/SubscribeBlock'
 import { articles } from '@/content/articles'
 
 export const metadata = {
@@ -102,6 +103,13 @@ export default function StoriesAndTrendsPage() {
               Older →
             </span>
           </div>
+        </div>
+      </section>
+
+      {/* ── Subscribe ─────────────────────────────────────────────── */}
+      <section className="bg-cream pb-20 px-6">
+        <div className="max-w-2xl mx-auto">
+          <SubscribeBlock />
         </div>
       </section>
     </>

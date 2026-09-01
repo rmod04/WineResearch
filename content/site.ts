@@ -21,6 +21,9 @@ export const site = {
   instagramUrl: 'https://www.instagram.com/corktotable/',
   substackUrl: 'https://corktotable.substack.com',
   substackLabel: 'The Deeper Pour',
+  substackTagline: 'Wine culture, tracked with data.',
+  substackNote:
+    'The Deeper Pour is a Substack-led publication from Cork To Table which focuses on tracking cultural trends in wine, with a solid research foundation.',
   contactEmail: 'corktotable@gmail.com',
   whatsappUrl: 'https://wa.me/919871576702',
 }

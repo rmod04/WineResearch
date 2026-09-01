@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import SubscribeBlock from '@/components/SubscribeBlock'
 import { about } from '@/content/about'
 import { site } from '@/content/site'
 
@@ -118,6 +119,13 @@ export default function AboutPage() {
           <Link href="/contact" className="btn-outline-dark">
             Get in Touch
           </Link>
+        </div>
+      </section>
+
+      {/* ── Subscribe ─────────────────────────────────────────────── */}
+      <section className="bg-cream pb-20 px-6">
+        <div className="max-w-2xl mx-auto">
+          <SubscribeBlock showNote />
         </div>
       </section>
     </>

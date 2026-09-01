@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import SubscribeBlock from '@/components/SubscribeBlock'
 import VisualEmbed from '@/components/VisualEmbed'
 import { VISUALS_BASE } from '@/content/visuals'
 import { getArticle } from '@/content/articles'
@@ -296,6 +297,13 @@ export default function TheRewardForCuriosityPage() {
             </div>
 
           </div>
+        </div>
+      </section>
+
+      {/* ── Subscribe ─────────────────────────────────────────────── */}
+      <section className="bg-cream pt-4 pb-16 px-6">
+        <div className="max-w-2xl mx-auto">
+          <SubscribeBlock />
         </div>
       </section>
 
