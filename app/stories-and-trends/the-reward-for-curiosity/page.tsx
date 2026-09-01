@@ -149,7 +149,6 @@ export default function TheRewardForCuriosityPage() {
             />
 
             <Quote text="For me, it is just a cost issue. I can't justify paying $13–14 for a single pour and $100+ for a bottle that I know costs $20. I'd rather just drink at home at those prices." source="r/wine · ▲ 130" />
-            <Quote text="Suckling is the worst. He is literally charging people for points. In any other industry this would be a scam." source="r/wine · ▲ 171" />
 
             <p className="font-montserrat text-xs text-mid/70 italic">
               Note: the ratings on which this inference is based are subjective preference judgements, not standardised quality scores.
@@ -280,19 +279,19 @@ export default function TheRewardForCuriosityPage() {
               <ol className="space-y-2 font-montserrat text-xs text-mid leading-relaxed list-decimal list-inside">
                 <li>Thach, L. & Bus 305W Researchers (2018). Wine Palate Life Cycle study, Sonoma State University. <em>Wine Business Monthly</em>, April 2018. n=422.</li>
                 <li>Risso, D. et al. (2017). Genetic variation in TAS2R38 and its influence on bitter taste perception. <em>Scientific Reports</em>. See also: Brito Nunes, C. et al. (2025). <em>European Journal of Nutrition</em>, UK Biobank.</li>
-                <li>Modwel, R. (2026). Original analysis of price and consumer rating data for 535 red and white wines, US market, July 2026.</li>
+                <li>Vivino. Consumer rating and price data for 535 red and white wines, US market, retrieved July 2026. Analysis conducted for this piece.</li>
                 <li>Goldstein, R. et al. (2008). Do more expensive wines taste better? Evidence from a large sample of blind tastings. <em>Journal of Wine Economics</em>, 3(1), 1–9.</li>
                 <li>YouGov (2024). Wine price perception survey, March 2024.</li>
                 <li>OnePoll for Woodbridge Wines (2022). Brand-commissioned online survey. Corroborated by Wine Market Council (2025), barriers to wine purchasing study.</li>
-                <li>Modwel, R. (2026). Original analysis of 1,626 Google autocomplete suggestions and Google Keyword Planner monthly search volume, July 2026. Global figures.</li>
-                <li>Modwel, R. (2026). Original keyword and sentiment analysis of 4,872 words of wine community discussion, June 2026.</li>
+                <li>Google. Autocomplete suggestions and Keyword Planner monthly search volume, 1,626 suggestions, retrieved July 2026. Global figures. Analysis conducted for this piece.</li>
+                <li>Reddit, r/wine. Public discussion threads dated 2022 to 2026, 4,872 words, retrieved June 2026. Keyword and sentiment analysis conducted for this piece.</li>
                 <li>SevenFifty Daily (2026). Market trend reporting on elegance and value.</li>
                 <li>Wine Opinions (2026). US consumer survey of 1,351 wine drinkers, reported by <em>The Drinks Business</em>, April 2026.</li>
                 <li>Wine Spectator (2025). Top 100 Wines of 2025.</li>
                 <li>Wine Enthusiast (2025). Best Buys 2025, November 2025.</li>
               </ol>
               <p className="font-montserrat text-[10px] text-mid/60 mt-4">
-                All community quotes attributed generically as &lsquo;r/wine&rsquo;. Upvote counts recorded August 2026. Market and tasting figures drawn from US-based studies; search-interest data is global. Original analysis: Modwel, R. (2026) — wine community discussion across r/wine threads, 2022–2026.
+                All community quotes attributed generically as &lsquo;r/wine&rsquo;. Upvote counts recorded August 2026. Market and tasting figures drawn from US-based studies; search-interest data is global. The rating, search-interest and community-discussion datasets in references 3, 7 and 8 were compiled from those providers and analysed for this piece.
               </p>
             </div>
 
