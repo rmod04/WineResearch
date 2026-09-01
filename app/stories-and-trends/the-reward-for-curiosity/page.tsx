@@ -75,9 +75,6 @@ export default function TheRewardForCuriosityPage() {
           <div className="font-montserrat text-sm text-charcoal leading-loose space-y-6">
 
             <p>
-              Thinking about preferences is intriguing. If anything, it&apos;s the backbone of an identity. In some cases they are fixed, but they often evolve as well. Wine very much falls into the latter category. While I&apos;ve touched upon evolving preferences based on context and setting in an earlier piece, there is one other very important factor at play: time. And when I say time, I mean it at an individual level, not as a societal or cultural shift over time.
-            </p>
-            <p>
               There is a quiet assumption that evolving preferences in an individual over time means wanting rarer, pricier, and more intimidating bottles of wine. In practice the opposite tends to happen. The more people taste over time, the more nuanced their palates and preferences become, and the less the price tag matters. Someone may seek more tannins, someone may be more at ease with a lighter body, another may show a clear preference for spicy notes, and so on. Whether it&apos;s a fancy label that&apos;s known all across the globe or a wine that simply presents a unique story about the winemaker and their journey, interest can be found in both.
             </p>
             <p>

@@ -1,5 +1,5 @@
 CORK TO TABLE — SUBSTACK URL SLUGS
-Last updated: 31 August 2026
+Last updated: 31 August 2026 (slug convention corrected)
 Maintained by: Substack Cowork project. Read by: C2T Website project.
 
 --------------------------------------------------------------------------
@@ -43,20 +43,37 @@ reader who arrives at only one of them.
 PIECE 1 — Every Wine Has Its Moment (April 2026)
 --------------------------------------------------------------------------
 Website slug   : every-wine-has-its-moment
-Substack slug  : why-wine-tastes-different-in-summer
-Full URL       : <BASE>/p/why-wine-tastes-different-in-summer
+Substack slug  : every-wine-has-its-moment
+Full URL       : <BASE>/p/every-wine-has-its-moment
 Subtitle       : How season, setting, company and even music change the wine in your glass
 Status         : PUBLISHED. Live on the C2T website and on Substack.
+Verified       : 31 August 2026. The URL above returns 200.
+
+CORRECTION, 31 August 2026. This entry previously listed the Substack slug as
+'why-wine-tastes-different-in-summer'. That slug was drafted during the SEO
+pass and never used. Substack generated the slug from the post title at
+publish time, so the live post carries the editorial slug. The old URL
+<BASE>/p/why-wine-tastes-different-in-summer returns 404 and must not appear
+anywhere. content/articles.ts already holds the correct URL.
 
 --------------------------------------------------------------------------
 PIECE 2 — The Reward for Curiosity (August 2026)
 --------------------------------------------------------------------------
 Website slug   : the-reward-for-curiosity
-Substack slug  : does-expensive-wine-taste-better
-Full URL       : <BASE>/p/does-expensive-wine-taste-better
+Substack slug  : the-reward-for-curiosity   (PLANNED, not yet live)
+Full URL       : <BASE>/p/the-reward-for-curiosity
 Subtitle       : The wine palate grows over time, and better wine doesn't have to cost more
 Status         : Live on the C2T website. NOT yet published on Substack.
                  Blocked on static images of the five Piece 2 visuals.
+
+At publish time: check the slug field in Substack's post settings before
+hitting publish. Substack derives it from the title, so it should already
+read 'the-reward-for-curiosity'. Confirm the live URL returns 200, then
+fill substackUrl in content/articles.ts.
+
+Superseded: 'does-expensive-wine-taste-better' was the earlier search-intent
+slug. Dropped on 31 August 2026 in favour of mirroring the website slug. The
+search phrasing now lives in the subtitle.
 
 --------------------------------------------------------------------------
 PIECE 3 — not yet written
@@ -65,6 +82,7 @@ Website slug   : TBC
 Substack slug  : TBC
 Notes          : India-focused. India examples were deliberately held back from
                  Pieces 1 and 2 and reserved for this piece.
+                 Substack slug mirrors the website slug. See RULES below.
 
 --------------------------------------------------------------------------
 HOW THE WEBSITE USES THIS
@@ -74,13 +92,13 @@ In content/articles.ts, fill the substackUrl field on the matching entry:
   {
     slug: 'every-wine-has-its-moment',
     ...
-    substackUrl: '<BASE>/p/why-wine-tastes-different-in-summer',
+    substackUrl: '<BASE>/p/every-wine-has-its-moment',
   },
 
   {
     slug: 'the-reward-for-curiosity',
     ...
-    substackUrl: '<BASE>/p/does-expensive-wine-taste-better',
+    substackUrl: '<BASE>/p/the-reward-for-curiosity',   // after publishing
   },
 
 Also in content/site.ts, substackUrl is the publication homepage, not an
@@ -121,9 +139,21 @@ RULES
 --------------------------------------------------------------------------
 1. Slugs are set BEFORE publishing. Changing a slug after publication breaks
    every existing link, and Substack does not always redirect.
-2. Do not sync the website slug to the Substack slug or vice versa. They are
-   deliberately different: the website slug carries the editorial title, the
-   Substack slug carries search intent.
+2. The Substack slug mirrors the website slug. Both carry the editorial
+   title. Search-intent phrasing lives in the subtitle, which Substack shows
+   in previews and which Google reads.
+
+   CHANGED 31 August 2026. The earlier rule kept the two slugs deliberately
+   different, with the Substack slug carrying search intent. Piece 1 shipped
+   with the editorial slug anyway, because Substack builds the slug from the
+   post title and it was never edited before publishing. Mirroring is now the
+   convention: it matches what is already live, it removes a field that can
+   silently drift out of date, and it means one slug per piece to remember.
+   The trade is real. A search-intent slug does carry some ranking value, and
+   that value now has to come from the subtitle and the body copy instead. If
+   a future piece has a title with no search demand at all, overriding the
+   slug in Substack's post settings is still allowed. Record the override
+   here when it happens.
 3. When a new piece is added, update this file at the same time as the SEO
    pass, not at publish time.
 

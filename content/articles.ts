@@ -26,7 +26,7 @@ export const articles: Article[] = [
     dateLabel: 'August 2026',
     category: 'Research · Substack',
     excerpt:
-      'There is a quiet assumption that evolving preferences in wine means wanting rarer, pricier, and more intimidating bottles. In practice the opposite tends to happen. The data has a more interesting story to tell.',
+      'Quality can be found across all varieties and labels. So why do many wine drinkers still feel unsure of venturing beyond the territory of what is already known? The data has an interesting story to tell.',
     thumbnail: '/images/photo-palate-arc.jpg',
     thumbnailAlt: 'The palate arc — a four-phase wheel of wine preference',
     isSubstack: true,
