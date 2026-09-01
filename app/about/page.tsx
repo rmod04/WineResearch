@@ -36,7 +36,7 @@ export default function AboutPage() {
 
           {/* Brand intro */}
           <div className="max-w-3xl mb-16">
-            <p className="font-montserrat text-sm text-charcoal leading-loose">
+            <p className="font-montserrat text-sm text-charcoal leading-loose whitespace-pre-line">
               {about.intro}
             </p>
             <div className="divider-gold-left" />
@@ -88,7 +88,7 @@ export default function AboutPage() {
           {/* Quote — full width below both headshot and bio */}
           <div className="divider-gold-left" />
           <blockquote className="font-cormorant text-xl md:text-2xl italic text-burgundy leading-relaxed border-l-2 border-gold pl-6">
-            &ldquo;{about.philosophy}&rdquo;
+            {about.philosophy}
           </blockquote>
         </div>
       </section>

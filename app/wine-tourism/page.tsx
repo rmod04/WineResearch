@@ -41,13 +41,13 @@ export default function WineTourismPage() {
             The story behind a wine is rarely on the label. It lives in the soil, the climate, and the moment you stand in front of a winemaker who has dedicated a lifetime to a single hillside.
           </p>
           <p className="font-montserrat text-sm text-charcoal leading-loose mb-6">
-            We design travel itineraries where wine takes centre stage. Winery visits, tastings with the people who actually make the wine, and the stays and detours that surround them. Every itinerary is built from scratch around your dates, your pace, and your budget.
-          </p>
-          <p className="font-montserrat text-sm text-charcoal leading-loose mb-6">
-            Wine does not have to be the whole trip. If you want a single winery day inside a fortnight of nature, museums and cocktail bars, we will happily plan all of it.
+            We design travel itineraries where wine takes centre stage (or not*). Winery visits, tastings with the people who actually make the wine, and the stays and detours that surround them. Every itinerary is built from scratch around your dates, your pace, and your budget.
           </p>
           <p className="font-montserrat text-sm text-charcoal leading-loose">
-            It&apos;s about the memories you take back home with you. Of course, you may take back some wine too!
+            It&apos;s about the memories you take back home with you. Of course, you may wish to take back a bottle, or two!
+          </p>
+          <p className="font-montserrat text-xs text-mid/70 leading-relaxed mt-6">
+            *If nature, museums, or cocktail bars are more your vibe, we will happily plan all of it.
           </p>
           <p className="font-montserrat text-sm italic text-mid leading-loose mt-8">
             Scroll further to see our partners, or{' '}
