@@ -49,6 +49,16 @@ export default function WineTourismPage() {
           <p className="font-montserrat text-sm text-charcoal leading-loose">
             It&apos;s about the memories you take back home with you. Of course, you may take back some wine too!
           </p>
+          <p className="font-montserrat text-sm italic text-mid leading-loose mt-8">
+            Scroll further to see our partners, or{' '}
+            <Link
+              href="/plan"
+              className="text-burgundy border-b border-burgundy/40 pb-0.5 hover:border-burgundy transition-colors"
+            >
+              click here
+            </Link>{' '}
+            if you&apos;ve already got a trip in mind and are ready to start planning
+          </p>
         </div>
       </section>
 
