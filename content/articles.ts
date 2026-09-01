@@ -30,7 +30,7 @@ export const articles: Article[] = [
     thumbnail: '/images/photo-palate-arc.jpg',
     thumbnailAlt: 'The palate arc — a four-phase wheel of wine preference',
     isSubstack: true,
-    substackUrl: '', // leave empty until the post is live; the page then shows "Coming Soon"
+    substackUrl: 'https://corktotable.substack.com/p/the-reward-for-curiosity',
   },
   {
     slug: 'every-wine-has-its-moment',
