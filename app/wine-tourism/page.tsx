@@ -87,9 +87,9 @@ export default function WineTourismPage() {
                     src={partner.image}
                     alt={partner.name}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-60"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-90"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/30 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/10 to-transparent" />
                 </div>
                 <div className="p-8">
                   <p className="font-montserrat text-[9px] tracking-[0.3em] uppercase text-gold mb-2">
