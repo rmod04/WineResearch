@@ -169,9 +169,9 @@ export const partners: Partner[] = [
     country: 'France',
     tagline: 'The Secret Garden of Bordeaux, five generations deep.',
     shortDescription:
-      'A fifth-generation family estate in the heart of Fronsac, Bordeaux\'s so-called Secret Garden, producing honest, lively wines from 50 hectares of clay-limestone hillside.',
+      'A fifth-generation family estate in the heart of Fronsac, Bordeaux\'s so-called Secret Garden, producing honest, lively wines from 45 hectares of clay-limestone hillside.',
     fullDescription:
-      'There\'s something quietly special about Fronsac. It sits just west of Saint-Émilion, shares much of the same geology, and has been producing wine since the 18th century, yet it remains largely undiscovered by the wider wine world. The Hermouet family has been here since 1911, working the same slopes through five generations. Esther Hermouet is the latest to take over, continuing a project built on careful observation, sustainable farming, and wines that reflect the land they came from. A quarter of the 50-hectare estate is given over to biodiversity: orchids, hedgerows, woods, and streams.',
+      'There\'s something quietly special about Fronsac. It sits just west of Saint-Émilion, shares much of the same geology, and has been producing wine for two thousand years, yet it remains largely undiscovered by the wider wine world. Vines have grown on this land since the 18th century. The Hermouet family arrived in 1911, working the same slopes through five generations. Esther Hermouet is the latest to take over, continuing a project built on careful observation, sustainable farming, and wines that reflect the land they came from. The estate runs to 60 hectares, a quarter of it given over to biodiversity: 45 hectares under vine and 15 of orchids, hedgerows, woods, and streams.',
     quirkLine:
       'They grow orchids between the vines here. How often do you get to see that?',
     experiences: [
