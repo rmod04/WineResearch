@@ -206,8 +206,6 @@ export const partners: Partner[] = [
       'One of Germany\'s oldest family estates, Dr. Bürklin-Wolf produces biodynamic Riesling from some of the Pfalz\'s finest Grand Cru sites, from a tradition rooted in 1597.',
     fullDescription:
       'There are wine estates with long histories, and then there is Bürklin-Wolf. The family\'s connection to the vineyards of Wachenheim goes back to 1597, making this one of the oldest privately owned wine estates in Germany. Today it is run by Bettina Bürklin-von Guradze, who in 1990 converted the entire estate to biodynamic farming, one of the first in the country to do so, and brought a Burgundian approach to vineyard classification that helped reshape how Germany thinks about its finest sites. The estate farms across four villages: Forst, Wachenheim, Deidesheim, and Ruppertsberg, working Grand Cru sites including Forster Kirchenstück, Jesuitengarten, and Ungeheuer. All biodynamic preparations are made on the estate itself. The result is a collection of dry Rieslings with real energy, precision, and terroir character: wines that shift your understanding of what Riesling can be. The tasting room sits in the English Garden on the estate, a beautiful historic property in Wachenheim, where the current vintage is always open and the warmth is genuine.',
-    quirkLine:
-      'Ask about the Treasure Chamber. There are bottles in there from before the First World War.',
     experiences: [
       {
         title: 'Stay at the Estate',
