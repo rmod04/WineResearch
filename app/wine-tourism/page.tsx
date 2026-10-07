@@ -121,10 +121,7 @@ export default function WineTourismPage() {
           {/* Placeholder for more partners */}
           <div className="mt-8 border border-dashed border-cream/20 p-10 text-center">
             <p className="font-cormorant text-2xl italic text-cream/40 mb-2">
-              More partnerships in development.
-            </p>
-            <p className="font-montserrat text-[10px] tracking-widest uppercase text-cream/30">
-              New destinations will be added as they are confirmed
+              More partnerships are constantly in development.
             </p>
             <p className="font-montserrat text-[10px] tracking-widest uppercase text-cream/30 mt-2">
               <Link href="/contact" className="text-gold border-b border-gold/50 pb-0.5 hover:border-gold transition-colors">
