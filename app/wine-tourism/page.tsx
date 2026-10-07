@@ -50,7 +50,7 @@ export default function WineTourismPage() {
             *If nature, museums, or cocktail bars are more your vibe, we will happily plan all of it.
           </p>
           <p className="font-montserrat text-sm italic text-mid leading-loose mt-8">
-            Scroll further to see our partners, or{' '}
+            Scroll further to see our founding partners, or{' '}
             <Link
               href="/plan"
               className="text-burgundy border-b border-burgundy/40 pb-0.5 hover:border-burgundy transition-colors"
@@ -66,7 +66,7 @@ export default function WineTourismPage() {
       <section className="bg-charcoal py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16">
-            <p className="section-label text-gold mb-4">Our Partners</p>
+            <p className="section-label text-gold mb-4">Our Founding Partners</p>
             <p className="font-montserrat text-xs text-cream/60 mt-4 max-w-2xl leading-relaxed">
               Every partner on this page was chosen for their taste, experience, and value. Each estate sits at the heart of a curated itinerary designed around your travel style.
             </p>
