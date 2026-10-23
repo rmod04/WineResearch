@@ -47,7 +47,7 @@ export default function WineTourismPage() {
             It&apos;s about the memories you take back home with you. Of course, you may wish to take back a bottle, or two!
           </p>
           <p className="font-montserrat text-xs text-mid/70 leading-relaxed mt-6">
-            *If nature, museums, or cocktail bars are more your vibe, we will happily plan all of it.
+            *If nature, museums, or cocktail bars are more your vibe, we&apos;ve got you covered.
           </p>
           <p className="font-montserrat text-sm italic text-mid leading-loose mt-8">
             Scroll further to see our founding partners, or{' '}
@@ -87,7 +87,9 @@ export default function WineTourismPage() {
                     src={partner.image}
                     alt={partner.name}
                     fill
+                    sizes="(min-width: 768px) 50vw, 100vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-90"
+                    style={partner.imagePosition ? { objectPosition: partner.imagePosition } : undefined}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/10 to-transparent" />
                 </div>

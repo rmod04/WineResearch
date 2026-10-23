@@ -2,6 +2,12 @@
 // WINE TOURISM PARTNERS — edit this file to add/update partners
 // ─────────────────────────────────────────────────────────────
 
+export interface PartnerImage {
+  src: string
+  alt: string
+  credit?: string // Shown as a small caption under the image, e.g. 'Photo © Leif Carlsson'
+}
+
 export interface Partner {
   slug: string
   name: string
@@ -12,7 +18,10 @@ export interface Partner {
   fullDescription: string
   quirkLine?: string // Rendered as a separate closing paragraph on the partner page
   experiences: { title: string; description: string }[]
-  image: string
+  image: string // Cover image: the tile on the wine tourism page and the hero on the partner page
+  imagePosition?: string // Which part of the cover to keep when it is cropped, e.g. 'center 20%' keeps more of the top
+  imageCredit?: string // Credit for the cover image, when the partner requires one
+  gallery?: PartnerImage[] // Extra images on the partner page: estate, tasting rooms, other vineyards
   mapEmbed?: string // Google Maps embed URL (no API key needed)
   comingSoon: boolean
 }
@@ -48,6 +57,10 @@ export const partners: Partner[] = [
       },
     ],
     image: '/images/photo-partner-nuala.jpg',
+    gallery: [
+      { src: '/images/photo-partner-nuala-lake.jpg', alt: 'Lake and snow-capped mountains in New Zealand' },
+      { src: '/images/photo-partner-nuala-harvest.jpg', alt: 'Harvest among autumn vines' },
+    ],
     comingSoon: false,
   },
   {
@@ -79,7 +92,11 @@ export const partners: Partner[] = [
           'A structured tasting of the full Arbo collection, from Château Godard Bellevue and L\'Étoile du Château Godard Bellevue to Château Puyanché (red and white), ARBO Malbec, and ARBO Cabernet Sauvignon, exploring how five generations of farming a single estate produces wines this distinct.',
       },
     ],
-    image: '/images/photo-partner-arbo.jpg',
+    image: '/images/photo-partner-arbo-river.jpg',
+    gallery: [
+      { src: '/images/photo-partner-arbo.jpg', alt: 'Sheep grazing between the vines' },
+      { src: '/images/photo-partner-arbo-oak.jpg', alt: 'An old oak tree beside the vineyards' },
+    ],
     mapEmbed:
       'https://maps.google.com/maps?q=Chateau+Godard+Bellevue+Francs+33570+France&t=&z=15&ie=UTF8&iwloc=&output=embed',
     comingSoon: false,
@@ -113,7 +130,11 @@ export const partners: Partner[] = [
           'Six of the most remarkable Brunello di Montalcino vintages from the estate, served in Zalto Universal glasses with local Pecorino, bread and olive oil. A masterclass for the serious wine lover, or anyone who wants to become one.',
       },
     ],
-    image: '/images/photo-partner-cdb-2.jpg',
+    image: '/images/photo-partner-cdb.jpg',
+    gallery: [
+      { src: '/images/photo-partner-cdb-2.jpg', alt: 'Three Castiglion del Bosco wines in the cellar' },
+      { src: '/images/photo-partner-cdb-hotel.jpg', alt: 'The hotel and pool at sunset' },
+    ],
     mapEmbed:
       'https://maps.google.com/maps?q=Castiglion+del+Bosco+1+53024+Montalcino+Siena+Italy&t=&z=15&ie=UTF8&iwloc=&output=embed',
     comingSoon: false,
@@ -158,6 +179,11 @@ export const partners: Partner[] = [
       },
     ],
     image: '/images/photo-partner-emilio-moro.jpg',
+    imagePosition: 'center 20%',
+    gallery: [
+      { src: '/images/photo-partner-emilio-moro-bottle.jpg', alt: 'A bottle of Emilio Moro 2021 beside a glass of red' },
+      { src: '/images/photo-partner-emilio-moro-vineyard.jpg', alt: 'Vineyard rows in autumn' },
+    ],
     mapEmbed:
       'https://maps.google.com/maps?q=Bodegas+Emilio+Moro+Ctra+Penafiel+Valoria+47315+Pesquera+de+Duero+Valladolid&t=&z=15&ie=UTF8&iwloc=&output=embed',
     comingSoon: false,
@@ -191,7 +217,11 @@ export const partners: Partner[] = [
           'Three and a half hours, no rush. Vineyard, winery, barrel room, the full tasting, and then a home-made gourmet lunch paired with the wines. The kind of afternoon you\'ll still be talking about on the way home.',
       },
     ],
-    image: '/images/photo-partner-hermouet.jpg',
+    image: '/images/photo-partner-hermouet-vineyard.jpg',
+    gallery: [
+      { src: '/images/photo-partner-hermouet.jpg', alt: 'The estate house' },
+      { src: '/images/photo-partner-hermouet-grapes.jpg', alt: 'Ripe grapes on the vine' },
+    ],
     mapEmbed:
       'https://maps.google.com/maps?q=Clos+du+Roy+33141+Saillans+France&t=&z=15&ie=UTF8&iwloc=&output=embed',
     comingSoon: false,
@@ -219,6 +249,10 @@ export const partners: Partner[] = [
       },
     ],
     image: '/images/photo-partner-buerklin-wolf.jpg',
+    gallery: [
+      { src: '/images/photo-partner-buerklin-wolf-estate.jpg', alt: 'The Bürklin-Wolf estate above its vineyards' },
+      { src: '/images/photo-partner-buerklin-wolf-cellar.jpg', alt: 'Labelled bottles in the Bürklin-Wolf cellar' },
+    ],
     mapEmbed:
       'https://maps.google.com/maps?q=Weingut+Dr+Burklin-Wolf+Ringstrasse+4+67157+Wachenheim+Germany&t=&z=15&ie=UTF8&iwloc=&output=embed',
     comingSoon: false,
@@ -247,9 +281,51 @@ export const partners: Partner[] = [
           'A focused and tailored session exploring the estate\'s Grand Cru sites and wines in depth, with older vintages and a theme shaped around your group. Format and duration are arranged in advance with the estate. One of the most rewarding afternoons you can spend in the Mosel valley.',
       },
     ],
-    image: '/images/photo-partner-mfr.jpg',
+    image: '/images/photo-partner-mfr-juffer.jpg',
+    gallery: [
+      { src: '/images/photo-partner-mfr-map.jpg', alt: 'Vineyard map of the Middle Mosel with the estate\'s sites marked' },
+      { src: '/images/photo-partner-mfr-treasure-chamber.jpg', alt: 'Bottles in the estate\'s treasure chamber' },
+    ],
     mapEmbed:
       'https://maps.google.com/maps?q=Weingut+Max+Ferd+Richter+Hauptstrasse+85+54486+Mulheim+Mosel+Germany&t=&z=15&ie=UTF8&iwloc=&output=embed',
+    comingSoon: false,
+  },
+  {
+    slug: 'benanti',
+    name: 'Benanti',
+    region: 'Etna, Sicily',
+    country: 'Italy',
+    tagline: 'Native grapes, old vines, and a volcano for a backyard.',
+    shortDescription:
+      'A family estate at the foot of Monte Serra on Etna, working with Sicily\'s native Carricante and Nerello Mascalese since 1988, with century-old vines behind the house and a nineteenth-century palmento on site.',
+    fullDescription:
+      'Giuseppe Benanti founded the estate in 1988 and built it entirely on the island\'s own grapes, a choice that ran against where most growers were looking at the time. He handed the winery to his sons Antonio and Salvino in 2012, though the family\'s winemaking in Viagrande goes back to the late 1800s. Everything rests on three native varieties: Carricante for the whites, Nerello Mascalese and Nerello Cappuccio for the reds, grown across separate contrade on different faces of the volcano. Rinazzo sits on the eastern slope at Milo and gives Pietra Marina. Dafara Galluzzo faces north above Rovittello, and Monte Serra looks southeast over Viagrande, both holding small pre-phylloxera parcels. The estate itself stands at the foot of the Monte Serra cone, a nineteenth-century property twenty minutes from Catania, with centenary Nerello vines on the slope behind it and the old palmento still standing.',
+    quirkLine:
+      'The old cellar is now a painting room, hung with oil portraits. Hard to top a wine tasting inside a gallery.',
+    experiences: [
+      {
+        title: 'Monte Serra Visit & Tasting',
+        description:
+          'A walk up Monte Serra to see and touch the vines, then the old palmento where the estate\'s winemaking history is laid out, the former cellar that is now a painting room, and the oak barrel room where the reds age. It closes with an in-depth tasting of the range alongside a curated choice of local delicacies, led by sommeliers trained through WSET and the Italian sommelier associations.',
+      },
+      {
+        title: 'Gourmet Lunch by the Vineyards',
+        description:
+          'Lunch cooked by two chefs who\'ve been around some of Italy\'s best kitchens: Enrico Rinaldi and Gianluca Sottile, one from Etna and one from the Langhe. Enjoyed alongside the estate\'s pool area overlooking the Monte Serra vineyards, open to a small group of guests.',
+      },
+      {
+        title: 'Private Dinners & Celebrations',
+        description:
+          'The Sala dei Quadri and the adjoining Palmento Etneo take convivial dinners, while the Sala del Cavaliere is the smaller and more private room. Menus are built around the wines with the chefs, from a sunset aperitif in the vineyard to a gala dinner.',
+      },
+    ],
+    image: '/images/photo-partner-benanti.jpg',
+    gallery: [
+      { src: '/images/photo-partner-benanti-estate.jpg', alt: 'The house at Tenuta Monte Serra' },
+      { src: '/images/photo-partner-benanti-tasting-room.jpg', alt: 'The painting room at Tenuta Monte Serra' },
+    ],
+    mapEmbed:
+      'https://maps.google.com/maps?q=Benanti+Via+Giuseppe+Garibaldi+361+95029+Viagrande+CT+Italy&t=&z=15&ie=UTF8&iwloc=&output=embed',
     comingSoon: false,
   },
 ]

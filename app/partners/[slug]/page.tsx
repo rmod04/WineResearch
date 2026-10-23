@@ -29,7 +29,9 @@ export default function PartnerPage({ params }: { params: { slug: string } }) {
           alt={partner.name}
           fill
           priority
+          sizes="100vw"
           className="object-cover object-center"
+          style={partner.imagePosition ? { objectPosition: partner.imagePosition } : undefined}
         />
         {/* Top fade keeps nav visible over bright images */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-transparent" />
@@ -45,6 +47,11 @@ export default function PartnerPage({ params }: { params: { slug: string } }) {
             {partner.region} · {partner.country}
           </p>
         </div>
+        {partner.imageCredit && (
+          <p className="absolute bottom-3 right-4 z-10 font-montserrat text-[10px] tracking-wide text-cream/60">
+            {partner.imageCredit}
+          </p>
+        )}
       </section>
 
       {/* ── About the estate ─────────────────────────────────────── */}
@@ -65,6 +72,36 @@ export default function PartnerPage({ params }: { params: { slug: string } }) {
           )}
         </div>
       </section>
+
+      {/* ── Gallery ──────────────────────────────────────────────── */}
+      {partner.gallery && partner.gallery.length > 0 && (
+        <section className="bg-cream pb-20 px-6">
+          <div
+            className={`max-w-6xl mx-auto grid grid-cols-1 gap-6 ${
+              partner.gallery.length >= 3 ? 'md:grid-cols-3' : 'md:grid-cols-2'
+            }`}
+          >
+            {partner.gallery.map((img) => (
+              <figure key={img.src}>
+                <div className="relative overflow-hidden border border-gold/20" style={{ aspectRatio: '4/3' }}>
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    sizes={partner.gallery!.length >= 3 ? '(min-width: 768px) 33vw, 100vw' : '(min-width: 768px) 50vw, 100vw'}
+                    className="object-cover"
+                  />
+                </div>
+                {img.credit && (
+                  <figcaption className="font-montserrat text-[10px] tracking-wide text-mid/70 mt-2">
+                    {img.credit}
+                  </figcaption>
+                )}
+              </figure>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* ── Experiences ──────────────────────────────────────────── */}
       <section className="bg-charcoal py-24 px-6">
