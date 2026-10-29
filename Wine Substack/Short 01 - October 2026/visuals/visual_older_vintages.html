@@ -53,16 +53,23 @@
     }
 
     .chart-head {
-      font-size: 9px;
+      font-size: 11.5px;
       color: var(--light);
       font-style: italic;
       margin-bottom: 12px;
       line-height: 1.5;
     }
 
+    .headline {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 10px;
+    }
+
     .chart-wrap {
       position: relative;
-      height: 250px;
+      height: 280px;
     }
 
     .legend {
@@ -81,7 +88,7 @@
       border-top: 1px solid var(--cream-dark);
       margin-top: 24px;
       padding-top: 12px;
-      font-size: 9.5px;
+      font-size: 11px;
       color: var(--light);
       font-style: italic;
       line-height: 1.5;
@@ -97,6 +104,8 @@
 
   <div class="main">
     <div class="chart-head">Average rating of the 2015 to 2017 vintages minus the 2020 to 2023 vintages, same wine, on a scale of 5. One dot per wine.</div>
+
+    <div class="headline" id="headline"></div>
 
     <div class="chart-wrap">
       <canvas id="vintageChart"></canvas>
@@ -142,8 +151,9 @@
   }));
 
   const higher = WINES.filter(w => w[1] > 0).length;
+  document.getElementById('headline').textContent = `Older rated higher in ${higher} of ${WINES.length} wines`;
 
-  // Zero line, direction labels and the headline count.
+  // Zero line and direction labels.
   const annotations = {
     id: 'annotations',
     beforeDatasetsDraw(c) {
@@ -155,17 +165,13 @@
       ctx.strokeStyle = '#2C2C2C';
       ctx.lineWidth = 1.5;
       ctx.beginPath(); ctx.moveTo(zx, a.top); ctx.lineTo(zx, a.bottom); ctx.stroke();
-      ctx.font = "500 10px 'Montserrat', sans-serif";
+      ctx.font = "500 12px 'Montserrat', sans-serif";
       ctx.fillStyle = '#7A5A64';
       ctx.textBaseline = 'bottom';
       ctx.textAlign = 'right';
       ctx.fillText('← Newer rated higher', zx - 8, a.bottom - 6);
       ctx.textAlign = 'left';
       ctx.fillText('Older rated higher →', zx + 8, a.bottom - 6);
-      ctx.textBaseline = 'top';
-      ctx.font = "600 12px 'Montserrat', sans-serif";
-      ctx.fillStyle = '#2C2C2C';
-      ctx.fillText(`Older rated higher in ${higher} of ${WINES.length} wines`, zx + 8, a.top + 6);
       ctx.restore();
     },
   };
@@ -190,7 +196,7 @@
           grid: { color: 'rgba(0,0,0,0.04)', drawTicks: false },
           ticks: {
             stepSize: 0.05,
-            font: { family: 'Montserrat', size: 9 },
+            font: { family: 'Montserrat', size: 11 },
             color: '#B09090',
             padding: 6,
             callback: (v) => (v > 0 ? '+' : '') + Number(v).toFixed(2).replace('-', '−'),
@@ -202,7 +208,7 @@
           border: { display: false },
           grid: { display: false },
           afterBuildTicks: (axis) => { axis.ticks = [{ value: 0 }, { value: 1 }]; },
-          ticks: { font: { family: 'Montserrat', size: 11, weight: '500' }, color: '#7A5A64', callback: (v) => TIERS[v] },
+          ticks: { font: { family: 'Montserrat', size: 13, weight: '500' }, color: '#7A5A64', callback: (v) => TIERS[v] },
         },
       },
     },

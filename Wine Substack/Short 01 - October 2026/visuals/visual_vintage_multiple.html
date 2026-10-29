@@ -48,7 +48,7 @@
     }
 
     .subtitle {
-      font-size: 11px;
+      font-size: 13px;
       font-weight: 400;
       color: rgba(245,236,215,0.6);
       line-height: 1.6;
@@ -64,13 +64,13 @@
 
     .rule {
       text-align: center;
-      font-size: 11px;
+      font-size: 13px;
       color: var(--mid);
       margin-top: 14px;
     }
 
     .note {
-      font-size: 9.5px;
+      font-size: 11.5px;
       color: var(--mid);
       margin-top: 22px;
       line-height: 1.5;
@@ -81,7 +81,7 @@
       border-top: 1px solid var(--cream-dark);
       margin-top: 12px;
       padding-top: 12px;
-      font-size: 9.5px;
+      font-size: 11px;
       color: var(--light);
       font-style: italic;
       line-height: 1.5;
@@ -123,7 +123,7 @@
 
   const UNIT = 140;          // px per 1.0
   const CX = 344;            // bottle centre
-  const BODY = 78;           // half the body width
+  const BODY = 90;           // half the body width
   const NECK = 22;           // half the neck width
   const BASE = 496;          // bottom of the bottle
   const NS = 'http://www.w3.org/2000/svg';
@@ -166,7 +166,7 @@
     el('rect', { x: CX - BODY, y, width: BODY * 2, height: h, fill: b.fill, 'clip-path': 'url(#glass)' });
     el('text', {
       x: CX, y: y + h / 2 + 4, 'text-anchor': 'middle',
-      'font-family': 'Montserrat', 'font-size': 10.5, 'font-weight': 600, fill: '#F5ECD7',
+      'font-family': 'Montserrat', 'font-size': 12, 'font-weight': 600, fill: '#F5ECD7',
     }, b.label);
   });
   el('path', { d: outline, fill: 'none', stroke: '#5C1A2E', 'stroke-width': 2 });
@@ -185,12 +185,12 @@
   function label(x, anchor, baseline, multiple, lines) {
     el('text', {
       x, y: baseline, 'text-anchor': anchor,
-      'font-family': 'Cormorant Garamond', 'font-size': 30, 'font-weight': 600, fill: '#5C1A2E',
+      'font-family': 'Cormorant Garamond', 'font-size': 34, 'font-weight': 600, fill: '#5C1A2E',
       style: 'font-variant-numeric: lining-nums',
     }, multiple);
     lines.forEach((line, i) => el('text', {
-      x, y: baseline + 20 + i * 16, 'text-anchor': anchor,
-      'font-family': 'Montserrat', 'font-size': 11, fill: '#2C2C2C',
+      x, y: baseline + 22 + i * 18, 'text-anchor': anchor,
+      'font-family': 'Montserrat', 'font-size': 13, fill: '#2C2C2C',
     }, line));
   }
 
@@ -203,7 +203,7 @@
         ['release prices, same wine,', 'new release then against', 'new release now']);
 
   bracket(left, fillTop, middleTop - 2, 1);
-  label(left - 12, 'end', fillTop - 14, '×1.15',
+  label(left - 12, 'end', fillTop - 20, '×1.15',
         ['age premium, older vintage', 'against current release,', 'both at today’s prices']);
 
   bracket(right, fillTop, base, -1);
