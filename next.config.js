@@ -21,6 +21,10 @@ const VISUALS = {
   'curiosity-ladder': 'visual_curiosity_ladder',
   'story-over-status': 'visual_story_over_status',
   'where-value-lives': 'visual_where_value_lives',
+
+  // Short 01 — The Burgundy Name Premium
+  'name-premium': 'visual_name_premium',
+  'price-ladder': 'visual_price_ladder',
 }
 
 const VISUALS_HOST = 'https://rmod04.github.io/WineResearch'
