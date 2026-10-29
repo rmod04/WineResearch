@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Short 01 boxes · render source</title>
+  <!-- Render source for the quote and data box images. Not deployed.
+       Montserrat 700 is not in the vendored fonts/ folder; the render copy
+       adds montserrat-700-normal-latin*.woff2 from npm (@fontsource/montserrat). -->
+  <style>
+    @import url('fonts.css');
+
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 700;
+      font-display: block;
+      src: url('fonts/montserrat-700-normal-latin.woff2') format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 700;
+      font-display: block;
+      src: url('fonts/montserrat-700-normal-latin-ext.woff2') format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #fff; padding: 20px; text-rendering: geometricPrecision; }
+
+    .frame { width: 900px; margin-bottom: 40px; }
+
+    /* ── Quote box (locked style) ── */
+    .quote-box {
+      background: #FAF5EE;
+      border-left: 3px solid #5C1A2E;
+      padding: 29px 35px 30px 34px;
+    }
+
+    .quote-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 30px;
+      color: #2C2C2C;
+    }
+
+    .quote-meta {
+      margin-top: 11px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 13px;
+      color: #7A5A64;
+    }
+
+    .quote-meta .score { color: #5C1A2E; font-weight: 700; }
+    .quote-meta .channel { color: #B8973A; font-weight: 700; }
+
+    /* ── Data box (locked style) ── */
+    .data-box {
+      font-family: 'Montserrat', sans-serif;
+      background: #F5ECD7;
+      padding: 34px 60px 34px 40px;
+      display: flex;
+      flex-direction: row;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .data-stat {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 46px;
+      color: #5C1A2E;
+      letter-spacing: -0.5px;
+      white-space: nowrap;
+    }
+
+    .data-body {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #2C2C2C;
+    }
+
+    .data-source {
+      font-size: 13px;
+      line-height: 1.5;
+      color: #7A5A64;
+      margin-top: 11px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 4 · section 3 -->
+  <div class="frame" id="s1_04_data_94-points">
+    <div class="data-box">
+      <div class="data-stat">€226 vs €65</div>
+      <div>
+        <div class="data-body">The price of a 94-point critic score: a typical Burgundy grand cru, against Domaine Drouhin Oregon’s Laurène from the Willamette Valley.</div>
+        <div class="data-source">Scores and prices obtained from Wine-Searcher, October 2026.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5 · Quote box A · P3-Q7 · section 3 -->
+  <div class="frame" id="s1_05_quote_marginal-increase">
+    <div class="quote-box">
+      <div class="quote-text">“Although "quality" certainly increases, at some point the marginal increase gets smaller and smaller - while the price function seems to do the opposite. […]”</div>
+      <div class="quote-meta"><span class="score">▲ 21</span> upvotes · <span class="channel">r/wine</span></div>
+    </div>
+  </div>
+
+  <!-- 7 · Quote box B · P3-Q1 · section 4 -->
+  <div class="frame" id="s1_07_quote_baseball-cards">
+    <div class="quote-box">
+      <div class="quote-text">“At a certain point, you have to realize burgundy has more in common with baseball cards than it does with beer for example.<br>The value of these bottles isn’t really based on their perceived quality so much as their rarity and collectability. […]”</div>
+      <div class="quote-meta"><span class="score">▲ 96</span> upvotes · <span class="channel">r/wine</span></div>
+    </div>
+  </div>
+
+  <!-- 9 · Quote box C · P3-Q17 · section 6 -->
+  <div class="frame" id="s1_09_quote_reputable-shop">
+    <div class="quote-box">
+      <div class="quote-text">“If you were to buy any random Burgundy from a reputable shop like K&amp;L for $60-100, it'd likely be very good. […]”</div>
+      <div class="quote-meta"><span class="score">▲ 18</span> upvotes · <span class="channel">r/wine</span></div>
+    </div>
+  </div>
+
+  <!-- 10 · Quote box D · P3-Q8 · section 6 -->
+  <div class="frame" id="s1_10_quote_overpriced">
+    <div class="quote-box">
+      <div class="quote-text">“Most of the time they are (IMO) overpriced.<br>Occasionally they are transcendent, singular, worth every penny and then some.”</div>
+      <div class="quote-meta"><span class="score">▲ 28</span> upvotes · <span class="channel">r/wine</span></div>
+    </div>
+  </div>
+
+  <!-- 11 · section 6 -->
+  <div class="frame" id="s1_11_data_60-to-680">
+    <div class="data-box">
+      <div class="data-stat">€60 to €680</div>
+      <div>
+        <div class="data-body">The price range of the four Burgundies that scored 97 at the 2025 Decanter World Wine Awards, from a Pommard premier cru to a Clos de la Roche grand cru.</div>
+        <div class="data-source">Results from the Decanter World Wine Awards, 2025. Prices from <span style="white-space: nowrap">Wine-Searcher</span>, June 2025.</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
