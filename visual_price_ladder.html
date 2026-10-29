@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Every rung of the label · Cork To Table</title>
+  <style>
+    @import url('fonts.css');
+
+    :root {
+      --burgundy:   #5C1A2E;
+      --cream:      #F5ECD7;
+      --cream-dark: #EAD9BE;
+      --gold:       #B8973A;
+      --rose:       #C27A8A;
+      --charcoal:   #2C2C2C;
+      --mid:        #7A5A64;
+      --light:      #B09090;
+      --bg:         #FAF6EF;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; } body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--bg);
+      display: flex;
+      justify-content: center;
+      padding: 28px 12px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 760px;
+      background: var(--bg);
+    }
+
+    /* ── Header ── */
+    .header {
+      background: var(--burgundy);
+      padding: 28px 36px 24px;
+    }
+
+    .title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--cream);
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-size: 11px;
+      font-weight: 400;
+      color: rgba(245,236,215,0.6);
+      line-height: 1.6;
+      margin-top: 6px;
+    }
+
+    /* ── Main ── */
+    .main {
+      padding: 28px 36px 24px;
+    }
+
+    .panel-head {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+
+    .chart-head {
+      font-size: 9px;
+      color: var(--light);
+      font-style: italic;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    .chart-wrap {
+      position: relative;
+      height: 270px;
+    }
+
+    .chart-wrap.controls { height: 210px; }
+
+    .panel + .panel {
+      margin-top: 26px;
+      padding-top: 22px;
+      border-top: 1px solid var(--cream-dark);
+    }
+
+    .hint {
+      font-size: 0.68rem;
+      color: var(--light);
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; overflow: hidden;
+      clip: rect(0 0 0 0); white-space: nowrap;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      border-top: 1px solid var(--cream-dark);
+      margin-top: 24px;
+      padding-top: 12px;
+      font-size: 9.5px;
+      color: var(--light);
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 540px) {
+      .header, .main { padding-left: 18px; padding-right: 18px; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="title">Every rung of the label</div>
+    <div class="subtitle">Burgundy compared with three Pinot Noir producers from Oregon, Central Otago and Germany.</div>
+  </div>
+
+  <div class="main">
+
+    <p class="hint">Hover/tap any dot or bar for details</p>
+
+    <div class="panel">
+      <div class="panel-head">Burgundy: The price of each label type</div>
+      <div class="chart-head">One dot per bottle, 2020 and 2023 vintages. The line marks the typical (median) price on each rung.</div>
+      <div class="chart-wrap">
+        <canvas id="ladderChart" role="img" aria-label="Dot plot of Burgundy bottle prices by label tier"></canvas>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">One producer’s range, entry wine to top wine</div>
+      <div class="chart-head">Each bar runs from a producer’s cheapest Pinot Noir to its top bottling, recent vintages (2020 to 2023).</div>
+      <div class="chart-wrap controls">
+        <canvas id="controlsChart" role="img" aria-label="Entry and top bottling prices for one producer in each region"></canvas>
+      </div>
+    </div>
+
+    <table class="sr-only" id="dataTable"></table>
+
+    <div class="footer">
+      Source: Price data obtained from Wine-Searcher, October 2026.
+    </div>
+  </div>
+
+</div>
+
+<script src="chart.umd.min.js"></script>
+<script>
+  const BURGUNDY = '#5C1A2E';
+  const MUTED = '#B9A39C';
+  const X_MAX = 500;
+
+  // Rungs from the bottom of the label to the top.
+  const TIERS = ['Bourgogne', 'Village', 'Premier cru', 'Grand cru'];
+
+  // tier, estate and wine, vintage, lowest offer worldwide in euros
+  const WINES = [
+    ['Bourgogne', 'Bouchard Père & Fils, Bourgogne Pinot Noir La Vignée', 2020, 25],
+    ['Bourgogne', 'Domaine Faiveley, Bourgogne Pinot Noir', 2020, 33],
+    ['Bourgogne', 'Domaine Fourrier, Bourgogne Rouge', 2020, 45],
+    ['Bourgogne', 'Domaine Henri Gouges, Bourgogne Rouge', 2020, 45],
+    ['Bourgogne', 'Domaine Hudelot-Noëllat, Bourgogne Rouge', 2020, 31],
+    ['Bourgogne', 'Domaine Hudelot-Noëllat, Bourgogne Rouge', 2023, 35],
+    ['Bourgogne', 'Domaine Jean Grivot, Bourgogne Rouge', 2020, 46],
+    ['Bourgogne', 'Domaine Mongeard-Mugneret, Bourgogne Hautes-Côtes de Nuits', 2020, 45],
+    ['Bourgogne', 'Domaine Robert Chevillon, Bourgogne Rouge', 2023, 32],
+    ['Bourgogne', 'Domaine Rossignol-Trapet, Bourgogne Rouge', 2020, 40],
+    ['Bourgogne', 'Domaine Tollot-Beaut, Bourgogne Rouge', 2020, 39],
+    ['Bourgogne', 'Domaine Tollot-Beaut, Bourgogne Rouge', 2023, 21],
+    ['Bourgogne', 'Domaine de Montille, Bourgogne Rouge', 2020, 24],
+    ['Bourgogne', 'Domaine de Montille, Bourgogne Rouge', 2023, 21],
+    ['Bourgogne', 'Joseph Drouhin, Laforêt Bourgogne Pinot Noir', 2020, 44],
+    ['Bourgogne', 'Joseph Drouhin, Laforêt Bourgogne Pinot Noir', 2023, 26],
+    ['Bourgogne', 'Louis Jadot, Bourgogne Pinot Noir Couvent des Jacobins', 2023, 25],
+    ['Bourgogne', 'Louis Latour, Bourgogne Pinot Noir', 2020, 31],
+    ['Bourgogne', 'Louis Latour, Bourgogne Pinot Noir', 2023, 28],
+    ['Village', 'Domaine Faiveley, Gevrey-Chambertin', 2020, 80],
+    ['Village', 'Domaine Henri Gouges, Nuits-Saint-Georges', 2020, 48],
+    ['Village', 'Domaine Henri Gouges, Nuits-Saint-Georges', 2023, 47],
+    ['Village', 'Domaine Hudelot-Noëllat, Chambolle-Musigny', 2020, 68],
+    ['Village', 'Domaine Hudelot-Noëllat, Chambolle-Musigny', 2023, 77],
+    ['Village', 'Domaine Jean Grivot, Vosne-Romanée', 2020, 78],
+    ['Village', 'Domaine Jean Grivot, Vosne-Romanée', 2023, 71],
+    ['Village', 'Domaine Mongeard-Mugneret, Vosne-Romanée', 2020, 107],
+    ['Village', 'Domaine Mongeard-Mugneret, Vosne-Romanée', 2023, 100],
+    ['Village', 'Domaine Robert Chevillon, Nuits-Saint-Georges Vieilles Vignes', 2020, 48],
+    ['Village', 'Domaine Robert Chevillon, Nuits-Saint-Georges Vieilles Vignes', 2023, 47],
+    ['Village', 'Domaine Rossignol-Trapet, Gevrey-Chambertin Vieilles Vignes', 2020, 39],
+    ['Village', 'Domaine Rossignol-Trapet, Gevrey-Chambertin Vieilles Vignes', 2023, 44],
+    ['Village', 'Domaine Tollot-Beaut, Chorey-lès-Beaune', 2020, 42],
+    ['Village', 'Domaine Tollot-Beaut, Chorey-lès-Beaune', 2023, 27],
+    ['Village', 'Domaine de Montille, Volnay', 2023, 122],
+    ['Village', 'Joseph Drouhin, Chambolle-Musigny', 2023, 65],
+    ['Village', 'Louis Jadot, Gevrey-Chambertin', 2020, 80],
+    ['Village', 'Louis Jadot, Gevrey-Chambertin', 2023, 73],
+    ['Village', 'Louis Latour, Gevrey-Chambertin', 2020, 177],
+    ['Village', 'Louis Latour, Gevrey-Chambertin', 2023, 86],
+    ['Premier cru', 'Domaine Faiveley, Gevrey-Chambertin Premier Cru Lavaux Saint-Jacques', 2020, 99],
+    ['Premier cru', 'Domaine Faiveley, Gevrey-Chambertin Premier Cru Lavaux Saint-Jacques', 2023, 125],
+    ['Premier cru', 'Domaine Fourrier, Gevrey-Chambertin Premier Cru Combe aux Moines', 2020, 213],
+    ['Premier cru', 'Domaine Fourrier, Gevrey-Chambertin Premier Cru Combe aux Moines', 2023, 226],
+    ['Premier cru', 'Domaine Henri Gouges, Nuits-Saint-Georges Premier Cru Les Vaucrains', 2020, 111],
+    ['Premier cru', 'Domaine Henri Gouges, Nuits-Saint-Georges Premier Cru Les Vaucrains', 2023, 119],
+    ['Premier cru', 'Domaine Jean Grivot, Vosne-Romanée Premier Cru Les Beaux Monts', 2020, 214],
+    ['Premier cru', 'Domaine Jean Grivot, Vosne-Romanée Premier Cru Les Beaux Monts', 2023, 238],
+    ['Premier cru', 'Domaine Robert Chevillon, Nuits-Saint-Georges Premier Cru Les Vaucrains', 2023, 128],
+    ['Premier cru', 'Domaine Tollot-Beaut, Beaune Premier Cru Grèves', 2020, 65],
+    ['Premier cru', 'Domaine Tollot-Beaut, Beaune Premier Cru Grèves', 2023, 57],
+    ['Premier cru', 'Domaine de Montille, Volnay Premier Cru Taillepieds', 2020, 127],
+    ['Premier cru', 'Domaine de Montille, Volnay Premier Cru Taillepieds', 2023, 139],
+    ['Premier cru', 'Louis Jadot, Gevrey-Chambertin Premier Cru Clos Saint-Jacques', 2020, 174],
+    ['Premier cru', 'Louis Jadot, Gevrey-Chambertin Premier Cru Clos Saint-Jacques', 2023, 167],
+    ['Grand cru', 'Domaine Faiveley, Chambertin-Clos de Bèze Grand Cru', 2020, 335],
+    ['Grand cru', 'Domaine Faiveley, Chambertin-Clos de Bèze Grand Cru', 2023, 458],
+    ['Grand cru', 'Domaine Hudelot-Noëllat, Clos de Vougeot Grand Cru', 2023, 226],
+    ['Grand cru', 'Domaine Jean Grivot, Clos de Vougeot Grand Cru', 2020, 204],
+    ['Grand cru', 'Domaine Jean Grivot, Clos de Vougeot Grand Cru', 2023, 228],
+    ['Grand cru', 'Domaine Mongeard-Mugneret, Échezeaux Grand Cru', 2020, 342],
+    ['Grand cru', 'Domaine Mongeard-Mugneret, Échezeaux Grand Cru', 2023, 295],
+    ['Grand cru', 'Domaine Rossignol-Trapet, Latricières-Chambertin Grand Cru', 2020, 119],
+    ['Grand cru', 'Domaine Rossignol-Trapet, Latricières-Chambertin Grand Cru', 2023, 218],
+    ['Grand cru', 'Domaine Tollot-Beaut, Corton-Bressandes Grand Cru', 2020, 99],
+    ['Grand cru', 'Domaine Tollot-Beaut, Corton-Bressandes Grand Cru', 2023, 83],
+    ['Grand cru', 'Joseph Drouhin, Clos de Vougeot Grand Cru', 2020, 208],
+    ['Grand cru', 'Joseph Drouhin, Clos de Vougeot Grand Cru', 2023, 179],
+    ['Grand cru', 'Louis Jadot, Chambertin-Clos de Bèze Grand Cru', 2020, 258],
+    ['Grand cru', 'Louis Jadot, Chambertin-Clos de Bèze Grand Cru', 2023, 443],
+  ];
+
+  // One producer per region, entry bottling to top bottling, in euros.
+  const CONTROLS = [
+    { region: 'Burgundy (one house)', entry: 25, top: 443, detail: 'Louis Jadot 2023, Bourgogne Couvent des Jacobins to Chambertin-Clos de Bèze', highlight: true },
+    { region: 'Oregon',               entry: 54, top: 65,  detail: 'Domaine Drouhin Oregon, Dundee Hills to Laurène' },
+    { region: 'Central Otago',        entry: 39, top: 89,  detail: 'Felton Road, Bannockburn to Block 5' },
+    { region: 'Germany',              entry: 28, top: 166, detail: 'Rudolf Fürst, Spätburgunder Tradition to Hundsrück GG' },
+  ];
+
+  function median(xs) {
+    const s = [...xs].sort((a, b) => a - b);
+    const m = Math.floor(s.length / 2);
+    return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
+  }
+
+  const MEDIANS = TIERS.map(t => median(WINES.filter(w => w[0] === t).map(w => w[3])));
+
+  // Spread dots that share a price so every wine stays visible.
+  function points() {
+    const seen = {};
+    return WINES.map(([tier, wine, vintage, price]) => {
+      const key = tier + price;
+      const k = seen[key] = (seen[key] || 0) + 1;
+      const offsets = [0, 0.2, -0.2, 0.4];
+      return { x: price, y: TIERS.indexOf(tier) + offsets[(k - 1) % 4], tier, wine, vintage, price };
+    });
+  }
+
+  const tooltipStyle = {
+    backgroundColor: '#2C2C2C',
+    titleFont: { family: 'Montserrat', size: 11, weight: '600' },
+    bodyFont: { family: 'Montserrat', size: 10 },
+    padding: 10,
+    cornerRadius: 1,
+    displayColors: false,
+  };
+
+  const xAxis = {
+    min: 0,
+    max: X_MAX,
+    border: { display: false },
+    grid: { color: 'rgba(0,0,0,0.04)', drawTicks: false },
+    ticks: { stepSize: 100, font: { family: 'Montserrat', size: 9 }, color: '#B09090', padding: 6, callback: (v) => '€' + v },
+  };
+
+  const yTickStyle = { font: { family: 'Montserrat', size: 11, weight: '500' }, color: '#7A5A64' };
+
+  // Median tick and its label on each rung.
+  const medianMarks = {
+    id: 'medianMarks',
+    afterDatasetsDraw(c) {
+      const { ctx, scales: { x, y } } = c;
+      ctx.save();
+      MEDIANS.forEach((m, i) => {
+        const px = x.getPixelForValue(m);
+        const top = y.getPixelForValue(i + 0.38);
+        const bottom = y.getPixelForValue(i - 0.38);
+        ctx.strokeStyle = '#2C2C2C';
+        ctx.lineWidth = 2;
+        ctx.beginPath(); ctx.moveTo(px, top); ctx.lineTo(px, bottom); ctx.stroke();
+        ctx.font = "600 11px 'Montserrat', sans-serif";
+        ctx.fillStyle = '#2C2C2C';
+        ctx.textBaseline = 'bottom';
+        ctx.textAlign = 'center';
+        ctx.fillText('€' + m, px, top - 3);
+      });
+      ctx.restore();
+    },
+  };
+
+  // Entry and top prices written beside each bar's ends.
+  const endLabels = {
+    id: 'endLabels',
+    afterDatasetsDraw(c) {
+      const { ctx, scales: { x } } = c;
+      const meta = c.getDatasetMeta(0);
+      ctx.save();
+      ctx.textBaseline = 'middle';
+      ctx.font = "600 11px 'Montserrat', sans-serif";
+      ctx.fillStyle = '#2C2C2C';
+      meta.data.forEach((bar, i) => {
+        const r = CONTROLS[i];
+        ctx.textAlign = 'right';
+        ctx.fillText('€' + r.entry, x.getPixelForValue(r.entry) - 9, bar.y);
+        ctx.textAlign = 'left';
+        ctx.fillText('€' + r.top, x.getPixelForValue(r.top) + 9, bar.y);
+      });
+      ctx.restore();
+    },
+  };
+
+  function renderTable() {
+    const rows = TIERS.map((t, i) =>
+      `<tr><th>${t}</th><td>median €${MEDIANS[i]}</td></tr>`).join('') +
+      CONTROLS.map(r => `<tr><th>${r.region}</th><td>€${r.entry} to €${r.top}</td></tr>`).join('');
+    document.getElementById('dataTable').innerHTML = '<caption>Prices by label tier and by producer</caption>' + rows;
+  }
+
+  function initLadder() {
+    new Chart(document.getElementById('ladderChart'), {
+      type: 'scatter',
+      data: {
+        datasets: [{
+          data: points(),
+          backgroundColor: 'rgba(92,26,46,0.55)',
+          borderColor: '#FAF6EF',
+          borderWidth: 1.5,
+          pointRadius: 5,
+          pointHoverRadius: 7,
+          pointHitRadius: 6,
+        }],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: { duration: 400 },
+        layout: { padding: { top: 6 } },
+        interaction: { mode: 'nearest', intersect: true },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            ...tooltipStyle,
+            callbacks: {
+              title: (items) => items[0].raw.wine,
+              label: (item) => `  ${item.raw.vintage} · €${item.raw.price}`,
+            },
+          },
+        },
+        scales: {
+          x: xAxis,
+          y: {
+            min: -0.6,
+            max: 3.6,
+            border: { display: false },
+            grid: { display: false },
+            afterBuildTicks: (axis) => { axis.ticks = TIERS.map((_, i) => ({ value: i })); },
+            ticks: { ...yTickStyle, callback: (v) => TIERS[v] },
+          },
+        },
+      },
+      plugins: [medianMarks],
+    });
+  }
+
+  function initControls() {
+    new Chart(document.getElementById('controlsChart'), {
+      type: 'bar',
+      data: {
+        labels: CONTROLS.map(r => r.region),
+        datasets: [{
+          data: CONTROLS.map(r => [r.entry, r.top]),
+          backgroundColor: CONTROLS.map(r => r.highlight ? BURGUNDY : MUTED),
+          borderRadius: 4,
+          borderSkipped: false,
+          barThickness: 12,
+        }],
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: { duration: 400 },
+        layout: { padding: { right: 12 } },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            ...tooltipStyle,
+            callbacks: {
+              title: (items) => CONTROLS[items[0].dataIndex].detail,
+              label: (item) => {
+                const r = CONTROLS[item.dataIndex];
+                return `  €${r.entry} to €${r.top}`;
+              },
+            },
+          },
+        },
+        scales: {
+          x: xAxis,
+          y: {
+            border: { display: false },
+            grid: { display: false },
+            // Left-align the region names and widen their column, so the entry
+            // prices beside each bar keep clear of them. Tick padding would also
+            // eat into the panel's height.
+            ticks: { ...yTickStyle, crossAlign: 'far' },
+            afterFit: (axis) => { axis.width += 48; },
+          },
+        },
+      },
+      plugins: [endLabels],
+    });
+  }
+
+  renderTable();
+  // Chart text is drawn on a canvas, which never asks the browser for a font by itself,
+  // so request the brand faces first and draw once they are in.
+  Promise.all(['400 11px Montserrat', '500 11px Montserrat', '600 11px Montserrat'].map(f => document.fonts.load(f))).then(() => { initLadder(); initControls(); });
+</script>
+
+<!-- ── Auto-height reporter ──────────────────────────────────────────
+     Tells the parent page how tall this visual actually is, so the
+     embedding iframe can size itself exactly to the content. -->
+<script>
+(function () {
+  if (window.parent === window) return;
+  var last = 0;
+
+  function measure() {
+    return Math.ceil(Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight,
+      document.body.offsetHeight,
+      document.documentElement.offsetHeight
+    ));
+  }
+
+  function report(force) {
+    var h = measure();
+    if (!h) return;
+    if (!force && Math.abs(h - last) <= 2) return;
+    last = h;
+    window.parent.postMessage({ type: 'c2t-visual-height', height: h }, '*');
+  }
+
+  window.addEventListener('message', function (e) {
+    if (e.data && e.data.type === 'c2t-request-height') report(true);
+  });
+
+  window.addEventListener('load', function () { report(true); });
+  window.addEventListener('pageshow', function () { report(true); });
+  window.addEventListener('resize', function () { report(false); });
+  document.addEventListener('DOMContentLoaded', function () { report(true); });
+  if (window.ResizeObserver) new ResizeObserver(function () { report(false); }).observe(document.body);
+  [100, 400, 900, 1600, 2600].forEach(function (t) { setTimeout(function () { report(true); }, t); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { report(true); });
+})();
+</script>
+
+</body>
+</html>
