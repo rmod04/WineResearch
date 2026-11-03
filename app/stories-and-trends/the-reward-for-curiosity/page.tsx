@@ -5,9 +5,9 @@ import { VISUALS_BASE } from '@/content/visuals'
 import { getArticle } from '@/content/articles'
 
 export const metadata = {
-  title: 'The Reward for Curiosity — Cork To Table',
-  description:
-    'The wine palate grows over time, and better wine doesn\'t have to cost more. A data-led look at how palates evolve, why price is a poor guide, and why curiosity is the most underrated quality in a wine drinker.',
+  title: 'The Reward for Curiosity | Cork To Table',
+  // The Google description is the subtitle shown under the title on the page.
+  description: getArticle('the-reward-for-curiosity')?.subtitle,
 }
 
 function DataCallout({ stat, context }: { stat: string; context: string }) {
@@ -114,6 +114,7 @@ export default function TheRewardForCuriosityPage() {
             <VisualEmbed
               src={`${VISUALS_BASE}/visual_palate_arc.html`}
               title="The palate arc: how wine preferences evolve over time"
+              description={"Four-stage wheel showing how wine preferences tend to move over a drinking lifetime: entry (semi-sweet whites, Prosecco, Moscato), exploration (dry whites, dry rosé, softer reds), depth (bolder reds such as Cabernet Sauvignon) and nuance (Barolo, Burgundy, dry Riesling, sherry). In a study of 422 US drinkers, 69% changed their preferences. A second tab shows dry red rising from 15% to 37% as a top choice, and semi-sweet white falling from 32% to 11%."}
             />
 
             <h2 className="font-cormorant text-2xl md:text-3xl font-light text-burgundy pt-4">
@@ -158,6 +159,7 @@ export default function TheRewardForCuriosityPage() {
             <VisualEmbed
               src={`${VISUALS_BASE}/visual_price_quality.html`}
               title="Price vs quality: what the data shows"
+              description={"Line chart of average rating against bottle price, from $10 to $15 up to $150 and over. With the price visible, average Vivino ratings across 535 wines rise from about 3.7 to 4.4 out of 5, while a second line, drawn to show the direction found in over 6,000 blind tastings, stays flat to slightly lower. Only 9% of drinkers are confident they could tell a $10 bottle from a $100 one."}
             />
 
             <h2 className="font-cormorant text-2xl md:text-3xl font-light text-burgundy pt-4">
@@ -198,6 +200,7 @@ export default function TheRewardForCuriosityPage() {
             <VisualEmbed
               src={`${VISUALS_BASE}/visual_curiosity_ladder.html`}
               title="The curiosity ladder: how wine search behaviour maps a learning journey"
+              description={"Three-rung ladder of the wine questions people type into Google, with combined monthly global searches for each rung. \"Am I doing this right?\" draws 2,800 searches a month, \"What does this mean?\" 4,200, and \"Where is this from?\" 22,800, with 43% of those origin searches naming a specific region or grape."}
             />
 
             <h2 className="font-cormorant text-2xl md:text-3xl font-light text-burgundy pt-4">
@@ -233,6 +236,7 @@ export default function TheRewardForCuriosityPage() {
             <VisualEmbed
               src={`${VISUALS_BASE}/visual_story_over_status.html`}
               title="Story is the new status: how narrative signals quality in wine"
+              description={"Donut chart of the keywords r/wine discussion uses about quality: 133 mentions (68%) are story-led, such as farming, terroir, the winemaker and authenticity, and 63 (32%) are shortcuts, such as label, price and score. 66% of the story-led mentions are positive, while 75% of the shortcut mentions are critical. Three cards then show community comments on the winemaker's intent, terroir and tradition."}
             />
 
             <h2 className="font-cormorant text-2xl md:text-3xl font-light text-burgundy pt-4">
@@ -268,6 +272,7 @@ export default function TheRewardForCuriosityPage() {
             <VisualEmbed
               src={`${VISUALS_BASE}/visual_where_value_lives.html`}
               title="Where value lives: consumers and critics see the bigger picture"
+              description={"Area chart with two views: where drinkers spend, and where Wine Spectator's 2025 Top 100 sits by price. In a 2026 survey of 1,351 drinkers, 54% regularly buy bottles under $15, 18% spend $15 to $30 and 28% spend over $30; in the Top 100, 34 wines cost under $30, 52 cost $30 to $100 and 14 cost over $100."}
             />
 
             <p>

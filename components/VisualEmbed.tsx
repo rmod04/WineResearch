@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
 
 import { VISUALS_ORIGIN } from '@/content/visuals'
 
@@ -24,10 +24,17 @@ const MAX_HEIGHT = 20000
 export default function VisualEmbed({
   src,
   title,
+  description,
   maxHeight,
 }: {
   src: string
   title: string
+  /**
+   * Optional text alternative for screen readers: what the visual shows and
+   * its key figures. Rendered as visually hidden text and linked to the
+   * iframe with aria-describedby, so it is read aloud and never shown.
+   */
+  description?: string
   /**
    * Optional cap, in pixels. Leave unset for the normal behaviour, where the
    * frame grows to the full content height and never scrolls internally.
@@ -39,6 +46,7 @@ export default function VisualEmbed({
   maxHeight?: number
 }) {
   const frameRef = useRef<HTMLIFrameElement>(null)
+  const descriptionId = useId()
   const [height, setHeight] = useState<number>(FALLBACK_HEIGHT)
 
   useEffect(() => {
@@ -101,11 +109,17 @@ export default function VisualEmbed({
 
   return (
     <div className="my-10">
+      {description && (
+        <p id={descriptionId} className="sr-only">
+          {description}
+        </p>
+      )}
       <div className="border border-gold/20 overflow-hidden">
         <iframe
           ref={frameRef}
           src={src}
           title={title}
+          aria-describedby={description ? descriptionId : undefined}
           loading="lazy"
           className="w-full block"
           style={{

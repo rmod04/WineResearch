@@ -1,14 +1,19 @@
 CORK TO TABLE — SUBSTACK URL SLUGS
-Last updated: 31 August 2026 (slug convention corrected)
+Last updated: 3 November 2026 (Short 01 title and slug set)
 Maintained by: Substack Cowork project. Read by: C2T Website project.
 
 --------------------------------------------------------------------------
 PURPOSE
 --------------------------------------------------------------------------
-The website and the Substack use DIFFERENT slugs for the same article.
-The website slug is set in content/articles.ts. The Substack slug is chosen
-during the SEO pass for search intent. This file maps one to the other so
-the website's empty substackUrl fields can be filled in correctly.
+The Substack slug MIRRORS the website slug. Convention changed 31 August
+2026. Substack derives the slug from the post title, so there is no slug to
+choose on a new piece and no search-intent slug to draft. The earlier idea of
+a separate search-intent Substack slug was dropped; that value now comes from
+the subtitle and body copy instead. See the SEO notes for each piece.
+
+This file remains the handover point: the C2T Website project reads it to fill
+the substackUrl fields in content/articles.ts. Record any deliberate slug
+override here, since an override is now an exception rather than a step.
 
 --------------------------------------------------------------------------
 PUBLICATION IDENTITY (decided 24 August 2026)
@@ -60,16 +65,14 @@ anywhere. content/articles.ts already holds the correct URL.
 PIECE 2 — The Reward for Curiosity (August 2026)
 --------------------------------------------------------------------------
 Website slug   : the-reward-for-curiosity
-Substack slug  : the-reward-for-curiosity   (PLANNED, not yet live)
+Substack slug  : the-reward-for-curiosity
 Full URL       : <BASE>/p/the-reward-for-curiosity
 Subtitle       : The wine palate grows over time, and better wine doesn't have to cost more
-Status         : Live on the C2T website. NOT yet published on Substack.
-                 Blocked on static images of the five Piece 2 visuals.
+Status         : PUBLISHED 1 September 2026. Live on the C2T website and on Substack.
+Verified       : 1 September 2026. The URL above resolves and carries the title,
+                 subtitle and byline above.
 
-At publish time: check the slug field in Substack's post settings before
-hitting publish. Substack derives it from the title, so it should already
-read 'the-reward-for-curiosity'. Confirm the live URL returns 200, then
-fill substackUrl in content/articles.ts.
+The slug mirrored the website slug as planned, with no override needed.
 
 Superseded: 'does-expensive-wine-taste-better' was the earlier search-intent
 slug. Dropped on 31 August 2026 in favour of mirroring the website slug. The
@@ -98,13 +101,13 @@ In content/articles.ts, fill the substackUrl field on the matching entry:
   {
     slug: 'the-reward-for-curiosity',
     ...
-    substackUrl: '<BASE>/p/the-reward-for-curiosity',   // after publishing
+    substackUrl: '<BASE>/p/the-reward-for-curiosity',
   },
 
 Also in content/site.ts, substackUrl is the publication homepage, not an
-article. Set it to <BASE> once live. It currently reads '' and that empty
-value is what keeps Substack links hidden in the footer, on Stories & Trends,
-and on About.
+article. Both pieces are now live on Substack, so set it to <BASE>. While it
+reads '' the Substack links stay hidden in the footer, on Stories & Trends,
+and on About. OPEN as of 1 September 2026.
 
 --------------------------------------------------------------------------
 CANONICAL URL RULE (decided 18 August 2026)
@@ -156,6 +159,42 @@ RULES
    here when it happens.
 3. When a new piece is added, update this file at the same time as the SEO
    pass, not at publish time.
+
+--------------------------------------------------------------------------
+SHORT 01 — Reading Between the Labels (November 2026)
+--------------------------------------------------------------------------
+Format         : monthly short. Numbered separately from the quarterly long
+                 pieces, so "Piece 3" still means only the India flagship.
+Title          : Reading Between the Labels  (agreed 3 November 2026)
+Subtitle       : What the Burgundy name adds to the price of a Pinot Noir,
+                 tested against other regions
+Website slug   : reading-between-the-labels
+Substack slug  : reading-between-the-labels  (mirrors the website. Substack
+                 derives it from the title, which gives the same string;
+                 check the slug field before publishing.)
+Full URL       : <BASE>/p/reading-between-the-labels
+Canonical      : https://corktotable.co/stories-and-trends/reading-between-the-labels
+Website SEO    : same model as Pieces 1 and 2. Page title is the headline,
+                 "Reading Between the Labels | Cork To Table". Meta
+                 description is the subtitle. Same title and subtitle on
+                 Substack; no separate search-engine fields.
+Cover image    : s1_00_cover_bottles.jpg (Short 01 folder, visuals/static),
+                 1200 x 630 at 2x. Pexels photo by Steve B, estate name
+                 blurred. Credit: Photo: Steve B (Pexels). Also the website
+                 article thumbnail.
+Status         : NOT PUBLISHED. Publication Thursday 5 November 2026.
+Visual slugs   : /visuals/name-premium and /visuals/price-ladder
+                 (interactive). Confirm both return 200 before posting.
+Sequencing     : the website page must be live before the Substack post, so
+                 the canonical URL points somewhere real.
+
+SEO note, 15 October 2026. Measured with aitorsm/keyword-volume, worldwide,
+English. "pinot noir price" 5,400 at medium competition is the subtitle
+target and the piece answers it directly. "burgundy wine price" measures only
+720 and was dropped. The People Also Ask phrasings measured no volume at all
+and were dropped as targets. "burgundy vs bordeaux" measures 2,900 a month at
+a competition index of 2, which is the best opportunity found, and it is
+logged for a FUTURE piece because this one does not answer it.
 
 --------------------------------------------------------------------------
 VISUAL LINKS (standing rule from Piece 3 onwards)

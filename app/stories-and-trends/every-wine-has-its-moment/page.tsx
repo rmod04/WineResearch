@@ -5,9 +5,9 @@ import { VISUALS_BASE } from '@/content/visuals'
 import { getArticle } from '@/content/articles'
 
 export const metadata = {
-  title: 'Every Wine Has Its Moment — Cork To Table',
-  description:
-    'Why does a cold evening make you reach for something heavier? Why does a glass with friends feel different from the one alone? A data-led research piece on wine, occasion, and the moment that makes it all mean something.',
+  title: 'Every Wine Has Its Moment | Cork To Table',
+  // The Google description is the subtitle shown under the title on the page.
+  description: getArticle('every-wine-has-its-moment')?.subtitle,
 }
 
 function DataCallout({ stat, context }: { stat: string; context: string }) {
@@ -103,6 +103,7 @@ export default function EveryWineHasItsMomentPage() {
             <VisualEmbed
               src={`${VISUALS_BASE}/visual_occasion_shift.html`}
               title="Occasion shift: how wine usage occasions have changed"
+              description={"Grouped bar chart comparing wine drinking occasions in mid 2023 and July 2025, from 56,000 responses to a Deutsch Family Wine & Spirits survey. Solo occasions fell from 14% to 7% of wine moments, and shared and couples occasions rose from 6% to 10.2%."}
             />
 
             <h2 className="font-cormorant text-2xl md:text-3xl font-light text-burgundy pt-4">
@@ -127,6 +128,7 @@ export default function EveryWineHasItsMomentPage() {
             <VisualEmbed
               src={`${VISUALS_BASE}/visual_instagram.html`}
               title="Instagram hashtag analysis: wine and occasion"
+              description={"Bar chart of engagement across 8 seasonal wine hashtags on Instagram, from 132 posts in April 2026, switchable between average likes, average comments, comments per 100 likes and post count. #winetime draws the most engagement, averaging 10,152 likes and 220 comments per post, and #winterwine draws the most discussion, at 12.2 comments per 100 likes. 67% of posts name a specific setting such as a beach, terrace, fireplace or restaurant."}
             />
 
             <h2 className="font-cormorant text-2xl md:text-3xl font-light text-burgundy pt-4">
@@ -163,6 +165,7 @@ export default function EveryWineHasItsMomentPage() {
             <VisualEmbed
               src={`${VISUALS_BASE}/visual_seasonal_instinct.html`}
               title="Seasonal wine preferences: data visualisation"
+              description={"Interactive panel with a tab for each season, listing the wines people associate with it in r/wine discussion, from 452 comments across 17 threads. Spring leans to Cru Beaujolais, Chardonnay and Sauvignon Blanc; summer to rosé, Txakolina, Riesling and Vinho Verde; autumn to Bordeaux, Pinot Noir and Zweigelt; winter to Barolo, Amarone, Zinfandel and southern Rhône."}
             />
 
             <h2 className="font-cormorant text-2xl md:text-3xl font-light text-burgundy pt-4">
@@ -228,6 +231,7 @@ export default function EveryWineHasItsMomentPage() {
             <VisualEmbed
               src={`${VISUALS_BASE}/visual_oiv_colour_shift.html`}
               title="OIV global wine consumption by colour shift over time"
+              description={"Stacked bar chart of global wine consumption by colour, comparing OIV's 2000 to 2004 average with 2021. Red's share fell from 51.3% to 47%, white's rose from 40% to 43%, and rosé's rose from 8.7% to 10%. By amount drunk, white is up 10% and rosé 17% since 2000, while red is down 15% from its 2007 peak."}
             />
 
             <h2 className="font-cormorant text-2xl md:text-3xl font-light text-burgundy pt-4">
@@ -260,6 +264,7 @@ export default function EveryWineHasItsMomentPage() {
             <VisualEmbed
               src={`${VISUALS_BASE}/visual_reddit_voices.html`}
               title="Reddit voices: curated consumer quotes from r/wine"
+              description={"Filterable list of 19 quotes from r/wine, chosen from 452 comments across 17 threads and sorted by upvotes. The quotes cover why wine tastes better on holiday, at a winery and in good company; which wines people link to each season; and how palates change over a lifetime, moving towards subtler wines and away from heavy oak."}
               maxHeight={760}
             />
 
