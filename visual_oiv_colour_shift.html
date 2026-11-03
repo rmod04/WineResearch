@@ -45,7 +45,7 @@
   .pill-swatch { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
   .pill-text { flex: 1; }
   .pill-name { font-size: 10px; font-weight: 600; color: var(--charcoal); letter-spacing: 0.3px; display: block; }
-  .pill-stat { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 600; color: var(--burgundy); line-height: 1; }
+  .pill-stat { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 600; color: var(--burgundy); line-height: 1; font-variant-numeric: lining-nums; }
   .pill-change { font-size: 9px; color: var(--mid); margin-top: 1px; display: block; }
 
   /* Insight box */
@@ -61,7 +61,7 @@
 <div class="card">
   <div class="header">
     <div class="title">The world is moving towards lighter</div>
-    <div class="subtitle">Global wine consumption by colour · 2000 vs 2021 · OIV via Decanter 2023 · hover/tap to view graph labels</div>
+    <div class="subtitle">Global wine consumption by colour · 2000 to 2004 average vs 2021 · hover/tap to view graph labels</div>
   </div>
 
   <div class="body">
@@ -71,24 +71,24 @@
         <div class="pill-swatch" style="background:#7B1D2E"></div>
         <div class="pill-text">
           <span class="pill-name">Red Wine</span>
-          <span class="pill-stat" id="red-stat">55% → 47%</span>
-          <span class="pill-change" id="red-change">−8pp · down 15% from 2007 peak</span>
+          <span class="pill-stat" id="red-stat">−15%</span>
+          <span class="pill-change" id="red-change">Amount drunk since its 2007 peak · share 51.3% → 47%</span>
         </div>
       </div>
       <div class="colour-pill" id="pill-white" onclick="toggleColour('white')">
         <div class="pill-swatch" style="background:#C8A96E"></div>
         <div class="pill-text">
           <span class="pill-name">White Wine</span>
-          <span class="pill-stat" id="white-stat">38% → 43%</span>
-          <span class="pill-change" id="white-change">+5pp · up 10% over two decades</span>
+          <span class="pill-stat" id="white-stat">+10%</span>
+          <span class="pill-change" id="white-change">Amount drunk since 2000 · share 40% → 43%</span>
         </div>
       </div>
       <div class="colour-pill" id="pill-rose" onclick="toggleColour('rose')">
         <div class="pill-swatch" style="background:#D4889A"></div>
         <div class="pill-text">
           <span class="pill-name">Rosé</span>
-          <span class="pill-stat" id="rose-stat">7% → 10%</span>
-          <span class="pill-change" id="rose-change">+3pp · fastest growing colour +43% relative</span>
+          <span class="pill-stat" id="rose-stat">+17%</span>
+          <span class="pill-change" id="rose-change">Amount drunk since 2000, fastest growing · share 8.7% → 10%</span>
         </div>
       </div>
     </div>
@@ -97,7 +97,7 @@
       <button class="toggle-btn active" onclick="setView('stacked')">Stacked Share</button>
       <button class="toggle-btn" onclick="setView('change')">Change Only</button>
     </div>
-    <div style="font-size:9.5px;color:#B09090;font-style:italic;margin-bottom:14px;margin-top:-10px;">pp = percentage points of global consumption share · relative % change shown in pills above</div>
+    <div style="font-size:9.5px;color:#B09090;font-style:italic;margin-bottom:14px;margin-top:-10px;">pp = percentage points of global consumption share · change in amount drunk shown in the boxes above</div>
 
     <div class="chart-wrap">
       <canvas id="mainChart"></canvas>
@@ -116,9 +116,10 @@
 
 <script>
 const DATA = {
-  red:   { y2000: 55, y2021: 47 },
-  white: { y2000: 38, y2021: 43 },
-  rose:  { y2000: 7,  y2021: 10 },
+  // Shares of world consumption: OIV's 2000 to 2004 average against 2021.
+  red:   { y2000: 51.3, y2021: 47 },
+  white: { y2000: 40.0, y2021: 43 },
+  rose:  { y2000: 8.7,  y2021: 10 },
 };
 
 const COLORS = {
@@ -128,8 +129,8 @@ const COLORS = {
 };
 
 const INSIGHTS = {
-  stacked: '<strong>Stacked share view:</strong> In 2000, red wine held more than half of all global consumption. By 2021, that has shrunk to just below half. White and rosé have filled the gap, together now accounting for over half of global consumption for the first time. This may seem minor, but in absolute consumption it represents a significant change.',
-  change: '<strong>Change since 2000 (in percentage points):</strong> Rosé is the standout mover, with a +3pp absolute gain, representing a 43% relative increase in global share. White wine grew steadily (+5pp). Red wine gave back ground accumulated since the 1990s (−8pp). <em>Note: pp = percentage points of global consumption share. Relative % change shown in the colour pills above.</em>',
+  stacked: '<strong>Stacked share view:</strong> In the early 2000s, red wine averaged just over half of global consumption (51.3%). By 2021 that had fallen to 47%, just below half. White and rosé filled the gap, and together now account for more than half of all wine drunk. The shift looks small in share points, but the amount of red wine drunk has fallen 15% from its 2007 peak.',
+  change: '<strong>Change in share, 2000 to 2004 average to 2021 (percentage points):</strong> White gained the most share, up 3.0 points, and rosé added 1.3, while red gave up 4.3. By amount drunk, rosé is the fastest growing colour, up 17% since 2000 against 10% for white. <em>Note: pp = percentage points of global consumption share. Change in amount drunk shown in the colour boxes above.</em>',
 };
 
 let currentView = 'stacked';
@@ -148,7 +149,7 @@ function getVisibleDatasets() {
 function buildStacked() {
   const ds = getVisibleDatasets();
   return {
-    labels: ['2000', '2021'],
+    labels: ['2000 to 2004 average', '2021'],
     datasets: ds.map(d => ({
       label: d.label,
       data: [DATA[d.key].y2000, DATA[d.key].y2021],
@@ -159,14 +160,19 @@ function buildStacked() {
   };
 }
 
+// Rounded to one decimal so 47 − 51.3 reads as −4.3, not −4.2999…
+function shareChange(key) {
+  return Math.round((DATA[key].y2021 - DATA[key].y2000) * 10) / 10;
+}
+
 function buildChange() {
   const ds = getVisibleDatasets();
   return {
     labels: ds.map(d => d.label),
     datasets: [{
       label: 'Change in percentage points (pp)',
-      data: ds.map(d => DATA[d.key].y2021 - DATA[d.key].y2000),
-      backgroundColor: ds.map(d => (DATA[d.key].y2021 - DATA[d.key].y2000) < 0 ? 'rgba(123,29,46,0.8)' : d.color.solid),
+      data: ds.map(d => shareChange(d.key)),
+      backgroundColor: ds.map(d => shareChange(d.key) < 0 ? 'rgba(123,29,46,0.8)' : d.color.solid),
       borderColor: ds.map(d => d.color.solid),
       borderWidth: 1.5,
       borderRadius: 2,
@@ -199,8 +205,8 @@ function render() {
           callbacks: {
             label: ctx => {
               const v = ctx.parsed.y;
-              const prefix = (currentView === 'change' && v > 0) ? '+' : '';
-              return `${ctx.dataset.label}: ${prefix}${v}%`;
+              if (currentView === 'change') return `${ctx.label}: ${v > 0 ? '+' : ''}${v.toFixed(1)} pp`;
+              return `${ctx.dataset.label}: ${v}%`;
             }
           }
         }
@@ -217,11 +223,11 @@ function render() {
           grid: { color: 'rgba(92,26,46,0.06)', drawBorder: false },
           ticks: {
             font: { family: 'Montserrat', size: 9.5 }, color: '#B09090',
-            callback: v => (isChange && v > 0 ? '+' : '') + v + '%'
+            callback: v => isChange ? (v > 0 ? '+' : '') + v + ' pp' : v + '%'
           },
           border: { display: false },
-          min: isChange ? -12 : 0,
-          max: isChange ? 10 : (isStacked ? 105 : 65),
+          min: isChange ? -6 : 0,
+          max: isChange ? 4 : (isStacked ? 105 : 65),
         }
       },
       animation: { duration: 500, easing: 'easeInOutQuart' }

@@ -282,7 +282,7 @@
       <div class="source">OIV International Organisation of Vine and Wine · via Decanter, December 2023</div>
       <div class="chart-wrap"><canvas id="oivChart"></canvas></div>
       <div class="method-note">
-        <strong>Methodology:</strong> OIV global consumption share data, two snapshots: 2000 and 2021. Red wine fell from 55% to 47% (−8pp; peak was ~55% in 2007 before sustained decline). White rose from 38% to 43% (+5pp). Rosé grew from 7% to 10% — a 43% relative increase, the fastest-growing colour by share. Connection to seasonal thesis: the global shift toward lighter styles is consistent with rising consumer preference for wine in warmer, more casual, social occasions.
+        <strong>Methodology:</strong> OIV global consumption share data: OIV's 2000 to 2004 average against 2021 (OIV gives no single-year shares for 2000). Red's share fell from 51.3% to 47% (−4.3pp), and the amount of red drunk is down 15% from its 2007 peak. White rose from 40.0% to 43% (+3.0pp), with the amount drunk up 10% since 2000. Rosé grew from 8.7% to 10% (+1.3pp) and is the fastest-growing colour by volume, up 17% since 2000. Connection to seasonal thesis: the global shift toward lighter styles is consistent with rising consumer preference for wine in warmer, more casual, social occasions.
       </div>
     </div>
 
@@ -513,11 +513,11 @@
 new Chart(document.getElementById('oivChart'), {
   type: 'bar',
   data: {
-    labels: ['2000', '2021'],
+    labels: ['2000 to 2004 average', '2021'],
     datasets: [
-      { label: 'Red',      data: [55, 47], backgroundColor: '#5C1A2E', borderRadius: 4, borderSkipped: false },
-      { label: 'White',    data: [38, 43], backgroundColor: '#B8973A', borderRadius: 4, borderSkipped: false },
-      { label: 'Rosé',     data: [7,  10], backgroundColor: '#C27A8A', borderRadius: 4, borderSkipped: false }
+      { label: 'Red',      data: [51.3, 47], backgroundColor: '#5C1A2E', borderRadius: 4, borderSkipped: false },
+      { label: 'White',    data: [40.0, 43], backgroundColor: '#B8973A', borderRadius: 4, borderSkipped: false },
+      { label: 'Rosé',     data: [8.7, 10], backgroundColor: '#C27A8A', borderRadius: 4, borderSkipped: false }
     ]
   },
   options: {

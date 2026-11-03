@@ -1033,10 +1033,11 @@
       "source": "OIV — International Organisation of Vine and Wine",
       "via": "Decanter, December 2023",
       "published": "2023-12",
+      "note": "Corrected 3 November 2026. OIV publishes no single-year shares for 2000; the start-of-period shares are OIV's 2000 to 2004 averages. Volume changes measure the amount drunk, not share.",
       "dataPoints": [
         {
-          "label": "White wine global share 2000",
-          "value": 38,
+          "label": "White wine global share, 2000 to 2004 average",
+          "value": 40.0,
           "unit": "%"
         },
         {
@@ -1045,8 +1046,8 @@
           "unit": "%"
         },
         {
-          "label": "Red wine global share 2000",
-          "value": 55,
+          "label": "Red wine global share, 2000 to 2004 average",
+          "value": 51.3,
           "unit": "%"
         },
         {
@@ -1055,8 +1056,8 @@
           "unit": "%"
         },
         {
-          "label": "Rosé global share 2000",
-          "value": 7,
+          "label": "Rosé global share, 2000 to 2004 average",
+          "value": 8.7,
           "unit": "%"
         },
         {
@@ -1071,7 +1072,7 @@
         },
         {
           "label": "Rosé change since 2000",
-          "value": 43,
+          "value": 17,
           "unit": "% relative increase"
         },
         {
