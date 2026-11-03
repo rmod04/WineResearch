@@ -138,11 +138,11 @@ export default function EveryWineHasItsMomentPage() {
 
             <DataCallout
               stat="+17%"
-              context="Global rosé consumption since 2000. Fastest-growing wine colour by share. (OIV, via Decanter 2023)⁴"
+              context="Global rosé consumption since 2000. Fastest-growing wine colour by volume. (OIV, via Decanter 2023)⁴"
             />
             <DataCallout
               stat="−15%"
-              context="Red wine consumption from its 2007 peak. White wine up 10% over the same period. (OIV)⁴"
+              context="Red wine consumption from its 2007 peak. White wine up 10% since 2000. (OIV)⁴"
             />
 
             <p>
