@@ -304,7 +304,7 @@ export default function ReadingBetweenTheLabelsPage() {
             </p>
 
             <h2 className="font-cormorant text-2xl md:text-3xl font-light text-burgundy pt-4">
-              Marsannay premier cru: a name in the making?
+              Marsannay Premier Cru: a name in the making?
             </h2>
 
             <p>
