@@ -112,6 +112,14 @@ and on About. OPEN as of 1 September 2026.
 --------------------------------------------------------------------------
 CANONICAL URL RULE (decided 18 August 2026)
 --------------------------------------------------------------------------
+CORRECTION, 5 November 2026: Substack has NO canonical URL field in post
+settings (Substack Help Center, "How do I edit my post's URL?", and Substack's
+SEO guide list only SEO title, SEO description, Post Url and social preview
+image). The step below cannot be carried out. What establishes the website as
+the original is publishing there first, then linking back to it from the
+Substack post. Set the slug in the draft: Settings > SEO Options > Post Url,
+before publishing only.
+
 The full article text is published in BOTH places: on the website and on
 Substack. Neither is condensed. That creates duplicate content, so the
 website is declared canonical and Substack points back to it.

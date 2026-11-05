@@ -50,6 +50,16 @@ Rewrite as a plain positive statement and let the contrast sit implicit. "Rather
 
 **Visual quotes need not mirror the article.** Visuals may carry shorter excerpts, or none at all. When the same source appears in two places, the excerpts must not overlap in wording, and each must earn its place in that section's argument.
 
+## References
+
+**Never cite the author as a source.** No "Modwel, R. (2026)", in the reference list, in a methodology note, in a visual footer, or in a data callout. A reference names where the data came from, and the data came from a provider.
+
+- Name the underlying provider: Vivino, Google Keyword Planner, Google autocomplete, Reddit r/wine, Wine Spectator, YouGov, a named study or publication.
+- State what was taken and when: the measure, the sample size, the market, the retrieval date.
+- Where the finding is an original analysis of that provider's data, say so without a byline. Use "Analysis conducted for this piece." Readers then know the provider supplied the data and not the conclusion.
+- Never name scraping tools, actors, vendors or intermediaries.
+- The same rule governs visual footers, which already follow it. A reference and a footer describing the same dataset should name the same provider.
+
 ## SEO pass (run before every publish)
 
 Do this after the draft is final and before it goes to Substack. Never let it distort the argument.
@@ -79,3 +89,16 @@ Do this after the draft is final and before it goes to Substack. Never let it di
 
 - Coding knowledge is zero. Explain in plain language and go step by step.
 - Cowork handles content, copy, research, and file edits. All git commits, pushes, and deploys run from Claude Code or the local terminal.
+
+## Closing lines on every Substack post
+
+Added 5 November 2026 (Short 01). After the sources footnote, every Substack post ends with these two lines:
+
+- *This piece is also on corktotable.co, with the charts fully interactive*, with "corktotable.co" linked to the matching website article page.
+- © [year] Cork To Table. All rights reserved. No reproduction without permission.
+
+Substack has no canonical URL setting. Publishing on the website first and linking back with the first line is what marks the website as the original.
+
+## Subscribe button placeholder in every draft
+
+Added 5 November 2026. Every Substack draft carries a line reading [SUBSCRIBE BUTTON] after the last paragraph of the article and before the sources footnote, so the Substack subscribe button is never forgotten when pasting.

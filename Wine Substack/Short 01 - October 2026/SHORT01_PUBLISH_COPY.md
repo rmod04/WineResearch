@@ -5,7 +5,7 @@
 *What the Burgundy name adds to the price of a Pinot Noir, tested against other regions*
 
 [COVER: s1_00_cover_bottles.jpg (Substack cover) / s1_00_cover_bottles_3x2.jpg (website thumbnail)]
-Caption: Photo: Steve B ([Pexels](https://www.pexels.com/photo/close-up-of-wine-bottles-in-shelf-display-38079535/)). Alt text: Close-up of red Burgundy bottles lined up on a wine shop shelf, labels facing out, the nearest reading Côte de Beaune.
+No caption (free Pexels image, no credit needed). Alt text: Close-up of red Burgundy bottles lined up on a wine shop shelf, labels facing out, the nearest reading Côte de Beaune.
 
 ## The villages that renamed themselves
 
@@ -129,4 +129,10 @@ Photo B. Caption: Vineyards above Marsannay-la-Côte. Photo: Arnaud 25 ([CC BY-S
 Even before any decree, these vineyards sell at a premium. Across our sample of producers, a wine labelled with its climat (a named vineyard plot) costs a median 22% more than the same grower’s village-labelled Marsannay. Some of that may simply reflect better sites. The more telling moment comes after the decree: if prices jump again while the wine stays the same, we may be watching the next name premium being made in Burgundy.
 
 
+[SUBSCRIBE BUTTON]
+
 *Sources: Vivino (ratings and prices, US market, October 2026, converted to euros; analysis conducted for this piece); Wine-Searcher (critic scores and prices, October 2026); Decanter World Wine Awards, 2025 and 2026, with 2025 prices from Wine-Searcher via Forbes; Guide Hachette des Vins (release prices, 1999 to 2026), iDealwine (current values) and INSEE (inflation); the VDP; South China Morning Post; Liv-ex via The Drinks Business; Safer via Decanter, and Agreste (vineyard land prices); INAO and Goedhuis (Marsannay); Reddit r/wine.*
+
+*This piece is also on [corktotable.co](https://corktotable.co/stories-and-trends/reading-between-the-labels), with the charts fully interactive*
+
+© 2026 Cork To Table. All rights reserved. No reproduction without permission.
