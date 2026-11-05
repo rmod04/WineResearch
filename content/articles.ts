@@ -41,7 +41,7 @@ export const articles: Article[] = [
     excerpt:
       'Quality can be found across all varieties and labels. So why do many wine drinkers still feel unsure of venturing beyond the territory of what is already known? The data has an interesting story to tell.',
     thumbnail: '/images/photo-palate-arc.jpg',
-    thumbnailAlt: 'The palate arc — a four-phase wheel of wine preference',
+    thumbnailAlt: 'The palate arc: a four-phase wheel of wine preference',
     isSubstack: true,
     substackUrl: 'https://corktotable.substack.com/p/the-reward-for-curiosity',
   },
@@ -68,7 +68,7 @@ export const articles: Article[] = [
       'Driving out of Madrid, the flat plains of the Meseta eventually give way to river valleys and vine-covered slopes. Three wineries, one grape variety, three completely different stories about soil, altitude, and commitment.',
     thumbnail: '/images/photo-spain-hero.jpg',
     thumbnailAlt: 'Vineyards along a Spanish river valley',
-    // HIDDEN Aug 2026 — Liquid Magazine (India) is publishing this piece
+    // HIDDEN Aug 2026: Liquid Magazine (India) is publishing this piece
     // in October 2026 and asked for it to come off the site until then.
     // TO RESTORE after their issue is out:
     //   1. delete this `hidden: true` line
