@@ -90,10 +90,6 @@ export default function ReadingBetweenTheLabelsPage() {
         <div className="max-w-2xl mx-auto">
           <div className="font-montserrat text-sm text-charcoal leading-loose space-y-6">
 
-            <h2 className="font-cormorant text-2xl md:text-3xl font-light text-burgundy pt-4">
-              The villages that renamed themselves
-            </h2>
-
             <p>
               Bourgogne, or Burgundy in English, is always an intriguing wine region for many. This renowned region in east-central France can hardly be considered straightforward for any wine enthusiast. From one village or vineyard to another, the sheer range in styles and quality levels leaves no stone unturned.
             </p>
@@ -101,6 +97,10 @@ export default function ReadingBetweenTheLabelsPage() {
             <p>
               But more than that, it’s also known for its ability to command an almost performatively premium price, depending on the label. The reason for choosing the word performatively is the entire basis for this piece: I simply wanted to test the foundation behind it.
             </p>
+
+            <h2 className="font-cormorant text-2xl md:text-3xl font-light text-burgundy pt-4">
+              The villages that renamed themselves
+            </h2>
 
             <p>
               So let’s begin with a story. In 1847 Gevrey petitioned the king to add the name of its most famous vineyard, Chambertin. Chambolle took Musigny in 1882. Morey took Saint-Denis. Around a dozen Côte d’Or villages did the same. The hyphenated names known to many are hyphenated for a reason. The name premium was built deliberately, long ago.
