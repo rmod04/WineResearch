@@ -95,7 +95,7 @@ export default function ReadingBetweenTheLabelsPage() {
             </p>
 
             <p>
-              But more than that, it’s also known for its ability to command an almost performatively premium price, depending on the label. The reason for choosing the word performatively is the entire basis for this piece: I simply wanted to test the foundation behind it.
+              But more than that, it’s also known for its ability to command a premium price, depending on the label. Some may even claim this trend to be almost ‘performative’. The investigaion within is the reason for this piece: I simply wanted to test the foundation behind the trend.
             </p>
 
             <h2 className="font-cormorant text-2xl md:text-3xl font-light text-burgundy pt-4">
@@ -103,7 +103,7 @@ export default function ReadingBetweenTheLabelsPage() {
             </h2>
 
             <p>
-              So let’s begin with a story. In 1847 Gevrey petitioned the king to add the name of its most famous vineyard, Chambertin. Chambolle took Musigny in 1882. Morey took Saint-Denis. Around a dozen Côte d’Or villages did the same. The hyphenated names known to many are hyphenated for a reason. The name premium was built deliberately, long ago.
+              Let’s begin with a story. In 1847 Gevrey petitioned the king to add the name of its most famous vineyard, Chambertin. Chambolle took Musigny in 1882. Morey took Saint-Denis. Around a dozen Côte d’Or villages did the same. The hyphenated names known to many are hyphenated for a reason. The name premium was built deliberately, long ago.
             </p>
 
             <figure className="my-10">
