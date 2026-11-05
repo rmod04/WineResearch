@@ -172,7 +172,7 @@ export default function ReadingBetweenTheLabelsPage() {
 
             <VisualEmbed
               src={`${VISUALS_BASE}/visual_older_vintages.html`}
-              title="Older vintages do not rate higher"
+              title="Older vintages do not always rate higher"
               description={"Dot plot of 31 Burgundy wines comparing the Vivino rating of their 2015 to 2017 vintages with their 2020 to 2023 vintages. Most dots sit at or below zero: the older vintages rated higher in only 8 of 31 wines."}
             />
 
