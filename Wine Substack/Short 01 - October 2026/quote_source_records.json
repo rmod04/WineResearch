@@ -1,0 +1,493 @@
+{
+  "piece": "Short 01 short form, October 2026",
+  "workingTitle": "The Burgundy name premium",
+  "protocolVersion": "C2T quote protocol, as stated in cork_to_table_style_rules.md",
+  "publicAttribution": "a wine community member. In Notes and lighter copy, “someone on Reddit”. Usernames stay in this file and never appear in published work.",
+  "scrapeProvenance": {
+    "platform": "Reddit, r/wine",
+    "pulledAt": "2026-10-09T11:38:07Z",
+    "searchQuery": "burgundy expensive value",
+    "withinSubreddit": "wine",
+    "recordsReturned": 139,
+    "postsReturned": 6,
+    "commentsReturned": 133,
+    "scoresCapturedAt": "2026-10-09",
+    "note": "Scores drift. Any score printed in the piece must match this file, and the piece must state when scores were captured."
+  },
+  "threads": {
+    "T1": {
+      "title": "I don't drink much burgundy. Thoughts on value here?",
+      "author": "u/b1ackfyre",
+      "score": 36,
+      "url": "https://www.reddit.com/r/wine/comments/1nleoo9/i_dont_drink_much_burgundy_thoughts_on_value_here/",
+      "createdAt": "2025-09-19"
+    },
+    "T2": {
+      "title": "Help me understand burgundy pricing",
+      "author": "u/shitbirdie",
+      "score": 16,
+      "url": "https://www.reddit.com/r/wine/comments/17candz/help_me_understand_burgundy_pricing/",
+      "createdAt": "2023-10-20"
+    },
+    "T3": {
+      "title": "Are Burgundy Red Wines Overpriced or Justifiably Expensive?",
+      "author": "u/zeriest",
+      "score": 29,
+      "url": "https://www.reddit.com/r/wine/comments/17z7dx5/are_burgundy_red_wines_overpriced_or_justifiably/",
+      "createdAt": "2023-11-19"
+    },
+    "T4": {
+      "title": "Burgundy and pricing",
+      "author": "u/Mchangwine",
+      "score": 109,
+      "url": "https://www.reddit.com/r/wine/comments/1opboat/burgundy_and_pricing/",
+      "createdAt": "2025-11-05"
+    },
+    "T5": {
+      "title": "These burgundies are getting too expensive",
+      "author": "u/odedi1",
+      "score": 112,
+      "url": "https://www.reddit.com/r/wine/comments/19c95x6/these_burgundies_are_getting_too_expensive/",
+      "createdAt": "2024-01-21"
+    },
+    "T6": {
+      "title": "Burgundy will never be relevant to future generations",
+      "author": "u/iwrotedabible",
+      "score": 179,
+      "url": "https://www.reddit.com/r/wine/comments/zb84rb/burgundy_will_never_be_relevant_to_future/",
+      "createdAt": "2022-12-03"
+    }
+  },
+  "fieldNotes": [
+    "exactText is stored verbatim as returned by the source, including typographic apostrophes, typos, stray punctuation and spacing before punctuation. Excerpts used in the piece must be exact substrings of exactText.",
+    "The source renders paragraph breaks as a newline pair followed by a single space. That leading space is a rendering artefact and may be trimmed when excerpting; no other character may be changed.",
+    "Mark every elision with […].",
+    "A post score is not a comment score. All 20 records here are comments. The six post scores are held in the threads block and must be labelled as post scores if used.",
+    "Six comments were pulled and then excluded on house-rule grounds. They are listed in excludedFromUse with reasons, so the decision is auditable and is not silently revisited later.",
+    "Record IDs keep the P3- prefix from when this piece was provisionally called Piece 3. The piece is now Short 01, October 2026. The IDs are referenced across the working document and the Drive quote index, so they stay as they are."
+  ],
+  "openItems": [
+    "P3-Q20: verify the claim that Burgundy was regarded as thin and insipid around 40 years ago before quoting it as fact. CHECKED 12 October 2026: substantially supportable for major negociants in the 1970s and 1980s, with named critics describing the wines as thin, charmless and lacking depth, and a 1987 illegal chaptalisation case at one large house. The commenter generalises it to the whole region, which the evidence does not support. Attribute as one drinker's view and, if the history is used as fact, cite the documented producer-level record instead.",
+    "P3-Q2 is the piece's own strongest objection. It must appear in the piece, not only in this file.",
+    "Scores re-checked 12 October 2026 and unchanged. Re-capture again only if publication slips past November 2026.",
+    "At draft stage, read each excerpt actually used against its exactText one final time. See transcriptionCheck.residualRisk."
+  ],
+  "excludedFromUse": [
+    {
+      "author": "u/latache-ee",
+      "score": 1,
+      "permalink": "https://www.reddit.com/r/wine/comments/zb84rb/comment/iysk37d/",
+      "reason": "Two words, derogatory toward a consumer group on economic grounds. Excluded by house rule."
+    },
+    {
+      "author": "u/Chodepoker1",
+      "score": 11,
+      "permalink": "https://www.reddit.com/r/wine/comments/17z7dx5/comment/k9z25da/",
+      "reason": "Relevant first paragraph about awful $200-500 bottles, but the second paragraph is a sexual analogy. Excluded on tone."
+    },
+    {
+      "author": "u/DotCapital7293",
+      "score": 8,
+      "permalink": "https://www.reddit.com/r/wine/comments/zb84rb/comment/iyr4o18/",
+      "reason": "Strong blind-tasting claim, but phrased with a crude metaphor and derogatory about collectors. Excluded on tone. The underlying claim is worth testing against the critic data instead."
+    },
+    {
+      "author": "u/werifesteria-vibes",
+      "score": 43,
+      "permalink": "https://www.reddit.com/r/wine/comments/zb84rb/comment/iypyxk3/",
+      "reason": "High score and insider trade detail, but frames buyers as snobs with inherited taste. Excluded by the derogatory-toward-a-consumer-group rule."
+    },
+    {
+      "author": "u/Twerp129",
+      "score": 29,
+      "permalink": "https://www.reddit.com/r/wine/comments/zb84rb/comment/iyptjex/",
+      "reason": "“less relevant to poor people”. Excluded by house rule."
+    },
+    {
+      "author": "u/lucasmilanesi",
+      "score": 4,
+      "permalink": "https://www.reddit.com/r/wine/comments/zb84rb/comment/iyqyomw/",
+      "reason": "Names a national consumer group as a luxury driver. Excluded by house rule."
+    }
+  ],
+  "quotes": [
+    {
+      "id": "P3-Q1",
+      "status": "VERIFIED",
+      "threadRef": "T2",
+      "threadTitle": "Help me understand burgundy pricing",
+      "threadUrl": "https://www.reddit.com/r/wine/comments/17candz/help_me_understand_burgundy_pricing/",
+      "author": "u/Chodepoker1",
+      "itemType": "comment",
+      "score": 96,
+      "scoreCapturedAt": "2026-10-09",
+      "permalink": "https://www.reddit.com/r/wine/comments/17candz/comment/k5opouh/",
+      "createdAt": "2023-10-20",
+      "exactText": "At a certain point, you have to realize burgundy has more in common with baseball cards than it does with beer for example.\n\n The value of these bottles isn’t really based on their perceived quality so much as their rarity and collectability.\n\n People who are big burgundy nerds are very terroir obsessed and want to collect and try every individual plot of land and compare it to the one directly next to it. People actually gather very commonly and do this. It’s like Pokémon league for rich people.\n\n Like anything that’s inexplicably expensive, at it’s core is outrageously nerdy.",
+      "theme": "Price tracks scarcity and collectability rather than tasted quality",
+      "usageNote": "Use PARAGRAPHS 1 AND 2 ONLY. Paragraphs 3 and 4 (“Pokémon league for rich people”, “outrageously nerdy”) are derogatory toward a consumer group and are excluded by house rule. Mark the cut with […].",
+      "flags": [
+        "PARTIAL_USE_REQUIRED"
+      ]
+    },
+    {
+      "id": "P3-Q2",
+      "status": "VERIFIED",
+      "threadRef": "T4",
+      "threadTitle": "Burgundy and pricing",
+      "threadUrl": "https://www.reddit.com/r/wine/comments/1opboat/burgundy_and_pricing/",
+      "author": "u/thewhizzle",
+      "itemType": "comment",
+      "score": 48,
+      "scoreCapturedAt": "2026-10-09",
+      "permalink": "https://www.reddit.com/r/wine/comments/1opboat/comment/nnah04d/",
+      "createdAt": "2025-11-05",
+      "exactText": "Most people on Reddit's experiences of Burgundy though are going to be random bottles purchased at the sub $80 price point and not through a carefully curated list of reputable producers. There are tons of random producers that are imported aimed at volume-oriented retailers like Costco, Total Wine, grocery stores that will still command $30-50 that probably cost $15 out the cellar door. They're pretty poor representations of the overall quality that Burgundy has to offer and it creates poor impressions of the region turning off customers from pursuing it further.\n\n Ex-cellar door prices are also not really relevant to the discussion as very few people will have access so we're forced to contend with whatever market prices are available.\n\n Good burgundy that is well made and expressive of terroir can certainly be had at $50-75 but that is probably on the upper range or even out of range for most wine consumers.",
+      "theme": "Selection bias in crowd ratings of Burgundy",
+      "usageNote": "LOAD-BEARING CAVEAT QUOTE. This is the strongest available objection to the piece's own Vivino analysis: the crowd sample skews to supermarket Burgundy. Use it to state the limitation in the community's own words rather than burying it in a footnote.",
+      "flags": [
+        "SELF-CRITICAL_OF_OUR_METHOD"
+      ]
+    },
+    {
+      "id": "P3-Q3",
+      "status": "VERIFIED",
+      "threadRef": "T4",
+      "threadTitle": "Burgundy and pricing",
+      "threadUrl": "https://www.reddit.com/r/wine/comments/1opboat/burgundy_and_pricing/",
+      "author": "u/Waking",
+      "itemType": "comment",
+      "score": 21,
+      "scoreCapturedAt": "2026-10-09",
+      "permalink": "https://www.reddit.com/r/wine/comments/1opboat/comment/nnahqrz/",
+      "createdAt": "2025-11-05",
+      "exactText": "Perhaps it’s because I live in the US, but I find if I grab a random Burgundy at $50-100 it’s just a coin toss on quality. You really have to know what you’re doing. A $100 Napa cab is almost always a winner in my experience. Besides Caymus What Napa wines are you buying at $100 that are “mediocre”? It may not be a place to find value but it’s just easier to get right.",
+      "theme": "Variance, not level, is what the buyer is paying for",
+      "usageNote": "Use the first three sentences. The question to another user and the closing clause are conversational and should be cut with […]. CORRECTED 12 October 2026: the stored text was previously truncated after “mediocre”? and was missing the closing sentence. The full comment is now stored.",
+      "flags": [
+        "PARTIAL_USE_REQUIRED",
+        "CORRECTED_2026-10-12"
+      ]
+    },
+    {
+      "id": "P3-Q4",
+      "status": "VERIFIED",
+      "threadRef": "T4",
+      "threadTitle": "Burgundy and pricing",
+      "threadUrl": "https://www.reddit.com/r/wine/comments/1opboat/burgundy_and_pricing/",
+      "author": "u/BenF87M2",
+      "itemType": "comment",
+      "score": 17,
+      "scoreCapturedAt": "2026-10-09",
+      "permalink": "https://www.reddit.com/r/wine/comments/1opboat/comment/nnaqf87/",
+      "createdAt": "2025-11-05",
+      "exactText": "I think this is just cope from someone who loves burgundy (I do too) But as a previous poster said, most Napa wines $50+ are higher quality and the reality is the same is not true for burgundy. With Burgundy there is a much higher knowledge to quality barrier that isn’t present on most other wines, which is why a lot of people avoid burgundy. Burgundy has one of the worst QPR due to the clout. Don’t get me wrong, if you know what you’re looking for and know quality producers, it can be great QPR but the knowledge ceiling required is too high to the point that most people give up",
+      "theme": "The name premium is partly a knowledge premium",
+      "usageNote": "Best single line is “Burgundy has one of the worst QPR due to the clout.” Quote the sentence in full context or excerpt with […]. Note QPR means quality-to-price ratio; gloss it for a general reader.",
+      "flags": [
+        "JARGON_NEEDS_GLOSS"
+      ]
+    },
+    {
+      "id": "P3-Q5",
+      "status": "VERIFIED",
+      "threadRef": "T2",
+      "threadTitle": "Help me understand burgundy pricing",
+      "threadUrl": "https://www.reddit.com/r/wine/comments/17candz/help_me_understand_burgundy_pricing/",
+      "author": "u/teddyone",
+      "itemType": "comment",
+      "score": 8,
+      "scoreCapturedAt": "2026-10-09",
+      "permalink": "https://www.reddit.com/r/wine/comments/17candz/comment/k5oo7pp/",
+      "createdAt": "2023-10-20",
+      "exactText": "the thing to understand here is that Gevrey is on of the most famous/prestigous pinot noir villages in the world, maybe after Vosne and Chambolle. It contains many Grand Cru vineyards producing some of the most expensive wines in the world. Auxey-Duresses is a great village but not anywhere near the level of international acclaim.\n\n So is the Gevrey twice as good? I somewhat doubt it, but the producer might take more care with the production because they know it will command a higher price.",
+      "theme": "Mechanism: reputation raises price, and price can then raise care",
+      "usageNote": "Second paragraph is the usable excerpt and is the most interesting causal claim in the whole pull. Contains typos in paragraph 1 (“on of”, “prestigous”); if paragraph 1 is used, quote verbatim including typos, or cut it with […].",
+      "flags": [
+        "SOURCE_TYPOS"
+      ]
+    },
+    {
+      "id": "P3-Q6",
+      "status": "VERIFIED",
+      "threadRef": "T2",
+      "threadTitle": "Help me understand burgundy pricing",
+      "threadUrl": "https://www.reddit.com/r/wine/comments/17candz/help_me_understand_burgundy_pricing/",
+      "author": "u/CondorKhan",
+      "itemType": "comment",
+      "score": 3,
+      "scoreCapturedAt": "2026-10-09",
+      "permalink": "https://www.reddit.com/r/wine/comments/17candz/comment/k5px0q5/",
+      "createdAt": "2023-10-20",
+      "exactText": "Gevrey is a more prestigious appellation than Auxey Duresses, simply put\n\n Burgundy works just like everything else...\n\n Maybe the top videocard is 10% faster than the next fastest one, but it's 2x the price, because people that have to have the top thing will pay for it.",
+      "theme": "Diminishing returns analogy from outside wine",
+      "usageNote": "Low score (3). Use for the analogy only, and do not present it as a widely held community view. Third paragraph is the usable excerpt.",
+      "flags": [
+        "LOW_SCORE"
+      ]
+    },
+    {
+      "id": "P3-Q7",
+      "status": "VERIFIED",
+      "threadRef": "T3",
+      "threadTitle": "Are Burgundy Red Wines Overpriced or Justifiably Expensive?",
+      "threadUrl": "https://www.reddit.com/r/wine/comments/17z7dx5/are_burgundy_red_wines_overpriced_or_justifiably/",
+      "author": "u/applecactuspie",
+      "itemType": "comment",
+      "score": 21,
+      "scoreCapturedAt": "2026-10-09",
+      "permalink": "https://www.reddit.com/r/wine/comments/17z7dx5/comment/k9ybrs1/",
+      "createdAt": "2023-11-19",
+      "exactText": "Short answer: it depends. The way I like to think of it, for wine the relationship between quality (taste, method of farming/production, the winemaker, and any other factors you want to use to describe a bottle) and price is not a linear function. Burgundy is the perfect example for this as prices can range from 20$ to 20k.\n\n Although \"quality\" certainly increases, at some point the marginal increase gets smaller and smaller - while the price function seems to do the opposite. The catch is that there is a market that is willing to pay up to get the extra bump in the quality of the bottle i.e. everyone's \"value\" function that matches the marginal increase in quality to the extra $ you pay is different.\n\n People ask \"is this 2000$ bottle 10 times better than this other 200$ bottle\" - probably not and as a result often think things are overpriced. When in reality they should be asking \" is it worth an extra 1800$ for me to have certain qualities in this bottle that I will not be certainly not be able to in this 200$ wine\" For some people yes, for some people no.",
+      "theme": "Non-linear quality-price curve, articulated by a drinker",
+      "usageNote": "Paragraph 2 is the cleanest excerpt and lines up almost exactly with Castriota et al. (2022). Pairing a community voice with the econometrics is the strongest move available for this section.",
+      "flags": []
+    },
+    {
+      "id": "P3-Q8",
+      "status": "VERIFIED",
+      "threadRef": "T3",
+      "threadTitle": "Are Burgundy Red Wines Overpriced or Justifiably Expensive?",
+      "threadUrl": "https://www.reddit.com/r/wine/comments/17z7dx5/are_burgundy_red_wines_overpriced_or_justifiably/",
+      "author": "u/rightanglerecording",
+      "itemType": "comment",
+      "score": 28,
+      "scoreCapturedAt": "2026-10-09",
+      "permalink": "https://www.reddit.com/r/wine/comments/17z7dx5/comment/k9xtrrj/",
+      "createdAt": "2023-11-19",
+      "exactText": "Most of the time they are (IMO) overpriced.\n\n Occasionally they are transcendent, singular, worth every penny and then some.",
+      "theme": "Both things are true at once",
+      "usageNote": "Use in full. This is the house price-neutrality rule stated by a drinker and protects the piece from reading as an attack on expensive wine.",
+      "flags": []
+    },
+    {
+      "id": "P3-Q9",
+      "status": "VERIFIED",
+      "threadRef": "T2",
+      "threadTitle": "Help me understand burgundy pricing",
+      "threadUrl": "https://www.reddit.com/r/wine/comments/17candz/help_me_understand_burgundy_pricing/",
+      "author": "u/targert_mathos",
+      "itemType": "comment",
+      "score": 32,
+      "scoreCapturedAt": "2026-10-09",
+      "permalink": "https://www.reddit.com/r/wine/comments/17candz/comment/k5ooqmn/",
+      "createdAt": "2023-10-20",
+      "exactText": "Wine prices are not about quality. It's about supply and demand. Don't buy a $100 bottle of any wine and think it will be \"twice as good\" as a $50 bottle.",
+      "theme": "Prices are set by demand",
+      "usageNote": "Contains an “not X, it's Y” antithesis, which house style bans in our own prose. It is a verbatim quote, so it is used unchanged. Never reword a quote to satisfy a style rule.",
+      "flags": [
+        "HOUSE_STYLE_EXEMPT_VERBATIM"
+      ]
+    },
+    {
+      "id": "P3-Q10",
+      "status": "VERIFIED",
+      "threadRef": "T2",
+      "threadTitle": "Help me understand burgundy pricing",
+      "threadUrl": "https://www.reddit.com/r/wine/comments/17candz/help_me_understand_burgundy_pricing/",
+      "author": "u/ababab70",
+      "itemType": "comment",
+      "score": 21,
+      "scoreCapturedAt": "2026-10-09",
+      "permalink": "https://www.reddit.com/r/wine/comments/17candz/comment/k5op86d/",
+      "createdAt": "2023-10-20",
+      "exactText": "No one understands burgundy pricing. It’s all over the map.",
+      "theme": "Opacity of Burgundy pricing",
+      "usageNote": "Short and quotable. Good opener or pull-quote. Note the companion reply from u/Backpacker7385 (12) reframes it: “it’s all over the map” is exactly why it is what it is.",
+      "flags": []
+    },
+    {
+      "id": "P3-Q11",
+      "status": "VERIFIED",
+      "threadRef": "T3",
+      "threadTitle": "Are Burgundy Red Wines Overpriced or Justifiably Expensive?",
+      "threadUrl": "https://www.reddit.com/r/wine/comments/17z7dx5/are_burgundy_red_wines_overpriced_or_justifiably/",
+      "author": "u/Acceptable_West_3871",
+      "itemType": "comment",
+      "score": 14,
+      "scoreCapturedAt": "2026-10-09",
+      "permalink": "https://www.reddit.com/r/wine/comments/17z7dx5/comment/k9z1eao/",
+      "createdAt": "2023-11-20",
+      "exactText": "Burgundy is a rat’s nest and probably the only place where “entry level bottle” and “$50” can be used in the same sentence.” I’ve had $200 bottles that sucked and also $40 bottles that knocked my socks off as well as everything in between. My gateway bottle into wine was a $50 bottle of Gevrey Chambertin villages. I suggest finding a producer you like and sticking with them. What makes burgundy fun is there are just so many different styles and price points and I find great satisfaction in finding undervalued wines. It’s frustrating because you might take 9 bottles that are meh and then the 10th will be one of the greatest wines you ever had.\n\n A great example of this is Domaine Pierre Guillemot which I had the pleasure of visiting earlier this year. Small, family run domaine in Savigny (off the beat village in the Cote de Beaune) but here you have a guy making some of the most delicious and pleasurable pinot noir in Burgundy and most of his wines are an absolute steal at the average $50 a bottle he charges for them, including several premier crus which can age for decades (we tried a 1984 Serpentieres which was still delivering the goods).",
+      "theme": "Lived variance, with the price-quality link broken in both directions",
+      "usageNote": "The “$200 bottles that sucked” sentence and the “9 bottles that are meh” sentence are the two usable excerpts. Note the stray closing quote mark after “$50” in the source; reproduce verbatim or start the excerpt after it.",
+      "flags": [
+        "SOURCE_PUNCTUATION_ARTEFACT"
+      ]
+    },
+    {
+      "id": "P3-Q12",
+      "status": "VERIFIED",
+      "threadRef": "T5",
+      "threadTitle": "These burgundies are getting too expensive",
+      "threadUrl": "https://www.reddit.com/r/wine/comments/19c95x6/these_burgundies_are_getting_too_expensive/",
+      "author": "u/GraDoN",
+      "itemType": "comment",
+      "score": 20,
+      "scoreCapturedAt": "2026-10-09",
+      "permalink": "https://www.reddit.com/r/wine/comments/19c95x6/comment/kixboat/",
+      "createdAt": "2024-01-21",
+      "exactText": "I honestly don't know how most people buy it... I suppose it does factor in where you live as that will affect availability of alternatives as well as price, but damn... $500 here can literally buy a dozen top Pinot Noirs or Chardonnays.\n\n USA, Australia, New Zealand and South Africa already produce quality that can compete with most of what Burgundy has to offer often at a much lower price point, at least locally. So I have no desire to ever spend a month's mortgage payment so I can taste a single Grand Cru that won't even be THAT much better than what I can get for a 10th of the price here.",
+      "theme": "New World Pinot as a direct substitute",
+      "usageNote": "Paragraph 2 first sentence is the key excerpt and names New Zealand, which supports the Central Otago comparison. The “month's mortgage payment” phrasing drew a correction from another user and is best cut.",
+      "flags": [
+        "PARTIAL_USE_REQUIRED"
+      ]
+    },
+    {
+      "id": "P3-Q13",
+      "status": "VERIFIED",
+      "threadRef": "T1",
+      "threadTitle": "I don't drink much burgundy. Thoughts on value here?",
+      "threadUrl": "https://www.reddit.com/r/wine/comments/1nleoo9/i_dont_drink_much_burgundy_thoughts_on_value_here/",
+      "author": "u/sid_loves_wine",
+      "itemType": "comment",
+      "score": 10,
+      "scoreCapturedAt": "2026-10-09",
+      "permalink": "https://www.reddit.com/r/wine/comments/1nleoo9/comment/nf5cl21/",
+      "createdAt": "2025-09-19",
+      "exactText": "For sure!! It'll probably be alright for the price, but I'd never pay the listed $60, and compared to $30-$40 Pinot from many other regions it'll have a likely disadvantage.\n\n A few you might consider in a similar price range or at least below $50:\n\n Amelie Berthaut, Hautes-Cotes de Nuits\n\n Domaine Arlaud, Bourgogne \"Roncevie\"\n\n Domaine Boussey, Monthelie \"Toisieres\"\n\n Domaine Collotte, Marsannay, Vieilles Vignes\n\n Practically anything from Savigny-les-Beaune, imo the best village for value buys in the entire region- a couple of underrated inexpensive producers include Phillipe et Arnaud Dubreuil, Domaine du Prieuré, and Jean-Michel Giboulot.\n\n Most wines from the huge negociant producers (Jadot, Faiveley, Bouchard, maybe also Frederic Magnien) are also generally reliable, even if they aren't the best in their categories, they are much more reliable than the average unknown producer, in many cases.\n\n Also look to the southern part of burgundy, the Cote Chalonnaise. Domaine Ragot, Domaine Francois Lumpp, and any of the Faiveley Mercurey bottlings, etc.",
+      "theme": "A village Burgundy at $60 losing to $30-40 Pinot elsewhere",
+      "usageNote": "First paragraph is the headline excerpt: a Burgundy drinker conceding the comparison the piece measures. The producer list is useful research material for the practical section rather than a quote.",
+      "flags": []
+    },
+    {
+      "id": "P3-Q14",
+      "status": "VERIFIED",
+      "threadRef": "T1",
+      "threadTitle": "I don't drink much burgundy. Thoughts on value here?",
+      "threadUrl": "https://www.reddit.com/r/wine/comments/1nleoo9/i_dont_drink_much_burgundy_thoughts_on_value_here/",
+      "author": "u/Frisbeehead",
+      "itemType": "comment",
+      "score": 11,
+      "scoreCapturedAt": "2026-10-09",
+      "permalink": "https://www.reddit.com/r/wine/comments/1nleoo9/comment/nf4xhcw/",
+      "createdAt": "2025-09-19",
+      "exactText": "You’d be better off spending the money on a lesser village from a better producer",
+      "theme": "Producer beats appellation",
+      "usageNote": "One line, usable whole. The same user's longer follow-up (score 4) says “I just want to spread the word of choosing producer over village”, which is the same point at lower authority.",
+      "flags": []
+    },
+    {
+      "id": "P3-Q15",
+      "status": "VERIFIED",
+      "threadRef": "T1",
+      "threadTitle": "I don't drink much burgundy. Thoughts on value here?",
+      "threadUrl": "https://www.reddit.com/r/wine/comments/1nleoo9/i_dont_drink_much_burgundy_thoughts_on_value_here/",
+      "author": "u/vertigo88",
+      "itemType": "comment",
+      "score": 6,
+      "scoreCapturedAt": "2026-10-09",
+      "permalink": "https://www.reddit.com/r/wine/comments/1nleoo9/comment/nf65xd7/",
+      "createdAt": "2025-09-20",
+      "exactText": "Burgundy is a minefield.\n\n The order is. Producer. Vineyard. Vintage.\n\n A good producer can make a good wine from a bad vineyard/vintage. A bad producer will screw one of those things up.",
+      "theme": "Ranking of what actually determines quality",
+      "usageNote": "Low score (6) but the clearest statement of the hierarchy in the pull. Use as a practical takeaway rather than as evidence of consensus.",
+      "flags": [
+        "LOW_SCORE"
+      ]
+    },
+    {
+      "id": "P3-Q16",
+      "status": "VERIFIED",
+      "threadRef": "T3",
+      "threadTitle": "Are Burgundy Red Wines Overpriced or Justifiably Expensive?",
+      "threadUrl": "https://www.reddit.com/r/wine/comments/17z7dx5/are_burgundy_red_wines_overpriced_or_justifiably/",
+      "author": "u/Lord_of_Bings",
+      "itemType": "comment",
+      "score": 4,
+      "scoreCapturedAt": "2026-10-09",
+      "permalink": "https://www.reddit.com/r/wine/comments/17z7dx5/comment/ka67au2/",
+      "createdAt": "2023-11-21",
+      "exactText": "Why is it priced the way it is ? Well to start with low volume production and high demand( For most of the well made stuff anyway) , land prices are enormous and the costs of producing wines in Burgundy is high.( manual harvesting, oak barrels , extended cellaring etc) Pinot Noir is not an easy variety to grow and manage.\n\n Now does this equal quality. In almost all circumstances absolutely not. I would say out of all the major French regions maybe even more so than Bordeaux the difference between a wine made by a high quality producer vs the average Burgundy you will find is frankly enormous. Now is it worth it ? Well that depends, of course there is a point of diminishing returns but there is a sweet spot were you can grab some pretty amazing wine if you are willing to spend in the $50- $200 range.",
+      "theme": "Cost side of the premium, from a working sommelier",
+      "usageNote": "Stored text is the first two paragraphs of a much longer comment; the full comment continues with buying advice and a closing note that white Burgundy offers better value than red. Score is only 4, so present as one sommelier's view, not as trade consensus. Spacing before punctuation is in the source.",
+      "flags": [
+        "PARTIAL_RECORD",
+        "LOW_SCORE",
+        "SOURCE_SPACING_ARTEFACT"
+      ]
+    },
+    {
+      "id": "P3-Q17",
+      "status": "VERIFIED",
+      "threadRef": "T4",
+      "threadTitle": "Burgundy and pricing",
+      "threadUrl": "https://www.reddit.com/r/wine/comments/1opboat/burgundy_and_pricing/",
+      "author": "u/Mchangwine",
+      "itemType": "comment",
+      "score": 18,
+      "scoreCapturedAt": "2026-10-09",
+      "permalink": "https://www.reddit.com/r/wine/comments/1opboat/comment/nnaj41g/",
+      "createdAt": "2025-11-05",
+      "exactText": "There is an ocean of mediocre Napa being sold for $1-300 a bottle (or at least intended to sell for 1-300 a bottle). You're now seeing a ton of these wines being sold by Last Bottle, WTSO and Cameron Hughes for 1/4 of what it was supposed to be, because it didn't sell at retail. Many of these are either owned by PE or passion project by some people who thought buying expensive grapes and hiring a \"top\" winemaker would be a viable business.\n\n If you were to buy any random Burgundy from a reputable shop like K&L for 60-100, it'd likely be very good. Sure if you go to total wine or the grocery store and try to buy burgundy, you're probably getting random garbage, but that's generally true of most wine regions.",
+      "theme": "The counter-case: retailer choice, not region, drives the hit rate",
+      "usageNote": "Paragraph 2 is the usable excerpt and is the best available rebuttal from the pro-Burgundy side. Author is the thread's OP, a high-end collector, which is worth signalling without naming him.",
+      "flags": []
+    },
+    {
+      "id": "P3-Q18",
+      "status": "VERIFIED",
+      "threadRef": "T5",
+      "threadTitle": "These burgundies are getting too expensive",
+      "threadUrl": "https://www.reddit.com/r/wine/comments/19c95x6/these_burgundies_are_getting_too_expensive/",
+      "author": "u/FocusIsFragile",
+      "itemType": "comment",
+      "score": 63,
+      "scoreCapturedAt": "2026-10-09",
+      "permalink": "https://www.reddit.com/r/wine/comments/19c95x6/comment/kix64si/",
+      "createdAt": "2024-01-21",
+      "exactText": "The price increases from 2019 thru 2021 will mean an entire generation of young drinkers will never really get the chance to experience that middle upper range of Burgs. I get it, low yields, but eventually you just price yourself out.",
+      "theme": "Access, and who gets shut out",
+      "usageNote": "Use whole. High score (63) and the emotional centre of the whole topic. Good candidate for the closing section.",
+      "flags": []
+    },
+    {
+      "id": "P3-Q19",
+      "status": "VERIFIED",
+      "threadRef": "T6",
+      "threadTitle": "Burgundy will never be relevant to future generations",
+      "threadUrl": "https://www.reddit.com/r/wine/comments/zb84rb/burgundy_will_never_be_relevant_to_future/",
+      "author": "u/Oikkuli",
+      "itemType": "comment",
+      "score": 124,
+      "scoreCapturedAt": "2026-10-09",
+      "permalink": "https://www.reddit.com/r/wine/comments/zb84rb/comment/iyqucgi/",
+      "createdAt": "2022-12-03",
+      "exactText": "The class politics of wine is very often overlooked in this community, and among wine snobs in general. This problem is especially dire in america, where enjoying wine seems to be almost exclusively an upper-middle class and up hobby.\n\n And the reason for it is clear. Many people here enjoy such a high standard of living that they might spend a third worlder's salary on just wine. When you can afford most any bottle, you also start to disregard bottles the average person can afford. When you have little to no economic constraints you lose perspective.\n\n I've often seen people in this sub say bottles under 15 dollars are not worth buying. Do they not realize the overwhealming majority of wine is sold at less than 15 dollars, and how out of touch they are? I'm sorry if not everyone can afford to open a 100€ burg on a weekday, but good for you.\n\n It's a very troubling development, because wine is not just meant for the upper classes. Everyone deserves good wine.",
+      "theme": "Who the premium excludes",
+      "usageNote": "HIGHEST SCORE IN THE PULL (124). Use ONLY the closing line “Everyone deserves good wine.”, or that sentence with its preceding clause. The middle paragraphs are pointed at a consumer group and are excluded by house rule. Contains a typo (“overwhealming”) if a longer excerpt is ever used.",
+      "flags": [
+        "PARTIAL_USE_REQUIRED",
+        "SOURCE_TYPOS"
+      ]
+    },
+    {
+      "id": "P3-Q20",
+      "status": "VERIFIED",
+      "threadRef": "T6",
+      "threadTitle": "Burgundy will never be relevant to future generations",
+      "threadUrl": "https://www.reddit.com/r/wine/comments/zb84rb/burgundy_will_never_be_relevant_to_future/",
+      "author": "u/bcarlofff",
+      "itemType": "comment",
+      "score": 160,
+      "scoreCapturedAt": "2026-10-09",
+      "permalink": "https://www.reddit.com/r/wine/comments/zb84rb/comment/iypwp8x/",
+      "createdAt": "2022-12-03",
+      "exactText": "I’d tend to agree, but perhaps I’d say there is a difference between “cultural” relevance and “consumer” relevance. Burgundy is the pinnacle of wine whether one likes it or not, so currently burgundy is still admired and aspired to from a cultural perspective. But as prices remain high and production is limited the number of wine makers and future decision makers (let alone wine lovers)that have the opportunity to experience top quality wines from top quality producers will decrease. As a result burgundy’s ability to set the trend for international production will decrease and consumer relevance will as a result shift (and is somewhat already shifting) away. Wine is all about fashion, 40 years ago burgundy was thin, insipid wash. I’m sure we’re just beginning to see the flow.",
+      "theme": "Cultural standing and consumer reality coming apart",
+      "usageNote": "HIGHEST-SCORING COMMENT AT 160. “Wine is all about fashion, 40 years ago burgundy was thin, insipid wash” is the sharpest excerpt and is a historical claim worth fact-checking before use. Missing space in “lovers)that” is in the source.",
+      "flags": [
+        "NEEDS_FACT_CHECK",
+        "SOURCE_SPACING_ARTEFACT"
+      ]
+    }
+  ],
+  "transcriptionCheck": {
+    "method": "Head-55 / tail-45 / score comparison of every record against a fresh pull of the Reddit source dataset, performed 12 October 2026. Reddit permalinks are not directly fetchable in this environment, so the scraper dataset is the accessible copy of the source.",
+    "status": "CHECKED, ONE DEFECT FOUND AND FIXED",
+    "result": "19 of 20 records matched exactly on opening text, closing text and score. P3-Q3 was stored truncated, missing its final sentence, and has been corrected. All 20 scores are unchanged from the 9 October capture, so no score needs restating.",
+    "residualRisk": "A single altered character in the middle of a long passage would not be caught by head/tail matching. Any excerpt actually used in the piece must be read against exactText one final time at draft stage.",
+    "checkedAt": "2026-10-12"
+  }
+}

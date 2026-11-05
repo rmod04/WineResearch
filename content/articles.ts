@@ -20,6 +20,19 @@ export type Article = {
 
 export const articles: Article[] = [
   {
+    slug: 'reading-between-the-labels',
+    title: 'Reading Between the Labels',
+    subtitle: 'What the Burgundy name adds to the price of a Pinot Noir, tested against other regions',
+    dateLabel: 'November 2026',
+    category: 'Research · Substack',
+    excerpt:
+      'Burgundy is known for its ability to command an almost performatively premium price, depending on the label. This piece tests the foundation behind it, from the villages that renamed themselves after their most famous vineyards to what those names are worth today.',
+    thumbnail: '/images/photo-short01-cover.jpg',
+    thumbnailAlt: 'Close-up of red Burgundy bottles lined up on a wine shop shelf, labels facing out, the nearest reading Côte de Beaune.',
+    isSubstack: true,
+    substackUrl: 'https://corktotable.substack.com/p/reading-between-the-labels',
+  },
+  {
     slug: 'the-reward-for-curiosity',
     title: 'The Reward for Curiosity',
     subtitle: 'The wine palate grows over time, and better wine doesn\'t have to cost more',

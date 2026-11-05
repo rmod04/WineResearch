@@ -1,0 +1,346 @@
+set,tier,wine,vintage,lowest_offer_usd,offers,critic_score,critic_reviews,dropped_reason
+marsannay,climat,Chateau de Marsannay Marsannay Les Boivin,2019,,,,0,no_result
+marsannay,climat,Chateau de Marsannay Marsannay Les Boivin,2020,,,,0,no_result
+marsannay,climat,Chateau de Marsannay Marsannay Les Boivin,2021,,,,0,no_result
+marsannay,climat,Chateau de Marsannay Marsannay Les Boivin,2023,,,,0,no_result
+marsannay,climat,Domaine Bruno Clair Marsannay Les Grasses Tetes,2018,60.21,2,90,6,
+marsannay,climat,Domaine Bruno Clair Marsannay Les Grasses Tetes,2019,50.67,6,90,5,
+marsannay,climat,Domaine Bruno Clair Marsannay Les Grasses Tetes,2020,50.18,5,92,3,
+marsannay,climat,Domaine Bruno Clair Marsannay Les Grasses Tetes,2021,49.54,2,90,4,
+marsannay,climat,Domaine Bruno Clair Marsannay Les Grasses Tetes,2022,49.51,6,92,4,price_repeats_across_vintages
+marsannay,climat,Domaine Bruno Clair Marsannay Les Grasses Tetes,2023,49.51,5,92,5,price_repeats_across_vintages
+marsannay,climat,Domaine Charles Audoin Marsannay Clos du Roy,2018,37.91,3,90,4,
+marsannay,climat,Domaine Charles Audoin Marsannay Clos du Roy,2019,34.56,6,91,4,
+marsannay,climat,Domaine Charles Audoin Marsannay Clos du Roy,2020,42.59,8,92,5,
+marsannay,climat,Domaine Charles Audoin Marsannay Clos du Roy,2021,43.49,5,91,3,price_repeats_across_vintages
+marsannay,climat,Domaine Charles Audoin Marsannay Clos du Roy,2022,49.07,3,91,4,
+marsannay,climat,Domaine Charles Audoin Marsannay Clos du Roy,2023,43.49,3,93,2,price_repeats_across_vintages
+marsannay,climat,Domaine Sylvain Pataille Marsannay Clos du Roy,2018,93.81,9,91,5,
+marsannay,climat,Domaine Sylvain Pataille Marsannay Clos du Roy,2019,76.94,15,91,5,
+marsannay,climat,Domaine Sylvain Pataille Marsannay Clos du Roy,2020,86.98,6,92,4,
+marsannay,climat,Domaine Sylvain Pataille Marsannay Clos du Roy,2021,78.05,7,91,3,
+marsannay,climat,Domaine Sylvain Pataille Marsannay Clos du Roy,2022,58.63,14,92,3,
+marsannay,climat,Domaine Sylvain Pataille Marsannay Clos du Roy,2023,60.21,14,92,5,
+marsannay,village,Chateau de Marsannay Marsannay Rouge,2018,45.04,7,88,2,
+marsannay,village,Chateau de Marsannay Marsannay Rouge,2019,67.27,9,89,1,
+marsannay,village,Chateau de Marsannay Marsannay Rouge,2020,62.93,2,88,2,
+marsannay,village,Chateau de Marsannay Marsannay Rouge,2021,38.28,5,89,1,
+marsannay,village,Chateau de Marsannay Marsannay Rouge,2022,34.55,19,89,2,
+marsannay,village,Chateau de Marsannay Marsannay Rouge,2023,32.34,1,90,1,
+marsannay,village,Domaine Bruno Clair Marsannay Rouge,2018,77.02,3,89,4,
+marsannay,village,Domaine Bruno Clair Marsannay Rouge,2019,37.16,158,87,3,
+marsannay,village,Domaine Bruno Clair Marsannay Rouge,2020,57.59,1,95,2,
+marsannay,village,Domaine Bruno Clair Marsannay Rouge,2021,49.54,3,92,1,
+marsannay,village,Domaine Bruno Clair Marsannay Rouge,2022,64.09,4,89,1,
+marsannay,village,Domaine Bruno Clair Marsannay Rouge,2023,61.99,3,95,0,
+marsannay,village,Domaine Charles Audoin Marsannay Cuvee Marie Ragonneau,2018,66.9,2,87,2,price_repeats_across_vintages
+marsannay,village,Domaine Charles Audoin Marsannay Cuvee Marie Ragonneau,2019,32.34,82,89,4,price_repeats_across_vintages
+marsannay,village,Domaine Charles Audoin Marsannay Cuvee Marie Ragonneau,2020,35.69,3,92,2,
+marsannay,village,Domaine Charles Audoin Marsannay Cuvee Marie Ragonneau,2021,66.9,2,90,3,price_repeats_across_vintages
+marsannay,village,Domaine Charles Audoin Marsannay Cuvee Marie Ragonneau,2022,36.8,1,91,4,
+marsannay,village,Domaine Charles Audoin Marsannay Cuvee Marie Ragonneau,2023,32.34,5,91,2,price_repeats_across_vintages
+marsannay,village,Domaine Sylvain Pataille Marsannay Rouge,2018,72.68,3,89,7,
+marsannay,village,Domaine Sylvain Pataille Marsannay Rouge,2019,61.32,5,91,5,
+marsannay,village,Domaine Sylvain Pataille Marsannay Rouge,2020,57.98,1,89,3,
+marsannay,village,Domaine Sylvain Pataille Marsannay Rouge,2021,50.85,3,91,5,
+marsannay,village,Domaine Sylvain Pataille Marsannay Rouge,2022,51.29,2,90,2,
+marsannay,village,Domaine Sylvain Pataille Marsannay Rouge,2023,54.86,10,90,4,
+matrix,grand_cru,Domaine Faiveley Chambertin-Clos de Beze Grand Cru,2000,758.92,4,92,2,
+matrix,grand_cru,Domaine Faiveley Chambertin-Clos de Beze Grand Cru,2005,446.02,10,94,3,
+matrix,grand_cru,Domaine Faiveley Chambertin-Clos de Beze Grand Cru,2010,423.73,1,95,7,
+matrix,grand_cru,Domaine Faiveley Chambertin-Clos de Beze Grand Cru,2015,312.21,28,94,5,
+matrix,grand_cru,Domaine Faiveley Chambertin-Clos de Beze Grand Cru,2020,376.9,14,97,5,
+matrix,grand_cru,Domaine Faiveley Chambertin-Clos de Beze Grand Cru,2023,514.72,14,95,7,
+matrix,grand_cru,Domaine Hudelot-Noellat Clos de Vougeot Grand Cru,2000,401.41,1,91,3,
+matrix,grand_cru,Domaine Hudelot-Noellat Clos de Vougeot Grand Cru,2005,323.37,5,91,5,
+matrix,grand_cru,Domaine Hudelot-Noellat Clos de Vougeot Grand Cru,2010,233.05,6,93,7,
+matrix,grand_cru,Domaine Hudelot-Noellat Clos de Vougeot Grand Cru,2015,301.07,26,92,6,price_repeats_across_vintages
+matrix,grand_cru,Domaine Hudelot-Noellat Clos de Vougeot Grand Cru,2020,301.07,12,95,2,price_repeats_across_vintages
+matrix,grand_cru,Domaine Hudelot-Noellat Clos de Vougeot Grand Cru,2023,254.24,12,94,3,
+matrix,grand_cru,Domaine Hudelot-Noellat Clos de Vougeot Grand Cru,2025,159.97,842,95,0,2025_unreleased
+matrix,grand_cru,Domaine Jean Grivot Clos de Vougeot Grand Cru,2000,439.14,2,90,8,
+matrix,grand_cru,Domaine Jean Grivot Clos de Vougeot Grand Cru,2005,254.24,10,93,7,
+matrix,grand_cru,Domaine Jean Grivot Clos de Vougeot Grand Cru,2010,276.98,17,94,8,
+matrix,grand_cru,Domaine Jean Grivot Clos de Vougeot Grand Cru,2015,160.57,10,94,8,
+matrix,grand_cru,Domaine Jean Grivot Clos de Vougeot Grand Cru,2020,228.81,17,94,6,
+matrix,grand_cru,Domaine Jean Grivot Clos de Vougeot Grand Cru,2023,256.47,25,93,4,
+matrix,grand_cru,Domaine Jean Grivot Clos de Vougeot Grand Cru,2025,135.12,50,96,0,2025_unreleased
+matrix,grand_cru,Domaine Mongeard-Mugneret Echezeaux Grand Cru,2000,382.85,3,89,2,
+matrix,grand_cru,Domaine Mongeard-Mugneret Echezeaux Grand Cru,2005,641.84,13,91,2,
+matrix,grand_cru,Domaine Mongeard-Mugneret Echezeaux Grand Cru,2010,518.21,6,93,3,
+matrix,grand_cru,Domaine Mongeard-Mugneret Echezeaux Grand Cru,2015,447.9,5,93,1,
+matrix,grand_cru,Domaine Mongeard-Mugneret Echezeaux Grand Cru,2020,383.91,5,94,2,
+matrix,grand_cru,Domaine Mongeard-Mugneret Echezeaux Grand Cru,2023,331.51,2,94,1,
+matrix,grand_cru,Domaine Mongeard-Mugneret Echezeaux Grand Cru,2025,240.85,51,94,0,2025_unreleased
+matrix,grand_cru,Domaine Rossignol-Trapet Latricieres-Chambertin Grand Cru,2000,180.72,1,89,2,
+matrix,grand_cru,Domaine Rossignol-Trapet Latricieres-Chambertin Grand Cru,2005,264.83,14,93,6,
+matrix,grand_cru,Domaine Rossignol-Trapet Latricieres-Chambertin Grand Cru,2010,220.78,7,93,5,
+matrix,grand_cru,Domaine Rossignol-Trapet Latricieres-Chambertin Grand Cru,2015,162.8,12,91,6,
+matrix,grand_cru,Domaine Rossignol-Trapet Latricieres-Chambertin Grand Cru,2020,133.81,11,94,6,
+matrix,grand_cru,Domaine Rossignol-Trapet Latricieres-Chambertin Grand Cru,2023,245.31,8,95,2,
+matrix,grand_cru,Domaine Tollot-Beaut Corton-Bressandes Grand Cru,2000,150.63,2,91,4,
+matrix,grand_cru,Domaine Tollot-Beaut Corton-Bressandes Grand Cru,2005,120.99,6,92,6,
+matrix,grand_cru,Domaine Tollot-Beaut Corton-Bressandes Grand Cru,2010,347.9,4,92,5,
+matrix,grand_cru,Domaine Tollot-Beaut Corton-Bressandes Grand Cru,2015,256.47,7,92,7,
+matrix,grand_cru,Domaine Tollot-Beaut Corton-Bressandes Grand Cru,2020,111.5,2,93,4,
+matrix,grand_cru,Domaine Tollot-Beaut Corton-Bressandes Grand Cru,2023,93.67,17,94,2,
+matrix,grand_cru,Domaine Tollot-Beaut Corton-Bressandes Grand Cru,2025,73.19,440,89,0,2025_unreleased
+matrix,grand_cru,Joseph Drouhin Clos de Vougeot Grand Cru,2000,92.39,50,91,3,
+matrix,grand_cru,Joseph Drouhin Clos de Vougeot Grand Cru,2005,133.81,3,92,6,
+matrix,grand_cru,Joseph Drouhin Clos de Vougeot Grand Cru,2010,401.42,3,92,10,
+matrix,grand_cru,Joseph Drouhin Clos de Vougeot Grand Cru,2015,214.09,18,92,7,
+matrix,grand_cru,Joseph Drouhin Clos de Vougeot Grand Cru,2020,234.16,26,93,1,
+matrix,grand_cru,Joseph Drouhin Clos de Vougeot Grand Cru,2023,200.71,15,93,2,
+matrix,grand_cru,Louis Jadot Chambertin-Clos de Beze Grand Cru,2000,351.31,2,92,3,
+matrix,grand_cru,Louis Jadot Chambertin-Clos de Beze Grand Cru,2005,446.02,8,96,7,
+matrix,grand_cru,Louis Jadot Chambertin-Clos de Beze Grand Cru,2010,423.73,11,95,9,price_repeats_across_vintages
+matrix,grand_cru,Louis Jadot Chambertin-Clos de Beze Grand Cru,2015,423.73,1,95,4,price_repeats_across_vintages
+matrix,grand_cru,Louis Jadot Chambertin-Clos de Beze Grand Cru,2020,289.92,16,96,4,
+matrix,grand_cru,Louis Jadot Chambertin-Clos de Beze Grand Cru,2023,497.32,5,95,6,
+matrix,premier_cru,Domaine Faiveley Gevrey-Chambertin Premier Cru Lavaux Saint-Jacques,2000,100.42,586,94,0,price_repeats_across_vintages
+matrix,premier_cru,Domaine Faiveley Gevrey-Chambertin Premier Cru Lavaux Saint-Jacques,2005,100.42,586,94,0,price_repeats_across_vintages
+matrix,premier_cru,Domaine Faiveley Gevrey-Chambertin Premier Cru Lavaux Saint-Jacques,2010,100.42,586,94,0,price_repeats_across_vintages
+matrix,premier_cru,Domaine Faiveley Gevrey-Chambertin Premier Cru Lavaux Saint-Jacques,2015,120.43,11,92,4,
+matrix,premier_cru,Domaine Faiveley Gevrey-Chambertin Premier Cru Lavaux Saint-Jacques,2020,111.5,11,93,3,
+matrix,premier_cru,Domaine Faiveley Gevrey-Chambertin Premier Cru Lavaux Saint-Jacques,2023,140.27,9,93,3,
+matrix,premier_cru,Domaine Fourrier Gevrey-Chambertin Premier Cru Combe aux Moines,2000,100.36,694,90,3,price_repeats_across_vintages
+matrix,premier_cru,Domaine Fourrier Gevrey-Chambertin Premier Cru Combe aux Moines,2005,363.62,4,92,5,
+matrix,premier_cru,Domaine Fourrier Gevrey-Chambertin Premier Cru Combe aux Moines,2010,361.28,3,93,9,
+matrix,premier_cru,Domaine Fourrier Gevrey-Chambertin Premier Cru Combe aux Moines,2015,475.02,4,92,5,
+matrix,premier_cru,Domaine Fourrier Gevrey-Chambertin Premier Cru Combe aux Moines,2020,239.52,9,93,5,
+matrix,premier_cru,Domaine Fourrier Gevrey-Chambertin Premier Cru Combe aux Moines,2023,254.24,10,93,4,
+matrix,premier_cru,Domaine Fourrier Gevrey-Chambertin Premier Cru Combe aux Moines,2025,100.36,694,91,0,2025_unreleased
+matrix,premier_cru,Domaine Henri Gouges Nuits-Saint-Georges Premier Cru Les Vaucrains,2000,163.27,2,90,5,
+matrix,premier_cru,Domaine Henri Gouges Nuits-Saint-Georges Premier Cru Les Vaucrains,2005,202.68,3,92,4,
+matrix,premier_cru,Domaine Henri Gouges Nuits-Saint-Georges Premier Cru Les Vaucrains,2010,132.7,7,92,7,
+matrix,premier_cru,Domaine Henri Gouges Nuits-Saint-Georges Premier Cru Les Vaucrains,2015,89.42,6,92,7,
+matrix,premier_cru,Domaine Henri Gouges Nuits-Saint-Georges Premier Cru Les Vaucrains,2020,124.88,11,93,4,
+matrix,premier_cru,Domaine Henri Gouges Nuits-Saint-Georges Premier Cru Les Vaucrains,2023,133.81,9,94,5,
+matrix,premier_cru,Domaine Jean Grivot Vosne-Romanee Premier Cru Les Beaux Monts,2000,802.42,1,88,5,
+matrix,premier_cru,Domaine Jean Grivot Vosne-Romanee Premier Cru Les Beaux Monts,2005,358.31,4,92,6,
+matrix,premier_cru,Domaine Jean Grivot Vosne-Romanee Premier Cru Les Beaux Monts,2010,466.99,4,93,9,
+matrix,premier_cru,Domaine Jean Grivot Vosne-Romanee Premier Cru Les Beaux Monts,2015,256.47,18,93,8,
+matrix,premier_cru,Domaine Jean Grivot Vosne-Romanee Premier Cru Les Beaux Monts,2020,240.85,18,94,5,
+matrix,premier_cru,Domaine Jean Grivot Vosne-Romanee Premier Cru Les Beaux Monts,2023,267.62,10,94,5,
+matrix,premier_cru,Domaine Jean Grivot Vosne-Romanee Premier Cru Les Beaux Monts,2025,117.16,833,93,0,2025_unreleased
+matrix,premier_cru,Domaine Robert Chevillon Nuits-Saint-Georges Premier Cru Les Vaucrains,2000,301.54,1,91,5,
+matrix,premier_cru,Domaine Robert Chevillon Nuits-Saint-Georges Premier Cru Les Vaucrains,2005,216.05,1,93,4,
+matrix,premier_cru,Domaine Robert Chevillon Nuits-Saint-Georges Premier Cru Les Vaucrains,2010,240.98,3,94,5,
+matrix,premier_cru,Domaine Robert Chevillon Nuits-Saint-Georges Premier Cru Les Vaucrains,2015,138.93,4,93,4,
+matrix,premier_cru,Domaine Robert Chevillon Nuits-Saint-Georges Premier Cru Les Vaucrains,2020,281.43,1,94,2,
+matrix,premier_cru,Domaine Robert Chevillon Nuits-Saint-Georges Premier Cru Les Vaucrains,2023,143.84,10,93,4,
+matrix,premier_cru,Domaine Robert Chevillon Nuits-Saint-Georges Premier Cru Les Vaucrains,2025,53.32,625,94,0,2025_unreleased
+matrix,premier_cru,Domaine Tollot-Beaut Beaune Premier Cru Greves,2000,90.37,3,86,3,
+matrix,premier_cru,Domaine Tollot-Beaut Beaune Premier Cru Greves,2005,72.7,5,91,4,
+matrix,premier_cru,Domaine Tollot-Beaut Beaune Premier Cru Greves,2010,133.81,3,91,4,
+matrix,premier_cru,Domaine Tollot-Beaut Beaune Premier Cru Greves,2015,63.56,4,91,6,
+matrix,premier_cru,Domaine Tollot-Beaut Beaune Premier Cru Greves,2020,73.59,4,92,3,
+matrix,premier_cru,Domaine Tollot-Beaut Beaune Premier Cru Greves,2023,64.33,7,92,3,
+matrix,premier_cru,Domaine Tollot-Beaut Beaune Premier Cru Greves,2025,58.21,193,89,0,2025_unreleased
+matrix,premier_cru,Domaine de Montille Volnay Premier Cru Taillepieds,2000,262.33,1,87,2,
+matrix,premier_cru,Domaine de Montille Volnay Premier Cru Taillepieds,2005,177.96,8,93,6,
+matrix,premier_cru,Domaine de Montille Volnay Premier Cru Taillepieds,2010,128.23,10,92,7,
+matrix,premier_cru,Domaine de Montille Volnay Premier Cru Taillepieds,2015,94.78,15,92,6,
+matrix,premier_cru,Domaine de Montille Volnay Premier Cru Taillepieds,2020,142.73,6,92,5,
+matrix,premier_cru,Domaine de Montille Volnay Premier Cru Taillepieds,2023,156.22,24,93,4,
+matrix,premier_cru,Domaine de Montille Volnay Premier Cru Taillepieds,2025,50.22,50,94,0,2025_unreleased
+matrix,premier_cru,Louis Jadot Gevrey-Chambertin Premier Cru Clos Saint-Jacques,2000,255.68,1,89,5,
+matrix,premier_cru,Louis Jadot Gevrey-Chambertin Premier Cru Clos Saint-Jacques,2005,278.76,13,93,8,
+matrix,premier_cru,Louis Jadot Gevrey-Chambertin Premier Cru Clos Saint-Jacques,2010,189.57,11,93,7,
+matrix,premier_cru,Louis Jadot Gevrey-Chambertin Premier Cru Clos Saint-Jacques,2015,183.99,8,94,9,
+matrix,premier_cru,Louis Jadot Gevrey-Chambertin Premier Cru Clos Saint-Jacques,2020,195.13,10,94,7,
+matrix,premier_cru,Louis Jadot Gevrey-Chambertin Premier Cru Clos Saint-Jacques,2023,187.33,9,94,5,
+matrix,regional,Bouchard Pere & Fils Bourgogne Pinot Noir La Vignee,2000,28.15,18,88,1,price_repeats_across_vintages
+matrix,regional,Bouchard Pere & Fils Bourgogne Pinot Noir La Vignee,2005,28.15,18,89,1,price_repeats_across_vintages
+matrix,regional,Bouchard Pere & Fils Bourgogne Pinot Noir La Vignee,2010,28.15,18,84,2,price_repeats_across_vintages
+matrix,regional,Bouchard Pere & Fils Bourgogne Pinot Noir La Vignee,2015,28.15,18,84,2,price_repeats_across_vintages
+matrix,regional,Bouchard Pere & Fils Bourgogne Pinot Noir La Vignee,2020,28.39,5,76,1,
+matrix,regional,Bouchard Pere & Fils Bourgogne Pinot Noir La Vignee,2023,28.15,18,95,0,price_repeats_across_vintages
+matrix,regional,Bouchard Pere & Fils Bourgogne Pinot Noir La Vignee,2025,28.15,18,95,0,2025_unreleased
+matrix,regional,Domaine Faiveley Bourgogne Pinot Noir,2000,27.11,51,94,0,price_repeats_across_vintages
+matrix,regional,Domaine Faiveley Bourgogne Pinot Noir,2005,27.11,51,85,4,price_repeats_across_vintages
+matrix,regional,Domaine Faiveley Bourgogne Pinot Noir,2010,27.11,51,86,2,price_repeats_across_vintages
+matrix,regional,Domaine Faiveley Bourgogne Pinot Noir,2015,45.04,1,90,4,
+matrix,regional,Domaine Faiveley Bourgogne Pinot Noir,2020,36.93,3,89,5,
+matrix,regional,Domaine Faiveley Bourgogne Pinot Noir,2023,12.71,6,94,2,outlier_12usd
+matrix,regional,Domaine Faiveley Bourgogne Pinot Noir,2025,27.11,51,94,0,2025_unreleased
+matrix,regional,Domaine Fourrier Bourgogne Rouge,2000,41.82,348,91,0,price_repeats_across_vintages
+matrix,regional,Domaine Fourrier Bourgogne Rouge,2005,41.82,348,91,0,price_repeats_across_vintages
+matrix,regional,Domaine Fourrier Bourgogne Rouge,2010,41.82,348,91,0,price_repeats_across_vintages
+matrix,regional,Domaine Fourrier Bourgogne Rouge,2015,120.43,2,87,4,
+matrix,regional,Domaine Fourrier Bourgogne Rouge,2020,50.07,8,90,1,
+matrix,regional,Domaine Fourrier Bourgogne Rouge,2023,41.82,10,88,2,price_repeats_across_vintages
+matrix,regional,Domaine Fourrier Bourgogne Rouge,2025,41.82,348,91,0,2025_unreleased
+matrix,regional,Domaine Henri Gouges Bourgogne Rouge,2000,40.16,10,84,1,price_repeats_across_vintages
+matrix,regional,Domaine Henri Gouges Bourgogne Rouge,2005,40.16,10,88,3,price_repeats_across_vintages
+matrix,regional,Domaine Henri Gouges Bourgogne Rouge,2010,40.16,10,87,4,price_repeats_across_vintages
+matrix,regional,Domaine Henri Gouges Bourgogne Rouge,2015,39.03,1,86,3,
+matrix,regional,Domaine Henri Gouges Bourgogne Rouge,2020,50.2,3,87,2,
+matrix,regional,Domaine Henri Gouges Bourgogne Rouge,2023,40.16,4,89,1,price_repeats_across_vintages
+matrix,regional,Domaine Henri Gouges Bourgogne Rouge,2025,40.16,10,92,0,2025_unreleased
+matrix,regional,Domaine Hudelot-Noellat Bourgogne Rouge,2000,31.24,236,95,0,price_repeats_across_vintages
+matrix,regional,Domaine Hudelot-Noellat Bourgogne Rouge,2005,88.96,1,86,3,
+matrix,regional,Domaine Hudelot-Noellat Bourgogne Rouge,2010,120.49,1,87,4,
+matrix,regional,Domaine Hudelot-Noellat Bourgogne Rouge,2015,52.19,3,86,4,
+matrix,regional,Domaine Hudelot-Noellat Bourgogne Rouge,2020,34.56,9,89,4,
+matrix,regional,Domaine Hudelot-Noellat Bourgogne Rouge,2023,38.8,9,88,4,
+matrix,regional,Domaine Hudelot-Noellat Bourgogne Rouge,2025,31.24,236,95,0,2025_unreleased
+matrix,regional,Domaine Jean Grivot Bourgogne Rouge,2000,40.14,111,85,1,price_repeats_across_vintages
+matrix,regional,Domaine Jean Grivot Bourgogne Rouge,2005,40.14,111,88,3,price_repeats_across_vintages
+matrix,regional,Domaine Jean Grivot Bourgogne Rouge,2010,72.06,1,87,2,
+matrix,regional,Domaine Jean Grivot Bourgogne Rouge,2015,46.83,1,88,3,
+matrix,regional,Domaine Jean Grivot Bourgogne Rouge,2020,51.29,3,89,6,
+matrix,regional,Domaine Jean Grivot Bourgogne Rouge,2023,40.14,6,89,3,price_repeats_across_vintages
+matrix,regional,Domaine Jean Grivot Bourgogne Rouge,2025,40.14,111,93,0,2025_unreleased
+matrix,regional,Domaine Mongeard-Mugneret Bourgogne Hautes-Cotes de Nuits,2000,55.22,2,94,0,price_repeats_across_vintages
+matrix,regional,Domaine Mongeard-Mugneret Bourgogne Hautes-Cotes de Nuits,2005,55.22,2,90,1,price_repeats_across_vintages
+matrix,regional,Domaine Mongeard-Mugneret Bourgogne Hautes-Cotes de Nuits,2010,55.22,2,89,1,price_repeats_across_vintages
+matrix,regional,Domaine Mongeard-Mugneret Bourgogne Hautes-Cotes de Nuits,2015,55.22,2,94,0,price_repeats_across_vintages
+matrix,regional,Domaine Mongeard-Mugneret Bourgogne Hautes-Cotes de Nuits,2020,51.09,3,94,1,
+matrix,regional,Domaine Mongeard-Mugneret Bourgogne Hautes-Cotes de Nuits,2023,55.22,2,94,0,price_repeats_across_vintages
+matrix,regional,Domaine Mongeard-Mugneret Bourgogne Hautes-Cotes de Nuits,2025,55.22,2,94,0,2025_unreleased
+matrix,regional,Domaine Robert Chevillon Bourgogne Rouge,2000,32.34,51,93,0,price_repeats_across_vintages
+matrix,regional,Domaine Robert Chevillon Bourgogne Rouge,2005,32.34,51,86,2,price_repeats_across_vintages
+matrix,regional,Domaine Robert Chevillon Bourgogne Rouge,2010,40.14,3,88,3,
+matrix,regional,Domaine Robert Chevillon Bourgogne Rouge,2015,27.02,2,88,2,
+matrix,regional,Domaine Robert Chevillon Bourgogne Rouge,2020,32.34,3,89,1,price_repeats_across_vintages
+matrix,regional,Domaine Robert Chevillon Bourgogne Rouge,2023,35.46,4,85,1,
+matrix,regional,Domaine Robert Chevillon Bourgogne Rouge,2025,32.34,51,93,0,2025_unreleased
+matrix,regional,Domaine Rossignol-Trapet Bourgogne Rouge,2000,26.76,43,95,0,price_repeats_across_vintages
+matrix,regional,Domaine Rossignol-Trapet Bourgogne Rouge,2005,26.76,43,87,2,price_repeats_across_vintages
+matrix,regional,Domaine Rossignol-Trapet Bourgogne Rouge,2010,26.76,43,90,1,price_repeats_across_vintages
+matrix,regional,Domaine Rossignol-Trapet Bourgogne Rouge,2015,26.76,43,88,3,price_repeats_across_vintages
+matrix,regional,Domaine Rossignol-Trapet Bourgogne Rouge,2020,44.93,3,95,0,
+matrix,regional,Domaine Rossignol-Trapet Bourgogne Rouge,2023,26.76,5,88,2,price_repeats_across_vintages
+matrix,regional,Domaine Rossignol-Trapet Bourgogne Rouge,2025,26.76,43,95,0,2025_unreleased
+matrix,regional,Domaine Tollot-Beaut Bourgogne Rouge,2000,45.04,1,86,2,
+matrix,regional,Domaine Tollot-Beaut Bourgogne Rouge,2005,23.42,103,85,1,price_repeats_across_vintages
+matrix,regional,Domaine Tollot-Beaut Bourgogne Rouge,2010,23.42,103,86,3,price_repeats_across_vintages
+matrix,regional,Domaine Tollot-Beaut Bourgogne Rouge,2015,49.58,1,89,4,
+matrix,regional,Domaine Tollot-Beaut Bourgogne Rouge,2020,43.49,3,84,1,
+matrix,regional,Domaine Tollot-Beaut Bourgogne Rouge,2023,24.09,4,87,1,
+matrix,regional,Domaine Tollot-Beaut Bourgogne Rouge,2025,23.42,103,89,0,2025_unreleased
+matrix,regional,Domaine de Montille Bourgogne Rouge,2000,16.89,322,94,0,price_repeats_across_vintages
+matrix,regional,Domaine de Montille Bourgogne Rouge,2005,91.39,3,88,2,
+matrix,regional,Domaine de Montille Bourgogne Rouge,2010,16.89,322,87,1,price_repeats_across_vintages
+matrix,regional,Domaine de Montille Bourgogne Rouge,2015,29.6,2,88,3,
+matrix,regional,Domaine de Montille Bourgogne Rouge,2020,26.76,10,88,3,
+matrix,regional,Domaine de Montille Bourgogne Rouge,2023,24.09,11,89,3,
+matrix,regional,Domaine de Montille Bourgogne Rouge,2025,16.89,322,94,0,2025_unreleased
+matrix,regional,Joseph Drouhin Laforet Bourgogne Pinot Noir,2000,17.15,145,86,1,price_repeats_across_vintages
+matrix,regional,Joseph Drouhin Laforet Bourgogne Pinot Noir,2005,17.15,145,83,1,price_repeats_across_vintages
+matrix,regional,Joseph Drouhin Laforet Bourgogne Pinot Noir,2010,17.15,145,86,3,price_repeats_across_vintages
+matrix,regional,Joseph Drouhin Laforet Bourgogne Pinot Noir,2015,17.15,145,87,1,price_repeats_across_vintages
+matrix,regional,Joseph Drouhin Laforet Bourgogne Pinot Noir,2020,48.99,2,92,1,
+matrix,regional,Joseph Drouhin Laforet Bourgogne Pinot Noir,2023,29.33,2,95,1,
+matrix,regional,Joseph Drouhin Laforet Bourgogne Pinot Noir,2025,17.15,145,95,0,2025_unreleased
+matrix,regional,Louis Jadot Bourgogne Pinot Noir Couvent des Jacobins,2000,21.07,50,92,0,price_repeats_across_vintages
+matrix,regional,Louis Jadot Bourgogne Pinot Noir Couvent des Jacobins,2005,21.07,50,86,1,price_repeats_across_vintages
+matrix,regional,Louis Jadot Bourgogne Pinot Noir Couvent des Jacobins,2010,21.07,50,86,2,price_repeats_across_vintages
+matrix,regional,Louis Jadot Bourgogne Pinot Noir Couvent des Jacobins,2015,21.07,50,87,3,price_repeats_across_vintages
+matrix,regional,Louis Jadot Bourgogne Pinot Noir Couvent des Jacobins,2020,33.56,1,86,1,
+matrix,regional,Louis Jadot Bourgogne Pinot Noir Couvent des Jacobins,2023,27.86,7,87,4,
+matrix,regional,Louis Jadot Bourgogne Pinot Noir Couvent des Jacobins,2025,30.28,1,92,0,2025_unreleased
+matrix,regional,Louis Latour Bourgogne Pinot Noir,2000,22.06,51,93,0,price_repeats_across_vintages
+matrix,regional,Louis Latour Bourgogne Pinot Noir,2005,22.06,51,82,1,price_repeats_across_vintages
+matrix,regional,Louis Latour Bourgogne Pinot Noir,2010,22.06,51,86,1,price_repeats_across_vintages
+matrix,regional,Louis Latour Bourgogne Pinot Noir,2015,22.06,51,87,4,price_repeats_across_vintages
+matrix,regional,Louis Latour Bourgogne Pinot Noir,2020,34.56,4,87,2,
+matrix,regional,Louis Latour Bourgogne Pinot Noir,2023,30.98,4,87,1,
+matrix,regional,Louis Latour Bourgogne Pinot Noir,2025,22.06,51,93,0,2025_unreleased
+matrix,village,Bouchard Pere & Fils Volnay,2000,107.05,3,95,0,price_repeats_across_vintages
+matrix,village,Bouchard Pere & Fils Volnay,2005,107.05,3,95,0,price_repeats_across_vintages
+matrix,village,Bouchard Pere & Fils Volnay,2010,107.05,3,95,0,price_repeats_across_vintages
+matrix,village,Bouchard Pere & Fils Volnay,2015,107.05,3,95,0,price_repeats_across_vintages
+matrix,village,Bouchard Pere & Fils Volnay,2020,107.05,3,95,0,price_repeats_across_vintages
+matrix,village,Bouchard Pere & Fils Volnay,2023,107.05,3,95,0,price_repeats_across_vintages
+matrix,village,Bouchard Pere & Fils Volnay,2025,107.05,3,95,0,2025_unreleased
+matrix,village,Domaine Faiveley Gevrey-Chambertin,2000,150.88,1,90,1,
+matrix,village,Domaine Faiveley Gevrey-Chambertin,2005,100.41,1,89,1,price_repeats_across_vintages
+matrix,village,Domaine Faiveley Gevrey-Chambertin,2010,83.59,1,88,3,
+matrix,village,Domaine Faiveley Gevrey-Chambertin,2015,24.49,1,91,1,outlier_single_offer_24
+matrix,village,Domaine Faiveley Gevrey-Chambertin,2020,90.37,2,92,1,
+matrix,village,Domaine Faiveley Gevrey-Chambertin,2023,100.41,2,94,0,price_repeats_across_vintages
+matrix,village,Domaine Faiveley Gevrey-Chambertin,2025,71.67,21,94,0,2025_unreleased
+matrix,village,Domaine Fourrier Gevrey-Chambertin Vieilles Vignes,2000,80.34,51,88,3,price_repeats_across_vintages
+matrix,village,Domaine Fourrier Gevrey-Chambertin Vieilles Vignes,2005,197.93,9,90,5,
+matrix,village,Domaine Fourrier Gevrey-Chambertin Vieilles Vignes,2010,213.53,9,91,6,
+matrix,village,Domaine Fourrier Gevrey-Chambertin Vieilles Vignes,2015,89.21,7,91,5,
+matrix,village,Domaine Fourrier Gevrey-Chambertin Vieilles Vignes,2020,107.05,24,91,5,price_repeats_across_vintages
+matrix,village,Domaine Fourrier Gevrey-Chambertin Vieilles Vignes,2023,107.05,10,91,4,price_repeats_across_vintages
+matrix,village,Domaine Fourrier Gevrey-Chambertin Vieilles Vignes,2025,80.34,51,94,0,2025_unreleased
+matrix,village,Domaine Henri Gouges Nuits-Saint-Georges,2000,46.83,654,86,2,price_repeats_across_vintages
+matrix,village,Domaine Henri Gouges Nuits-Saint-Georges,2005,70.3,2,89,6,
+matrix,village,Domaine Henri Gouges Nuits-Saint-Georges,2010,70.36,2,88,6,
+matrix,village,Domaine Henri Gouges Nuits-Saint-Georges,2015,84.3,7,90,7,
+matrix,village,Domaine Henri Gouges Nuits-Saint-Georges,2020,53.52,14,91,3,
+matrix,village,Domaine Henri Gouges Nuits-Saint-Georges,2023,52.85,17,91,4,
+matrix,village,Domaine Henri Gouges Nuits-Saint-Georges,2025,46.83,654,92,0,2025_unreleased
+matrix,village,Domaine Hudelot-Noellat Chambolle-Musigny,2000,8.9,378,87,3,price_repeats_across_vintages
+matrix,village,Domaine Hudelot-Noellat Chambolle-Musigny,2005,8.9,378,89,4,price_repeats_across_vintages
+matrix,village,Domaine Hudelot-Noellat Chambolle-Musigny,2010,111.5,1,89,7,
+matrix,village,Domaine Hudelot-Noellat Chambolle-Musigny,2015,100.36,7,89,4,
+matrix,village,Domaine Hudelot-Noellat Chambolle-Musigny,2020,76.27,10,91,5,
+matrix,village,Domaine Hudelot-Noellat Chambolle-Musigny,2023,86.98,17,91,4,
+matrix,village,Domaine Hudelot-Noellat Chambolle-Musigny,2025,8.9,378,95,0,2025_unreleased
+matrix,village,Domaine Jean Grivot Vosne-Romanee,2000,66.9,51,88,6,
+matrix,village,Domaine Jean Grivot Vosne-Romanee,2005,173.95,1,89,7,
+matrix,village,Domaine Jean Grivot Vosne-Romanee,2010,107.05,9,89,6,
+matrix,village,Domaine Jean Grivot Vosne-Romanee,2015,98.12,7,91,4,
+matrix,village,Domaine Jean Grivot Vosne-Romanee,2020,88.09,12,92,7,
+matrix,village,Domaine Jean Grivot Vosne-Romanee,2023,80.28,13,91,3,
+matrix,village,Domaine Mongeard-Mugneret Vosne-Romanee,2000,73.65,51,86,1,price_repeats_across_vintages
+matrix,village,Domaine Mongeard-Mugneret Vosne-Romanee,2005,73.65,51,90,2,price_repeats_across_vintages
+matrix,village,Domaine Mongeard-Mugneret Vosne-Romanee,2010,73.65,51,90,2,price_repeats_across_vintages
+matrix,village,Domaine Mongeard-Mugneret Vosne-Romanee,2015,216.77,4,91,1,
+matrix,village,Domaine Mongeard-Mugneret Vosne-Romanee,2020,120.11,9,91,2,
+matrix,village,Domaine Mongeard-Mugneret Vosne-Romanee,2023,112.61,11,94,0,
+matrix,village,Domaine Mongeard-Mugneret Vosne-Romanee,2025,73.65,51,94,0,2025_unreleased
+matrix,village,Domaine Robert Chevillon Nuits-Saint-Georges Vieilles Vignes,2000,42.66,598,87,3,price_repeats_across_vintages
+matrix,village,Domaine Robert Chevillon Nuits-Saint-Georges Vieilles Vignes,2005,163.01,1,89,4,
+matrix,village,Domaine Robert Chevillon Nuits-Saint-Georges Vieilles Vignes,2010,50.22,5,89,4,
+matrix,village,Domaine Robert Chevillon Nuits-Saint-Georges Vieilles Vignes,2015,64.0,4,89,3,
+matrix,village,Domaine Robert Chevillon Nuits-Saint-Georges Vieilles Vignes,2020,53.52,9,88,3,
+matrix,village,Domaine Robert Chevillon Nuits-Saint-Georges Vieilles Vignes,2023,52.41,10,90,3,
+matrix,village,Domaine Robert Chevillon Nuits-Saint-Georges Vieilles Vignes,2025,42.66,598,93,0,2025_unreleased
+matrix,village,Domaine Rossignol-Trapet Gevrey-Chambertin Vieilles Vignes,2000,33.21,459,87,2,price_repeats_across_vintages
+matrix,village,Domaine Rossignol-Trapet Gevrey-Chambertin Vieilles Vignes,2005,139.39,1,89,3,
+matrix,village,Domaine Rossignol-Trapet Gevrey-Chambertin Vieilles Vignes,2010,61.32,8,90,7,
+matrix,village,Domaine Rossignol-Trapet Gevrey-Chambertin Vieilles Vignes,2015,66.68,5,89,4,
+matrix,village,Domaine Rossignol-Trapet Gevrey-Chambertin Vieilles Vignes,2020,44.05,11,91,7,
+matrix,village,Domaine Rossignol-Trapet Gevrey-Chambertin Vieilles Vignes,2023,49.07,11,91,4,
+matrix,village,Domaine Rossignol-Trapet Gevrey-Chambertin Vieilles Vignes,2025,33.21,459,95,0,2025_unreleased
+matrix,village,Domaine Tollot-Beaut Chorey-les-Beaune,2000,29.88,51,85,4,price_repeats_across_vintages
+matrix,village,Domaine Tollot-Beaut Chorey-les-Beaune,2005,29.88,51,88,3,price_repeats_across_vintages
+matrix,village,Domaine Tollot-Beaut Chorey-les-Beaune,2010,451.92,1,87,2,outlier_single_offer_451
+matrix,village,Domaine Tollot-Beaut Chorey-les-Beaune,2015,29.88,2,90,7,price_repeats_across_vintages
+matrix,village,Domaine Tollot-Beaut Chorey-les-Beaune,2020,46.97,5,87,4,
+matrix,village,Domaine Tollot-Beaut Chorey-les-Beaune,2023,30.11,19,89,2,
+matrix,village,Domaine Tollot-Beaut Chorey-les-Beaune,2025,29.88,51,92,0,2025_unreleased
+matrix,village,Domaine de Montille Volnay,2000,,,,0,no_result
+matrix,village,Domaine de Montille Volnay,2005,,,,0,no_result
+matrix,village,Domaine de Montille Volnay,2010,82.96,3,94,0,price_repeats_across_vintages
+matrix,village,Domaine de Montille Volnay,2015,82.96,3,94,0,price_repeats_across_vintages
+matrix,village,Domaine de Montille Volnay,2020,82.96,3,94,0,price_repeats_across_vintages
+matrix,village,Domaine de Montille Volnay,2023,137.49,3,94,0,
+matrix,village,Domaine de Montille Volnay,2025,73.59,3,94,0,2025_unreleased
+matrix,village,Joseph Drouhin Chambolle-Musigny,2000,58.21,51,88,2,price_repeats_across_vintages
+matrix,village,Joseph Drouhin Chambolle-Musigny,2005,89.21,1,90,5,
+matrix,village,Joseph Drouhin Chambolle-Musigny,2010,190.81,2,91,1,
+matrix,village,Joseph Drouhin Chambolle-Musigny,2015,100.36,1,90,5,
+matrix,village,Joseph Drouhin Chambolle-Musigny,2020,58.21,5,91,2,price_repeats_across_vintages
+matrix,village,Joseph Drouhin Chambolle-Musigny,2023,72.48,9,94,1,
+matrix,village,Louis Jadot Gevrey-Chambertin,2000,74.05,51,92,0,price_repeats_across_vintages
+matrix,village,Louis Jadot Gevrey-Chambertin,2005,74.05,51,88,5,price_repeats_across_vintages
+matrix,village,Louis Jadot Gevrey-Chambertin,2010,74.05,51,89,4,price_repeats_across_vintages
+matrix,village,Louis Jadot Gevrey-Chambertin,2015,95.97,3,89,5,
+matrix,village,Louis Jadot Gevrey-Chambertin,2020,90.35,4,88,2,
+matrix,village,Louis Jadot Gevrey-Chambertin,2023,82.21,4,89,1,
+matrix,village,Louis Jadot Gevrey-Chambertin,2025,74.05,51,92,0,2025_unreleased
+matrix,village,Louis Latour Gevrey-Chambertin,2000,78.71,51,93,0,price_repeats_across_vintages
+matrix,village,Louis Latour Gevrey-Chambertin,2005,78.71,51,88,1,price_repeats_across_vintages
+matrix,village,Louis Latour Gevrey-Chambertin,2010,78.71,51,87,3,price_repeats_across_vintages
+matrix,village,Louis Latour Gevrey-Chambertin,2015,154.84,2,92,4,
+matrix,village,Louis Latour Gevrey-Chambertin,2020,199.37,2,92,1,
+matrix,village,Louis Latour Gevrey-Chambertin,2023,96.57,3,90,4,
+matrix,village,Louis Latour Gevrey-Chambertin,2025,78.71,51,93,0,2025_unreleased

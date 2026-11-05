@@ -1,0 +1,336 @@
+wine,region,tier,price_usd,vintage,rating,ratings_count
+Bouchard Père & Fils Bourgogne Pinot Noir,Bourgogne,regional,31.9,2021,3.8,89
+Bouchard Père & Fils Bourgogne Pinot Noir,Bourgogne,regional,31.9,2020,3.8,173
+Bouchard Père & Fils Bourgogne Pinot Noir,Bourgogne,regional,31.9,2019,3.8,723
+Bouchard Père & Fils Bourgogne Pinot Noir,Bourgogne,regional,31.9,2017,3.7,765
+Bouchard Père & Fils Bourgogne Pinot Noir,Bourgogne,regional,31.9,2016,3.7,672
+Olivier Leflaive Bourgogne Cuvée Margot,Bourgogne,regional,45.21,2023,,11
+Olivier Leflaive Bourgogne Cuvée Margot,Bourgogne,regional,45.21,2022,4.1,283
+Olivier Leflaive Bourgogne Cuvée Margot,Bourgogne,regional,45.21,2021,4.0,247
+Olivier Leflaive Bourgogne Cuvée Margot,Bourgogne,regional,45.21,2020,4.0,652
+Olivier Leflaive Bourgogne Cuvée Margot,Bourgogne,regional,45.21,2019,4.0,834
+Olivier Leflaive Bourgogne Cuvée Margot,Bourgogne,regional,45.21,2018,3.9,782
+Olivier Leflaive Bourgogne Cuvée Margot,Bourgogne,regional,45.21,2017,3.8,934
+Olivier Leflaive Bourgogne Cuvée Margot,Bourgogne,regional,45.21,2016,3.7,693
+Louis Latour Marsannay Rouge,Marsannay,village,40.99,2024,,7
+Louis Latour Marsannay Rouge,Marsannay,village,40.99,2023,3.9,70
+Louis Latour Marsannay Rouge,Marsannay,village,40.99,2022,3.9,102
+Louis Latour Marsannay Rouge,Marsannay,village,40.99,2021,3.9,89
+Louis Latour Marsannay Rouge,Marsannay,village,40.99,2020,3.9,121
+Louis Latour Marsannay Rouge,Marsannay,village,40.99,2019,4.0,548
+Louis Latour Marsannay Rouge,Marsannay,village,40.99,2016,3.9,443
+Louis Latour Marsannay Rouge,Marsannay,village,40.99,2015,3.8,603
+Claude Dugat Gevrey-Chambertin,Gevrey-Chambertin,village,780.0,2023,4.2,49
+Claude Dugat Gevrey-Chambertin,Gevrey-Chambertin,village,780.0,2022,4.1,82
+Claude Dugat Gevrey-Chambertin,Gevrey-Chambertin,village,780.0,2021,4.1,99
+Claude Dugat Gevrey-Chambertin,Gevrey-Chambertin,village,780.0,2020,4.1,120
+Claude Dugat Gevrey-Chambertin,Gevrey-Chambertin,village,780.0,2019,4.2,215
+Claude Dugat Gevrey-Chambertin,Gevrey-Chambertin,village,780.0,2018,4.2,270
+Claude Dugat Gevrey-Chambertin,Gevrey-Chambertin,village,780.0,2017,4.1,614
+Claude Dugat Gevrey-Chambertin,Gevrey-Chambertin,village,780.0,2016,4.1,157
+Claude Dugat Gevrey-Chambertin,Gevrey-Chambertin,village,780.0,2015,4.1,240
+Faiveley Nuits-Saint-Georges,Nuits-Saint-Georges,village,199.99,2023,4.3,93
+Faiveley Nuits-Saint-Georges,Nuits-Saint-Georges,village,199.99,2022,4.2,266
+Faiveley Nuits-Saint-Georges,Nuits-Saint-Georges,village,199.99,2021,4.2,110
+Faiveley Nuits-Saint-Georges,Nuits-Saint-Georges,village,199.99,2020,4.2,364
+Faiveley Nuits-Saint-Georges,Nuits-Saint-Georges,village,199.99,2019,4.2,357
+Faiveley Nuits-Saint-Georges,Nuits-Saint-Georges,village,199.99,2017,4.2,791
+Faiveley Nuits-Saint-Georges,Nuits-Saint-Georges,village,199.99,2016,4.2,390
+Faiveley Nuits-Saint-Georges,Nuits-Saint-Georges,village,199.99,2015,4.2,276
+Domaine Jean Grivot Vosne-Romanée,Vosne-Romanée,village,138.59,2024,,5
+Domaine Jean Grivot Vosne-Romanée,Vosne-Romanée,village,138.59,2023,,20
+Domaine Jean Grivot Vosne-Romanée,Vosne-Romanée,village,138.59,2022,4.2,101
+Domaine Jean Grivot Vosne-Romanée,Vosne-Romanée,village,138.59,2021,4.3,109
+Domaine Jean Grivot Vosne-Romanée,Vosne-Romanée,village,138.59,2020,4.3,141
+Domaine Jean Grivot Vosne-Romanée,Vosne-Romanée,village,138.59,2019,4.3,237
+Domaine Jean Grivot Vosne-Romanée,Vosne-Romanée,village,138.59,2018,4.3,357
+Domaine Jean Grivot Vosne-Romanée,Vosne-Romanée,village,138.59,2017,4.3,458
+Domaine Jean Grivot Vosne-Romanée,Vosne-Romanée,village,138.59,2016,4.2,351
+Domaine Jean Grivot Vosne-Romanée,Vosne-Romanée,village,138.59,2015,4.2,288
+Domaine Robert Chevillon Vieilles Vignes Nuits-Saint-Georges,Nuits-Saint-Georges,village,118.49,2023,,13
+Domaine Robert Chevillon Vieilles Vignes Nuits-Saint-Georges,Nuits-Saint-Georges,village,118.49,2022,4.0,31
+Domaine Robert Chevillon Vieilles Vignes Nuits-Saint-Georges,Nuits-Saint-Georges,village,118.49,2021,4.1,58
+Domaine Robert Chevillon Vieilles Vignes Nuits-Saint-Georges,Nuits-Saint-Georges,village,118.49,2020,4.1,139
+Domaine Robert Chevillon Vieilles Vignes Nuits-Saint-Georges,Nuits-Saint-Georges,village,118.49,2019,4.1,248
+Domaine Robert Chevillon Vieilles Vignes Nuits-Saint-Georges,Nuits-Saint-Georges,village,118.49,2018,4.2,190
+Domaine Robert Chevillon Vieilles Vignes Nuits-Saint-Georges,Nuits-Saint-Georges,village,118.49,2017,4.2,447
+Domaine Robert Chevillon Vieilles Vignes Nuits-Saint-Georges,Nuits-Saint-Georges,village,118.49,2016,4.1,225
+Domaine Robert Chevillon Vieilles Vignes Nuits-Saint-Georges,Nuits-Saint-Georges,village,118.49,2015,4.0,180
+Joseph Drouhin Vosne-Romanée,Vosne-Romanée,village,160.54,2023,,3
+Joseph Drouhin Vosne-Romanée,Vosne-Romanée,village,160.54,2022,4.2,37
+Joseph Drouhin Vosne-Romanée,Vosne-Romanée,village,160.54,2021,4.2,46
+Joseph Drouhin Vosne-Romanée,Vosne-Romanée,village,160.54,2020,4.3,118
+Joseph Drouhin Vosne-Romanée,Vosne-Romanée,village,160.54,2019,4.3,213
+Joseph Drouhin Vosne-Romanée,Vosne-Romanée,village,160.54,2018,4.2,175
+Joseph Drouhin Vosne-Romanée,Vosne-Romanée,village,160.54,2017,4.2,409
+Joseph Drouhin Vosne-Romanée,Vosne-Romanée,village,160.54,2016,4.3,250
+Joseph Drouhin Vosne-Romanée,Vosne-Romanée,village,160.54,2015,4.3,413
+A.F. Gros Vosne-Romanee Aux Reas,Vosne-Romanée,village,187.24,2023,,13
+A.F. Gros Vosne-Romanee Aux Reas,Vosne-Romanée,village,187.24,2022,4.4,59
+A.F. Gros Vosne-Romanee Aux Reas,Vosne-Romanée,village,187.24,2021,4.3,74
+A.F. Gros Vosne-Romanee Aux Reas,Vosne-Romanée,village,187.24,2020,4.2,82
+A.F. Gros Vosne-Romanee Aux Reas,Vosne-Romanée,village,187.24,2019,4.2,199
+A.F. Gros Vosne-Romanee Aux Reas,Vosne-Romanée,village,187.24,2018,4.4,291
+A.F. Gros Vosne-Romanee Aux Reas,Vosne-Romanée,village,187.24,2017,4.3,248
+A.F. Gros Vosne-Romanee Aux Reas,Vosne-Romanée,village,187.24,2016,4.3,209
+A.F. Gros Vosne-Romanee Aux Reas,Vosne-Romanée,village,187.24,2015,4.2,279
+Domaine Antonin Guyon Gevrey-Chambertin La Justice,Gevrey-Chambertin,village,148.54,2024,,3
+Domaine Antonin Guyon Gevrey-Chambertin La Justice,Gevrey-Chambertin,village,148.54,2023,,17
+Domaine Antonin Guyon Gevrey-Chambertin La Justice,Gevrey-Chambertin,village,148.54,2022,4.2,59
+Domaine Antonin Guyon Gevrey-Chambertin La Justice,Gevrey-Chambertin,village,148.54,2021,4.2,63
+Domaine Antonin Guyon Gevrey-Chambertin La Justice,Gevrey-Chambertin,village,148.54,2020,4.2,75
+Domaine Antonin Guyon Gevrey-Chambertin La Justice,Gevrey-Chambertin,village,148.54,2019,4.4,286
+Domaine Antonin Guyon Gevrey-Chambertin La Justice,Gevrey-Chambertin,village,148.54,2018,4.4,211
+Domaine Antonin Guyon Gevrey-Chambertin La Justice,Gevrey-Chambertin,village,148.54,2017,4.3,430
+Domaine Antonin Guyon Gevrey-Chambertin La Justice,Gevrey-Chambertin,village,148.54,2016,4.3,251
+Domaine Antonin Guyon Gevrey-Chambertin La Justice,Gevrey-Chambertin,village,148.54,2015,4.2,252
+Louis Latour Gevrey-Chambertin,Gevrey-Chambertin,village,98.95,2022,4.2,55
+Louis Latour Gevrey-Chambertin,Gevrey-Chambertin,village,98.95,2021,4.3,55
+Louis Latour Gevrey-Chambertin,Gevrey-Chambertin,village,98.95,2020,4.1,89
+Louis Latour Gevrey-Chambertin,Gevrey-Chambertin,village,98.95,2019,4.2,107
+Louis Latour Gevrey-Chambertin,Gevrey-Chambertin,village,98.95,2018,4.2,359
+Louis Latour Gevrey-Chambertin,Gevrey-Chambertin,village,98.95,2017,4.2,288
+Louis Latour Gevrey-Chambertin,Gevrey-Chambertin,village,98.95,2016,4.1,184
+Louis Latour Gevrey-Chambertin,Gevrey-Chambertin,village,98.95,2015,4.2,291
+Pierre Labet Vieilles Vignes Bourgogne Pinot Noir,Bourgogne,regional,39.95,2024,,2
+Pierre Labet Vieilles Vignes Bourgogne Pinot Noir,Bourgogne,regional,39.95,2023,,13
+Pierre Labet Vieilles Vignes Bourgogne Pinot Noir,Bourgogne,regional,39.95,2022,3.7,45
+Pierre Labet Vieilles Vignes Bourgogne Pinot Noir,Bourgogne,regional,39.95,2021,3.9,29
+Pierre Labet Vieilles Vignes Bourgogne Pinot Noir,Bourgogne,regional,39.95,2020,3.9,79
+Pierre Labet Vieilles Vignes Bourgogne Pinot Noir,Bourgogne,regional,39.95,2019,3.9,198
+Pierre Labet Vieilles Vignes Bourgogne Pinot Noir,Bourgogne,regional,39.95,2018,4.0,210
+Pierre Labet Vieilles Vignes Bourgogne Pinot Noir,Bourgogne,regional,39.95,2017,3.8,166
+Pierre Labet Vieilles Vignes Bourgogne Pinot Noir,Bourgogne,regional,39.95,2016,4.0,196
+Pierre Labet Vieilles Vignes Bourgogne Pinot Noir,Bourgogne,regional,39.95,2015,3.7,185
+Domaine Taupenot-Merme Gevrey Chambertin,Gevrey-Chambertin,village,146.15,2022,4.3,55
+Domaine Taupenot-Merme Gevrey Chambertin,Gevrey-Chambertin,village,146.15,2021,,22
+Domaine Taupenot-Merme Gevrey Chambertin,Gevrey-Chambertin,village,146.15,2020,4.3,42
+Domaine Taupenot-Merme Gevrey Chambertin,Gevrey-Chambertin,village,146.15,2019,4.2,130
+Domaine Taupenot-Merme Gevrey Chambertin,Gevrey-Chambertin,village,146.15,2018,4.3,157
+Domaine Taupenot-Merme Gevrey Chambertin,Gevrey-Chambertin,village,146.15,2017,4.2,327
+Domaine Taupenot-Merme Gevrey Chambertin,Gevrey-Chambertin,village,146.15,2016,4.2,120
+Domaine Taupenot-Merme Gevrey Chambertin,Gevrey-Chambertin,village,146.15,2015,4.0,128
+Domaine Robert Chevillon Les Chaignots Nuits-Saint-Georges 1er Cru,Nuits-Saint-Georges,premier,179.95,2022,,10
+Domaine Robert Chevillon Les Chaignots Nuits-Saint-Georges 1er Cru,Nuits-Saint-Georges,premier,179.95,2021,,17
+Domaine Robert Chevillon Les Chaignots Nuits-Saint-Georges 1er Cru,Nuits-Saint-Georges,premier,179.95,2020,4.0,31
+Domaine Robert Chevillon Les Chaignots Nuits-Saint-Georges 1er Cru,Nuits-Saint-Georges,premier,179.95,2019,4.2,32
+Domaine Robert Chevillon Les Chaignots Nuits-Saint-Georges 1er Cru,Nuits-Saint-Georges,premier,179.95,2018,4.3,74
+Domaine Robert Chevillon Les Chaignots Nuits-Saint-Georges 1er Cru,Nuits-Saint-Georges,premier,179.95,2017,4.2,146
+Domaine Robert Chevillon Les Chaignots Nuits-Saint-Georges 1er Cru,Nuits-Saint-Georges,premier,179.95,2016,4.2,46
+Domaine Robert Chevillon Les Chaignots Nuits-Saint-Georges 1er Cru,Nuits-Saint-Georges,premier,179.95,2015,4.4,61
+Albert Bichot Gevrey-Chambertin,Gevrey-Chambertin,village,147.0,2020,,14
+Albert Bichot Gevrey-Chambertin,Gevrey-Chambertin,village,147.0,2019,4.1,83
+Albert Bichot Gevrey-Chambertin,Gevrey-Chambertin,village,147.0,2018,4.0,142
+Albert Bichot Gevrey-Chambertin,Gevrey-Chambertin,village,147.0,2017,4.3,133
+Albert Bichot Gevrey-Chambertin,Gevrey-Chambertin,village,147.0,2016,4.1,116
+Albert Bichot Gevrey-Chambertin,Gevrey-Chambertin,village,147.0,2015,4.1,108
+Devillard Le Renard Pinot Noir Bourgogne,Bourgogne,regional,32.99,2023,3.9,32
+Devillard Le Renard Pinot Noir Bourgogne,Bourgogne,regional,32.99,2022,3.9,138
+Devillard Le Renard Pinot Noir Bourgogne,Bourgogne,regional,32.99,2021,,1
+Devillard Le Renard Pinot Noir Bourgogne,Bourgogne,regional,32.99,2019,3.8,84
+Devillard Le Renard Pinot Noir Bourgogne,Bourgogne,regional,32.99,2018,4.1,200
+Devillard Le Renard Pinot Noir Bourgogne,Bourgogne,regional,32.99,2017,3.8,83
+Devillard Le Renard Pinot Noir Bourgogne,Bourgogne,regional,32.99,2016,3.5,144
+Devillard Le Renard Pinot Noir Bourgogne,Bourgogne,regional,32.99,2015,3.6,200
+Bachelet-Monnot Bourgogne Rouge,Bourgogne,regional,64.6,2024,,9
+Bachelet-Monnot Bourgogne Rouge,Bourgogne,regional,64.6,2023,4.1,77
+Bachelet-Monnot Bourgogne Rouge,Bourgogne,regional,64.6,2022,4.3,126
+Bachelet-Monnot Bourgogne Rouge,Bourgogne,regional,64.6,2021,4.1,134
+Bachelet-Monnot Bourgogne Rouge,Bourgogne,regional,64.6,2020,4.1,219
+Bachelet-Monnot Bourgogne Rouge,Bourgogne,regional,64.6,2019,4.2,199
+Bachelet-Monnot Bourgogne Rouge,Bourgogne,regional,64.6,2018,4.0,227
+Bachelet-Monnot Bourgogne Rouge,Bourgogne,regional,64.6,2017,4.0,198
+Bachelet-Monnot Bourgogne Rouge,Bourgogne,regional,64.6,2016,3.9,186
+Bachelet-Monnot Bourgogne Rouge,Bourgogne,regional,64.6,2015,4.0,188
+Domaine Sylvain Cathiard Vosne-Romanée,Vosne-Romanée,village,297.49,2023,,12
+Domaine Sylvain Cathiard Vosne-Romanée,Vosne-Romanée,village,297.49,2022,4.3,26
+Domaine Sylvain Cathiard Vosne-Romanée,Vosne-Romanée,village,297.49,2021,,24
+Domaine Sylvain Cathiard Vosne-Romanée,Vosne-Romanée,village,297.49,2020,4.4,43
+Domaine Sylvain Cathiard Vosne-Romanée,Vosne-Romanée,village,297.49,2019,4.3,68
+Domaine Sylvain Cathiard Vosne-Romanée,Vosne-Romanée,village,297.49,2018,4.4,113
+Domaine Sylvain Cathiard Vosne-Romanée,Vosne-Romanée,village,297.49,2017,4.3,127
+Domaine Sylvain Cathiard Vosne-Romanée,Vosne-Romanée,village,297.49,2016,4.3,73
+Domaine Sylvain Cathiard Vosne-Romanée,Vosne-Romanée,village,297.49,2015,4.3,121
+Louis Latour Vosne-Romanée,Vosne-Romanée,village,137.99,2023,,23
+Louis Latour Vosne-Romanée,Vosne-Romanée,village,137.99,2022,4.2,32
+Louis Latour Vosne-Romanée,Vosne-Romanée,village,137.99,2021,,17
+Louis Latour Vosne-Romanée,Vosne-Romanée,village,137.99,2020,4.3,66
+Louis Latour Vosne-Romanée,Vosne-Romanée,village,137.99,2019,4.3,37
+Louis Latour Vosne-Romanée,Vosne-Romanée,village,137.99,2018,4.2,57
+Louis Latour Vosne-Romanée,Vosne-Romanée,village,137.99,2017,4.3,319
+Louis Latour Vosne-Romanée,Vosne-Romanée,village,137.99,2016,4.1,151
+Louis Latour Vosne-Romanée,Vosne-Romanée,village,137.99,2015,4.2,231
+Domaine Pierre Gelin Gevrey-Chambertin Clos de Meixvelle,Gevrey-Chambertin,village,158.95,2022,4.2,37
+Domaine Pierre Gelin Gevrey-Chambertin Clos de Meixvelle,Gevrey-Chambertin,village,158.95,2021,4.4,26
+Domaine Pierre Gelin Gevrey-Chambertin Clos de Meixvelle,Gevrey-Chambertin,village,158.95,2020,4.2,77
+Domaine Pierre Gelin Gevrey-Chambertin Clos de Meixvelle,Gevrey-Chambertin,village,158.95,2019,4.4,70
+Domaine Pierre Gelin Gevrey-Chambertin Clos de Meixvelle,Gevrey-Chambertin,village,158.95,2018,4.3,188
+Domaine Pierre Gelin Gevrey-Chambertin Clos de Meixvelle,Gevrey-Chambertin,village,158.95,2017,4.4,330
+Domaine Pierre Gelin Gevrey-Chambertin Clos de Meixvelle,Gevrey-Chambertin,village,158.95,2016,4.3,123
+Domaine Pierre Gelin Gevrey-Chambertin Clos de Meixvelle,Gevrey-Chambertin,village,158.95,2015,4.3,126
+Domaine Robert Chevillon Les Vaucrains Nuits Saint Georges 1er Cru,Nuits-Saint-Georges,premier,424.99,2023,,4
+Domaine Robert Chevillon Les Vaucrains Nuits Saint Georges 1er Cru,Nuits-Saint-Georges,premier,424.99,2022,,7
+Domaine Robert Chevillon Les Vaucrains Nuits Saint Georges 1er Cru,Nuits-Saint-Georges,premier,424.99,2021,,12
+Domaine Robert Chevillon Les Vaucrains Nuits Saint Georges 1er Cru,Nuits-Saint-Georges,premier,424.99,2020,,17
+Domaine Robert Chevillon Les Vaucrains Nuits Saint Georges 1er Cru,Nuits-Saint-Georges,premier,424.99,2019,,22
+Domaine Robert Chevillon Les Vaucrains Nuits Saint Georges 1er Cru,Nuits-Saint-Georges,premier,424.99,2018,4.3,57
+Domaine Robert Chevillon Les Vaucrains Nuits Saint Georges 1er Cru,Nuits-Saint-Georges,premier,424.99,2017,4.4,76
+Domaine Robert Chevillon Les Vaucrains Nuits Saint Georges 1er Cru,Nuits-Saint-Georges,premier,424.99,2016,4.3,29
+Domaine Robert Chevillon Les Vaucrains Nuits Saint Georges 1er Cru,Nuits-Saint-Georges,premier,424.99,2015,4.1,40
+Louis Boillot & Fils Gevrey-Chambertin,Gevrey-Chambertin,village,82.79,2024,,2
+Louis Boillot & Fils Gevrey-Chambertin,Gevrey-Chambertin,village,82.79,2023,,18
+Louis Boillot & Fils Gevrey-Chambertin,Gevrey-Chambertin,village,82.79,2022,4.2,41
+Louis Boillot & Fils Gevrey-Chambertin,Gevrey-Chambertin,village,82.79,2021,4.2,34
+Louis Boillot & Fils Gevrey-Chambertin,Gevrey-Chambertin,village,82.79,2020,4.1,42
+Louis Boillot & Fils Gevrey-Chambertin,Gevrey-Chambertin,village,82.79,2019,4.2,89
+Louis Boillot & Fils Gevrey-Chambertin,Gevrey-Chambertin,village,82.79,2018,4.2,68
+Louis Boillot & Fils Gevrey-Chambertin,Gevrey-Chambertin,village,82.79,2017,4.2,197
+Louis Boillot & Fils Gevrey-Chambertin,Gevrey-Chambertin,village,82.79,2016,4.2,125
+Louis Boillot & Fils Gevrey-Chambertin,Gevrey-Chambertin,village,82.79,2015,4.2,118
+Jacques-Frederic Mugnier Chambolle-Musigny,Chambolle-Musigny,village,1412.0,2023,,22
+Jacques-Frederic Mugnier Chambolle-Musigny,Chambolle-Musigny,village,1412.0,2022,4.4,41
+Jacques-Frederic Mugnier Chambolle-Musigny,Chambolle-Musigny,village,1412.0,2021,4.3,60
+Jacques-Frederic Mugnier Chambolle-Musigny,Chambolle-Musigny,village,1412.0,2020,4.4,53
+Jacques-Frederic Mugnier Chambolle-Musigny,Chambolle-Musigny,village,1412.0,2019,4.4,83
+Jacques-Frederic Mugnier Chambolle-Musigny,Chambolle-Musigny,village,1412.0,2018,4.5,82
+Jacques-Frederic Mugnier Chambolle-Musigny,Chambolle-Musigny,village,1412.0,2017,4.4,141
+Jacques-Frederic Mugnier Chambolle-Musigny,Chambolle-Musigny,village,1412.0,2016,,5
+Jacques-Frederic Mugnier Chambolle-Musigny,Chambolle-Musigny,village,1412.0,2015,4.3,93
+Domaine du Comte Liger-Belair Vosne-Romanée Clos du Chateau Monopole,Vosne-Romanée,village,6152.0,2022,,9
+Domaine du Comte Liger-Belair Vosne-Romanée Clos du Chateau Monopole,Vosne-Romanée,village,6152.0,2021,,6
+Domaine du Comte Liger-Belair Vosne-Romanée Clos du Chateau Monopole,Vosne-Romanée,village,6152.0,2020,,13
+Domaine du Comte Liger-Belair Vosne-Romanée Clos du Chateau Monopole,Vosne-Romanée,village,6152.0,2019,4.6,44
+Domaine du Comte Liger-Belair Vosne-Romanée Clos du Chateau Monopole,Vosne-Romanée,village,6152.0,2018,4.7,69
+Domaine du Comte Liger-Belair Vosne-Romanée Clos du Chateau Monopole,Vosne-Romanée,village,6152.0,2017,4.7,111
+Domaine du Comte Liger-Belair Vosne-Romanée Clos du Chateau Monopole,Vosne-Romanée,village,6152.0,2016,4.7,86
+Domaine du Comte Liger-Belair Vosne-Romanée Clos du Chateau Monopole,Vosne-Romanée,village,6152.0,2015,4.5,105
+Domaine Bruno Clair Marsannay Les Grasses Tetes,Marsannay,village,117.03,2023,,22
+Domaine Bruno Clair Marsannay Les Grasses Tetes,Marsannay,village,117.03,2022,4.2,101
+Domaine Bruno Clair Marsannay Les Grasses Tetes,Marsannay,village,117.03,2021,4.2,79
+Domaine Bruno Clair Marsannay Les Grasses Tetes,Marsannay,village,117.03,2020,4.1,113
+Domaine Bruno Clair Marsannay Les Grasses Tetes,Marsannay,village,117.03,2019,4.1,158
+Domaine Bruno Clair Marsannay Les Grasses Tetes,Marsannay,village,117.03,2018,4.3,152
+Domaine Bruno Clair Marsannay Les Grasses Tetes,Marsannay,village,117.03,2017,4.1,148
+Domaine Bruno Clair Marsannay Les Grasses Tetes,Marsannay,village,117.03,2016,4.0,40
+Domaine Bruno Clair Marsannay Les Grasses Tetes,Marsannay,village,117.03,2015,4.0,94
+Pierre Girardin Eclat de Calcaire Bourgogne Pinot Noir,Bourgogne,regional,61.33,2024,,4
+Pierre Girardin Eclat de Calcaire Bourgogne Pinot Noir,Bourgogne,regional,61.33,2022,4.0,38
+Pierre Girardin Eclat de Calcaire Bourgogne Pinot Noir,Bourgogne,regional,61.33,2021,4.0,57
+Pierre Girardin Eclat de Calcaire Bourgogne Pinot Noir,Bourgogne,regional,61.33,2020,4.2,250
+Pierre Girardin Eclat de Calcaire Bourgogne Pinot Noir,Bourgogne,regional,61.33,2019,4.2,456
+Pierre Girardin Eclat de Calcaire Bourgogne Pinot Noir,Bourgogne,regional,61.33,2018,4.0,449
+Pierre Girardin Eclat de Calcaire Bourgogne Pinot Noir,Bourgogne,regional,61.33,2017,4.0,205
+Lignier-Michelot Vieilles Vignes Chambolle-Musigny,Chambolle-Musigny,village,116.47,2023,,23
+Lignier-Michelot Vieilles Vignes Chambolle-Musigny,Chambolle-Musigny,village,116.47,2022,4.1,42
+Lignier-Michelot Vieilles Vignes Chambolle-Musigny,Chambolle-Musigny,village,116.47,2021,4.1,55
+Lignier-Michelot Vieilles Vignes Chambolle-Musigny,Chambolle-Musigny,village,116.47,2020,4.3,70
+Lignier-Michelot Vieilles Vignes Chambolle-Musigny,Chambolle-Musigny,village,116.47,2019,4.2,68
+Lignier-Michelot Vieilles Vignes Chambolle-Musigny,Chambolle-Musigny,village,116.47,2018,4.2,131
+Lignier-Michelot Vieilles Vignes Chambolle-Musigny,Chambolle-Musigny,village,116.47,2017,4.2,187
+Lignier-Michelot Vieilles Vignes Chambolle-Musigny,Chambolle-Musigny,village,116.47,2016,4.2,136
+Lignier-Michelot Vieilles Vignes Chambolle-Musigny,Chambolle-Musigny,village,116.47,2015,4.2,126
+Terres Dorées Pinot Noir Bourgogne,Bourgogne,regional,37.4,2024,,23
+Terres Dorées Pinot Noir Bourgogne,Bourgogne,regional,37.4,2023,3.7,27
+Terres Dorées Pinot Noir Bourgogne,Bourgogne,regional,37.4,2022,3.8,62
+Terres Dorées Pinot Noir Bourgogne,Bourgogne,regional,37.4,2021,3.7,263
+Terres Dorées Pinot Noir Bourgogne,Bourgogne,regional,37.4,2020,3.9,203
+Terres Dorées Pinot Noir Bourgogne,Bourgogne,regional,37.4,2019,3.8,304
+Terres Dorées Pinot Noir Bourgogne,Bourgogne,regional,37.4,2018,3.9,185
+Terres Dorées Pinot Noir Bourgogne,Bourgogne,regional,37.4,2017,3.9,38
+Terres Dorées Pinot Noir Bourgogne,Bourgogne,regional,37.4,2016,3.8,122
+Terres Dorées Pinot Noir Bourgogne,Bourgogne,regional,37.4,2015,3.8,122
+Simon Bize & Fils Bourgogne Les Perrières Rouge,Bourgogne,regional,102.0,2023,,11
+Simon Bize & Fils Bourgogne Les Perrières Rouge,Bourgogne,regional,102.0,2022,4.0,37
+Simon Bize & Fils Bourgogne Les Perrières Rouge,Bourgogne,regional,102.0,2021,4.1,34
+Simon Bize & Fils Bourgogne Les Perrières Rouge,Bourgogne,regional,102.0,2020,4.1,71
+Simon Bize & Fils Bourgogne Les Perrières Rouge,Bourgogne,regional,102.0,2019,4.2,108
+Simon Bize & Fils Bourgogne Les Perrières Rouge,Bourgogne,regional,102.0,2018,4.2,307
+Simon Bize & Fils Bourgogne Les Perrières Rouge,Bourgogne,regional,102.0,2017,3.9,243
+Simon Bize & Fils Bourgogne Les Perrières Rouge,Bourgogne,regional,102.0,2016,,6
+Simon Bize & Fils Bourgogne Les Perrières Rouge,Bourgogne,regional,102.0,2015,3.9,116
+Louis Jadot Nuits-Saint-Georges,Nuits-Saint-Georges,village,63.99,2022,,15
+Louis Jadot Nuits-Saint-Georges,Nuits-Saint-Georges,village,63.99,2021,,19
+Louis Jadot Nuits-Saint-Georges,Nuits-Saint-Georges,village,63.99,2020,4.1,27
+Louis Jadot Nuits-Saint-Georges,Nuits-Saint-Georges,village,63.99,2019,4.2,36
+Louis Jadot Nuits-Saint-Georges,Nuits-Saint-Georges,village,63.99,2018,4.1,55
+Louis Jadot Nuits-Saint-Georges,Nuits-Saint-Georges,village,63.99,2017,4.0,29
+Louis Jadot Nuits-Saint-Georges,Nuits-Saint-Georges,village,63.99,2016,4.2,84
+Louis Jadot Nuits-Saint-Georges,Nuits-Saint-Georges,village,63.99,2015,3.8,52
+Domaine Taupenot-Merme Chambolle Musigny,Chambolle-Musigny,village,156.79,2023,,20
+Domaine Taupenot-Merme Chambolle Musigny,Chambolle-Musigny,village,156.79,2022,4.2,48
+Domaine Taupenot-Merme Chambolle Musigny,Chambolle-Musigny,village,156.79,2021,4.3,35
+Domaine Taupenot-Merme Chambolle Musigny,Chambolle-Musigny,village,156.79,2020,4.3,45
+Domaine Taupenot-Merme Chambolle Musigny,Chambolle-Musigny,village,156.79,2019,4.3,80
+Domaine Taupenot-Merme Chambolle Musigny,Chambolle-Musigny,village,156.79,2018,4.3,168
+Domaine Taupenot-Merme Chambolle Musigny,Chambolle-Musigny,village,156.79,2017,4.2,124
+Domaine Taupenot-Merme Chambolle Musigny,Chambolle-Musigny,village,156.79,2016,4.1,93
+Domaine Taupenot-Merme Chambolle Musigny,Chambolle-Musigny,village,156.79,2015,4.1,80
+Faiveley Gevrey-Chambertin,Gevrey-Chambertin,village,101.09,2021,,9
+Faiveley Gevrey-Chambertin,Gevrey-Chambertin,village,101.09,2020,,20
+Faiveley Gevrey-Chambertin,Gevrey-Chambertin,village,101.09,2019,,10
+Faiveley Gevrey-Chambertin,Gevrey-Chambertin,village,101.09,2018,4.5,46
+Faiveley Gevrey-Chambertin,Gevrey-Chambertin,village,101.09,2017,4.0,34
+Faiveley Gevrey-Chambertin,Gevrey-Chambertin,village,101.09,2016,4.3,59
+Faiveley Gevrey-Chambertin,Gevrey-Chambertin,village,101.09,2015,4.0,112
+Domaine Antonin Guyon Chambolle-Musigny Les Cras,Chambolle-Musigny,village,189.06,2024,,3
+Domaine Antonin Guyon Chambolle-Musigny Les Cras,Chambolle-Musigny,village,189.06,2023,,13
+Domaine Antonin Guyon Chambolle-Musigny Les Cras,Chambolle-Musigny,village,189.06,2022,4.2,29
+Domaine Antonin Guyon Chambolle-Musigny Les Cras,Chambolle-Musigny,village,189.06,2021,,17
+Domaine Antonin Guyon Chambolle-Musigny Les Cras,Chambolle-Musigny,village,189.06,2020,4.2,74
+Domaine Antonin Guyon Chambolle-Musigny Les Cras,Chambolle-Musigny,village,189.06,2019,4.3,73
+Domaine Antonin Guyon Chambolle-Musigny Les Cras,Chambolle-Musigny,village,189.06,2018,4.3,209
+Domaine Antonin Guyon Chambolle-Musigny Les Cras,Chambolle-Musigny,village,189.06,2017,4.3,181
+Domaine Antonin Guyon Chambolle-Musigny Les Cras,Chambolle-Musigny,village,189.06,2016,4.5,87
+Domaine Antonin Guyon Chambolle-Musigny Les Cras,Chambolle-Musigny,village,189.06,2015,4.2,171
+Domaine Tollot-Beaut Bourgogne Rouge,Bourgogne,regional,46.99,2021,,12
+Domaine Tollot-Beaut Bourgogne Rouge,Bourgogne,regional,46.99,2020,,18
+Domaine Tollot-Beaut Bourgogne Rouge,Bourgogne,regional,46.99,2019,4.0,116
+Domaine Tollot-Beaut Bourgogne Rouge,Bourgogne,regional,46.99,2018,4.0,193
+Domaine Tollot-Beaut Bourgogne Rouge,Bourgogne,regional,46.99,2017,3.9,172
+Domaine Tollot-Beaut Bourgogne Rouge,Bourgogne,regional,46.99,2016,3.9,63
+Domaine Tollot-Beaut Bourgogne Rouge,Bourgogne,regional,46.99,2015,4.0,100
+Faiveley Vosne-Romanée,Vosne-Romanée,village,156.4,2023,4.3,35
+Faiveley Vosne-Romanée,Vosne-Romanée,village,156.4,2022,4.4,79
+Faiveley Vosne-Romanée,Vosne-Romanée,village,156.4,2021,4.3,32
+Faiveley Vosne-Romanée,Vosne-Romanée,village,156.4,2020,4.2,79
+Faiveley Vosne-Romanée,Vosne-Romanée,village,156.4,2019,4.1,48
+Faiveley Vosne-Romanée,Vosne-Romanée,village,156.4,2018,4.1,58
+Faiveley Vosne-Romanée,Vosne-Romanée,village,156.4,2017,4.4,121
+Faiveley Vosne-Romanée,Vosne-Romanée,village,156.4,2016,4.2,59
+Faiveley Vosne-Romanée,Vosne-Romanée,village,156.4,2015,4.1,227
+Benjamin Leroux Vosne-Romanee,Vosne-Romanée,village,158.95,2023,4.3,28
+Benjamin Leroux Vosne-Romanee,Vosne-Romanée,village,158.95,2022,4.3,59
+Benjamin Leroux Vosne-Romanee,Vosne-Romanée,village,158.95,2021,4.3,57
+Benjamin Leroux Vosne-Romanee,Vosne-Romanée,village,158.95,2020,4.2,68
+Benjamin Leroux Vosne-Romanee,Vosne-Romanée,village,158.95,2019,4.4,120
+Benjamin Leroux Vosne-Romanee,Vosne-Romanée,village,158.95,2018,4.3,200
+Benjamin Leroux Vosne-Romanee,Vosne-Romanée,village,158.95,2017,4.3,273
+Benjamin Leroux Vosne-Romanee,Vosne-Romanée,village,158.95,2016,4.3,159
+Benjamin Leroux Vosne-Romanee,Vosne-Romanée,village,158.95,2015,4.2,133
+Joseph Drouhin Bourgogne Pinot Noir,Bourgogne,regional,32.14,2024,,1
+Joseph Drouhin Bourgogne Pinot Noir,Bourgogne,regional,32.14,2023,3.8,77
+Joseph Drouhin Bourgogne Pinot Noir,Bourgogne,regional,32.14,2022,3.8,328
+Joseph Drouhin Bourgogne Pinot Noir,Bourgogne,regional,32.14,2021,3.8,280
+Joseph Drouhin Bourgogne Pinot Noir,Bourgogne,regional,32.14,2019,3.7,586
+Joseph Drouhin Bourgogne Pinot Noir,Bourgogne,regional,32.14,2018,3.7,887
+Joseph Drouhin Bourgogne Pinot Noir,Bourgogne,regional,32.14,2017,3.5,262
+Joseph Drouhin Bourgogne Pinot Noir,Bourgogne,regional,32.14,2016,3.4,145
+Joseph Drouhin Bourgogne Pinot Noir,Bourgogne,regional,32.14,2015,3.6,128
+Joséphine Dubois Grand Réserve Bourgogne Pinot Noir,Bourgogne,regional,20.99,2023,,2
+Joséphine Dubois Grand Réserve Bourgogne Pinot Noir,Bourgogne,regional,20.99,2022,3.7,30
+Joséphine Dubois Grand Réserve Bourgogne Pinot Noir,Bourgogne,regional,20.99,2021,,14
+Joséphine Dubois Grand Réserve Bourgogne Pinot Noir,Bourgogne,regional,20.99,2020,3.9,51
+Joséphine Dubois Grand Réserve Bourgogne Pinot Noir,Bourgogne,regional,20.99,2019,3.9,39
+Joséphine Dubois Grand Réserve Bourgogne Pinot Noir,Bourgogne,regional,20.99,2018,3.7,151
+Joséphine Dubois Grand Réserve Bourgogne Pinot Noir,Bourgogne,regional,20.99,2017,3.4,34
+Joséphine Dubois Grand Réserve Bourgogne Pinot Noir,Bourgogne,regional,20.99,2016,3.8,166
+Faiveley Pinot Noir Bourgogne,Bourgogne,regional,36.99,2023,4.1,772
+Domaine Berthaut-Gerbet Vosne-Romanée,Vosne-Romanée,village,118.68,2023,4.2,62
+Domaine Berthaut-Gerbet Vosne-Romanée,Vosne-Romanée,village,118.68,2022,4.2,105
+Domaine Berthaut-Gerbet Vosne-Romanée,Vosne-Romanée,village,118.68,2021,4.3,100
+Domaine Berthaut-Gerbet Vosne-Romanée,Vosne-Romanée,village,118.68,2020,4.2,78
+Domaine Berthaut-Gerbet Vosne-Romanée,Vosne-Romanée,village,118.68,2019,4.3,107
+Domaine Berthaut-Gerbet Vosne-Romanée,Vosne-Romanée,village,118.68,2018,4.2,144
+Domaine Berthaut-Gerbet Vosne-Romanée,Vosne-Romanée,village,118.68,2017,4.1,174
+Domaine Berthaut-Gerbet Vosne-Romanée,Vosne-Romanée,village,118.68,2016,4.1,170
+Domaine Berthaut-Gerbet Vosne-Romanée,Vosne-Romanée,village,118.68,2015,4.0,114

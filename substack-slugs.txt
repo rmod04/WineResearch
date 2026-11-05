@@ -180,8 +180,10 @@ Website SEO    : same model as Pieces 1 and 2. Page title is the headline,
                  Substack; no separate search-engine fields.
 Cover image    : s1_00_cover_bottles.jpg (Short 01 folder, visuals/static),
                  1200 x 630 at 2x. Pexels photo by Steve B, estate name
-                 blurred. Credit: Photo: Steve B (Pexels). Also the website
-                 article thumbnail.
+                 blurred. Credit: Photo: Steve B (Pexels). Substack cover.
+Website thumb  : s1_00_cover_bottles_3x2.jpg (same folder), original 3:2
+                 frame, 2576 x 1717, same blurring. Use for the article
+                 thumbnail on Stories & Trends.
 Status         : NOT PUBLISHED. Publication Thursday 5 November 2026.
 Visual slugs   : /visuals/name-premium and /visuals/price-ladder
                  (interactive). Confirm both return 200 before posting.
