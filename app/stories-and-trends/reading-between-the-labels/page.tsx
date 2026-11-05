@@ -79,6 +79,8 @@ export default function ReadingBetweenTheLabelsPage() {
           fill
           sizes="100vw"
           className="object-cover"
+          // The labels sit low in this photo; anchor the crop near the bottom so they stay centred.
+          style={{ objectPosition: '50% 88%' }}
           priority
         />
       </div>
@@ -329,7 +331,7 @@ export default function ReadingBetweenTheLabelsPage() {
 
             {/* Sources footnote */}
             <p className="mt-12 pt-8 border-t border-gold/20 font-montserrat text-xs italic text-mid leading-relaxed">
-              Sources: Wine rating and price data obtained from Vivino, US market, October 2026, converted to euros (analysis conducted for this piece). Critic score and price data obtained from Wine-Searcher, October 2026. Blind competition results obtained from the Decanter World Wine Awards, 2025 and 2026, with 2025 prices as Wine-Searcher average retail reported by Forbes, June 2025. Release prices obtained from the Guide Hachette des Vins, editions 1999 to 2026, current values from iDealwine, October 2026, and inflation data from INSEE. Classification wording from the VDP (Verband Deutscher Prädikatsweingüter). Hong Kong wine duty from the South China Morning Post, 2018. Liv-ex Burgundy index from The Drinks Business, August 2026. Vineyard land prices obtained from Safer, reported by Decanter, May 2026, and from Agreste. Marsannay premier cru status from INAO, 2026. Marsannay prices obtained from Goedhuis, 2023 vintage en primeur offer. Wine community discussion obtained from Reddit r/wine, 2022 to 2025.
+              <strong>Sources:</strong> Vivino (ratings and prices, US market, October 2026, converted to euros; analysis conducted for this piece); Wine-Searcher (critic scores and prices, October 2026); Decanter World Wine Awards, 2025 and 2026, with 2025 prices from Wine-Searcher via Forbes; Guide Hachette des Vins (release prices, 1999 to 2026), iDealwine (current values) and INSEE (inflation); the VDP; South China Morning Post; Liv-ex via The Drinks Business; Safer via Decanter, and Agreste (vineyard land prices); INAO and Goedhuis (Marsannay); Reddit r/wine.
             </p>
 
           </div>
