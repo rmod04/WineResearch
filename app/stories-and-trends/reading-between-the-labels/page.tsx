@@ -91,7 +91,7 @@ export default function ReadingBetweenTheLabelsPage() {
           <div className="font-montserrat text-sm text-charcoal leading-loose space-y-6">
 
             <p>
-              Bourgogne, or Burgundy in English, is always an intriguing wine region for many. This renowned region in east-central France can hardly be considered straightforward for any wine enthusiast. From one village or vineyard to another, the sheer range in styles and quality levels leaves no stone unturned.
+              Bourgogne, or Burgundy in English, is always an intriguing wine story for many. This renowned region in east-central France can hardly be considered straightforward for any wine enthusiast. From one village or vineyard to another, the sheer range in styles and quality levels leaves no stone unturned.
             </p>
 
             <p>
