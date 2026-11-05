@@ -26,7 +26,7 @@ export const articles: Article[] = [
     dateLabel: 'November 2026',
     category: 'Research · Substack',
     excerpt:
-      'Burgundy is known for its ability to command an almost performatively premium price, depending on the label. This piece tests the foundation behind it, from the villages that renamed themselves after their most famous vineyards to what those names are worth today.',
+      'Burgundy is known for its ability to command a premium price, depending on the label, and some may even call it almost ‘performative’. This piece tests the foundation behind that premium, from the villages that renamed themselves after their most famous vineyards to what those names are worth today.',
     thumbnail: '/images/photo-short01-cover.jpg',
     thumbnailAlt: 'Close-up of red Burgundy bottles lined up on a wine shop shelf, labels facing out, the nearest reading Côte de Beaune.',
     isSubstack: true,

@@ -95,7 +95,7 @@ export default function ReadingBetweenTheLabelsPage() {
             </p>
 
             <p>
-              But more than that, it’s also known for its ability to command a premium price, depending on the label. Some may even claim this trend to be almost ‘performative’. The investigaion within is the reason for this piece: I simply wanted to test the foundation behind the trend.
+              But more than that, it’s also known for its ability to command a premium price, depending on the label. Some may even claim this trend to be almost ‘performative’. The investigation within is the reason for this piece: I simply wanted to test the foundation behind the trend.
             </p>
 
             <h2 className="font-cormorant text-2xl md:text-3xl font-light text-burgundy pt-4">
