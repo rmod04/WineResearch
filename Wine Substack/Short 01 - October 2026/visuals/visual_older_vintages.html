@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Older vintages do not rate higher · Cork To Table</title>
+  <title>Older vintages do not always rate higher · Cork To Table</title>
   <style>
     @import url('fonts.css');
 
@@ -69,7 +69,7 @@
 
     .chart-wrap {
       position: relative;
-      height: 280px;
+      height: 305px;
     }
 
     .legend {
@@ -99,11 +99,11 @@
 <div class="container">
 
   <div class="header">
-    <div class="title">Older vintages do not rate higher</div>
+    <div class="title">Older vintages do not always rate higher</div>
   </div>
 
   <div class="main">
-    <div class="chart-head">Average rating of the 2015 to 2017 vintages minus the 2020 to 2023 vintages, same wine, on a scale of 5. One dot per wine.</div>
+    <div class="chart-head">Each dot is one wine, compared with itself. The position shows the difference between its 2015 to 2017 vintages rating (on a scale of 5) against its 2020 to 2023 vintages rating.</div>
 
     <div class="headline" id="headline"></div>
 
@@ -200,6 +200,13 @@
             color: '#B09090',
             padding: 6,
             callback: (v) => (v > 0 ? '+' : '') + Number(v).toFixed(2).replace('-', '−'),
+          },
+          title: {
+            display: true,
+            text: 'Difference in rating, older minus newer',
+            font: { family: 'Montserrat', size: 12, weight: '500' },
+            color: '#7A5A64',
+            padding: { top: 10 },
           },
         },
         y: {
