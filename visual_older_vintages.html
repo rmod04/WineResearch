@@ -103,7 +103,7 @@
   </div>
 
   <div class="main">
-    <div class="chart-head">Average rating of the 2015 to 2017 vintages minus the 2020 to 2023 vintages, same wine, on a scale of 5. One dot per wine.</div>
+    <div class="chart-head">Each dot is one wine. It shows how its 2015 to 2017 vintages rated against its 2020 to 2023 vintages, on a scale of 5.</div>
 
     <div class="headline" id="headline"></div>
 
@@ -200,6 +200,13 @@
             color: '#B09090',
             padding: 6,
             callback: (v) => (v > 0 ? '+' : '') + Number(v).toFixed(2).replace('-', '−'),
+          },
+          title: {
+            display: true,
+            text: 'Difference in rating, older minus newer (points out of 5)',
+            font: { family: 'Montserrat', size: 12, weight: '500' },
+            color: '#7A5A64',
+            padding: { top: 10 },
           },
         },
         y: {
