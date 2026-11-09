@@ -328,4 +328,43 @@ export const partners: Partner[] = [
       'https://maps.google.com/maps?q=Benanti+Via+Giuseppe+Garibaldi+361+95029+Viagrande+CT+Italy&t=&z=15&ie=UTF8&iwloc=&output=embed',
     comingSoon: false,
   },
+  {
+    slug: 'vignobles-raguenot',
+    name: 'Vignobles Raguenot',
+    region: 'Blaye, Bordeaux',
+    country: 'France',
+    tagline: 'Over 100 hectares of vines across Saint-Caprais-de-Blaye and the Haut-Médoc, with Bordeaux in every colour.',
+    shortDescription:
+      'A family estate in Blaye-Côtes de Bordeaux, founded in 1967 and in the hands of the second generation since 1997, with 70 hectares at Château des Tourtes and a range that runs from classic reds to de-alcoholised wines.',
+    fullDescription:
+      'Lise and Philippe Raguenot founded Vignobles Raguenot in 1967. In 1997 their daughters, Emmanuelle and Marie-Pierre, took over Château des Tourtes with their husbands, Daren Miller and Eric Lallez. All four came from other careers and trained in viticulture and oenology to make the switch, and a year later they added Château Haut Beyzac in the Haut-Médoc. Château des Tourtes sits in Saint-Caprais-de-Blaye, in the Blaye-Côtes de Bordeaux appellation: 70 hectares of silico-clay soils over gravel, planted mostly with Merlot for the reds and Sauvignon Blanc for the whites. Across both estates the family farms over 100 hectares, certified High Environmental Value (HVE 3), with 17 hectares certified organic. The range spans eight appellations and just about every format going: white, red, clairet and rosé, still and sparkling, in bottles, cans and bag-in-box. Since 2023 there has also been Tip Top, a range of de-alcoholised wines. More than 100 medals later, the wines reach over 25 countries, and the estate holds the Vignobles & Découvertes label, France\'s national distinction for quality wine tourism.',
+    quirkLine:
+      'Two sisters, two husbands, all four from other careers when they took over. The family calls them the four musketeers.',
+    experiences: [
+      {
+        title: 'Tasting Escapade',
+        description:
+          'An hour at Château des Tourtes: a guided tour of the estate, a stroll through the vines, a look inside the cellars, and a tasting of five wines. Other tours put two vintages side by side or pour the Tip Top de-alcoholised range, for those keeping a clear head.',
+      },
+      {
+        title: 'Blending Workshop',
+        description:
+          'Two and a half hours in the winemaker\'s shoes. After a guided cellar tour and an introduction to tasting, you blend your own wine from single-varietal wines, design its label, and take the bottle home along with a logoed glass. Bragging rights included.',
+      },
+      {
+        title: 'Food and Wine Pairing Workshop',
+        description:
+          'A short walk through the vineyards and cellars, then the tasting room: five wines, five bites to match, and a Vignobles Raguenot glass to take home. Families are welcome too, with an activity booklet and an aroma game for children aged 3 to 10.',
+      },
+    ],
+    image: '/images/photo-partner-raguenot.jpg',
+    imagePosition: '60% center',
+    gallery: [
+      { src: '/images/photo-partner-raguenot-vineyard.jpg', alt: 'Rows of vines with a small stone pavilion beyond' },
+      { src: '/images/photo-partner-raguenot-harvest.jpg', alt: 'White grapes on the vine at harvest, with picking crates behind' },
+    ],
+    mapEmbed:
+      'https://maps.google.com/maps?q=Chateau+des+Tourtes+33820+Saint-Caprais-de-Blaye+France&t=&z=15&ie=UTF8&iwloc=&output=embed',
+    comingSoon: false,
+  },
 ]
